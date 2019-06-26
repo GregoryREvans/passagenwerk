@@ -6,6 +6,9 @@ __pycache__/
 *.png
 *.wav
 *.DS_Store
+*.aux
+*.log
+*.synctex.gz
 
 # C extensions
 *.so
