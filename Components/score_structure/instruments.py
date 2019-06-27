@@ -55,17 +55,17 @@ instruments = [
     instrument_seven,
     instrument_eight,
     instrument_nine,
-    ]
+]
 voices = len(instruments)
 
 voice_to_name_dict = {
-    'Voice 1': 'violin_I-1',
-    'Voice 2': 'violin_I-2',
-    'Voice 3': 'violin_II-1',
-    'Voice 4': 'violin_II-2',
-    'Voice 5': 'viola-1',
-    'Voice 6': 'viola-2',
-    'Voice 7': 'violoncello-1',
-    'Voice 8': 'violoncello-2',
-    'Voice 9': 'contrabass',
+    "Voice 1": "violin_I-1",
+    "Voice 2": "violin_I-2",
+    "Voice 3": "violin_II-1",
+    "Voice 4": "violin_II-2",
+    "Voice 5": "viola-1",
+    "Voice 6": "viola-2",
+    "Voice 7": "violoncello-1",
+    "Voice 8": "violoncello-2",
+    "Voice 9": "contrabass",
 }

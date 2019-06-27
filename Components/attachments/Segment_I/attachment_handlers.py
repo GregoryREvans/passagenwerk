@@ -9,33 +9,49 @@ from evans.AttachmentHandlers.TextSpanHandler import TextSpanHandler
 from Scores.passagenwerk.Components.pitch.pitches import *
 
 articulation_handler_one = ArticulationHandler(
-    articulation_list=['tenuto', 'tremolo', 'tremolo', 'accent', 'default', 'tremolo', 'tenuto', 'accent', 'espressivo', 'tenuto', ],
+    articulation_list=[
+        "tenuto",
+        "tremolo",
+        "tremolo",
+        "accent",
+        "default",
+        "tremolo",
+        "tenuto",
+        "accent",
+        "espressivo",
+        "tenuto",
+    ],
     continuous=True,
-    )
+)
 
 clef_handler_one = ClefHandler(
-    clef='treble',
+    clef="treble",
     add_ottavas=True,
     # ottava_shelf=16,
-    )
+)
 
 dynamic_handler_one = DynamicHandler(
-    starting_dynamic='mf',
-    hairpin='>',
-    ending_dynamic='mp',
-    continuous=True,
-    )
+    starting_dynamic="mf", hairpin=">", ending_dynamic="mp", continuous=True
+)
 
 notehead_handler_one = NoteheadHandler(
-    notehead_list=['default', 'harmonic-mixed', 'triangle', 'default',  'default', 'triangle', 'default',  'harmonic-mixed', 'triangle', 'default',  ],
+    notehead_list=[
+        "default",
+        "harmonic-mixed",
+        "triangle",
+        "default",
+        "default",
+        "triangle",
+        "default",
+        "harmonic-mixed",
+        "triangle",
+        "default",
+    ],
     transition=False,
     continuous=True,
-    )
+)
 
-pitch_handler_one = PitchHandler(
-    pitch_list=sieve_list,
-    continuous=True,
-    )
+pitch_handler_one = PitchHandler(pitch_list=sieve_list, continuous=True)
 
 # text_span_handler_one = TextSpanHandler(
 #     span_two_positions=['st.', 'ord.', 'st.', 'sp.', 'msp.', 'ord.',],
@@ -51,33 +67,44 @@ pitch_handler_one = PitchHandler(
 
 #######
 articulation_handler_two = ArticulationHandler(
-    articulation_list=['espressivo', 'tenuto', 'tenuto', 'accent', 'default', 'tenuto', 'accent', ],
+    articulation_list=[
+        "espressivo",
+        "tenuto",
+        "tenuto",
+        "accent",
+        "default",
+        "tenuto",
+        "accent",
+    ],
     continuous=True,
-    )
+)
 
 clef_handler_two = ClefHandler(
-    clef='varC',
+    clef="varC",
     add_ottavas=True,
     # ottava_shelf=5,
-    )
+)
 
 dynamic_handler_two = DynamicHandler(
-    starting_dynamic='"ppp"',
-    hairpin='<',
-    ending_dynamic='"ff"',
-    continuous=True,
-    )
+    starting_dynamic='"ppp"', hairpin="<", ending_dynamic='"ff"', continuous=True
+)
 
 notehead_handler_two = NoteheadHandler(
-    notehead_list=['default', 'default', 'harmonic-mixed', 'default', 'triangle', 'harmonic-mixed', 'harmonic-mixed', 'default',  ],
+    notehead_list=[
+        "default",
+        "default",
+        "harmonic-mixed",
+        "default",
+        "triangle",
+        "harmonic-mixed",
+        "harmonic-mixed",
+        "default",
+    ],
     transition=False,
     continuous=True,
-    )
+)
 
-pitch_handler_two = PitchHandler(
-    pitch_list=sieve_list,
-    continuous=True,
-    )
+pitch_handler_two = PitchHandler(pitch_list=sieve_list, continuous=True)
 
 # text_span_handler_two = TextSpanHandler(
 #     span_one_positions=['7/7', '6/7', '7/7', '5/7', '1/7', '7/7', '4/7', '3/7', '1/7', '6/7', '2/7', '5/7',],
@@ -97,22 +124,27 @@ pitch_handler_two = PitchHandler(
 
 #######
 articulation_handler_three = ArticulationHandler(
-    articulation_list=['accent', 'tenuto', 'tenuto', 'espressivo', 'accent', 'tenuto', 'tenuto',],
+    articulation_list=[
+        "accent",
+        "tenuto",
+        "tenuto",
+        "espressivo",
+        "accent",
+        "tenuto",
+        "tenuto",
+    ],
     continuous=True,
-    )
+)
 
 clef_handler_three = ClefHandler(
-    clef='varC',
+    clef="varC",
     add_ottavas=True,
     # ottava_shelf=5,
-    )
+)
 
 dynamic_handler_three = DynamicHandler(
-    starting_dynamic='"mp"',
-    hairpin='>',
-    ending_dynamic='"ppppp"',
-    continuous=True,
-    )
+    starting_dynamic='"mp"', hairpin=">", ending_dynamic='"ppppp"', continuous=True
+)
 
 # glissando_handler_three = GlissandoHandler(
 #     # glissando_style='hide_middle_note_heads',
@@ -120,15 +152,21 @@ dynamic_handler_three = DynamicHandler(
 #     )
 
 notehead_handler_three = NoteheadHandler(
-    notehead_list=['harmonic-mixed', 'triangle', 'default', 'triangle', 'default', 'harmonic-mixed', 'triangle', 'default', ],
+    notehead_list=[
+        "harmonic-mixed",
+        "triangle",
+        "default",
+        "triangle",
+        "default",
+        "harmonic-mixed",
+        "triangle",
+        "default",
+    ],
     transition=True,
     continuous=True,
-    )
+)
 
-pitch_handler_three = PitchHandler(
-    pitch_list=random_walk_list,
-    continuous=True,
-    )
+pitch_handler_three = PitchHandler(pitch_list=random_walk_list, continuous=True)
 
 # text_span_handler_three = TextSpanHandler(
 #     span_one_positions=['1/5', '2/5', '1/5', '2/5', '3/5', '2/5', '3/5', '4/5', '5/5', '1/5', '4/5', '2/5', '3/5', ],
@@ -145,31 +183,23 @@ pitch_handler_three = PitchHandler(
 
 #######
 articulation_handler_four = ArticulationHandler(
-    articulation_list=['tenuto', 'tenuto', 'accent', 'tenuto', 'espressivo', ],
+    articulation_list=["tenuto", "tenuto", "accent", "tenuto", "espressivo"],
     continuous=True,
-    )
+)
 
 clef_handler_four = ClefHandler(
-    clef='varC',
+    clef="varC",
     add_ottavas=True,
     # ottava_shelf=5,
-    )
+)
 
 dynamic_handler_four = DynamicHandler(
-    starting_dynamic='ff',
-    hairpin='--',
-    continuous=True,
-    )
+    starting_dynamic="ff", hairpin="--", continuous=True
+)
 
-notehead_handler_four = NoteheadHandler(
-    notehead_list=['default',  ],
-    continuous=True,
-    )
+notehead_handler_four = NoteheadHandler(notehead_list=["default"], continuous=True)
 
-pitch_handler_four = PitchHandler(
-    pitch_list=perm_list,
-    continuous=True,
-    )
+pitch_handler_four = PitchHandler(pitch_list=perm_list, continuous=True)
 
 # text_span_handler_four = TextSpanHandler(
 #     span_two_positions=['st.', 'ord.', 'sp.', 'msp.', 'ord.',],
@@ -184,39 +214,27 @@ pitch_handler_four = PitchHandler(
 #     )
 
 #######
-pitch_handler_five = PitchHandler(
-    pitch_list=chords,
-    continuous=True,
-    )
+pitch_handler_five = PitchHandler(pitch_list=chords, continuous=True)
 dynamic_handler_five = DynamicHandler(
-    starting_dynamic='f',
-    hairpin='>',
-    ending_dynamic='mp',
-    continuous=True,
-    )
+    starting_dynamic="f", hairpin=">", ending_dynamic="mp", continuous=True
+)
 clef_handler_five = ClefHandler(
-    clef='treble',
+    clef="treble",
     add_ottavas=True,
     # ottava_shelf=5,
-    )
+)
 # text_span_handler_five = TextSpanHandler()
 
 #######
-pitch_handler_six = PitchHandler(
-    pitch_list=runs,
-    continuous=True,
-    )
+pitch_handler_six = PitchHandler(pitch_list=runs, continuous=True)
 dynamic_handler_six = DynamicHandler(
-    starting_dynamic='pppp',
-    hairpin='<|',
-    ending_dynamic='fff',
-    continuous=True,
-    )
+    starting_dynamic="pppp", hairpin="<|", ending_dynamic="fff", continuous=True
+)
 clef_handler_six = ClefHandler(
-    clef='varC',
+    clef="varC",
     add_ottavas=True,
     # ottava_shelf=5,
-    )
+)
 slur_handler_six = SlurHandler()
 # text_span_handler_six = TextSpanHandler(
 #     span_one_positions=['accel.', 'rit.', 'accel.', 'rit.', 'rit.', ],

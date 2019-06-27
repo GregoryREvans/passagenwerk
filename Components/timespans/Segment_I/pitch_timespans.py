@@ -5,41 +5,42 @@ import time
 import abjadext.rmakers as rmakers
 from tsmakers.TaleaTimespanMaker import TaleaTimespanMaker
 from tsmakers.PerformedTimespan import PerformedTimespan
-from Scores.passagenwerk.Components.score_structure.Segment_I.pitch_material_pattern import pitch_material_list
+from Scores.passagenwerk.Components.score_structure.Segment_I.pitch_material_pattern import (
+    pitch_material_list,
+)
 from evans.general_tools.cyc import cyc
 from evans.abjad_functions.talea_timespan import timespan_functions
 from Scores.passagenwerk.Components.pitch.Segment_I.pitch_handlers import *
 from Scores.passagenwerk.Components.score_structure.instruments import instruments
-from Scores.passagenwerk.Components.score_structure.instruments import voice_to_name_dict
+from Scores.passagenwerk.Components.score_structure.instruments import (
+    voice_to_name_dict,
+)
 from collections import defaultdict, OrderedDict
 from evans.general_tools.human_keys import human_sorted_keys
 
-music_specifiers = OrderedDict([(f'Voice {i+1}', None) for i, name in enumerate(instruments)])
+music_specifiers = OrderedDict(
+    [(f"Voice {i+1}", None) for i, name in enumerate(instruments)]
+)
 
 target_timespan = abjad.Timespan(0, 8)
 
 timespan_maker = TaleaTimespanMaker(
-    initial_silence_talea=rmakers.Talea(
-    counts=(0, 5, 3, 6, 2),
-    denominator=8,
-    ),
+    initial_silence_talea=rmakers.Talea(counts=(0, 5, 3, 6, 2), denominator=8),
     # synchronize_step=True, #goes down voices instead of across? maybe not consistent...
     # synchronize_groupings=True, #goes down voices instead of across? maybe not consistent...
-    playing_talea=rmakers.Talea(
-    counts=(5, 3, 1, 2, 6),
-    denominator=4,
-    ),
-    playing_groupings=(1, 2, 3, 2), #smashes timespans together without intermittent silence
-    silence_talea=rmakers.Talea(
-    counts=(2, 1, 1,),
-    denominator=4,
-    ),
+    playing_talea=rmakers.Talea(counts=(5, 3, 1, 2, 6), denominator=4),
+    playing_groupings=(
+        1,
+        2,
+        3,
+        2,
+    ),  # smashes timespans together without intermittent silence
+    silence_talea=rmakers.Talea(counts=(2, 1, 1), denominator=4),
     # fuse_groups=False, #turns groups from multiple timespans into one large timespan
 )
 
 timespan_list = timespan_maker(
-    music_specifiers=music_specifiers,
-    target_timespan=target_timespan,
+    music_specifiers=music_specifiers, target_timespan=target_timespan
 )
 
 cyclic_materials = timespan_functions.cyc(pitch_material_list)
@@ -49,15 +50,16 @@ master_list = []
 groups = [timespan.voice_name for timespan in timespan_list]
 input = [(span, group) for span, group in zip(timespan_list, groups)]
 res = defaultdict(list)
-for v, k in input: res[k].append(v)
-voice_dict_list = [{'voice':k, 'items':abjad.TimespanList(v)} for k,v in res.items()]
+for v, k in input:
+    res[k].append(v)
+voice_dict_list = [{"voice": k, "items": abjad.TimespanList(v)} for k, v in res.items()]
 
-item_list = [x['voice'] for x in voice_dict_list]
+item_list = [x["voice"] for x in voice_dict_list]
 item_list.sort(key=human_sorted_keys)
 sorted_voice_dict_list = []
 for key in item_list:
     for span_dict in voice_dict_list:
-        if span_dict['voice'] == key:
+        if span_dict["voice"] == key:
             sorted_voice_dict_list.append(span_dict)
 
 for i, timespan_dict in enumerate(sorted_voice_dict_list):
@@ -65,8 +67,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
     for timespan in timespan_dict["items"]:
         if isinstance(timespan, abjad.AnnotatedTimespan):
             timespan.annotation = timespan_functions.TimespanSpecifier(
-                voice_name = f'Voice {i}',
-                pitch_handler = next(cyclic_materials),
+                voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
             )
             ts_list.append(timespan)
         elif isinstance(timespan, PerformedTimespan):
@@ -74,9 +75,8 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
                 start_offset=timespan.start_offset,
                 stop_offset=timespan.stop_offset,
                 annotation=timespan_functions.TimespanSpecifier(
-                    voice_name = f'Voice {i}',
-                    pitch_handler = next(cyclic_materials),
-                )
+                    voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
+                ),
             )
             ts_list.append(timespan)
         else:
@@ -85,54 +85,60 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
     master_list.append(ts_list)
 
 master_length = len(master_list)
-voices = [f'Voice {i + 1}' for i in range(master_length)]
-pitch_timespans = {voice : timespan_list for voice, timespan_list in zip(voices, master_list)}
+voices = [f"Voice {i + 1}" for i in range(master_length)]
+pitch_timespans = {
+    voice: timespan_list for voice, timespan_list in zip(voices, master_list)
+}
 
-#persist timespan_list
-directory = '/Users/evansdsg2/Scores/passagenwerk/Segments/Segment_I'
-pdf_path = f'{directory}/Segment_I_pitch_timespans.pdf'
-path = pathlib.Path('Segment_I_pitch_timespans.pdf')
+# persist timespan_list
+directory = "/Users/evansdsg2/Scores/passagenwerk/Segments/Segment_I"
+pdf_path = f"{directory}/Segment_I_pitch_timespans.pdf"
+path = pathlib.Path("Segment_I_pitch_timespans.pdf")
 if path.exists():
-    print(f'Removing {pdf_path} ...')
+    print(f"Removing {pdf_path} ...")
     path.unlink()
 time_1 = time.time()
-print(f'Persisting {pdf_path} ...')
-result = abjad.persist(timespan_list).as_pdf(pdf_path, scale=0.5, key='voice_name')#, sort_callable=human_sorted_keys)
+print(f"Persisting {pdf_path} ...")
+result = abjad.persist(timespan_list).as_pdf(
+    pdf_path, scale=0.5, key="voice_name"
+)  # , sort_callable=human_sorted_keys)
 print(result[0])
 print(result[1])
 print(result[2])
 success = result[3]
 if success is False:
-    print('LilyPond failed!')
+    print("LilyPond failed!")
 time_2 = time.time()
 total_time = time_2 - time_1
-print(f'Total time: {total_time} seconds')
+print(f"Total time: {total_time} seconds")
 if path.exists():
-    print(f'Opening {pdf_path} ...')
-    os.system(f'open {pdf_path}')
+    print(f"Opening {pdf_path} ...")
+    os.system(f"open {pdf_path}")
 
-#persist voice timespan_lists
+# persist voice timespan_lists
 for voice_name in voices:
     tspan_list = pitch_timespans[voice_name]
     name = voice_to_name_dict[voice_name]
-    directory = f'/Users/evansdsg2/Scores/passagenwerk/Build/Parts/{name}/timespans/Segment_I'
-    pdf_path = f'{directory}/{voice_name}_Segment_I_pitch_timespans.pdf'
-    path = pathlib.Path(f'{voice_name}_Segment_I_pitch_timespans.pdf')
+    directory = (
+        f"/Users/evansdsg2/Scores/passagenwerk/Build/Parts/{name}/timespans/Segment_I"
+    )
+    pdf_path = f"{directory}/{voice_name}_Segment_I_pitch_timespans.pdf"
+    path = pathlib.Path(f"{voice_name}_Segment_I_pitch_timespans.pdf")
     if path.exists():
-        print(f'Removing {pdf_path} ...')
+        print(f"Removing {pdf_path} ...")
         path.unlink()
     time_1 = time.time()
-    print(f'Persisting {pdf_path} ...')
-    result = abjad.persist(tspan_list).as_pdf(pdf_path, scale=0.5,)
+    print(f"Persisting {pdf_path} ...")
+    result = abjad.persist(tspan_list).as_pdf(pdf_path, scale=0.5)
     print(result[0])
     print(result[1])
     print(result[2])
     success = result[3]
     if success is False:
-        print('LilyPond failed!')
+        print("LilyPond failed!")
     time_2 = time.time()
     total_time = time_2 - time_1
-    print(f'Total time: {total_time} seconds')
+    print(f"Total time: {total_time} seconds")
     if path.exists():
-        print(f'Opening {pdf_path} ...')
-        os.system(f'open {pdf_path}')
+        print(f"Opening {pdf_path} ...")
+        os.system(f"open {pdf_path}")
