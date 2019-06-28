@@ -62,7 +62,7 @@ for voice_name, timespan_list in rhythm_timespans.items():
         durations = [timespan.duration for timespan in grouper]
         container = make_container(rhythm_handler, durations)
         voice = score[voice_name]
-        voice.append(container)
+        voice.append(container[:]) #maybe leave the container and find a way to put rests in same container?
 
 print('Splitting and rewriting ...')
 for voice in abjad.iterate(score['Staff Group']).components(abjad.Voice):
@@ -108,16 +108,22 @@ for voice_name, sub_timespan_list in pitch_timespans.items():
         voice_tie_collection.insert(tie)
     for target_timespan in sub_timespan_list:
         selection = abjad.Selection([_ for _ in voice_tie_collection.find_logical_ties_intersecting_timespan(target_timespan)])
-        # target_timespan.annotation.pitch_handler(selection)
-        length = len(abjad.select(selection).leaves())
-        nums = cyc([_+1 for _ in range(length)])
-        color = next(cyc_colors)
-        for leaf in abjad.select(selection).leaves():
-            if isinstance(leaf, (abjad.Rest, abjad.MultimeasureRest)):
-                continue
-            else:
-                abjad.override(leaf).note_head.color = color
-                abjad.attach(abjad.Markup(f'{next(nums)}/{length}'), leaf)
+        print('pre selection')
+        print(selection)
+        print('parentage')
+        print([abjad.inspect(_).parentage().parent for _ in abjad.select(selection).leaves()])
+        target_timespan.annotation.pitch_handler(selection) #printing reveals that this works on the first run but then the next passage is empty
+        print('post selection')
+        print(selection)
+        # length = len(abjad.select(selection).leaves())
+        # nums = cyc([_+1 for _ in range(length)])
+        # color = next(cyc_colors)
+        # for leaf in abjad.select(selection).leaves():
+        #     if isinstance(leaf, (abjad.Rest, abjad.MultimeasureRest)):
+        #         continue
+        #     else:
+        #         abjad.override(leaf).note_head.color = color
+        #         abjad.attach(abjad.Markup(f'{next(nums)}/{length}'), leaf)
 
 # print('Adding ending skips ...')
 # last_skip = abjad.select(score['Global Context']).leaves()[-1]
