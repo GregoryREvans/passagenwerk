@@ -17,7 +17,7 @@
                 \sans
                     \line
                         {
-                            "Voice 1:"
+                            "Voice 0:"
                         }
             \vspace
                 #0.5
@@ -263,7 +263,7 @@
                 \sans
                     \line
                         {
-                            "Voice 2:"
+                            "Voice 1:"
                         }
             \vspace
                 #0.5
@@ -488,7 +488,7 @@
                 \sans
                     \line
                         {
-                            "Voice 3:"
+                            "Voice 2:"
                         }
             \vspace
                 #0.5
@@ -734,7 +734,7 @@
                 \sans
                     \line
                         {
-                            "Voice 4:"
+                            "Voice 3:"
                         }
             \vspace
                 #0.5
@@ -947,7 +947,7 @@
                 \sans
                     \line
                         {
-                            "Voice 5:"
+                            "Voice 4:"
                         }
             \vspace
                 #0.5
@@ -1193,7 +1193,7 @@
                 \sans
                     \line
                         {
-                            "Voice 6:"
+                            "Voice 5:"
                         }
             \vspace
                 #0.5
@@ -1418,7 +1418,7 @@
                 \sans
                     \line
                         {
-                            "Voice 7:"
+                            "Voice 6:"
                         }
             \vspace
                 #0.5
@@ -1631,7 +1631,7 @@
                 \sans
                     \line
                         {
-                            "Voice 8:"
+                            "Voice 7:"
                         }
             \vspace
                 #0.5
@@ -1877,7 +1877,7 @@
                 \sans
                     \line
                         {
-                            "Voice 9:"
+                            "Voice 8:"
                         }
             \vspace
                 #0.5

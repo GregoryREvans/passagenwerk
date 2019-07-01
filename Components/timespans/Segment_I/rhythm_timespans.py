@@ -16,7 +16,8 @@ from Scores.passagenwerk.Components.score_structure.instruments import (
     voice_to_name_dict,
 )
 from collections import defaultdict, OrderedDict
-from evans.general_tools.human_keys import human_sorted_keys
+from evans.general_tools.sorted_keys import sorted_keys
+from evans.abjad_functions.timespan_human_keys import human_sorted_keys
 
 music_specifiers = OrderedDict(
     [(f"Voice {i+1}", None) for i, name in enumerate(instruments)]
@@ -55,7 +56,7 @@ for v, k in input:
 voice_dict_list = [{"voice": k, "items": abjad.TimespanList(v)} for k, v in res.items()]
 
 item_list = [x["voice"] for x in voice_dict_list]
-item_list.sort(key=human_sorted_keys)
+item_list.sort(key=sorted_keys)
 sorted_voice_dict_list = []
 for key in item_list:
     for span_dict in voice_dict_list:
@@ -91,6 +92,16 @@ from Scores.passagenwerk.Components.score_structure.Segment_I.time_signatures im
     bounds,
 )
 
+showable_list = abjad.TimespanList()
+for x in master_list:
+    for y in x:
+        new_span = abjad.AnnotatedTimespan(
+            start_offset=y.start_offset,
+            stop_offset=y.stop_offset,
+            annotation=y.annotation.voice_name,
+        )
+        showable_list.append(new_span)
+
 split_timespans = [timespan_functions.make_split_list(x, bounds) for x in master_list]
 
 master_list = split_timespans
@@ -112,9 +123,9 @@ if path.exists():
     path.unlink()
 time_1 = time.time()
 print(f"Persisting {pdf_path} ...")
-result = abjad.persist(timespan_list).as_pdf(
-    pdf_path, scale=0.5, key="voice_name"
-)  # , sort_callable=human_sorted_keys)
+result = abjad.persist(showable_list).as_pdf(
+    pdf_path, scale=0.5, key="annotation", sort_callable=human_sorted_keys
+)
 print(result[0])
 print(result[1])
 print(result[2])
@@ -127,31 +138,3 @@ print(f"Total time: {total_time} seconds")
 if path.exists():
     print(f"Opening {pdf_path} ...")
     os.system(f"open {pdf_path}")
-
-# persist voice timespan_lists
-for voice_name in voices:
-    tspan_list = rhythm_timespans[voice_name]
-    name = voice_to_name_dict[voice_name]
-    directory = (
-        f"/Users/evansdsg2/Scores/passagenwerk/Build/Parts/{name}/timespans/Segment_I"
-    )
-    pdf_path = f"{directory}/{voice_name}_Segment_I_rhythm_timespans.pdf"
-    path = pathlib.Path(f"{voice_name}_Segment_I_rhythm_timespans.pdf")
-    if path.exists():
-        print(f"Removing {pdf_path} ...")
-        path.unlink()
-    time_1 = time.time()
-    print(f"Persisting {pdf_path} ...")
-    result = abjad.persist(tspan_list).as_pdf(pdf_path, scale=0.5)
-    print(result[0])
-    print(result[1])
-    print(result[2])
-    success = result[3]
-    if success is False:
-        print("LilyPond failed!")
-    time_2 = time.time()
-    total_time = time_2 - time_1
-    print(f"Total time: {total_time} seconds")
-    if path.exists():
-        print(f"Opening {pdf_path} ...")
-        os.system(f"open {pdf_path}")
