@@ -1,4 +1,4 @@
-\version "2.19.82"  %! abjad.LilyPondFile
+\version "2.19.83"  %! abjad.LilyPondFile
 \language "english" %! abjad.LilyPondFile
 
 \include "/Users/evansdsg2/Scores/passagenwerk/Build/first_stylesheet.ily" %! abjad.LilyPondFile
