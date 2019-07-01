@@ -1,6 +1,6 @@
 % 2018-07-17 19:54
 
-\version "2.19.82"
+\version "2.19.83"
 \language "english"
 #(set-default-paper-size "11x17portrait")
 #(set-global-staff-size 13)
@@ -100,7 +100,7 @@
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 19) (minimum-distance . 19) (padding . 0))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.slope = #0.3
 		%{ \override StemTremolo.shape = #'rectangle %}
