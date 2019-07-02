@@ -33,7 +33,7 @@ timespan_maker = TaleaTimespanMaker(
     playing_groupings=(
         [1, 2, 3, 2]
     ),  # smashes timespans together without intermittent silence
-    silence_talea=rmakers.Talea(counts=([2, 1, 1]), denominator=4),
+    silence_talea=rmakers.Talea(counts=([5, 3, 4, 3]), denominator=4),
     # fuse_groups=False, #turns groups from multiple timespans into one large timespan
 )
 

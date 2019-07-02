@@ -87,26 +87,9 @@ for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
             for leaf in shard:
                 print(abjad.inspect(leaf).parentage().parent)
 
-print("Adding Multimeasure Rests ...")
-for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
-    leaves = abjad.select(voice).leaves()
-    for shard in abjad.mutate(leaves).split(time_signatures):
-        if not all(isinstance(leaf, abjad.Rest) for leaf in shard):
-            continue
-        multiplier = abjad.inspect(shard).duration()
-        multimeasure_rest = abjad.MultimeasureRest(1, multiplier=(multiplier))
-        try:
-            abjad.mutate(shard).replace(multimeasure_rest)
-        except AssertionError:
-            print("We've hit the error...")
-            for leaf in shard:
-                print(abjad.inspect(leaf).parentage().parent)
-                # print whatever to prove they do/don't have the same parentage
-                # or maybe make a set of the parents and print the length of the set
 
 print("Handling Pitches ...")
 for voice_name, sub_timespan_list in pitch_timespans.items():
-    cyc_colors = cyc(["blue", "red", "yellow"])
     voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
     pre_split_leaves = abjad.select(voice_tie_selection).leaves(pitched=True)
     durations = [timespan.duration for timespan in sub_timespan_list]
@@ -128,16 +111,40 @@ for voice_name, sub_timespan_list in pitch_timespans.items():
                 )
             ]
         )
-        target_timespan.annotation.pitch_handler(selection)
-        length = len(abjad.select(selection).leaves())
-        nums = cyc([_ + 1 for _ in range(length)])
-        color = next(cyc_colors)
-        for leaf in abjad.select(selection).leaves():
-            if isinstance(leaf, (abjad.Rest, abjad.MultimeasureRest)):
-                continue
-            else:
-                abjad.override(leaf).note_head.color = color
-                abjad.attach(abjad.Markup(f"{next(nums)}/{length}"), leaf)
+        if len(selection) < 1:
+            continue
+        else:
+            target_timespan.annotation.pitch_handler(selection)
+
+print("Adding Multimeasure Rests and cutaway...")
+for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
+    leaves = abjad.select(voice).leaves()
+    for shard in abjad.mutate(leaves).split(time_signatures):
+        if not all(isinstance(leaf, abjad.Rest) for leaf in shard):
+            continue
+        multiplier = abjad.inspect(shard).duration() / 2
+        invisible_rest = abjad.Rest(1, multiplier=(multiplier))
+        rest_literal = abjad.LilyPondLiteral(r'\once \override Rest.transparent = ##t', 'before')
+        abjad.attach(rest_literal, invisible_rest)
+        multimeasure_rest = abjad.MultimeasureRest(1, multiplier=(multiplier))
+        start_command = abjad.LilyPondLiteral(
+                r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
+                format_slot="before",
+            )
+        stop_command = abjad.LilyPondLiteral(
+                r"\stopStaff \startStaff", format_slot="after"
+            )
+        abjad.attach(start_command, invisible_rest)
+        abjad.attach(stop_command, multimeasure_rest)
+        both_rests = [invisible_rest, multimeasure_rest]
+        try:
+            abjad.mutate(shard).replace(both_rests[:])
+        except AssertionError:
+            print("We've hit the error...")
+            for leaf in shard:
+                print(abjad.inspect(leaf).parentage().parent)
+                # print whatever to prove they do/don't have the same parentage
+                # or maybe make a set of the parents and print the length of the set
 
 # print('Adding ending skips ...')
 # last_skip = abjad.select(score['Global Context']).leaves()[-1]
@@ -189,21 +196,6 @@ for voice in abjad.select(score).components(abjad.Voice):
         # durations=[(1, 4) for _ in range(run_quarters)],
         # span_beam_count=1,
     )
-
-print("Making cutaway score ...")
-for staff in abjad.iterate(score["Staff Group"]).components(abjad.Staff):
-    for selection in (
-        abjad.select(staff).components(abjad.MultimeasureRest).group_by_contiguity()
-    ):
-        start_command = abjad.LilyPondLiteral(
-            r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
-            format_slot="before",
-        )
-        stop_command = abjad.LilyPondLiteral(
-            r"\stopStaff \startStaff", format_slot="after"
-        )
-        abjad.attach(start_command, selection[0])
-        abjad.attach(stop_command, selection[-1])
 
 # print('Stopping Hairpins and Text Spans...')
 # for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
