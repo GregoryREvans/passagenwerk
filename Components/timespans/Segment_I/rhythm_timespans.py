@@ -65,7 +65,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
     for timespan in timespan_dict["items"]:
         if isinstance(timespan, abjad.AnnotatedTimespan):
             timespan.annotation = timespan_functions.TimespanSpecifier(
-                voice_name=f"Voice {i}", rhythm_handler=next(cyclic_materials)
+                voice_name=f"Voice {i}", handler=next(cyclic_materials)
             )
             ts_list.append(timespan)
         elif isinstance(timespan, PerformedTimespan):
@@ -73,13 +73,13 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
                 start_offset=timespan.start_offset,
                 stop_offset=timespan.stop_offset,
                 annotation=timespan_functions.TimespanSpecifier(
-                    voice_name=f"Voice {i}", rhythm_handler=next(cyclic_materials)
+                    voice_name=f"Voice {i}", handler=next(cyclic_materials)
                 ),
             )
             ts_list.append(timespan)
         else:
             timespan.annotation = timespan_functions.TimespanSpecifier(
-                voice_name=f"Voice {i}", rhythm_handler=silence_maker
+                voice_name=f"Voice {i}", handler=silence_maker
             )
             ts_list.append(timespan)
     ts_list.sort()
@@ -108,7 +108,7 @@ voices = [f"Voice {i + 1}" for i in range(master_length)]
 rhythm_timespans = {
     voice: timespan_list for voice, timespan_list in zip(voices, master_list)
 }
-silence_specifier = timespan_functions.TimespanSpecifier(rhythm_maker=silence_maker)
+silence_specifier = timespan_functions.TimespanSpecifier(handler=silence_maker)
 timespan_functions.add_silences_to_timespan_dict(rhythm_timespans, silence_specifier)
 
 # persist timespan_list

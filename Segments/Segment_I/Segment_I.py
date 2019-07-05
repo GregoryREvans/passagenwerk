@@ -12,6 +12,9 @@ from Scores.passagenwerk.Components.timespans.Segment_I.rhythm_timespans import 
 from Scores.passagenwerk.Components.timespans.Segment_I.pitch_timespans import (
     pitch_timespans,
 )
+from Scores.passagenwerk.Components.timespans.Segment_I.dynamic_timespans import (
+    dynamic_timespans,
+)
 from Scores.passagenwerk.Components.score_structure.score_structure import score
 from Scores.passagenwerk.Components.score_structure.Segment_I.time_signatures import (
     time_signatures,
@@ -41,7 +44,7 @@ for voice_name, timespan_list in rhythm_timespans.items():
                 start_offset=silence_timespan.start_offset,
                 stop_offset=silence_timespan.stop_offset,
                 annotation=TimespanSpecifier(
-                    rhythm_handler=None, voice_name=voice_name
+                    handler=None, voice_name=voice_name
                 ),
             )
         )
@@ -57,48 +60,35 @@ print("Making containers ...")
 
 
 def key_function(timespan):
-    return timespan.annotation.rhythm_handler or silence_maker
+    return timespan.annotation.handler or silence_maker
 
 
-def make_container(rhythm_handler, durations):
-    selections = rhythm_handler(durations)
+def make_container(handler, durations):
+    selections = handler(durations)
     container = abjad.Container([])
     container.extend(selections)
     return container
 
 
 for voice_name, timespan_list in rhythm_timespans.items():
-    for rhythm_handler, grouper in itertools.groupby(timespan_list, key=key_function):
+    for handler, grouper in itertools.groupby(timespan_list, key=key_function):
         durations = [timespan.duration for timespan in grouper]
-        container = make_container(rhythm_handler, durations)
+        container = make_container(handler, durations)
         voice = score[voice_name]
         voice.append(
             container[:]
-        )  # maybe leave the container and find a way to put rests in same container?
+        )
 
 print("Splitting and rewriting ...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
     for i, shard in enumerate(abjad.mutate(voice[:]).split(time_signatures)):
         time_signature = time_signatures[i]
-        try:
-            abjad.mutate(shard).rewrite_meter(time_signature, boundary_depth=1)
-        except AssertionError:
-            print("We've hit the error...")
-            for leaf in shard:
-                print(abjad.inspect(leaf).parentage().parent)
+        abjad.mutate(shard).rewrite_meter(time_signature)#, boundary_depth=1)
 
 
 print("Handling Pitches ...")
 for voice_name, sub_timespan_list in pitch_timespans.items():
     voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
-    pre_split_leaves = abjad.select(voice_tie_selection).leaves(pitched=True)
-    durations = [timespan.duration for timespan in sub_timespan_list]
-    split_leaves = abjad.mutate(
-        pre_split_leaves
-    ).split(  # to split or not to split...that is the question...maybe more trouble than its worth
-        durations, tie_split_notes=False
-    )
-    voice_tie_selection = abjad.select(split_leaves).logical_ties()
     voice_tie_collection = LogicalTieCollection()
     for tie in voice_tie_selection:
         voice_tie_collection.insert(tie)
@@ -106,7 +96,7 @@ for voice_name, sub_timespan_list in pitch_timespans.items():
         selection = abjad.Selection(
             [
                 _
-                for _ in voice_tie_collection.find_logical_ties_intersecting_timespan(
+                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
                     target_timespan
                 )
             ]
@@ -114,7 +104,27 @@ for voice_name, sub_timespan_list in pitch_timespans.items():
         if len(selection) < 1:
             continue
         else:
-            target_timespan.annotation.pitch_handler(selection)
+            target_timespan.annotation.handler(selection)
+
+print("Handling Dynamics ...")
+for voice_name, sub_timespan_list in dynamic_timespans.items():
+    voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
+    voice_tie_collection = LogicalTieCollection()
+    for tie in voice_tie_selection:
+        voice_tie_collection.insert(tie)
+    for target_timespan in sub_timespan_list:
+        selection = abjad.Selection(
+            [
+                _
+                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
+                    target_timespan
+                )
+            ]
+        )
+        if len(selection) < 1:
+            continue
+        else:
+            target_timespan.annotation.handler(selection)
 
 print("Adding Multimeasure Rests and cutaway...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
@@ -137,14 +147,15 @@ for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
         abjad.attach(start_command, invisible_rest)
         abjad.attach(stop_command, multimeasure_rest)
         both_rests = [invisible_rest, multimeasure_rest]
-        try:
-            abjad.mutate(shard).replace(both_rests[:])
-        except AssertionError:
-            print("We've hit the error...")
-            for leaf in shard:
-                print(abjad.inspect(leaf).parentage().parent)
-                # print whatever to prove they do/don't have the same parentage
-                # or maybe make a set of the parents and print the length of the set
+        abjad.mutate(shard).replace(both_rests[:])
+        # try:
+        #     abjad.mutate(shard).replace(both_rests[:])
+        # except AssertionError:
+        #     print("We've hit the error...")
+        #     for leaf in shard:
+        #         print(abjad.inspect(leaf).parentage().parent)
+        #         # print whatever to prove they do/don't have the same parentage
+        #         # or maybe make a set of the parents and print the length of the set
 
 # print('Adding ending skips ...')
 # last_skip = abjad.select(score['Global Context']).leaves()[-1]

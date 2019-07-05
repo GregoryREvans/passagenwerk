@@ -65,7 +65,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
     for timespan in timespan_dict["items"]:
         if isinstance(timespan, abjad.AnnotatedTimespan):
             timespan.annotation = timespan_functions.TimespanSpecifier(
-                voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
+                voice_name=f"Voice {i}", handler=next(cyclic_materials)
             )
             ts_list.append(timespan)
         elif isinstance(timespan, PerformedTimespan):
@@ -73,7 +73,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
                 start_offset=timespan.start_offset,
                 stop_offset=timespan.stop_offset,
                 annotation=timespan_functions.TimespanSpecifier(
-                    voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
+                    voice_name=f"Voice {i}", handler=next(cyclic_materials)
                 ),
             )
             ts_list.append(timespan)

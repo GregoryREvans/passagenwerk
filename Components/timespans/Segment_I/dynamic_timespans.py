@@ -5,12 +5,12 @@ import time
 import abjadext.rmakers as rmakers
 from tsmakers.TaleaTimespanMaker import TaleaTimespanMaker
 from tsmakers.PerformedTimespan import PerformedTimespan
-from Scores.passagenwerk.Components.score_structure.Segment_I.pitch_material_pattern import (
-    pitch_material_list,
+from Scores.passagenwerk.Components.score_structure.Segment_I.dynamic_material_pattern import (
+    dynamic_material_list,
 )
 from evans.general_tools.cyc import cyc
 from evans.abjad_functions.talea_timespan import timespan_functions
-from Scores.passagenwerk.Components.pitch.Segment_I.pitch_handlers import *
+from Scores.passagenwerk.Components.attachments.Segment_I.dynamic_handlers import *
 from Scores.passagenwerk.Components.score_structure.instruments import instruments
 from Scores.passagenwerk.Components.score_structure.instruments import (
     voice_to_name_dict,
@@ -29,7 +29,7 @@ timespan_maker = TaleaTimespanMaker(
     # initial_silence_talea=rmakers.Talea(counts=([0, 5, 3, 6, 2]), denominator=8),
     # synchronize_step=True, #goes down voices instead of across? maybe not consistent...
     # synchronize_groupings=True, #goes down voices instead of across? maybe not consistent...
-    playing_talea=rmakers.Talea(counts=([5, 3, 2, 6]), denominator=4),
+    playing_talea=rmakers.Talea(counts=([2, 3, 2, 4, 3, 6]), denominator=4),
     # playing_groupings=(
     #     [1, 2, 3, 2]
     # ),  # smashes timespans together without intermittent silence
@@ -41,7 +41,7 @@ timespan_list = timespan_maker(
     music_specifiers=music_specifiers, target_timespan=target_timespan
 )
 
-cyclic_materials = timespan_functions.cyc(pitch_material_list)
+cyclic_materials = timespan_functions.cyc(dynamic_material_list)
 
 master_list = []
 
@@ -65,7 +65,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
     for timespan in timespan_dict["items"]:
         if isinstance(timespan, abjad.AnnotatedTimespan):
             timespan.annotation = timespan_functions.TimespanSpecifier(
-                voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
+                voice_name=f"Voice {i}", handler=next(cyclic_materials)
             )
             ts_list.append(timespan)
         elif isinstance(timespan, PerformedTimespan):
@@ -73,7 +73,7 @@ for i, timespan_dict in enumerate(sorted_voice_dict_list):
                 start_offset=timespan.start_offset,
                 stop_offset=timespan.stop_offset,
                 annotation=timespan_functions.TimespanSpecifier(
-                    voice_name=f"Voice {i}", pitch_handler=next(cyclic_materials)
+                    voice_name=f"Voice {i}", handler=next(cyclic_materials)
                 ),
             )
             ts_list.append(timespan)
@@ -94,14 +94,14 @@ for x in master_list:
 
 master_length = len(master_list)
 voices = [f"Voice {i + 1}" for i in range(master_length)]
-pitch_timespans = {
+dynamic_timespans = {
     voice: timespan_list for voice, timespan_list in zip(voices, master_list)
 }
 
 # persist timespan_list
 directory = "/Users/evansdsg2/Scores/passagenwerk/Segments/Segment_I"
-pdf_path = f"{directory}/Segment_I_pitch_timespans.pdf"
-path = pathlib.Path("Segment_I_pitch_timespans.pdf")
+pdf_path = f"{directory}/Segment_I_dynamic_timespans.pdf"
+path = pathlib.Path("Segment_I_dynamic_timespans.pdf")
 if path.exists():
     print(f"Removing {pdf_path} ...")
     path.unlink()

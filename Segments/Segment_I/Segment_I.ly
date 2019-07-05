@@ -69,26 +69,27 @@
                     \set Staff.instrumentName =
                     \markup { "Violin I-1" }
                     aqs'8
+                    \f
+                    \>
                     [
                     aqf'16
-                    af'16
-                    ~
-                    af'8
+                    af'8.
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 14/13 {
                         % [Voice 1 measure 2] %! COMMENT_MEASURE_NUMBERS
                         af'8.
+                        \p
                         ]
                         g'4
-                        bf'8
-                        ~
+                        \mf
+                        \<
+                        bf'8.
                         [
-                        bf'16
-                        aqf'16
-                        ~
-                        aqf'8
+                        aqf'8.
                         ]
+                        <>
+                        \f
                     }
                     % [Voice 1 measure 3] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -105,9 +106,14 @@
                     % [Voice 1 measure 5] %! COMMENT_MEASURE_NUMBERS
                     r4
                     aqs'8
+                    \sfp
+                    \<
                     [
                     aqf'8
+                    \ff
                     af'16
+                    \p
+                    \<
                     g'8.
                     ~
                     \times 4/5 {
@@ -121,16 +127,18 @@
                         bf'8
                         aqf'16
                         ]
+                        <>
+                        \mf
                     }
                     r4
                     % [Voice 1 measure 7] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \times 16/17 {
                         \times 2/3 {
-                            b'64.
-                            ~
+                            b'32
+                            \ppppp
+                            \<
                             [
-                            b'128
                             c''64
                             ~
                             c''64.
@@ -141,18 +149,12 @@
                             dqs''128
                             ~
                             dqs''64
-                            dqf''128
-                            ~
-                            dqf''64.
+                            dqf''32
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            b'32.
-                            ~
-                            b'64
-                            c''64
-                            ~
-                            c''32
+                            b'16
+                            c''32.
                         }
                         b'32
                     }
@@ -160,11 +162,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
                             % [Voice 1 measure 8] %! COMMENT_MEASURE_NUMBERS
-                            c''64.
-                            ~
-                            c''64
-                            ~
-                            c''128
+                            c''32.
                             aqf'128
                             ~
                             aqf'32
@@ -177,20 +175,12 @@
                             fs'256
                             ~
                             fs'64
-                            gqf'256
-                            ~
-                            gqf'128.
-                            ~
-                            gqf'128
+                            gqf'64.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            g'32.
-                            ~
-                            g'64
-                            bf'64
-                            ~
-                            bf'32
+                            g'16
+                            bf'32.
                         }
                         aqf'16
                     }
@@ -198,19 +188,25 @@
                     bf'8
                     ~
                     bf'8.
+                    \mp
                     aqs'16
+                    \f
+                    \>
                     ~
                     aqs'16
                     bf16
                     bqf8
                     ~
+                    ]
                     \times 8/9 {
                         % [Voice 1 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        bqf8.
-                        ~
-                        bqf16
+                        bqf4
+                        \p
                         b8
+                        \mf
+                        \<
                         ~
+                        [
                         b8
                         bf16
                         ~
@@ -218,7 +214,10 @@
                     % [Voice 1 measure 10] %! COMMENT_MEASURE_NUMBERS
                     bf8
                     b'8
+                    \f
                     c''16
+                    \sfp
+                    \<
                     b'16
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
@@ -230,24 +229,25 @@
                         dqf''16
                         c''16
                         aqs'16
+                        \ff
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 5/4 {
                         % [Voice 1 measure 12] %! COMMENT_MEASURE_NUMBERS
                         aqf'8
+                        \mf
+                        \<
                         af'8
                         g'8
-                        \times 4/5 {
-                            bf'32
-                            aqf'8
-                        }
+                        bf'8
                     }
                     % [Voice 1 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    aqf'16
                     b'16
-                    c''16
                     ]
-                    r8
-                    r4
+                    <>
+                    \f
+                    r4.
                 }
             }
             \context Staff = "Staff 2"
@@ -270,12 +270,10 @@
                     \times 10/13 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            b'16.
-                            ~
+                            b'8.
+                            \p
+                            \<
                             [
-                            b'16
-                            ~
-                            b'32
                             c''32
                             ~
                             c''8
@@ -289,30 +287,21 @@
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/9 {
-                            fqs'16.
-                            ~
-                            fqs'32
+                            fqs'8
                             fs'16
                             ~
                             fs'16.
                         }
-                        \times 4/5 {
-                            gqf'32
-                            ~
-                            gqf'32.
-                            ~
-                        }
-                        gqf'8
+                        gqf'8.
+                        \mf
                     }
                     \times 16/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
-                            g'64.
-                            ~
-                            g'64
-                            ~
-                            g'128
+                            g'32.
+                            \f
+                            \>
                             bf'128
                             ~
                             bf'32
@@ -329,12 +318,8 @@
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
-                            bf'64
-                            ~
-                            bf'128
-                            dqf''128
-                            ~
-                            dqf''64
+                            bf'64.
+                            dqf''64.
                         }
                         c''32.
                         ]
@@ -350,7 +335,10 @@
                         \times 2/3 {
                             bf'32.
                             aqf'32.
+                            \p
                             b'32.
+                            \mf
+                            \<
                         }
                         c''32
                         ~
@@ -362,13 +350,9 @@
                         \times 4/5 {
                             % [Voice 2 measure 4] %! COMMENT_MEASURE_NUMBERS
                             g'64
-                            fs'128
-                            ~
-                            fs'64
+                            fs'64.
                         }
-                        eqf'16
-                        ~
-                        eqf'16
+                        eqf'8
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
                             eqs'16
@@ -377,15 +361,13 @@
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            aqs32.
-                            ~
-                            aqs64
-                            bf64
-                            ~
-                            bf32
+                            aqs16
+                            bf32.
                         }
                         a16
                         ]
+                        <>
+                        \f
                     }
                     r8
                     % [Voice 2 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -396,52 +378,44 @@
                     \stopStaff \startStaff
                     % [Voice 2 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r8
-                    af8
-                    ~
-                    af4
-                    aqf8
-                    [
-                    aqs8
-                    ]
+                    af4.
+                    \p
+                    \<
+                    <>
+                    \mf
+                    aqf4
+                    \f
+                    \>
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 2 measure 7] %! COMMENT_MEASURE_NUMBERS
-                        bqf4.
-                        ~
-                        bqf8
-                        [
-                        b'8
-                        ]
-                        bf'4
+                        aqs2
+                        c''8
+                        b'4
                         ~
                     }
                     % [Voice 2 measure 8] %! COMMENT_MEASURE_NUMBERS
-                    bf'8
+                    b'8
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 7/8 {
-                        bf'4
-                        \times 4/7 {
-                            g'16
-                            ~
-                            g'4.
-                            ~
-                        }
+                        b'4
+                        bf'4.
+                        \p
                         g'8
+                        \ppppp
+                        \<
+                        ~
                         [
+                        g'8
                         fs'8
                         ~
-                        fs'8
-                        eqf'8
-                        ~
+                        ]
                     }
                     % [Voice 2 measure 9] %! COMMENT_MEASURE_NUMBERS
-                    eqf'8
-                    ~
-                    eqf'8
-                    ~
-                    eqf'8
-                    ]
+                    fs'4.
+                    <>
+                    \mp
                     r8
                     % [Voice 2 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -453,78 +427,61 @@
                     r4
                     \times 16/17 {
                         \times 2/3 {
-                            eqs'128.
-                            ~
+                            eqf'64
+                            \mf
+                            \<
                             [
-                            eqs'256
-                            eqf'128
+                            eqs'128
                             ~
-                            eqf'128.
+                            eqs'128.
                         }
-                        eqs'32
+                        eqf'32
                         \times 2/3 {
+                            eqs'128
+                            dqf'256
+                            ~
                             dqf'128
-                            dqs'256
-                            ~
-                            dqs'128
-                            fqs'256
-                            ~
-                            fqs'128.
+                            dqs'64
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
+                            fqs'32
                             eqs'64.
-                            ~
-                            eqs'128
-                            eqf'128
-                            ~
-                            eqf'64
                         }
-                        dqs'64
+                        eqf'64
+                        \f
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 20/21 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
                             % [Voice 2 measure 12] %! COMMENT_MEASURE_NUMBERS
-                            fs'32.
-                            ~
-                            fs'32
-                            ~
+                            dqs'16.
+                            \p
+                            \<
                             fs'64
-                            eqs'64
                             ~
-                            \times 16/25 {
-                                eqs'32..
-                                d'32
-                                dqf'128.
-                            }
+                            fs'16
                         }
-                        d'16
+                        eqs'16
                         ~
-                        d'16
+                        eqs'16
                         \times 4/5 {
+                            d'32
+                            dqf'128
+                            ~
                             dqf'32
-                            bf128
-                            ~
-                            bf32
-                            bqs128
-                            ~
-                            bqs64.
-                            ~
-                            bqs64
+                            d'32.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            aqs16.
-                            ~
-                            aqs32
-                            bf32
-                            ~
-                            bf16
+                            dqf'8
+                            bf16.
                         }
-                        bf8
+                        bqf8
                         ]
+                        <>
+                        \mf
                     }
                     % [Voice 2 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -550,6 +507,10 @@
                     \stopStaff \startStaff
                     % [Voice 3 measure 2] %! COMMENT_MEASURE_NUMBERS
                     f'4
+                    \mf
+                    \<
+                    <>
+                    \f
                     r8
                     r2
                     % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
@@ -560,87 +521,99 @@
                     \stopStaff \startStaff
                     % [Voice 3 measure 4] %! COMMENT_MEASURE_NUMBERS
                     fs'4.
+                    \sfp
+                    \<
                     ~
                     % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
                     fs'8
                     [
-                    aqs8
-                    bf16
-                    dqf'8.
+                    bqs8
+                    aqs16
+                    bf8.
                     ~
-                    dqf'8
-                    bqs16
-                    d'16
+                    bf8.
+                    \ff
+                    aqs16
+                    \f
+                    \>
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13 {
                         % [Voice 3 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        d'8.
-                        dqs'8
-                        ~
-                        dqs'16
-                        d'16
+                        aqs8.
+                        bf8.
+                        dqf'16
                         ~
                         ]
-                        \times 2/3 {
-                            d'4
-                            dqf'16..
-                            [
-                            eqs'64
-                        }
-                        fs'8
+                        dqf'4
+                        \p
+                        bqs8
+                        \mf
+                        \<
+                        [
                     }
                     % [Voice 3 measure 7] %! COMMENT_MEASURE_NUMBERS
-                    eqf'8
+                    d'8
                     ]
+                    <>
+                    \f
                     r8
                     r2
                     % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
                     r8
-                    eqs'8
-                    ~
+                    dqs'4.
+                    \p
+                    \<
+                    <>
+                    \mf
+                    d'4
+                    \f
+                    \>
+                    bf8.
                     [
-                    eqs'8
-                    fqs'8
+                    b16
+                    ~
                     ]
-                    eqs'4
-                    b8.
-                    [
-                    c'16
-                    ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        c'8.
+                        b4
+                        \p
+                        c'16
+                        \ppppp
+                        \<
                         ~
+                        [
                         c'16
                         cqs'16
-                        ~
-                        cqs'16
-                        bqs16
                     }
-                    bqf8
+                    bqs8
                     ~
+                    ]
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
                         % [Voice 3 measure 10] %! COMMENT_MEASURE_NUMBERS
-                        bqf8.
-                        ~
+                        bqs4
+                        \mp
                         bqf16
-                        bf16
+                        \mf
+                        \<
                         ~
+                        [
                     }
                     % [Voice 3 measure 11] %! COMMENT_MEASURE_NUMBERS
-                    bf8
-                    ~
+                    bqf8.
                     bf16
-                    b16
-                    c'8
+                    b8
+                    \f
                     % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
-                    cqs'8
+                    c'8
+                    \p
+                    \<
                     ]
-                    r4
-                    r4
+                    <>
+                    \mf
+                    r2
                     % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -665,62 +638,58 @@
                     \stopStaff \startStaff
                     % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
                     r4.
-                    g'4
-                    fs'4
+                    dqf'4
+                    \mf
+                    \<
+                    eqs'4
+                    \f
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
-                            eqf'16.
-                            ~
+                            fs'8.
+                            \f
+                            \>
                             [
+                            eqf'32
+                            ~
+                            eqf'8
+                        }
+                        eqs'8
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 5/9 {
+                            fqs'16.
+                            eqs'16.
+                            g'16.
+                        }
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 5/9 {
+                            fs'8
                             eqf'16
                             ~
-                            eqf'32
-                            eqs'32
-                            ~
-                            eqs'8
-                        }
-                        fqs'8
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 5/9 {
-                            fs'16.
-                            dqs'16.
-                            dqf'16.
-                        }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 5/9 {
                             eqf'16.
-                            ~
-                            eqf'32
-                            eqs'16
-                            ~
-                            eqs'16.
                         }
-                        eqf'16
-                        ~
-                        eqf'8
+                        eqs'8.
+                        \p
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 24/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
-                            dqs'32.
-                            ~
-                            dqs'32
-                            ~
-                            dqs'64
+                            fqs'16.
+                            \mf
+                            \<
                             fs'64
                             ~
                             fs'16
                         }
-                        g'64
+                        dqs'64
                         ~
-                        g'16
+                        dqs'16
                         ~
-                        g'64
+                        dqs'64
                         \times 2/3 {
                             a'32.
                             <b' e''>32.
@@ -728,12 +697,8 @@
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
-                            bf''32
-                            ~
-                            bf''64
-                            af''64
-                            ~
-                            af''32
+                            bf''32.
+                            af''32.
                         }
                         <g b>16.
                     }
@@ -755,6 +720,8 @@
                         bf16.
                         cs'8.
                         ]
+                        <>
+                        \f
                     }
                     r4
                     % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -764,38 +731,39 @@
                     R1 * 3/8
                     \stopStaff \startStaff
                     % [Voice 4 measure 7] %! COMMENT_MEASURE_NUMBERS
-                    <c'' fs''>4
-                    ~
-                    <c'' fs''>8
-                    [
-                    eqs'8
-                    ~
-                    ]
-                    eqs'4
+                    <c'' fs''>4.
+                    \sfp
+                    \<
+                    eqs'4.
                     ~
                     \times 4/5 {
                         % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
                         eqs'4
-                        fqs'8
-                        ~
-                        fqs'4
+                        dqf'4.
+                        <>
+                        \ff
                     }
                     r2
                     % [Voice 4 measure 9] %! COMMENT_MEASURE_NUMBERS
                     r4
-                    fs'4
+                    eqf'4
+                    \ppppp
+                    \<
                     ~
                     % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
-                    fs'4.
+                    eqf'4.
+                    \mp
                     % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
-                    fqs'8
+                    eqs'8
+                    \p
+                    \<
                     [
                     \times 4/5 {
-                        eqs'8
-                        dqf'16
-                        ~
-                        dqf'8
+                        eqf'8
+                        dqs'8.
                         ]
+                        <>
+                        \mf
                     }
                     % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -822,6 +790,8 @@
                     \markup { Viola-1 }
                     r4
                     aqs8
+                    \f
+                    \>
                     ~
                     [
                     % [Voice 5 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -829,47 +799,56 @@
                     bqf16
                     ~
                     bqf16
+                    \p
                     c'16
+                    \mf
+                    \<
                     cqs'8
                     ~
+                    ]
                     \times 8/9 {
-                        cqs'8.
-                        ~
-                        cqs'16
+                        cqs'4
                         bqs8
                         ~
+                        [
                         bqs8
                         cs'16
                         ~
                     }
                     % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
                     cs'8
-                    dqf'8
-                    ~
-                    dqf'8
+                    \f
+                    ]
+                    dqf'4
+                    \mf
+                    \<
                     ~
                     dqf'16
+                    [
                     dqs'16
                     ~
                     dqs'16
+                    \f
                     fqs'16
+                    \p
+                    \<
                     ]
                     % [Voice 5 measure 4] %! COMMENT_MEASURE_NUMBERS
                     eqs'4.
                     ~
                     % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
                     eqs'2.
+                    <>
+                    \mf
                     % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r2
                     e''4
+                    \f
+                    \>
                     ~
                     % [Voice 5 measure 7] %! COMMENT_MEASURE_NUMBERS
-                    e''4
-                    ~
-                    e''8
-                    [
+                    e''4.
                     eqf'8
-                    ]
                     dqs'4
                     ~
                     % [Voice 5 measure 8] %! COMMENT_MEASURE_NUMBERS
@@ -877,10 +856,19 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
                         fs'4.
+                        \p
                         eqs'4
+                        \mf
+                        \<
+                        <>
+                        \f
                     }
                     % [Voice 5 measure 9] %! COMMENT_MEASURE_NUMBERS
-                    dqf'4
+                    cqs'4
+                    \p
+                    \<
+                    <>
+                    \mf
                     r4
                     % [Voice 5 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -890,14 +878,20 @@
                     \stopStaff \startStaff
                     % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
                     r8
-                    cqs'8
+                    dqf'8
+                    \sfp
+                    \<
                     [
-                    c'8
+                    cqs'8
+                    \ff
                     ]
                     % [Voice 5 measure 12] %! COMMENT_MEASURE_NUMBERS
-                    b4
-                    r8
-                    r4
+                    c'4
+                    \f
+                    \>
+                    <>
+                    \p
+                    r4.
                     % [Voice 5 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -916,54 +910,55 @@
                     \set Staff.instrumentName =
                     \markup { Viola-2 }
                     cs''4.
+                    \ppppp
+                    \<
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 7/8 {
                         % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
                         cs''8
-                        [
-                        \times 4/7 {
-                            c'32
-                            ~
-                            c'8.
-                            ~
-                            ]
-                        }
-                        c'4
+                        c'4.
+                        \mp
                         <b ef'>4
+                        \mf
+                        \<
                         f'4
                         ~
                     }
                     % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
                     f'4
+                    \f
                     b'16
+                    \mf
+                    \<
                     [
                     bf'16
                     ~
                     bf'8.
+                    \f
                     e''16
+                    \p
+                    \<
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
                         e''8
-                        \times 2/3 {
-                            <d' d''>32
-                            ~
-                            <d' d''>16
-                            ~
-                            ]
-                        }
+                        <d' d''>16
+                        ~
+                        ]
                         <d' d''>4
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 8/7 {
                         % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        bf8
+                        b8
                         [
-                        aqs16
+                        bf16
                         ]
-                        aqf4
+                        aqs4
+                        <>
+                        \mf
                     }
                     r4
                     % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -974,6 +969,8 @@
                     \stopStaff \startStaff
                     % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
                     f'8
+                    \sfp
+                    \<
                     [
                     cs'8
                     ~
@@ -983,17 +980,22 @@
                     d'16
                     dqf'8.
                     ]
+                    <>
+                    \ff
                     % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     g'4
+                    \f
+                    \>
                     ~
                     % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
                     g'8
-                    [
-                    a'8
-                    ~
-                    ]
-                    a'4
+                    \p
+                    a'4.
+                    \mf
+                    \<
+                    <>
+                    \f
                     % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1039,268 +1041,226 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \times 4/5 {
-                            gqs32
+                            aqf32
+                            \p
+                            \<
                             [
-                            af64
-                            ~
-                            af32
+                            gqs32.
+                            ]
                         }
-                        a8
-                        ~
-                        a8
+                        af4
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            bf8
-                            aqs16
-                            aqf8
+                            a8
+                            [
+                            bf16
+                            aqs8
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
+                            aqf8
                             gqs16.
-                            ~
-                            gqs32
-                            g32
-                            ~
-                            g16
                         }
-                        af8
+                        g8
+                        \mf
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \times 4/5 {
                             % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
-                            a32
-                            aqs64
-                            ~
-                            aqs32
+                            af32
+                            \f
+                            \>
+                            a32.
+                            ]
                         }
-                        aqf8
-                        ~
-                        aqf8
+                        aqs4
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            aqs8
-                            bf16
-                            b8
+                            aqf8
+                            [
+                            aqs16
+                            bf8
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
+                            b8
                             c'16.
-                            ~
-                            c'32
-                            cqs'32
-                            ~
-                            cqs'16
+                            \p
                         }
-                        dqf'8
+                        cqs'8
+                        \ppppp
+                        \<
                     }
                     \times 16/17 {
                         \times 2/3 {
                             % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            dqf'32
+                            cqs'64
+                            ~
                             cqs'64.
-                            ~
-                            cqs'128
-                            cs'64
-                            ~
-                            cs'64.
                         }
-                        d'16
+                        cs'16
                         \times 2/3 {
+                            d'64
+                            cs'128
+                            ~
                             cs'64
-                            dqf'128
-                            ~
-                            dqf'64
-                            dqs'128
-                            ~
-                            dqs'64.
+                            dqf'32
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
+                            dqs'16
                             dqf'32.
-                            ~
-                            dqf'64
-                            d'64
-                            ~
-                            d'32
                         }
-                        cs'32
+                        d'32
                     }
                     \times 2/3 {
-                        d'8
-                        dqs'16
+                        cs'8
+                        d'16
                         ~
                     }
                     % [Voice 7 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    d'16
                     dqs'16
-                    eqf'16
-                    dqs'8
-                    ~
-                    dqs'8
-                    ef'8
                     ]
-                    e'4
+                    eqf'4.
+                    \mp
+                    dqs'4
+                    \mf
+                    \<
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
-                        \times 2/3 {
-                            % [Voice 7 measure 6] %! COMMENT_MEASURE_NUMBERS
-                            ef'8
-                            [
-                            eqf'32
-                            eqs'8
-                        }
-                        fqs'8
+                        % [Voice 7 measure 6] %! COMMENT_MEASURE_NUMBERS
+                        ef'8.
+                        [
+                        e'8
                         ~
                     }
-                    fqs'8
+                    e'8
                     ~
-                    fqs'16
-                    f'16
-                    ~
-                    f'16
                     e'16
+                    \f
+                    ef'16
+                    \p
+                    \<
+                    ~
+                    ef'16
+                    eqf'16
+                    ]
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 7 measure 7] %! COMMENT_MEASURE_NUMBERS
-                        ef'8.
-                        ~
-                        ef'8
-                        ~
-                        ef'16
-                        eqf'16
-                        ]
+                        eqs'4.
+                        fqs'16
+                        <>
+                        \mf
                     }
-                    r8
-                    r4
+                    r4.
                     % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
-                    r2.
-                    r8
+                    r2..
                     \times 16/21 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
-                            dqs'128.
-                            ~
+                            f'64.
+                            \f
+                            \>
                             [
-                            dqs'128
+                            e'256
                             ~
-                            dqs'256
-                            eqf'256
-                            ~
-                            eqf'64
+                            e'64
                         }
                         ef'64
                         ~
                         ef'64
                         \times 4/5 {
-                            e'128
-                            ef'512
+                            eqf'128
+                            dqs'512
                             ~
-                            ef'128
-                            eqf'512
-                            ~
-                            eqf'256.
-                            ~
-                            eqf'256
+                            dqs'128
+                            eqf'128.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            eqs'64.
-                            ~
-                            eqs'128
-                            fqs'128
-                            ~
-                            fqs'64
+                            ef'32
+                            e'64.
                         }
-                        fs'32
+                        ef'32
+                        \p
                     }
                     \times 8/13 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
+                            eqf'32.
+                            \mf
+                            \<
+                            eqs'128
+                            ~
+                            eqs'32
+                        }
+                        fqs'32
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 5/9 {
+                            fs'64.
                             g'64.
-                            ~
-                            g'64
-                            ~
-                            g'128
-                            af'128
-                            ~
-                            af'32
+                            af'64.
                         }
-                        gqs'32
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/9 {
+                            gqs'32
+                            gqf'64
+                            ~
                             gqf'64.
-                            gqs'64.
-                            af'64.
                         }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 5/9 {
-                            a'64.
-                            ~
-                            a'128
-                            af'64
-                            ~
-                            af'64.
-                        }
-                        aqf'64
-                        ~
-                        aqf'32
+                        gqs'32.
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 24/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            aqs'32.
+                            af'16.
+                            a'64
                             ~
-                            aqs'32
-                            ~
-                            aqs'64
-                            bqf'64
-                            ~
-                            bqf'16
+                            a'16
                         }
-                        bf'64
+                        af'64
                         ~
-                        bf'16
+                        af'16
                         ~
-                        bf'64
+                        af'64
                         \times 2/3 {
-                            b'32.
-                            bf'32.
+                            aqf'32.
+                            aqs'32.
                             bqf'32.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
-                            \times 4/5 {
-                                aqs'32
-                                ~
-                                aqs'128
-                                ~
-                            }
-                            aqs'64
-                            aqf'64
-                            ~
-                            aqf'32
+                            bf'32.
+                            b'32.
                         }
-                        a'16.
+                        bf'16.
                     }
                     \times 8/15 {
                         % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
-                        bqs64.
-                        aqs64.
-                        aqf32
+                        fs'64.
+                        g'64.
+                        fqs'32
                         ~
-                        aqf64
+                        fqs'64
                         \times 2/3 {
-                            aqs64.
-                            aqf64.
-                            bqs64.
+                            fs'64.
+                            fqs'64.
+                            eqs'64.
                         }
-                        bf64
+                        dqf'64
                         ~
-                        bf128
-                        cqs'64.
-                        dqf'32.
+                        dqf'128
+                        bqs64.
+                        aqs32.
                         ]
+                        <>
+                        \f
                     }
                     r4
                     % [Voice 7 measure 11] %! COMMENT_MEASURE_NUMBERS
@@ -1341,23 +1301,26 @@
                     \times 14/13 {
                         % [Voice 8 measure 2] %! COMMENT_MEASURE_NUMBERS
                         ef'8.
+                        \sfp
+                        \<
                         [
-                        d'8
-                        ~
-                        d'16
+                        <>
+                        \ff
+                        d'8.
+                        \mf
+                        \<
                         dqf'16
                         ~
-                        \times 4/7 {
-                            dqf'32.
-                            ]
-                            bf4.
-                            bqs64
-                            [
-                        }
-                        aqs8
+                        ]
+                        dqf'4
+                        bf8
+                        \f
+                        [
                     }
                     % [Voice 8 measure 3] %! COMMENT_MEASURE_NUMBERS
-                    bf16
+                    bqs16
+                    \p
+                    \<
                     aqs16
                     ~
                     ]
@@ -1367,6 +1330,8 @@
                     [
                     bf8.
                     ]
+                    <>
+                    \mf
                     % [Voice 8 measure 4] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1374,220 +1339,189 @@
                     R1 * 3/16
                     \stopStaff \startStaff
                     % [Voice 8 measure 5] %! COMMENT_MEASURE_NUMBERS
-                    r4
-                    r8
+                    r4.
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        dqf'16
+                        aqs16
+                        \f
+                        \>
                         [
+                        bf16
+                        dqf'16
+                        \p
                         bqs16
+                        \ppppp
+                        \<
                         d'16
                         dqs'16
                         d'16
-                        dqf'16
-                        eqs'16
                     }
                     % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    dqf'16
+                    eqs'16
                     fs'16
                     eqf'16
                     eqs'16
                     fqs'16
                     eqs'16
                     g'16
+                    \mp
                     fs'16
+                    \mf
+                    \<
                     eqf'16
                     eqs'16
                     fqs'16
+                    % [Voice 8 measure 7] %! COMMENT_MEASURE_NUMBERS
                     fs'16
                     dqs'16
-                    % [Voice 8 measure 7] %! COMMENT_MEASURE_NUMBERS
-                    dqf'16
-                    eqf'16
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \times 4/5 {
-                            eqs'32
-                            eqf'64
-                            ~
-                            eqf'32
+                            dqf'32
+                            eqf'32.
+                            ]
                         }
-                        dqs'8
-                        ~
-                        dqs'8
+                        eqs'4
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            cqs'8
-                            dqf'16
-                            bf8
+                            aqf8
+                            [
+                            aqs16
+                            aqf8
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            bqs16.
-                            ~
-                            bqs32
-                            aqs32
-                            ~
-                            \times 4/5 {
-                                aqs64.
-                                aqf32..
-                            }
+                            bqs8
+                            bf16.
                         }
-                        aqs8
+                        cqs'8
                     }
                     \times 16/17 {
                         \times 2/3 {
                             % [Voice 8 measure 8] %! COMMENT_MEASURE_NUMBERS
-                            aqf128.
+                            dqf'64
+                            cqs'128
                             ~
-                            aqf256
-                            aqf128
-                            ~
-                            aqf128.
+                            cqs'128.
                         }
-                        g32
+                        dqf'32
                         \times 2/3 {
-                            aqs128
-                            aqf256
+                            bf128
+                            bqs256
                             ~
-                            aqf128
-                            aqs256
-                            ~
-                            aqs128.
+                            bqs128
+                            aqs64
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            aqf64.
-                            ~
-                            aqf128
-                            bqs128
-                            ~
-                            bqs64
+                            aqf32
+                            aqs64.
                         }
-                        dqf'64
+                        aqf64
                         ]
+                        <>
+                        \f
                     }
-                    r8
-                    r2.
+                    r2..
                     % [Voice 8 measure 9] %! COMMENT_MEASURE_NUMBERS
                     r8
-                    b8
-                    ~
-                    b4
+                    aqf4.
+                    \p
+                    \<
                     ~
                     % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
-                    b8
-                    bqs4
+                    aqf4.
+                    \mf
                     \times 4/7 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
                             % [Voice 8 measure 11] %! COMMENT_MEASURE_NUMBERS
-                            b32.
-                            ~
+                            g16.
+                            \f
+                            \>
                             [
-                            b32
+                            aqs64
                             ~
-                            b64
-                            bf64
-                            ~
-                            bf16
+                            aqs16
                         }
-                        g16
+                        aqf16
                         ~
-                        g16
+                        aqf16
                         \times 4/5 {
+                            aqs32
+                            aqf128
+                            ~
                             aqf32
-                            b128
-                            ~
-                            b32
-                            bqs128
-                            ~
-                            bqs64.
-                            ~
-                            bqs64
+                            bqs32.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
-                            \times 4/5 {
-                                cqs'16..
-                                ~
-                                cqs'128
-                                ~
-                            }
-                            cqs'32
-                            bqs32
-                            ~
-                            bqs16
+                            dqf'8
+                            b16.
                         }
-                        aqf8
+                        bqs8
+                        \p
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 8 measure 12] %! COMMENT_MEASURE_NUMBERS
-                            bf16.
-                            ~
-                            bf16
-                            ~
+                            b8.
+                            \mf
+                            \<
                             bf32
-                            cqs'32
                             ~
-                            cqs'8
+                            bf8
                         }
-                        bqs8
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 5/9 {
-                            cqs'16.
-                            dqf'16.
-                            bf16.
-                        }
+                        g8
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/9 {
                             aqf16.
-                            ~
-                            aqf32
-                            b16
-                            ~
                             b16.
+                            bqs16.
                         }
-                        bqs16
-                        ~
-                        bqs8
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 5/9 {
+                            cqs'8
+                            bqs16
+                            ~
+                            bqs16.
+                        }
+                        aqf8.
                     }
                     \times 16/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 8 measure 13] %! COMMENT_MEASURE_NUMBERS
-                            af'16.
+                            bqf'8.
+                            aqs'32
                             ~
-                            af'16
-                            ~
-                            af'32
-                            a'32
-                            ~
-                            a'8
+                            aqs'8
                         }
-                        aqs'32
+                        aqf'32
                         ~
-                        aqs'8
+                        aqf'8
                         ~
-                        aqs'32
+                        aqf'32
                         \times 2/3 {
-                            aqf'16.
-                            gqs'16.
+                            a'16.
                             af'16.
+                            a'16.
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
-                            g'16
-                            ~
-                            g'32
-                            af'32
-                            ~
-                            af'16
+                            aqs'16.
+                            aqf'16.
+                            \f
                         }
                         gqs'8.
+                        \mf
+                        \<
                         ]
+                        <>
+                        \f
                     }
                 }
             }
@@ -1609,29 +1543,31 @@
                     r4.
                     \times 4/5 {
                         <c'' d''>8
+                        \p
+                        \<
                         [
                         af'8
-                        e'8
-                        ~
                         ]
-                        e'4
+                        e'4.
                         ~
                     }
                     % [Voice 9 measure 3] %! COMMENT_MEASURE_NUMBERS
                     e'4
-                    a'8
-                    ~
-                    a'4
+                    \mf
+                    a'4.
+                    \sfp
+                    \<
+                    <>
+                    \ff
                     % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
-                    <ef' g'>8
-                    [
-                    fs'8
-                    g'8
+                    <ef' g'>4
+                    \f
+                    \>
+                    eqf'8
                     ~
-                    ]
                     \times 4/5 {
                         % [Voice 9 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        g'4.
+                        eqf'4.
                         g'8
                         [
                         c''8
@@ -1639,6 +1575,8 @@
                         ]
                     }
                     c''4
+                    <>
+                    \p
                     % [Voice 9 measure 6] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1648,13 +1586,13 @@
                     \times 8/9 {
                         % [Voice 9 measure 7] %! COMMENT_MEASURE_NUMBERS
                         bf'16
+                        \mf
+                        \<
                         [
                         fs'8
                         ~
                         fs'16
-                        <fs bf>32
-                        ~
-                        <fs bf>16.
+                        <fs bf>8
                         ~
                         <fs bf>8.
                     }
@@ -1670,17 +1608,25 @@
                         g''8
                         ]
                         ef''4
+                        \f
                         <e'' a''>16
+                        \ppppp
+                        \<
                         ~
                         [
                         <e'' a''>8
-                        b8.
+                        bf8.
                         ~
                     }
                     % [Voice 9 measure 9] %! COMMENT_MEASURE_NUMBERS
-                    b8
                     bf8
+                    \mp
+                    cqs'8
+                    \mf
+                    \<
                     ]
+                    <>
+                    \f
                     r4
                     % [Voice 9 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
