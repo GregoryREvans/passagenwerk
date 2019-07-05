@@ -1,4 +1,4 @@
-from Scores.passagenwerk.Components.attachments.Segment_I.dynamic_handlers import *
+from Scores.passagenwerk.Components.dynamics.Segment_I.dynamic_handlers import *
 
 
 key_list_1 = [
@@ -31,9 +31,7 @@ dict = {
 
 material_list_1 = [dict[x] for x in key_list_1]
 
-materials = [
-    material_list_1,
-]
+materials = [material_list_1]
 dynamic_material_list = []
 for x in materials:
     dynamic_material_list.extend(x)

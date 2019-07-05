@@ -43,9 +43,7 @@ for voice_name, timespan_list in rhythm_timespans.items():
             abjad.AnnotatedTimespan(
                 start_offset=silence_timespan.start_offset,
                 stop_offset=silence_timespan.stop_offset,
-                annotation=TimespanSpecifier(
-                    handler=None, voice_name=voice_name
-                ),
+                annotation=TimespanSpecifier(handler=None, voice_name=voice_name),
             )
         )
     timespan_list.sort()
@@ -75,15 +73,13 @@ for voice_name, timespan_list in rhythm_timespans.items():
         durations = [timespan.duration for timespan in grouper]
         container = make_container(handler, durations)
         voice = score[voice_name]
-        voice.append(
-            container[:]
-        )
+        voice.append(container[:])
 
 print("Splitting and rewriting ...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
     for i, shard in enumerate(abjad.mutate(voice[:]).split(time_signatures)):
         time_signature = time_signatures[i]
-        abjad.mutate(shard).rewrite_meter(time_signature)#, boundary_depth=1)
+        abjad.mutate(shard).rewrite_meter(time_signature)  # , boundary_depth=1)
 
 
 print("Handling Pitches ...")
@@ -126,36 +122,34 @@ for voice_name, sub_timespan_list in dynamic_timespans.items():
         else:
             target_timespan.annotation.handler(selection)
 
+
 print("Adding Multimeasure Rests and cutaway...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
     leaves = abjad.select(voice).leaves()
     for shard in abjad.mutate(leaves).split(time_signatures):
         if not all(isinstance(leaf, abjad.Rest) for leaf in shard):
             continue
+        indicators = abjad.inspect(shard[0]).indicators()
         multiplier = abjad.inspect(shard).duration() / 2
         invisible_rest = abjad.Rest(1, multiplier=(multiplier))
-        rest_literal = abjad.LilyPondLiteral(r'\once \override Rest.transparent = ##t', 'before')
+        rest_literal = abjad.LilyPondLiteral(
+            r"\once \override Rest.transparent = ##t", "before"
+        )
         abjad.attach(rest_literal, invisible_rest)
+        for indicator in indicators:
+            abjad.attach(indicator, invisible_rest)
         multimeasure_rest = abjad.MultimeasureRest(1, multiplier=(multiplier))
         start_command = abjad.LilyPondLiteral(
-                r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
-                format_slot="before",
-            )
+            r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
+            format_slot="before",
+        )
         stop_command = abjad.LilyPondLiteral(
-                r"\stopStaff \startStaff", format_slot="after"
-            )
+            r"\stopStaff \startStaff", format_slot="after"
+        )
         abjad.attach(start_command, invisible_rest)
         abjad.attach(stop_command, multimeasure_rest)
         both_rests = [invisible_rest, multimeasure_rest]
         abjad.mutate(shard).replace(both_rests[:])
-        # try:
-        #     abjad.mutate(shard).replace(both_rests[:])
-        # except AssertionError:
-        #     print("We've hit the error...")
-        #     for leaf in shard:
-        #         print(abjad.inspect(leaf).parentage().parent)
-        #         # print whatever to prove they do/don't have the same parentage
-        #         # or maybe make a set of the parents and print the length of the set
 
 # print('Adding ending skips ...')
 # last_skip = abjad.select(score['Global Context']).leaves()[-1]

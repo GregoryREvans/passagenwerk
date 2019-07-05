@@ -10,7 +10,7 @@ from Scores.passagenwerk.Components.score_structure.Segment_I.dynamic_material_p
 )
 from evans.general_tools.cyc import cyc
 from evans.abjad_functions.talea_timespan import timespan_functions
-from Scores.passagenwerk.Components.attachments.Segment_I.dynamic_handlers import *
+from Scores.passagenwerk.Components.dynamics.Segment_I.dynamic_handlers import *
 from Scores.passagenwerk.Components.score_structure.instruments import instruments
 from Scores.passagenwerk.Components.score_structure.instruments import (
     voice_to_name_dict,

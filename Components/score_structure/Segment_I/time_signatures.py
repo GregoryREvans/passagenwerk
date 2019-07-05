@@ -5,7 +5,9 @@ from Scores.passagenwerk.Components.timespans.Segment_I.rhythm_timespans import 
 
 offset_counter = abjad.OffsetCounter(timespan_list)
 
-permitted_meters = abjad.MeterList([(4, 4), (7, 8), (3, 4), (5, 8), (2, 4), (3, 8), (5, 16)])
+permitted_meters = abjad.MeterList(
+    [(4, 4), (7, 8), (3, 4), (5, 8), (2, 4), (3, 8), (5, 16)]
+)
 
 fitted_meters = abjad.Meter.fit_meters(
     argument=offset_counter,
