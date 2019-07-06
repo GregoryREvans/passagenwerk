@@ -2,8 +2,8 @@ from evans.AttachmentHandlers.DynamicHandler import DynamicHandler
 
 
 dynamic_handler_one = DynamicHandler(
-    dynamic_list=["f", "p", "mf"],  # "niente" seems broken
-    flare_boolean_vector=[0, 0, 0, 1],
+    dynamic_list=["f", "p", "niente", "mf"], #niente + leak is weird
+    flare_boolean_vector=[1, 0, 0, 1],
     flare_continuous=True,
     hold_first_boolean_vector=[1, 0, 0],
     hold_first_continuous=True,
