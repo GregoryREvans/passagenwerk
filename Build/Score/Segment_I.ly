@@ -41,6 +41,10 @@
             % [Global Context measure 13] %! COMMENT_MEASURE_NUMBERS
             \time 2/4
             s1 * 1/2
+            % [Global Context measure 14] %! COMMENT_MEASURE_NUMBERS
+            \once \override TimeSignature.color = #white
+            \time 1/4
+            s1 * 1/4
         }
         \context StaffGroup = "Staff Group"
         <<
@@ -53,10 +57,22 @@
                     \markup { "vln. I-1" }
                     \set Staff.instrumentName =
                     \markup { "Violin I-1" }
+                    \clef "treble"
                     aqs'8
-                    \f
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     [
                     aqf'16
                     af'8.
@@ -65,17 +81,18 @@
                     \times 14/13 {
                         % [Voice 1 measure 2] %! COMMENT_MEASURE_NUMBERS
                         af'8.
-                        \p
                         ]
                         g'4
+                        \p
                         - \tweak circled-tip ##t
-                        \<
+                        - \tweak stencil #abjad-flared-hairpin
+                        \>
                         bf'8.
                         [
                         aqf'8.
                         ]
                         <>
-                        \mf
+                        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
                     }
                     % [Voice 1 measure 3] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
@@ -101,8 +118,8 @@
                     \<
                     af'16
                     \!
-                    \f
-                    \>
+                    \mf
+                    \<
                     g'8.
                     ~
                     \times 4/5 {
@@ -115,11 +132,24 @@
                     \times 4/3 {
                         bf'8
                         aqf'16
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.4
+                                    #:dynamic "f"
+                                    #:hspace -0.2
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
+                        - \tweak stencil #constante-hairpin
+                        \<
                         ]
-                        <>
-                        \p
                     }
                     r4
+                    \!
                     % [Voice 1 measure 7] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \times 16/17 {
@@ -180,8 +210,8 @@
                     bf'8.
                     \mp
                     aqs'16
-                    - \tweak circled-tip ##t
-                    - \tweak stencil #abjad-flared-hairpin
+                    \p
+                    - \tweak stencil #constante-hairpin
                     \<
                     ~
                     aqs'16
@@ -192,7 +222,6 @@
                     \times 8/9 {
                         % [Voice 1 measure 9] %! COMMENT_MEASURE_NUMBERS
                         bqf4
-                        \mf
                         b8
                         \mf
                         - \tweak stencil #abjad-flared-hairpin
@@ -230,9 +259,8 @@
                     \times 5/4 {
                         % [Voice 1 measure 12] %! COMMENT_MEASURE_NUMBERS
                         aqf'8
-                        \f
-                        - \tweak stencil #abjad-flared-hairpin
-                        \>
+                        - \tweak circled-tip ##t
+                        \<
                         af'8
                         g'8
                         bf'8
@@ -242,8 +270,19 @@
                     b'16
                     ]
                     <>
-                    \p
+                    \mf
                     r4.
+                    % [Voice 1 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
+                    \stopStaff \startStaff
                 }
             }
             \context Staff = "Staff 2"
@@ -257,6 +296,7 @@
                     \markup { "Violin I-2" }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "treble"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
@@ -267,8 +307,20 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             b'8.
-                            - \tweak circled-tip ##t
-                            \<
+                            _ #(make-dynamic-script
+                                (markup
+                                    #:whiteout
+                                    #:line (
+                                        #:general-align Y -2 #:normal-text #:larger "“"
+                                        #:hspace -0.4
+                                        #:dynamic "f"
+                                        #:hspace -0.2
+                                        #:general-align Y -2 #:normal-text #:larger "”"
+                                        )
+                                    )
+                                )
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
                             [
                             c''32
                             ~
@@ -289,15 +341,30 @@
                             fs'16.
                         }
                         gqf'8.
-                        \mf
+                        \p
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     \times 16/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
                             g'32.
-                            \f
-                            \>
+                            \!
+                            _ #(make-dynamic-script
+                                (markup
+                                    #:whiteout
+                                    #:line (
+                                        #:general-align Y -2 #:normal-text #:larger "“"
+                                        #:hspace -0.1
+                                        #:dynamic "mf"
+                                        #:hspace -0.2
+                                        #:general-align Y -2 #:normal-text #:larger "”"
+                                        )
+                                    )
+                                )
+                            - \tweak stencil #constante-hairpin
+                            \<
                             bf'128
                             ~
                             bf'32
@@ -331,11 +398,10 @@
                         \times 2/3 {
                             bf'32.
                             aqf'32.
-                            \p
                             b'32.
-                            - \tweak circled-tip ##t
+                            \f
                             - \tweak stencil #abjad-flared-hairpin
-                            \<
+                            \>
                         }
                         c''32
                         ~
@@ -364,7 +430,18 @@
                         a16
                         ]
                         <>
-                        \mf
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.1
+                                    #:dynamic "p"
+                                    #:hspace -0.25
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
                     }
                     r8
                     % [Voice 2 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -376,13 +453,23 @@
                     % [Voice 2 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r8
                     af4.
-                    \f
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
-                    <>
-                    \p
+                    \mf
+                    - \tweak stencil #constante-hairpin
+                    \<
                     aqf4
-                    - \tweak circled-tip ##t
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
                     \<
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
@@ -399,7 +486,6 @@
                     \times 7/8 {
                         b'4
                         bf'4.
-                        \mf
                         g'8
                         \ppppp
                         \<
@@ -428,7 +514,8 @@
                     \times 16/17 {
                         \times 2/3 {
                             eqf'64
-                            \f
+                            \p
+                            - \tweak circled-tip ##t
                             \>
                             [
                             eqs'128
@@ -449,7 +536,6 @@
                             eqs'64.
                         }
                         eqf'64
-                        \p
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 20/21 {
@@ -457,8 +543,7 @@
                         \times 10/11 {
                             % [Voice 2 measure 12] %! COMMENT_MEASURE_NUMBERS
                             dqs'16.
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
+                            \mf
                             \<
                             fs'64
                             ~
@@ -480,15 +565,39 @@
                             bf16.
                         }
                         bqf8
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.4
+                                    #:dynamic "f"
+                                    #:hspace -0.2
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
+                        - \tweak stencil #constante-hairpin
+                        \<
                         ]
-                        <>
-                        \mf
                     }
                     % [Voice 2 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 1/4
+                    \!
                     R1 * 1/4
+                    \stopStaff \startStaff
+                    % [Voice 2 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
                     \stopStaff \startStaff
                 }
             }
@@ -503,6 +612,7 @@
                     \markup { "Violin II-1" }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "treble"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
@@ -540,9 +650,9 @@
                     \<
                     aqs16
                     \!
-                    \f
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
+                    \p
+                    - \tweak stencil #constante-hairpin
+                    \<
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13 {
@@ -553,9 +663,9 @@
                         ~
                         ]
                         dqf'4
-                        \p
                         bqs8
                         - \tweak circled-tip ##t
+                        - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
                     }
@@ -569,13 +679,23 @@
                     % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
                     r8
                     dqs'4.
-                    \f
-                    \>
-                    <>
-                    \p
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     d'4
-                    - \tweak circled-tip ##t
-                    - \tweak stencil #abjad-flared-hairpin
+                    \p
+                    - \tweak stencil #constante-hairpin
                     \<
                     bf8.
                     [
@@ -586,7 +706,6 @@
                     \times 6/7 {
                         % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
                         b4
-                        \mf
                         c'16
                         \ppppp
                         \<
@@ -604,9 +723,9 @@
                         bqs4
                         \mp
                         bqf16
-                        \f
+                        - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
-                        \>
+                        \<
                         ~
                         [
                     }
@@ -614,20 +733,42 @@
                     bqf8.
                     bf16
                     b8
-                    \p
+                    \mf
                     % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
                     c'8
-                    - \tweak circled-tip ##t
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
                     \<
                     ]
-                    <>
-                    \mf
                     r2
+                    \!
                     % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 1/4
                     R1 * 1/4
+                    \stopStaff \startStaff
+                    % [Voice 3 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
                     \stopStaff \startStaff
                 }
             }
@@ -642,6 +783,7 @@
                     \markup { "Violin II-2" }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "treble"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
@@ -661,8 +803,9 @@
                             % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
                             fs'8.
                             \!
-                            \f
-                            \>
+                            \p
+                            - \tweak stencil #constante-hairpin
+                            \<
                             [
                             eqf'32
                             ~
@@ -683,7 +826,6 @@
                             eqf'16.
                         }
                         eqs'8.
-                        \p
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 24/29 {
@@ -692,7 +834,6 @@
                             % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
                             fqs'16.
                             - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
                             \<
                             fs'64
                             ~
@@ -773,21 +914,33 @@
                     % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
                     eqs'8
                     \!
-                    \f
-                    - \tweak stencil #abjad-flared-hairpin
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
                     \>
                     [
                     \times 4/5 {
                         eqf'8
                         dqs'8.
-                        ]
-                        <>
                         \p
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 5/16
+                    \!
                     R1 * 5/16
                     \stopStaff \startStaff
                     % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
@@ -795,6 +948,17 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 1/4
                     R1 * 1/4
+                    \stopStaff \startStaff
+                    % [Voice 4 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
                     \stopStaff \startStaff
                 }
             }
@@ -807,9 +971,22 @@
                     \markup { vla.-1 }
                     \set Staff.instrumentName =
                     \markup { Viola-1 }
+                    \clef "alto"
                     r4
                     aqs8
-                    - \tweak circled-tip ##t
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
                     \<
                     ~
                     [
@@ -818,9 +995,9 @@
                     bqf16
                     ~
                     bqf16
-                    \mf
                     c'16
                     \f
+                    - \tweak stencil #abjad-flared-hairpin
                     \>
                     cqs'8
                     ~
@@ -836,7 +1013,18 @@
                     }
                     % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
                     cs'8
-                    \p
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "p"
+                                #:hspace -0.25
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
                     ]
                     dqf'4
                     \mf
@@ -858,17 +1046,32 @@
                     ~
                     % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
                     eqs'2.
-                    <>
-                    \mf
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r2
+                    \!
+                    \ottava 1
                     e''4
                     \f
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
+                    - \tweak stencil #constante-hairpin
+                    \<
                     ~
                     % [Voice 5 measure 7] %! COMMENT_MEASURE_NUMBERS
                     e''4.
+                    \ottava 0
                     eqf'8
                     dqs'4
                     ~
@@ -877,20 +1080,42 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
                         fs'4.
-                        \p
                         eqs'4
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.1
+                                    #:dynamic "p"
+                                    #:hspace -0.25
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
                         - \tweak circled-tip ##t
-                        \<
+                        \>
                         <>
-                        \mf
+                        \!
                     }
                     % [Voice 5 measure 9] %! COMMENT_MEASURE_NUMBERS
                     cqs'4
-                    \f
-                    \>
-                    <>
-                    \p
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     r4
+                    \!
                     % [Voice 5 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -911,17 +1136,27 @@
                     % [Voice 5 measure 12] %! COMMENT_MEASURE_NUMBERS
                     c'4
                     \!
-                    - \tweak circled-tip ##t
-                    - \tweak stencil #abjad-flared-hairpin
+                    \f
+                    - \tweak stencil #constante-hairpin
                     \<
-                    <>
-                    \mf
                     r4.
+                    \!
                     % [Voice 5 measure 13] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 1/4
                     R1 * 1/4
+                    \stopStaff \startStaff
+                    % [Voice 5 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
                     \stopStaff \startStaff
                 }
             }
@@ -934,6 +1169,7 @@
                     \markup { vla.-2 }
                     \set Staff.instrumentName =
                     \markup { Viola-2 }
+                    \clef "alto"
                     cs''4.
                     \ppppp
                     - \tweak stencil #abjad-flared-hairpin
@@ -946,15 +1182,25 @@
                         c'4.
                         \mp
                         <b ef'>4
-                        \f
-                        - \tweak stencil #abjad-flared-hairpin
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.1
+                                    #:dynamic "p"
+                                    #:hspace -0.25
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
+                        - \tweak circled-tip ##t
                         \>
                         f'4
                         ~
                     }
                     % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
                     f'4
-                    \p
                     b'16
                     \mf
                     - \tweak stencil #abjad-flared-hairpin
@@ -966,19 +1212,35 @@
                     \f
                     - \tweak stencil #constante-hairpin
                     \<
+                    \ottava 1
                     e''16
                     \!
-                    - \tweak circled-tip ##t
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #abjad-flared-hairpin
                     \<
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
                         e''8
+                        \ottava 0
+                        \ottava 1
                         <d' d''>16
                         ~
                         ]
                         <d' d''>4
+                        \ottava 0
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 8/7 {
@@ -988,10 +1250,12 @@
                         bf16
                         ]
                         aqs4
-                        <>
-                        \mf
+                        \f
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     r4
+                    \!
                     % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1016,18 +1280,40 @@
                     % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     g'4
-                    \f
-                    \>
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "p"
+                                #:hspace -0.25
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     ~
                     % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
                     g'8
-                    \p
                     a'4.
                     - \tweak circled-tip ##t
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     <>
-                    \mf
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
                     % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1052,6 +1338,17 @@
                     r1 * 1/4
                     R1 * 1/4
                     \stopStaff \startStaff
+                    % [Voice 6 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
+                    \stopStaff \startStaff
                 }
             }
             \context Staff = "Staff 7"
@@ -1065,6 +1362,7 @@
                     \markup { Violoncello-1 }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "bass"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
@@ -1075,7 +1373,6 @@
                         \times 4/5 {
                             aqf32
                             \f
-                            - \tweak stencil #abjad-flared-hairpin
                             \>
                             [
                             gqs32.
@@ -1095,14 +1392,29 @@
                             gqs16.
                         }
                         g8
-                        \p
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.1
+                                    #:dynamic "p"
+                                    #:hspace -0.25
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \times 4/5 {
                             % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
                             af32
-                            - \tweak circled-tip ##t
+                            \!
+                            \mf
+                            - \tweak stencil #constante-hairpin
                             \<
                             a32.
                             ]
@@ -1119,7 +1431,6 @@
                         \times 6/7 {
                             b8
                             c'16.
-                            \mf
                         }
                         cqs'8
                         \ppppp
@@ -1157,19 +1468,33 @@
                     d'16
                     dqs'16
                     ]
+                    \ottava 1
                     eqf'4.
                     \mp
                     - \tweak stencil #constante-hairpin
                     \<
+                    \ottava 0
                     dqs'4
                     \!
-                    \f
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
                     \>
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
                         % [Voice 7 measure 6] %! COMMENT_MEASURE_NUMBERS
                         ef'8.
                         [
+                        \ottava 1
                         e'8
                         ~
                     }
@@ -1177,120 +1502,197 @@
                     ~
                     e'16
                     \p
+                    \ottava 0
                     ef'16
                     - \tweak circled-tip ##t
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ~
                     ef'16
+                    \ottava 1
                     eqf'16
                     ]
+                    \ottava 0
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 7 measure 7] %! COMMENT_MEASURE_NUMBERS
+                        \ottava 1
                         eqs'4.
+                        \ottava 0
+                        \ottava 1
                         fqs'16
-                        <>
                         \mf
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        \ottava 0
                     }
                     r4.
+                    \!
                     % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
                     r2..
                     \times 16/21 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
+                            \ottava 1
                             f'64.
-                            \f
-                            - \tweak stencil #abjad-flared-hairpin
-                            \>
+                            _ #(make-dynamic-script
+                                (markup
+                                    #:whiteout
+                                    #:line (
+                                        #:general-align Y -2 #:normal-text #:larger "“"
+                                        #:hspace -0.4
+                                        #:dynamic "f"
+                                        #:hspace -0.2
+                                        #:general-align Y -2 #:normal-text #:larger "”"
+                                        )
+                                    )
+                                )
+                            - \tweak stencil #constante-hairpin
+                            \<
                             [
+                            \ottava 0
+                            \ottava 1
                             e'256
                             ~
                             e'64
+                            \ottava 0
                         }
                         ef'64
                         ~
                         ef'64
                         \times 4/5 {
+                            \ottava 1
                             eqf'128
+                            \ottava 0
                             dqs'512
                             ~
                             dqs'128
+                            \ottava 1
                             eqf'128.
+                            \ottava 0
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/7 {
                             ef'32
+                            \ottava 1
                             e'64.
+                            \ottava 0
                         }
                         ef'32
-                        \p
                     }
                     \times 8/13 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
+                            \ottava 1
                             eqf'32.
                             \mf
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            \ottava 0
+                            \ottava 1
                             eqs'128
                             ~
                             eqs'32
+                            \ottava 0
                         }
+                        \ottava 1
                         fqs'32
+                        \ottava 0
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/9 {
+                            \ottava 1
                             fs'64.
+                            \ottava 0
+                            \ottava 1
                             g'64.
+                            \ottava 0
+                            \ottava 1
                             af'64.
+                            \ottava 0
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/9 {
+                            \ottava 1
                             gqs'32
+                            \ottava 0
+                            \ottava 1
                             gqf'64
                             ~
                             gqf'64.
+                            \ottava 0
                         }
+                        \ottava 1
                         gqs'32.
+                        \ottava 0
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 24/29 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
+                            \ottava 1
                             af'16.
+                            \ottava 0
+                            \ottava 1
                             a'64
                             ~
                             a'16
+                            \ottava 0
                         }
+                        \ottava 1
                         af'64
                         ~
                         af'16
                         ~
                         af'64
+                        \ottava 0
                         \times 2/3 {
+                            \ottava 1
                             aqf'32.
+                            \ottava 0
+                            \ottava 1
                             aqs'32.
+                            \ottava 0
+                            \ottava 1
                             bqf'32.
+                            \ottava 0
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
+                            \ottava 1
                             bf'32.
+                            \ottava 0
+                            \ottava 1
                             b'32.
+                            \ottava 0
                         }
+                        \ottava 1
                         bf'16.
+                        \ottava 0
                     }
                     \times 8/15 {
                         % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
+                        \ottava 1
                         fs'64.
+                        \ottava 0
+                        \ottava 1
                         g'64.
+                        \ottava 0
+                        \ottava 1
                         fqs'32
                         ~
                         fqs'64
+                        \ottava 0
                         \times 2/3 {
+                            \ottava 1
                             fs'64.
+                            \ottava 0
+                            \ottava 1
                             fqs'64.
+                            \ottava 0
+                            \ottava 1
                             eqs'64.
+                            \ottava 0
                         }
                         dqf'64
                         ~
@@ -1320,6 +1722,17 @@
                     r1 * 1/4
                     R1 * 1/4
                     \stopStaff \startStaff
+                    % [Voice 7 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
+                    \stopStaff \startStaff
                 }
             }
             \context Staff = "Staff 8"
@@ -1333,6 +1746,7 @@
                     \markup { Violoncello-2 }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "bass"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
@@ -1345,20 +1759,21 @@
                         \<
                         [
                         d'8.
+                        \p
                         - \tweak circled-tip ##t
-                        \<
+                        - \tweak stencil #abjad-flared-hairpin
+                        \>
                         dqf'16
                         ~
                         ]
                         dqf'4
                         bf8
-                        \mf
                         [
                     }
                     % [Voice 8 measure 3] %! COMMENT_MEASURE_NUMBERS
                     bqs16
-                    \f
-                    \>
+                    \mf
+                    \<
                     aqs16
                     ~
                     ]
@@ -1367,13 +1782,26 @@
                     aqs16
                     [
                     bf8.
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
                     ]
-                    <>
-                    \p
                     % [Voice 8 measure 4] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 3/16
+                    \!
                     R1 * 3/16
                     \stopStaff \startStaff
                     % [Voice 8 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -1381,13 +1809,12 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         aqs16
-                        - \tweak circled-tip ##t
-                        - \tweak stencil #abjad-flared-hairpin
+                        \p
+                        - \tweak stencil #constante-hairpin
                         \<
                         [
                         bf16
                         dqf'16
-                        \mf
                         bqs16
                         \ff
                         - \tweak stencil #abjad-flared-hairpin
@@ -1398,32 +1825,59 @@
                     }
                     % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
                     dqf'16
+                    \ottava 1
                     eqs'16
+                    \ottava 0
+                    \ottava 1
                     fs'16
+                    \ottava 0
+                    \ottava 1
                     eqf'16
+                    \ottava 0
+                    \ottava 1
                     eqs'16
+                    \ottava 0
+                    \ottava 1
                     fqs'16
+                    \ottava 0
+                    \ottava 1
                     eqs'16
+                    \ottava 0
+                    \ottava 1
                     g'16
                     \ppppp
+                    \ottava 0
+                    \ottava 1
                     fs'16
-                    \f
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
+                    - \tweak circled-tip ##t
+                    \<
+                    \ottava 0
+                    \ottava 1
                     eqf'16
+                    \ottava 0
+                    \ottava 1
                     eqs'16
+                    \ottava 0
+                    \ottava 1
                     fqs'16
+                    \ottava 0
                     % [Voice 8 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     fs'16
+                    \ottava 0
                     dqs'16
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
                         \times 4/5 {
                             dqf'32
+                            \ottava 1
                             eqf'32.
                             ]
+                            \ottava 0
                         }
+                        \ottava 1
                         eqs'4
+                        \ottava 0
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
                             aqf8
@@ -1462,25 +1916,52 @@
                         aqf64
                         ]
                         <>
-                        \p
+                        \mf
                     }
                     r2..
                     % [Voice 8 measure 9] %! COMMENT_MEASURE_NUMBERS
                     r8
                     aqf4.
-                    - \tweak circled-tip ##t
-                    \<
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #abjad-flared-hairpin
+                    \>
                     ~
                     % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
                     aqf4.
-                    \mf
+                    \p
+                    - \tweak stencil #constante-hairpin
+                    \<
                     \times 4/7 {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
                             % [Voice 8 measure 11] %! COMMENT_MEASURE_NUMBERS
                             g16.
-                            \f
-                            \>
+                            \!
+                            _ #(make-dynamic-script
+                                (markup
+                                    #:whiteout
+                                    #:line (
+                                        #:general-align Y -2 #:normal-text #:larger "“"
+                                        #:hspace -0.1
+                                        #:dynamic "mf"
+                                        #:hspace -0.2
+                                        #:general-align Y -2 #:normal-text #:larger "”"
+                                        )
+                                    )
+                                )
+                            - \tweak stencil #constante-hairpin
+                            \<
                             [
                             aqs64
                             ~
@@ -1502,7 +1983,6 @@
                             b16.
                         }
                         bqs8
-                        \p
                     }
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/13 {
@@ -1510,9 +1990,9 @@
                         \times 6/11 {
                             % [Voice 8 measure 12] %! COMMENT_MEASURE_NUMBERS
                             b8.
-                            - \tweak circled-tip ##t
+                            \f
                             - \tweak stencil #abjad-flared-hairpin
-                            \<
+                            \>
                             bf32
                             ~
                             bf8
@@ -1537,33 +2017,74 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
                             % [Voice 8 measure 13] %! COMMENT_MEASURE_NUMBERS
+                            \ottava 1
                             bqf'8.
+                            \ottava 0
+                            \ottava 1
                             aqs'32
                             ~
                             aqs'8
+                            \ottava 0
                         }
+                        \ottava 1
                         aqf'32
                         ~
                         aqf'8
                         ~
                         aqf'32
+                        \ottava 0
                         \times 2/3 {
+                            \ottava 1
                             a'16.
+                            \ottava 0
+                            \ottava 1
                             af'16.
+                            \ottava 0
+                            \ottava 1
                             a'16.
+                            \ottava 0
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
+                            \ottava 1
                             aqs'16.
+                            \ottava 0
+                            \ottava 1
                             aqf'16.
-                            \mf
+                            _ #(make-dynamic-script
+                                (markup
+                                    #:whiteout
+                                    #:line (
+                                        #:general-align Y -2 #:normal-text #:larger "“"
+                                        #:hspace -0.1
+                                        #:dynamic "p"
+                                        #:hspace -0.25
+                                        #:general-align Y -2 #:normal-text #:larger "”"
+                                        )
+                                    )
+                                )
+                            \ottava 0
                         }
+                        \ottava 1
                         gqs'8.
                         \mp
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \ottava 0
                     }
+                    % [Voice 8 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \!
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
+                    \stopStaff \startStaff
                 }
             }
             \context Staff = "Staff 9"
@@ -1577,100 +2098,169 @@
                     \markup { Contrabass }
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                    \clef "bass"
                     r1 * 3/16
                     R1 * 3/16
                     \stopStaff \startStaff
                     % [Voice 9 measure 2] %! COMMENT_MEASURE_NUMBERS
                     r4.
                     \times 4/5 {
-                        <c'' d''>8
-                        \f
-                        - \tweak stencil #abjad-flared-hairpin
-                        \>
+                        \ottava 1
+                        \ottava 1
+                        <c''' d'''>8
+                        - \tweak circled-tip ##t
+                        \<
                         [
-                        af'8
+                        \ottava 0
+                        \ottava 0
+                        \ottava 1
+                        af''8
                         ]
-                        e'4.
+                        \ottava 0
+                        \ottava 1
+                        e''4.
                         ~
                     }
                     % [Voice 9 measure 3] %! COMMENT_MEASURE_NUMBERS
-                    e'4
-                    \p
-                    a'4.
+                    e''4
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "mf"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #constante-hairpin
+                    \<
+                    \ottava 0
+                    \ottava 1
+                    a''4.
+                    \!
                     \mf
                     \<
+                    \ottava 0
                     <>
                     \f
                     % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
-                    <ef' g'>4
-                    - \tweak circled-tip ##t
+                    \ottava 1
+                    \ottava 1
+                    <ef'' g''>4
+                    \f
+                    - \tweak stencil #constante-hairpin
                     \<
-                    eqf'8
+                    \ottava 0
+                    \ottava 0
+                    \ottava 1
+                    eqf''8
                     ~
                     \times 4/5 {
                         % [Voice 9 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        eqf'4.
-                        g'8
+                        eqf''4.
+                        \ottava 0
+                        \ottava 1
+                        g''8
                         [
-                        c''8
+                        \ottava 0
+                        \ottava 1
+                        c'''8
                         ~
                         ]
                     }
-                    c''4
-                    <>
-                    \mf
+                    c'''4
+                    \ottava 0
                     % [Voice 9 measure 6] %! COMMENT_MEASURE_NUMBERS
                     \once \override Rest.transparent = ##t
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 3/8
+                    \!
                     R1 * 3/8
                     \stopStaff \startStaff
                     \times 8/9 {
                         % [Voice 9 measure 7] %! COMMENT_MEASURE_NUMBERS
-                        bf'16
-                        \f
+                        \ottava 1
+                        bf''16
+                        _ #(make-dynamic-script
+                            (markup
+                                #:whiteout
+                                #:line (
+                                    #:general-align Y -2 #:normal-text #:larger "“"
+                                    #:hspace -0.1
+                                    #:dynamic "p"
+                                    #:hspace -0.25
+                                    #:general-align Y -2 #:normal-text #:larger "”"
+                                    )
+                                )
+                            )
+                        - \tweak circled-tip ##t
                         \>
                         [
-                        fs'8
+                        \ottava 0
+                        \ottava 1
+                        fs''8
                         ~
-                        fs'16
-                        <fs bf>8
+                        fs''16
+                        \ottava 0
+                        \ottava 1
+                        \ottava 1
+                        <fs' bf'>8
                         ~
-                        <fs bf>8.
+                        <fs' bf'>8.
+                        \ottava 0
+                        \ottava 0
                     }
-                    g8
-                    c'16
-                    g''16
+                    \ottava 1
+                    g'8
+                    \ottava 0
+                    \ottava 1
+                    c''16
+                    \ottava 0
+                    \ottava 1
+                    g'''16
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 16/15 {
                         % [Voice 9 measure 8] %! COMMENT_MEASURE_NUMBERS
-                        g''8.
+                        g'''8.
                         ~
-                        g''8
+                        g'''8
                         ]
-                        ef''4
-                        \p
-                        <e'' a''>16
+                        \ottava 0
+                        \ottava 1
+                        ef'''4
+                        \ottava 0
+                        \ottava 1
+                        \ottava 1
+                        <e''' a'''>16
                         \sfp
                         \<
                         ~
                         [
-                        <e'' a''>8
-                        bf8.
+                        <e''' a'''>8
+                        \ottava 0
+                        \ottava 0
+                        \ottava 1
+                        bf'8.
                         ~
                     }
                     % [Voice 9 measure 9] %! COMMENT_MEASURE_NUMBERS
-                    bf8
+                    bf'8
                     \ff
                     - \tweak stencil #constante-hairpin
                     \<
-                    cqs'8
+                    \ottava 0
+                    \ottava 1
+                    cqs''8
                     \!
                     \ppppp
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ]
+                    \ottava 0
                     <>
                     \mp
                     r4
@@ -1697,6 +2287,17 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                     r1 * 1/4
                     R1 * 1/4
+                    \stopStaff \startStaff
+                    % [Voice 9 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                    \once \override Rest.color = #white
+                    r1 * 1/8
+                    \once \override MultiMeasureRest.color = #white
+                    R1 * 1/8
+                    ^ \markup {
+                        \musicglyph
+                            #"scripts.ushortfermata"
+                        }
                     \stopStaff \startStaff
                 }
             }

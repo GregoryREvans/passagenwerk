@@ -23,6 +23,7 @@ from Scores.passagenwerk.Components.score_structure.Segment_I.time_signatures im
     bounds,
 )
 from Scores.passagenwerk.Components.rhythm.Segment_I.rhythm_handlers import *  # segregate segments and switch to rhythm_handler objects
+from Scores.passagenwerk.Components.pitch.Segment_I.clef_handlers import clef_handlers
 from evans.abjad_functions.talea_timespan.timespan_functions import (
     TimespanSpecifier,
 )  # rename module
@@ -81,7 +82,6 @@ for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
         time_signature = time_signatures[i]
         abjad.mutate(shard).rewrite_meter(time_signature)  # , boundary_depth=1)
 
-
 print("Handling Pitches ...")
 for voice_name, sub_timespan_list in pitch_timespans.items():
     voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
@@ -101,27 +101,6 @@ for voice_name, sub_timespan_list in pitch_timespans.items():
             continue
         else:
             target_timespan.annotation.handler(selection)
-
-print("Handling Dynamics ...")
-for voice_name, sub_timespan_list in dynamic_timespans.items():
-    voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
-    voice_tie_collection = LogicalTieCollection()
-    for tie in voice_tie_selection:
-        voice_tie_collection.insert(tie)
-    for target_timespan in sub_timespan_list:
-        selection = abjad.Selection(
-            [
-                _
-                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
-                    target_timespan
-                )
-            ]
-        )
-        if len(selection) < 1:
-            continue
-        else:
-            target_timespan.annotation.handler(selection)
-
 
 print("Adding Multimeasure Rests and cutaway...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
@@ -151,43 +130,62 @@ for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
         both_rests = [invisible_rest, multimeasure_rest]
         abjad.mutate(shard).replace(both_rests[:])
 
-# print('Adding ending skips ...')
-# last_skip = abjad.select(score['Global Context']).leaves()[-1]
-# override_command = abjad.LilyPondLiteral(r'\once \override TimeSignature.color = #white', format_slot='before',)
-# abjad.attach(override_command, last_skip)
-#
-# for voice in abjad.select(score['Staff Group']).components(abjad.Voice):
-#     container = abjad.Container()
-#     sig = time_signatures[-1]
-#     leaf_duration = sig.duration / 2
-#     rest_leaf = abjad.Rest(1, multiplier=(leaf_duration))
-#     mult_rest_leaf = abjad.MultimeasureRest(1, multiplier=(leaf_duration))
-#     container.append(rest_leaf)
-#     container.append(mult_rest_leaf)
-#     markup = abjad.Markup.musicglyph('scripts.ushortfermata',direction=abjad.Up,)
-#     markup.center_align()
-#     start_command = abjad.LilyPondLiteral(
-#                 r'\stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff',
-#                 format_slot='before',
-#                 )
-#     stop_command = abjad.LilyPondLiteral(
-#         r'\stopStaff \startStaff',
-#         format_slot='after',
-#         )
-#     rest_literal = abjad.LilyPondLiteral(r'\once \override Rest.color = #white', 'before')
-#     mult_rest_literal = abjad.LilyPondLiteral(r'\once \override MultiMeasureRest.color = #white', 'before')
-#     penultimate_rest = container[0]
-#     final_rest = container[-1]
-#     abjad.attach(markup, final_rest)
-#     abjad.attach(start_command, penultimate_rest)
-#     abjad.attach(stop_command, final_rest)
-#     abjad.attach(rest_literal, penultimate_rest)
-#     abjad.attach(mult_rest_literal, final_rest)
-#     # abjad.attach(abjad.StopHairpin(), penultimate_rest)
-#     # abjad.attach(abjad.StopTextSpan(command=r'\stopTextSpanOne'), penultimate_rest)
-#     # abjad.attach(abjad.StopTextSpan(command=r'\stopTextSpanTwo'), penultimate_rest)
-#     # abjad.attach(abjad.StopTextSpan(command=r'\stopTextSpanThree'), penultimate_rest)
-#     voice.append(container)
+print("Adding ending skips ...")
+last_skip = abjad.select(score["Global Context"]).leaves()[-1]
+override_command = abjad.LilyPondLiteral(
+    r"\once \override TimeSignature.color = #white", format_slot="before"
+)
+abjad.attach(override_command, last_skip)
+
+for voice in abjad.select(score["Staff Group"]).components(abjad.Voice):
+    container = abjad.Container()
+    sig = time_signatures[-1]
+    leaf_duration = sig.duration / 2
+    rest_leaf = abjad.Rest(1, multiplier=(leaf_duration))
+    mult_rest_leaf = abjad.MultimeasureRest(1, multiplier=(leaf_duration))
+    container.append(rest_leaf)
+    container.append(mult_rest_leaf)
+    markup = abjad.Markup.musicglyph("scripts.ushortfermata", direction=abjad.Up)
+    markup.center_align()
+    start_command = abjad.LilyPondLiteral(
+        r"\stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff",
+        format_slot="before",
+    )
+    stop_command = abjad.LilyPondLiteral(r"\stopStaff \startStaff", format_slot="after")
+    rest_literal = abjad.LilyPondLiteral(
+        r"\once \override Rest.color = #white", "before"
+    )
+    mult_rest_literal = abjad.LilyPondLiteral(
+        r"\once \override MultiMeasureRest.color = #white", "before"
+    )
+    penultimate_rest = container[0]
+    final_rest = container[-1]
+    abjad.attach(markup, final_rest)
+    abjad.attach(start_command, penultimate_rest)
+    abjad.attach(stop_command, final_rest)
+    abjad.attach(rest_literal, penultimate_rest)
+    abjad.attach(mult_rest_literal, final_rest)
+    voice.append(container[:])
+
+print("Handling Dynamics ...")
+for voice_name, sub_timespan_list in dynamic_timespans.items():
+    voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
+    voice_tie_collection = LogicalTieCollection()
+    for tie in voice_tie_selection:
+        voice_tie_collection.insert(tie)
+    for target_timespan in sub_timespan_list:
+        selection = abjad.Selection(
+            [
+                _
+                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
+                    target_timespan
+                )
+            ]
+        )
+        if len(selection) < 1:
+            continue
+        else:
+            target_timespan.annotation.handler(selection)
 
 print("Beaming runs ...")
 for voice in abjad.select(score).components(abjad.Voice):
@@ -268,7 +266,6 @@ mark_abbreviations = [abjad.Markup(_) for _ in abb]
 for x in mark_abbreviations:
     x.hcenter_in(12)
     abbreviations.append(abjad.MarginMarkup(markup=x))
-abbreviations = cyc(abbreviations)
 
 names = []
 nm = [
@@ -286,13 +283,6 @@ mark_names = [abjad.Markup(_) for _ in nm]
 for x in mark_names:
     x.hcenter_in(14)
     names.append(abjad.StartMarkup(markup=x))
-names = cyc(names)
-
-for staff in abjad.iterate(score["Staff Group"]).components(abjad.Staff):
-    leaf1 = abjad.select(staff).leaves()[0]
-    abjad.attach(next(instruments), leaf1)
-    abjad.attach(next(abbreviations), leaf1)
-    abjad.attach(next(names), leaf1)
 
 # for staff in abjad.select(score['Staff Group']).components(abjad.Staff):
 #     last_leaf = abjad.select(staff).leaves()[-3]
@@ -310,8 +300,20 @@ for staff in abjad.iterate(score["Staff Group"]).components(abjad.Staff):
 # abjad.attach(mark4, leaf4)
 # abjad.attach(mark5, leaf5)
 
-# for staff in abjad.iterate(score['Staff Group 1']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
+print("transposing and adding clefs ...")
+for abbrev, name, inst, handler, voice in zip(
+    abbreviations,
+    names,
+    insts,
+    clef_handlers,
+    abjad.select(score["Staff Group"]).components(abjad.Voice),
+):
+    first_leaf = abjad.select(voice).leaves()[0]
+    abjad.attach(abbrev, first_leaf)
+    abjad.attach(name, first_leaf)
+    abjad.attach(inst, first_leaf)
+    abjad.Instrument.transpose_from_sounding_pitch(voice)
+    handler(voice)
 
 # print('Transforming Tuplet Brackets ...')
 # transformer = NoteheadBracketMaker()
