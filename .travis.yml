@@ -50,10 +50,15 @@ before_install:
     - git clone https://github.com/GregoryREvans/evans.git $EVANS
     - export PYTHONPATH=$EVANS/..:$PYTHONPATH
 
+    # clone & install moscotta:
+    - MOSCOTTA=/tmp/moscotta
+    - git clone https://github.com/ivanalexandermoscotta/moscotta.git $MOSCOTTA
+    - export PYTHONPATH=$MOSCOTTA:$PYTHONPATH
+
     # clone & install tsmakers:
     - TSMAKERS=/tmp/tsmakers
     - git clone https://github.com/ivanalexandermoscotta/tsmakers.git $TSMAKERS
-    - export PYTHONPATH=$TSMAKERS/:$PYTHONPATH
+    - export PYTHONPATH=$TSMAKERS:$PYTHONPATH
 
     # log setup:
     - echo $PYTHONPATH
