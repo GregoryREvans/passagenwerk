@@ -24,7 +24,7 @@
 	%\accidentalStyle modern-cautionary
     %{ indent = #0 %}
 	ragged-last = ##t
-    %{ ragged-right = ##t %}
+    ragged-right = ##t
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -140,7 +140,6 @@
 }
 
 \paper {
-	system-separator-markup = \slashSeparator
 	%system-system-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 5))
 	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
 

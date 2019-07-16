@@ -140,7 +140,8 @@
 }
 
 \paper {
-	system-separator-markup = \slashSeparator
+	%{ system-separator-markup = \slashSeparator %}
+	system-separator-markup = \markup { \fill-line { \slashSeparator \slashSeparator } }
 	%system-system-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 5))
 	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
 
