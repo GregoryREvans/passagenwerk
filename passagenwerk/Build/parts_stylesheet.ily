@@ -3,7 +3,7 @@
 \version "2.19.83"
 \language "english"
 #(set-default-paper-size "letterportrait")
-#(set-global-staff-size 12)
+#(set-global-staff-size 13)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
@@ -24,7 +24,7 @@
 	%\accidentalStyle modern-cautionary
     %{ indent = #0 %}
 	ragged-last = ##t
-    ragged-right = ##t
+    %{ ragged-right = ##t %}
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -143,8 +143,8 @@
 	%system-system-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 5))
 	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
 
-	indent = 20\mm
-    short-indent = 15\mm
+	indent = 5\mm
+    short-indent = 5\mm
     bottom-margin = 10\mm
     left-margin = 10\mm
     right-margin = 10\mm
