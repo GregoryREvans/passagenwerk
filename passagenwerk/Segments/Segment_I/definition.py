@@ -316,13 +316,8 @@ for abbrev, name, inst, handler, voice in zip(
 # transformer = NoteheadBracketMaker()
 # transformer(score)
 
-abjad_stylesheet_path = os.path.join(
-    os.environ.get("HOME"), "abjad/docs/source/_stylesheets/abjad.ily"
-)
-current_directory = pathlib.Path(__file__).parent
-stylesheet_path = (current_directory / ".." / ".." / "Build").resolve()
 score_file = abjad.LilyPondFile.new(
-    score, includes=[abjad_stylesheet_path, f"{stylesheet_path}/first_stylesheet.ily"]
+    score, includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "../../Build/first_stylesheet.ily"]
 )
 
 abjad.SegmentMaker.comment_measure_numbers(score)
