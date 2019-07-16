@@ -365,7 +365,7 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Voice)):
     part.insert(0, signature_copy)
     part_file = abjad.LilyPondFile.new(
         part,
-        includes=[abjad_stylesheet_path, f"{stylesheet_path}/parts_stylesheet.ily"],
+        includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "../../Build/first_stylesheet.ily"],
     )
     pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
     path = pathlib.Path(f"part_illustration{count + 1}.pdf")
