@@ -2,7 +2,7 @@
 \language "english" %! abjad.LilyPondFile
 
 \include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"                    %! abjad.LilyPondFile
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily" %! abjad.LilyPondFile
 
 \header { %! abjad.LilyPondFile
     tagline = ##f

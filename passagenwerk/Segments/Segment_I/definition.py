@@ -317,7 +317,7 @@ for abbrev, name, inst, handler, voice in zip(
 # transformer(score)
 
 score_file = abjad.LilyPondFile.new(
-    score, includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "../../Build/first_stylesheet.ily"]
+    score, includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily"]
 )
 
 abjad.SegmentMaker.comment_measure_numbers(score)
@@ -365,7 +365,7 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Voice)):
     part.insert(0, signature_copy)
     part_file = abjad.LilyPondFile.new(
         part,
-        includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "../../Build/first_stylesheet.ily"],
+        includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily"],
     )
     pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
     path = pathlib.Path(f"part_illustration{count + 1}.pdf")
