@@ -13,7 +13,7 @@
 	dedication = \markup \override #'(font-name . "Didot") \fontsize #3.5 \center-column {"to the University of Iowa Symphony Orchestra"}
 	title =  \markup \override #'(font-name . "Didot") \fontsize #16 \bold\center-column {"Passagenwerk" }
 	subtitle = \markup \override #'(font-name . "Didot") \center-column { \line{ \fontsize #23 ".                                   ."} \line{ \fontsize #7 "for string ensemble"} \line{ \fontsize #23 ".                                   ."} }
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #3 \center-column {"from Walter Benjamin"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #3 \center-column {"after Walter Benjamin"}
 	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 	%{ arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"} %}
 }

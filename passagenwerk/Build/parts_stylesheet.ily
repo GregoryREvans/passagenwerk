@@ -13,7 +13,7 @@
 	dedication = \markup \override #'(font-name . "Didot") \fontsize #3.5 \center-column {"to the University of Iowa Symphony Orchestra"}
 	title =  \markup \override #'(font-name . "Didot") \fontsize #16 \bold\center-column {"Passagenwerk" }
 	subtitle = \markup \override #'(font-name . "Didot") \center-column { \line{ \fontsize #23 ".                                   ."} \line{ \fontsize #7 "for string ensemble"} \line{ \fontsize #23 ".                                   ."} }
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #3 \center-column {"from Walter Benjamin"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #3 \center-column {"after Walter Benjamin"}
 	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 	%{ arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"} %}
 }
@@ -42,7 +42,7 @@
 		%\override BarNumber.font-name = "Didot"
 		%{ \override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print) %}
 		\override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print)
-		\override BarNumber.font-size = 5
+		\override BarNumber.font-size = 2
 		\override BarNumber.padding = 4
 		%\override BarNumber.stencil = ##f
 		\override MetronomeMark.X-extent = #'(0 . 0)
@@ -66,12 +66,12 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #4
+        \override TimeSignature.font-size = #2
         \override TimeSignature.self-alignment-X = #center
 		%\override TimeSignature.stencil = ##f
 		\override TimeSignature.whiteout-style = #'outline
 		\override TimeSignature.whiteout = ##t
-        \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 13) (minimum-distance . 13) (padding . 4) (stretchability . 0))
+        \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 4) (stretchability . 0))
     }
     \context {
         \Score
@@ -141,7 +141,7 @@
 
 \paper {
 	%system-system-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 5))
-	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
+	system-system-spacing = #'((basic-distance . 18) (minimum-distance . 18) (padding . 5))
 
 	indent = 5\mm
     short-indent = 5\mm
