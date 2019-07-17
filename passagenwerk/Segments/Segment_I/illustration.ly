@@ -1,80 +1,80 @@
-\version "2.19.83"  %! abjad.LilyPondFile
-\language "english" %! abjad.LilyPondFile
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"                    %! abjad.LilyPondFile
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
 \include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily" %! abjad.LilyPondFile
 
-\header { %! abjad.LilyPondFile
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-} %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score { %! abjad.LilyPondFile
+\score {                                                                       %! abjad.LilyPondFile
     
     \context Score = "passagenwerk Score"
     <<
 
         \context TimeSignatureContext = "Global Context"
         {
-            % [Global Context measure 1] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 1]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 2] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 2]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 7/8 %! scaling time signatures
+            \time 7/8                                                          %! scaling time signatures
             s1 * 7/8
-            % [Global Context measure 3] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 3]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 5/8 %! scaling time signatures
+            \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 4] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 4]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 5] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 5]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 6] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 6]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 7] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 7]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 8] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 8]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 4/4 %! scaling time signatures
+            \time 4/4                                                          %! scaling time signatures
             s1 * 1
-            % [Global Context measure 9] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 9]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 2/4 %! scaling time signatures
+            \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 10] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 10]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 11] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 11]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 12] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 12]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 5/8 %! scaling time signatures
+            \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 13] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 13]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 2/4 %! scaling time signatures
+            \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 14] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 14]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \once \override TimeSignature.color = #white %! applying ending skips
-            \time 1/4 %! scaling time signatures
+            \once \override TimeSignature.color = #white                       %! applying ending skips
+            \time 1/4                                                          %! scaling time signatures
             s1 * 1/4
 
         }
@@ -87,12 +87,12 @@
 
                 \context Voice = "Voice 1"
                 {
-                    % [Voice 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { "vln. I-1" }           %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { "Violin I-1" }    %! applying staff names and clefs
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { "vln. I-1" }                                     %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { "Violin I-1" }                                   %! applying staff names and clefs
                     \clef "treble"
                     aqs'8
                     _ #(make-dynamic-script
@@ -118,7 +118,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 14/13 {
-                        % [Voice 1 measure 2] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 1 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
                         af'8.
                         ]
@@ -138,23 +138,23 @@
                         _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
 
                     }
-                    % [Voice 1 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 1 measure 4] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 1 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 1 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 1 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4
 
@@ -177,7 +177,7 @@
                     ~
 
                     \times 4/5 {
-                        % [Voice 1 measure 6] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 1 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
                         g'8.
 
@@ -212,7 +212,7 @@
 
                     r4
                     \!
-                    % [Voice 1 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r2
 
@@ -265,7 +265,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
-                            % [Voice 1 measure 8] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 1 measure 8]                              %! COMMENT_MEASURE_NUMBERS
 
                             c''32.
 
@@ -330,7 +330,7 @@
                     ]
 
                     \times 8/9 {
-                        % [Voice 1 measure 9] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 1 measure 9]                                  %! COMMENT_MEASURE_NUMBERS
 
                         bqf4
 
@@ -347,7 +347,7 @@
                         ~
 
                     }
-                    % [Voice 1 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
                     bf8
 
@@ -365,7 +365,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        % [Voice 1 measure 11] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS
 
                         c''16
 
@@ -386,7 +386,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 5/4 {
-                        % [Voice 1 measure 12] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 1 measure 12]                                 %! COMMENT_MEASURE_NUMBERS
 
                         aqf'8
                         - \tweak circled-tip ##t
@@ -399,7 +399,7 @@
                         bf'8
 
                     }
-                    % [Voice 1 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
                     aqf'16
 
@@ -409,19 +409,19 @@
                     \mf
 
                     r4.
-                    % [Voice 1 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 1 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -432,20 +432,20 @@
 
                 \context Voice = "Voice 2"
                 {
-                    % [Voice 2 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { "vln. I-2" }           %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { "Violin I-2" }    %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { "vln. I-2" }                                     %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { "Violin I-2" }                                   %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "treble"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 2 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 2 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4
 
@@ -515,7 +515,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
                             g'32.
                             \!
@@ -614,7 +614,7 @@
                     \times 8/13 {
 
                         \times 4/5 {
-                            % [Voice 2 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 2 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
                             g'64
 
@@ -663,15 +663,15 @@
                     }
 
                     r8
-                    % [Voice 2 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/8
 
                     R1 * 3/8
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 2 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 2 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r8
 
@@ -698,7 +698,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        % [Voice 2 measure 7] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 2 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
                         aqs2
 
@@ -708,7 +708,7 @@
                         ~
 
                     }
-                    % [Voice 2 measure 8] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
                     b'8
                     ~
@@ -733,7 +733,7 @@
                         ]
 
                     }
-                    % [Voice 2 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     fs'4.
                     \mp
@@ -742,15 +742,15 @@
 
                     r8
                     \!
-                    % [Voice 2 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 2 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 2 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
                     r4
 
@@ -804,7 +804,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
-                            % [Voice 2 measure 12] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 2 measure 12]                             %! COMMENT_MEASURE_NUMBERS
 
                             dqs'16.
                             \mf
@@ -862,28 +862,28 @@
                         ]
 
                     }
-                    % [Voice 2 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 2 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
                     \!
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 2 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 2 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -894,20 +894,20 @@
 
                 \context Voice = "Voice 3"
                 {
-                    % [Voice 3 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { "vln. II-1" }          %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { "Violin II-1" }   %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { "vln. II-1" }                                    %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { "Violin II-1" }                                  %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "treble"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 3 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 3 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     f'4
                     \mf
@@ -919,22 +919,22 @@
                     r8
 
                     r2
-                    % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 3 measure 4] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 3 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
                     fs'4.
                     \sfp
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ~
-                    % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
                     fs'8
                     [
@@ -960,7 +960,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 12/13 {
-                        % [Voice 3 measure 6] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 3 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
                         aqs8.
 
@@ -979,7 +979,7 @@
                         [
 
                     }
-                    % [Voice 3 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     d'8
                     ]
@@ -989,7 +989,7 @@
                     r8
 
                     r2
-                    % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r8
 
@@ -1023,7 +1023,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 3 measure 9]                                  %! COMMENT_MEASURE_NUMBERS
 
                         b4
 
@@ -1045,7 +1045,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
-                        % [Voice 3 measure 10] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 3 measure 10]                                 %! COMMENT_MEASURE_NUMBERS
 
                         bqs4
                         \mp
@@ -1058,7 +1058,7 @@
                         [
 
                     }
-                    % [Voice 3 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
                     bqf8.
 
@@ -1066,7 +1066,7 @@
 
                     b8
                     \mf
-                    % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
                     c'8
                     _ #(make-dynamic-script
@@ -1087,27 +1087,27 @@
 
                     r2
                     \!
-                    % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 3 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 3 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 3 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -1118,20 +1118,20 @@
 
                 \context Voice = "Voice 4"
                 {
-                    % [Voice 4 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { "vln. II-2" }          %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { "Violin II-2" }   %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { "vln. II-2" }                                    %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { "Violin II-2" }                                  %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "treble"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 4 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4.
 
@@ -1149,7 +1149,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 4 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
                             fs'8.
                             \!
@@ -1199,7 +1199,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 4 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
                             fqs'16.
                             - \tweak circled-tip ##t
@@ -1244,7 +1244,7 @@
                     }
 
                     \times 8/15 {
-                        % [Voice 4 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 4 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
                         af16.
 
@@ -1280,15 +1280,15 @@
                     }
 
                     r4
-                    % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/8
 
                     R1 * 3/8
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 4 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 4 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     <c'' fs''>4.
                     \sfp
@@ -1299,7 +1299,7 @@
                     ~
 
                     \times 4/5 {
-                        % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 4 measure 8]                                  %! COMMENT_MEASURE_NUMBERS
 
                         eqs'4
 
@@ -1310,7 +1310,7 @@
                     }
 
                     r2
-                    % [Voice 4 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4
 
@@ -1319,13 +1319,13 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ~
-                    % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
                     eqf'4.
                     \mp
                     - \tweak stencil #constante-hairpin
                     \<
-                    % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
                     eqs'8
                     \!
@@ -1355,36 +1355,36 @@
                         ]
 
                     }
-                    % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
                     \!
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 4 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 4 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 4 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -1395,12 +1395,12 @@
 
                 \context Voice = "Voice 5"
                 {
-                    % [Voice 5 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { vla.-1 }               %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { Viola-1 }         %! applying staff names and clefs
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { vla.-1 }                                         %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { Viola-1 }                                        %! applying staff names and clefs
                     \clef "varC"
                     r4
 
@@ -1421,7 +1421,7 @@
                     \<
                     ~
                     [
-                    % [Voice 5 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     aqs16
 
@@ -1453,7 +1453,7 @@
                         ~
 
                     }
-                    % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     cs'8
                     _ #(make-dynamic-script
@@ -1489,11 +1489,11 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ]
-                    % [Voice 5 measure 4] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
                     eqs'4.
                     ~
-                    % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
                     eqs'2.
                     _ #(make-dynamic-script
@@ -1510,7 +1510,7 @@
                         )
                     - \tweak stencil #constante-hairpin
                     \<
-                    % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r2
                     \!
@@ -1521,7 +1521,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ~
-                    % [Voice 5 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     e''4.
                     \ottava 0
@@ -1530,7 +1530,7 @@
 
                     dqs'4
                     ~
-                    % [Voice 5 measure 8] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
                     dqs'4
 
@@ -1558,7 +1558,7 @@
                         \!
 
                     }
-                    % [Voice 5 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     cqs'4
                     _ #(make-dynamic-script
@@ -1578,15 +1578,15 @@
 
                     r4
                     \!
-                    % [Voice 5 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 5 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
                     r8
 
@@ -1600,7 +1600,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
-                    % [Voice 5 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
                     c'4
                     \!
@@ -1610,27 +1610,27 @@
 
                     r4.
                     \!
-                    % [Voice 5 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 5 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 5 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 5 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -1641,12 +1641,12 @@
 
                 \context Voice = "Voice 6"
                 {
-                    % [Voice 6 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { vla.-2 }               %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { Viola-2 }         %! applying staff names and clefs
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { vla.-2 }                                         %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { Viola-2 }                                        %! applying staff names and clefs
                     \clef "varC"
                     cs''4.
                     \ppppp
@@ -1656,7 +1656,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 7/8 {
-                        % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 6 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
                         cs''8
 
@@ -1683,7 +1683,7 @@
                         ~
 
                     }
-                    % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     f'4
 
@@ -1722,7 +1722,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 6 measure 4]                                  %! COMMENT_MEASURE_NUMBERS
 
                         e''8
                         \ottava 0
@@ -1739,7 +1739,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 8/7 {
-                        % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 6 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
                         b8
                         [
@@ -1756,15 +1756,15 @@
 
                     r4
                     \!
-                    % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/8
 
                     R1 * 3/8
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 6 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     f'8
                     \sfp
@@ -1785,7 +1785,7 @@
                     ]
                     <>
                     \ff
-                    % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r2.
 
@@ -1805,7 +1805,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ~
-                    % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     g'8
 
@@ -1826,51 +1826,51 @@
                                 )
                             )
                         )
-                    % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 6 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 6 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 6 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 6 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 6 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 6 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 6 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 6 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 6 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -1881,20 +1881,20 @@
 
                 \context Voice = "Voice 7"
                 {
-                    % [Voice 7 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 7 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { vc.-1 }                %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { Violoncello-1 }   %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { vc.-1 }                                          %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { Violoncello-1 }                                  %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "bass"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 7 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 7 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4
 
@@ -1958,7 +1958,7 @@
                     \times 10/13 {
 
                         \times 4/5 {
-                            % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
                             af32
                             \!
@@ -2003,7 +2003,7 @@
                     \times 16/17 {
 
                         \times 2/3 {
-                            % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
                             dqf'32
 
@@ -2050,7 +2050,7 @@
                         ~
 
                     }
-                    % [Voice 7 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 7 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
                     d'16
 
@@ -2082,7 +2082,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/5 {
-                        % [Voice 7 measure 6] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 7 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
                         ef'8.
                         [
@@ -2115,7 +2115,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
-                        % [Voice 7 measure 7] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 7 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
                         \ottava 1
                         eqs'4.
@@ -2132,7 +2132,7 @@
 
                     r4.
                     \!
-                    % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 7 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r2..
 
@@ -2201,7 +2201,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 7 measure 9]                              %! COMMENT_MEASURE_NUMBERS
 
                             eqf'32.
                             \mf
@@ -2295,7 +2295,7 @@
                     }
 
                     \times 8/15 {
-                        % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 7 measure 10]                                 %! COMMENT_MEASURE_NUMBERS
 
                         fs'64.
 
@@ -2331,43 +2331,43 @@
                     }
 
                     r4
-                    % [Voice 7 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 7 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 7 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 7 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 7 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 7 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 7 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 7 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -2378,23 +2378,23 @@
 
                 \context Voice = "Voice 8"
                 {
-                    % [Voice 8 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { vc.-2 }                %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { Violoncello-2 }   %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { vc.-2 }                                          %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { Violoncello-2 }                                  %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "bass"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
+                    \stopStaff \startStaff                                     %! applying cutaway
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 14/13 {
-                        % [Voice 8 measure 2] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 8 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
                         ef'8.
                         \sfp
@@ -2418,7 +2418,7 @@
                         [
 
                     }
-                    % [Voice 8 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     bqs16
                     \mf
@@ -2450,16 +2450,16 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
-                    % [Voice 8 measure 4] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
                     \!
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 8 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 8 measure 5]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4.
 
@@ -2488,7 +2488,7 @@
                         d'16
 
                     }
-                    % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
                     dqf'16
 
@@ -2538,7 +2538,7 @@
                     \ottava 1
                     fqs'16
                     \ottava 0
-                    % [Voice 8 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     \ottava 1
                     fs'16
@@ -2592,7 +2592,7 @@
                     \times 16/17 {
 
                         \times 2/3 {
-                            % [Voice 8 measure 8] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS
 
                             dqf'64
 
@@ -2635,7 +2635,7 @@
                     }
 
                     r2..
-                    % [Voice 8 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r8
 
@@ -2655,7 +2655,7 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \>
                     ~
-                    % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
                     aqf4.
                     \p
@@ -2666,7 +2666,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
-                            % [Voice 8 measure 11] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 8 measure 11]                             %! COMMENT_MEASURE_NUMBERS
 
                             g16.
                             \!
@@ -2729,7 +2729,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 8 measure 12] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 8 measure 12]                             %! COMMENT_MEASURE_NUMBERS
 
                             b8.
                             \f
@@ -2776,7 +2776,7 @@
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/11 {
-                            % [Voice 8 measure 13] %! COMMENT_MEASURE_NUMBERS
+                            % [Voice 8 measure 13]                             %! COMMENT_MEASURE_NUMBERS
 
                             \ottava 1
                             bqf'8.
@@ -2851,20 +2851,20 @@
                         \ottava 0
 
                     }
-                    % [Voice 8 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 8 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
                     \!
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -2875,20 +2875,20 @@
 
                 \context Voice = "Voice 9"
                 {
-                    % [Voice 9 measure 1] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 1]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \set Staff.shortInstrumentName = %! applying staff names and clefs
-                    \markup { cb. }                  %! applying staff names and clefs
-                    \set Staff.instrumentName = %! applying staff names and clefs
-                    \markup { Contrabass }      %! applying staff names and clefs
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \set Staff.shortInstrumentName =                           %! applying staff names and clefs
+                    \markup { cb. }                                            %! applying staff names and clefs
+                    \set Staff.instrumentName =                                %! applying staff names and clefs
+                    \markup { Contrabass }                                     %! applying staff names and clefs
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     \clef "bass"
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 9 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 9 measure 2]                                      %! COMMENT_MEASURE_NUMBERS
 
                     r4.
 
@@ -2909,7 +2909,7 @@
                         ~
 
                     }
-                    % [Voice 9 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     e''4
                     _ #(make-dynamic-script
@@ -2933,7 +2933,7 @@
                     \<
                     <>
                     \f
-                    % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
                     <ef'' g''>4
                     \f
@@ -2944,7 +2944,7 @@
                     ~
 
                     \times 4/5 {
-                        % [Voice 9 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 9 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
                         eqf''4.
 
@@ -2958,18 +2958,18 @@
                     }
 
                     c'''4
-                    % [Voice 9 measure 6] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 6]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/8
                     \!
 
                     R1 * 3/8
-                    \stopStaff \startStaff %! applying cutaway
+                    \stopStaff \startStaff                                     %! applying cutaway
 
                     \times 8/9 {
-                        % [Voice 9 measure 7] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 9 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
                         bf''16
                         _ #(make-dynamic-script
@@ -3010,7 +3010,7 @@
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 16/15 {
-                        % [Voice 9 measure 8] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 9 measure 8]                                  %! COMMENT_MEASURE_NUMBERS
 
                         g'''8.
                         ~
@@ -3039,7 +3039,7 @@
                         ~
 
                     }
-                    % [Voice 9 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
                     bf'8
                     \ff
@@ -3056,51 +3056,51 @@
                     \mp
 
                     r4
-                    % [Voice 9 measure 10] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 9 measure 10]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 9 measure 11] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 9 measure 11]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 3/16
 
                     R1 * 3/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 9 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 9 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 5/16
 
                     R1 * 5/16
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 9 measure 13] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 9 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \once \override Rest.transparent = ##t %! applying invisibility
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/4
 
                     R1 * 1/4
-                    \stopStaff \startStaff %! applying cutaway
-                    % [Voice 9 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \stopStaff \startStaff                                     %! applying cutaway
+                    % [Voice 9 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
 
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white %! applying ending skips
+                    \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
 
-                    \once \override MultiMeasureRest.color = #white %! applying ending skips
+                    \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
-                    ^ \markup {                      %! applying ending skips
-                        \musicglyph                  %! applying ending skips
-                            #"scripts.ushortfermata" %! applying ending skips
-                        }                            %! applying ending skips
-                    \stopStaff \startStaff %! applying ending skips
+                    ^ \markup {                                                %! applying ending skips
+                        \musicglyph                                            %! applying ending skips
+                            #"scripts.ushortfermata"                           %! applying ending skips
+                        }                                                      %! applying ending skips
+                    \stopStaff \startStaff                                     %! applying ending skips
 
                 }
 
@@ -3109,4 +3109,4 @@
         >>
 
     >>
-} %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile

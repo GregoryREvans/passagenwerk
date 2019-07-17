@@ -347,7 +347,7 @@ if path.exists():
     path.unlink()
 time_3 = time.time()
 print(f"Persisting {pdf_path} ...")
-result = abjad.persist(score_file).as_pdf(pdf_path)  # or ly
+result = abjad.persist(score_file).as_pdf(pdf_path, strict=79)  # or ly
 print(result[0])
 print(result[1])
 print(result[2])
@@ -385,7 +385,7 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Voice)):
         print(f"Removing {pdf_path} ...")
         path.unlink()
     print(f"Persisting {pdf_path} ...")
-    result = abjad.persist(part_file).as_pdf(pdf_path)
+    result = abjad.persist(part_file).as_pdf(pdf_path, strict=79)
     print(result[0])
     print(result[1])
     print(result[2])
