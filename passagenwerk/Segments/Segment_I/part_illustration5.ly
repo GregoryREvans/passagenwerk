@@ -1,91 +1,91 @@
-\version "2.19.83"  %! abjad.LilyPondFile
-\language "english" %! abjad.LilyPondFile
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"                    %! abjad.LilyPondFile
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
 \include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
 
-\header { %! abjad.LilyPondFile
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-} %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score { %! abjad.LilyPondFile
+\score {                                                                       %! abjad.LilyPondFile
     \new Score
     <<
 
         \context TimeSignatureContext = "Global Context"
         {
-            % [Global Context measure 1] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 1]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 2] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 2]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 7/8 %! scaling time signatures
+            \time 7/8                                                          %! scaling time signatures
             s1 * 7/8
-            % [Global Context measure 3] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 3]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 5/8 %! scaling time signatures
+            \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 4] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 4]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 5] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 5]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 6] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 6]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 7] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 7]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/4 %! scaling time signatures
+            \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 8] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 8]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 4/4 %! scaling time signatures
+            \time 4/4                                                          %! scaling time signatures
             s1 * 1
-            % [Global Context measure 9] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 9]                                       %! COMMENT_MEASURE_NUMBERS
 
-            \time 2/4 %! scaling time signatures
+            \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 10] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 10]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 11] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 11]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 3/8 %! scaling time signatures
+            \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 12] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 12]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 5/8 %! scaling time signatures
+            \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 13] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 13]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \time 2/4 %! scaling time signatures
+            \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 14] %! COMMENT_MEASURE_NUMBERS
+            % [Global Context measure 14]                                      %! COMMENT_MEASURE_NUMBERS
 
-            \once \override TimeSignature.color = #white %! applying ending skips
-            \time 1/4 %! scaling time signatures
+            \once \override TimeSignature.color = #white                       %! applying ending skips
+            \time 1/4                                                          %! scaling time signatures
             s1 * 1/4
 
         }
 
         \context Voice = "Voice 5"
         {
-            % [Voice 5 measure 1] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 1]                                              %! COMMENT_MEASURE_NUMBERS
 
-            \set Staff.shortInstrumentName = %! applying staff names and clefs
-            \markup { vla.-1 }               %! applying staff names and clefs
-            \set Staff.instrumentName = %! applying staff names and clefs
-            \markup { Viola-1 }         %! applying staff names and clefs
+            \set Staff.shortInstrumentName =                                   %! applying staff names and clefs
+            \markup { vla.-1 }                                                 %! applying staff names and clefs
+            \set Staff.instrumentName =                                        %! applying staff names and clefs
+            \markup { Viola-1 }                                                %! applying staff names and clefs
             \clef "varC"
             r4
 
@@ -106,7 +106,7 @@
             \<
             ~
             [
-            % [Voice 5 measure 2] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 2]                                              %! COMMENT_MEASURE_NUMBERS
 
             aqs16
 
@@ -138,7 +138,7 @@
                 ~
 
             }
-            % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
 
             cs'8
             _ #(make-dynamic-script
@@ -174,11 +174,11 @@
             - \tweak stencil #abjad-flared-hairpin
             \<
             ]
-            % [Voice 5 measure 4] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
 
             eqs'4.
             ~
-            % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
 
             eqs'2.
             _ #(make-dynamic-script
@@ -195,27 +195,26 @@
                 )
             - \tweak stencil #constante-hairpin
             \<
-            % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 6]                                              %! COMMENT_MEASURE_NUMBERS
 
             r2
             \!
 
-            \ottava 1
+            \clef "treble"
             e''4
             \f
             - \tweak stencil #constante-hairpin
             \<
             ~
-            % [Voice 5 measure 7] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 7]                                              %! COMMENT_MEASURE_NUMBERS
 
             e''4.
-            \ottava 0
 
             eqf'8
 
             dqs'4
             ~
-            % [Voice 5 measure 8] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
 
             dqs'4
 
@@ -243,7 +242,7 @@
                 \!
 
             }
-            % [Voice 5 measure 9] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
             cqs'4
             _ #(make-dynamic-script
@@ -263,15 +262,15 @@
 
             r4
             \!
-            % [Voice 5 measure 10] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
 
-            \once \override Rest.transparent = ##t %! applying invisibility
+            \once \override Rest.transparent = ##t                             %! applying invisibility
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
             r1 * 3/16
 
             R1 * 3/16
-            \stopStaff \startStaff %! applying cutaway
-            % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
+            \stopStaff \startStaff                                             %! applying cutaway
+            % [Voice 5 measure 11]                                             %! COMMENT_MEASURE_NUMBERS
 
             r8
 
@@ -285,7 +284,7 @@
             - \tweak stencil #constante-hairpin
             \<
             ]
-            % [Voice 5 measure 12] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 12]                                             %! COMMENT_MEASURE_NUMBERS
 
             c'4
             \!
@@ -295,28 +294,28 @@
 
             r4.
             \!
-            % [Voice 5 measure 13] %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 13]                                             %! COMMENT_MEASURE_NUMBERS
 
-            \once \override Rest.transparent = ##t %! applying invisibility
+            \once \override Rest.transparent = ##t                             %! applying invisibility
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
             r1 * 1/4
 
             R1 * 1/4
-            \stopStaff \startStaff %! applying cutaway
-            % [Voice 5 measure 14] %! COMMENT_MEASURE_NUMBERS
+            \stopStaff \startStaff                                             %! applying cutaway
+            % [Voice 5 measure 14]                                             %! COMMENT_MEASURE_NUMBERS
 
             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-            \once \override Rest.color = #white %! applying ending skips
+            \once \override Rest.color = #white                                %! applying ending skips
             r1 * 1/8
 
-            \once \override MultiMeasureRest.color = #white %! applying ending skips
+            \once \override MultiMeasureRest.color = #white                    %! applying ending skips
             R1 * 1/8
-            ^ \markup {                      %! applying ending skips
-                \musicglyph                  %! applying ending skips
-                    #"scripts.ushortfermata" %! applying ending skips
-                }                            %! applying ending skips
-            \stopStaff \startStaff %! applying ending skips
+            ^ \markup {                                                        %! applying ending skips
+                \musicglyph                                                    %! applying ending skips
+                    #"scripts.ushortfermata"                                   %! applying ending skips
+                }                                                              %! applying ending skips
+            \stopStaff \startStaff                                             %! applying ending skips
 
         }
     >>
-} %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile

@@ -85,6 +85,8 @@
 		%\override BarLine.stencil = ##f
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
+		\override Beam.beam-thickness = #0.8
+        \override Beam.length-fraction = #1.5
 		\override Clef.whiteout-style = #'outline
   		\override Clef.whiteout = 1
 		\override DynamicText.font-size = #-2

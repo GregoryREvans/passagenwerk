@@ -1515,7 +1515,7 @@
                     r2
                     \!
 
-                    \ottava 1
+                    \clef "treble"
                     e''4
                     \f
                     - \tweak stencil #constante-hairpin
@@ -1524,7 +1524,6 @@
                     % [Voice 5 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
                     e''4.
-                    \ottava 0
 
                     eqf'8
 
@@ -1701,7 +1700,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    \ottava 1
+                    \clef "treble"
                     e''16
                     \!
                     _ #(make-dynamic-script
@@ -1725,15 +1724,12 @@
                         % [Voice 6 measure 4]                                  %! COMMENT_MEASURE_NUMBERS
 
                         e''8
-                        \ottava 0
 
-                        \ottava 1
                         <d' d''>16
                         ~
                         ]
 
                         <d' d''>4
-                        \ottava 0
 
                     }
 
@@ -2057,12 +2053,10 @@
                     dqs'16
                     ]
 
-                    \ottava 1
                     eqf'4.
                     \mp
                     - \tweak stencil #constante-hairpin
                     \<
-                    \ottava 0
 
                     dqs'4
                     \!
@@ -2087,7 +2081,6 @@
                         ef'8.
                         [
 
-                        \ottava 1
                         e'8
                         ~
 
@@ -2098,7 +2091,6 @@
 
                     e'16
                     \p
-                    \ottava 0
 
                     ef'16
                     - \tweak circled-tip ##t
@@ -2108,25 +2100,19 @@
 
                     ef'16
 
-                    \ottava 1
                     eqf'16
                     ]
-                    \ottava 0
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 6/7 {
                         % [Voice 7 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        \ottava 1
                         eqs'4.
-                        \ottava 0
 
-                        \ottava 1
                         fqs'16
                         \mf
                         - \tweak stencil #constante-hairpin
                         \<
-                        \ottava 0
 
                     }
 
@@ -2141,7 +2127,6 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/11 {
 
-                            \clef "tenorvarC"
                             f'64.
                             _ #(make-dynamic-script
                                 (markup
@@ -2222,6 +2207,7 @@
 
                             fs'64.
 
+                            \clef "tenorvarC"
                             g'64.
 
                             af'64.
@@ -2273,9 +2259,8 @@
 
                             aqs'32.
 
-                            \ottava 1
+                            \clef "treble"
                             bqf'32.
-                            \ottava 0
 
                         }
 
@@ -2284,9 +2269,7 @@
 
                             bf'32.
 
-                            \ottava 1
                             b'32.
-                            \ottava 0
 
                         }
 
@@ -2492,57 +2475,34 @@
 
                     dqf'16
 
-                    \ottava 1
                     eqs'16
-                    \ottava 0
 
-                    \ottava 1
                     fs'16
-                    \ottava 0
 
-                    \ottava 1
                     eqf'16
-                    \ottava 0
 
-                    \ottava 1
                     eqs'16
-                    \ottava 0
 
-                    \ottava 1
                     fqs'16
-                    \ottava 0
 
-                    \ottava 1
                     eqs'16
-                    \ottava 0
 
-                    \ottava 1
+                    \clef "tenorvarC"
                     g'16
                     \ppppp
-                    \ottava 0
 
-                    \ottava 1
                     fs'16
                     - \tweak circled-tip ##t
                     \<
-                    \ottava 0
 
-                    \ottava 1
                     eqf'16
-                    \ottava 0
 
-                    \ottava 1
                     eqs'16
-                    \ottava 0
 
-                    \ottava 1
                     fqs'16
-                    \ottava 0
                     % [Voice 8 measure 7]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    \ottava 1
                     fs'16
-                    \ottava 0
 
                     dqs'16
 
@@ -2553,16 +2513,12 @@
 
                             dqf'32
 
-                            \ottava 1
                             eqf'32.
                             ]
-                            \ottava 0
 
                         }
 
-                        \ottava 1
                         eqs'4
-                        \ottava 0
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
@@ -2778,20 +2734,16 @@
                         \times 6/11 {
                             % [Voice 8 measure 13]                             %! COMMENT_MEASURE_NUMBERS
 
-                            \ottava 1
+                            \clef "treble"
                             bqf'8.
-                            \ottava 0
 
-                            \ottava 1
                             aqs'32
                             ~
 
                             aqs'8
-                            \ottava 0
 
                         }
 
-                        \ottava 1
                         aqf'32
                         ~
 
@@ -2799,32 +2751,22 @@
                         ~
 
                         aqf'32
-                        \ottava 0
 
                         \times 2/3 {
 
-                            \ottava 1
                             a'16.
-                            \ottava 0
 
-                            \ottava 1
                             af'16.
-                            \ottava 0
 
-                            \ottava 1
                             a'16.
-                            \ottava 0
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
 
-                            \ottava 1
                             aqs'16.
-                            \ottava 0
 
-                            \ottava 1
                             aqf'16.
                             _ #(make-dynamic-script
                                 (markup
@@ -2838,17 +2780,14 @@
                                         )
                                     )
                                 )
-                            \ottava 0
 
                         }
 
-                        \ottava 1
                         gqs'8.
                         \mp
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
-                        \ottava 0
 
                     }
                     % [Voice 8 measure 14]                                     %! COMMENT_MEASURE_NUMBERS
@@ -2894,13 +2833,11 @@
 
                     \times 4/5 {
 
-                        \ottava 1
                         \clef "treble"
                         <c''' d'''>8
                         - \tweak circled-tip ##t
                         \<
                         [
-                        \ottava 0
 
                         af''8
                         ]
@@ -3004,7 +2941,6 @@
 
                     c''16
 
-                    \ottava 1
                     g'''16
                     ~
 
@@ -3017,14 +2953,9 @@
 
                         g'''8
                         ]
-                        \ottava 0
 
-                        \ottava 1
                         ef'''4
-                        \ottava 0
 
-                        \ottava 1
-                        \ottava 1
                         <e''' a'''>16
                         \sfp
                         \<
@@ -3032,8 +2963,6 @@
                         [
 
                         <e''' a'''>8
-                        \ottava 0
-                        \ottava 0
 
                         bf'8.
                         ~
