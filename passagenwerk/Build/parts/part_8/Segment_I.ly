@@ -438,7 +438,6 @@
                 \times 6/11 {
                     % [Voice 8 measure 13]                                     %! COMMENT_MEASURE_NUMBERS
 
-                    \clef "treble"
                     bqf'8.
 
                     aqs'32

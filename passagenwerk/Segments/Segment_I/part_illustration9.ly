@@ -99,12 +99,14 @@
 
             \times 4/5 {
 
+                \ottava 1
                 \clef "treble"
                 <c''' d'''>8
                 - \tweak circled-tip ##t
                 \<
                 [
 
+                \ottava 0
                 af''8
                 ]
 
@@ -207,6 +209,7 @@
 
             c''16
 
+            \ottava 1
             g'''16
             ~
 
@@ -222,6 +225,7 @@
 
                 ef'''4
 
+                \ottava 1
                 <e''' a'''>16
                 \sfp
                 \<
@@ -230,6 +234,8 @@
 
                 <e''' a'''>8
 
+                \ottava 0
+                \ottava 0
                 bf'8.
                 ~
 

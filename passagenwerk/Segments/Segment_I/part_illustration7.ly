@@ -462,7 +462,6 @@
 
                     aqs'32.
 
-                    \clef "treble"
                     bqf'32.
 
                 }
