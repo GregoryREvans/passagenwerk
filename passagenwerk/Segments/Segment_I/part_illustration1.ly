@@ -128,7 +128,7 @@
                 aqf'8.
                 ]
                 <>
-                _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
+                \!
 
             }
             % [Voice 1 measure 3]                                              %! COMMENT_MEASURE_NUMBERS

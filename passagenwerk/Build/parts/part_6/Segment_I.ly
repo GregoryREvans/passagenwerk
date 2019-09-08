@@ -110,6 +110,8 @@
             % [Voice 6 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
 
             f'4
+            <>
+            \!
 
             b'16
             \mf

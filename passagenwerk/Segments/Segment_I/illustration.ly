@@ -135,7 +135,7 @@
                         aqf'8.
                         ]
                         <>
-                        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
+                        \!
 
                     }
                     % [Voice 1 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
@@ -796,6 +796,8 @@
                         }
 
                         eqf'64
+                        <>
+                        \!
 
                     }
 
@@ -1685,6 +1687,8 @@
                     % [Voice 6 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     f'4
+                    <>
+                    \!
 
                     b'16
                     \mf
@@ -2398,6 +2402,8 @@
 
                         bf8
                         [
+                        <>
+                        \!
 
                     }
                     % [Voice 8 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
@@ -2956,6 +2962,8 @@
                         ]
 
                         ef'''4
+                        <>
+                        \!
 
                         \ottava 1
                         <e''' a'''>16
