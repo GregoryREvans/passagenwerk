@@ -1,4 +1,5 @@
 # from . import attachments
+from . import articulations
 from . import dynamics
 from . import pitch
 from . import rhythm

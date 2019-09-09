@@ -82,6 +82,7 @@
 
             f'4
             \mp
+            - \tenuto
             - \tweak stencil #constante-hairpin
             \<
 
@@ -101,6 +102,7 @@
 
             f'4.
             \mf
+            - \tenuto
             \<
             ~
             % [Voice 3 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
@@ -111,11 +113,13 @@
 
             aqs'8
             \sfp
+            - \accent
             \<
 
             aqs'16
 
             aqf'8.
+            - \tenuto
             ~
 
             aqf'8.
@@ -137,6 +141,7 @@
                         )
                     )
                 )
+            - \tenuto
             \<
             ~
 
@@ -163,16 +168,19 @@
                             )
                         )
                     )
+                - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
                 aqf'16
+                - \espressivo
                 ~
                 ]
 
                 aqf'4
 
                 af'8
+                - \tenuto
                 - \tweak circled-tip ##t
                 \<
                 [
@@ -195,6 +203,7 @@
 
             aqs'8
             \f
+            - \tenuto
             - \tweak stencil #constante-hairpin
             \<
             ]
@@ -220,6 +229,7 @@
                         )
                     )
                 )
+            - \accent
             - \tweak stencil #constante-hairpin
             \<
 
@@ -229,9 +239,11 @@
             \<
 
             a8.
+            - \tenuto
             [
 
             aqs16
+            - \accent
             ~
             ]
 
@@ -255,6 +267,7 @@
 
                 a16
                 \ppppp
+                - \accent
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 ~
@@ -263,10 +276,12 @@
                 a16
 
                 aqs16
+                - \espressivo
 
             }
 
             bf8
+            - \tenuto
             ~
             ]
 
@@ -279,6 +294,7 @@
 
                 a16
                 \f
+                - \espressivo
                 - \tweak stencil #abjad-flared-hairpin
                 \>
                 ~
@@ -306,10 +322,12 @@
             a16
             \!
             \mf
+            - \tenuto
             - \tweak stencil #constante-hairpin
             \<
 
             aqs8
+            - \tenuto
             % [Voice 3 measure 12]                                             %! COMMENT_MEASURE_NUMBERS
 
             a8
@@ -325,6 +343,7 @@
                         )
                     )
                 )
+            - \accent
             \>
             ]
             <>

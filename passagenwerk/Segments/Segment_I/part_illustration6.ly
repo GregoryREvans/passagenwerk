@@ -89,6 +89,7 @@
             \clef "varC"
             f'4.
             \mp
+            - \tenuto
             \<
             ~
 
@@ -104,6 +105,7 @@
                 f'4.
                 \!
                 \f
+                - \accent
                 \>
                 <>
                 \sfp
@@ -121,10 +123,12 @@
                             )
                         )
                     )
+                - \espressivo
                 - \tweak stencil #abjad-flared-hairpin
                 \<
 
                 fs'4
+                - \tenuto
                 ~
 
             }
@@ -138,11 +142,13 @@
             f'16
             \!
             \ff
+            - \espressivo
             - \tweak stencil #abjad-flared-hairpin
             \>
             [
 
             fs'16
+            - \tenuto
             ~
 
             fs'8.
@@ -164,6 +170,7 @@
                         )
                     )
                 )
+            - \tenuto
             - \tweak stencil #constante-hairpin
             \<
             ~
@@ -175,6 +182,7 @@
                 a'8
 
                 f'16
+                - \accent
                 - \tweak circled-tip ##t
                 - \tweak stencil #abjad-flared-hairpin
                 \<
@@ -207,6 +215,7 @@
                 [
 
                 aqs16
+                - \tenuto
                 ]
 
                 bf4
@@ -222,6 +231,7 @@
                             )
                         )
                     )
+                - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
@@ -241,11 +251,13 @@
 
             f'8
             \mp
+            - \tenuto
             - \tweak stencil #abjad-flared-hairpin
             \<
             [
 
             fs'8
+            - \accent
             ~
 
             fs'8
@@ -256,6 +268,7 @@
             aqs'16
 
             aqf'8.
+            - \tenuto
             ]
             <>
             \mf
@@ -265,6 +278,7 @@
 
             f'4
             \mf
+            - \espressivo
             - \tweak stencil #constante-hairpin
             \<
             ~
@@ -285,6 +299,7 @@
                         )
                     )
                 )
+            - \tenuto
             \>
             <>
             \p

@@ -1,23 +1,22 @@
-import abjad
-from evans.AttachmentHandlers.ClefHandler import ClefHandler
+import evans
 
-clef_handler_one = ClefHandler(clef="treble", add_extended_clefs=True, add_ottavas=True)
-clef_handler_two = ClefHandler(clef="treble", add_extended_clefs=True, add_ottavas=True)
+clef_handler_one = evans.ClefHandler(clef="treble", add_extended_clefs=True, add_ottavas=True)
+clef_handler_two = evans.ClefHandler(clef="treble", add_extended_clefs=True, add_ottavas=True)
 
-clef_handler_three = ClefHandler(
+clef_handler_three = evans.ClefHandler(
     clef="treble", add_extended_clefs=True, add_ottavas=True
 )
-clef_handler_four = ClefHandler(
+clef_handler_four = evans.ClefHandler(
     clef="treble", add_extended_clefs=True, add_ottavas=True
 )
 
-clef_handler_five = ClefHandler(clef="alto", add_extended_clefs=True, add_ottavas=True)
-clef_handler_six = ClefHandler(clef="alto", add_extended_clefs=True, add_ottavas=True)
+clef_handler_five = evans.ClefHandler(clef="alto", add_extended_clefs=True, add_ottavas=True)
+clef_handler_six = evans.ClefHandler(clef="alto", add_extended_clefs=True, add_ottavas=True)
 
-clef_handler_seven = ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
-clef_handler_eight = ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
+clef_handler_seven = evans.ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
+clef_handler_eight = evans.ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
 
-clef_handler_nine = ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
+clef_handler_nine = evans.ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
 
 clef_handlers = [
     clef_handler_one,

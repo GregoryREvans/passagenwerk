@@ -27,7 +27,8 @@ time_1 = time.time()
 print("Interpreting file ...")
 
 global_timespan = abjad.Timespan(
-    start_offset=0, stop_offset=max(_.stop_offset for _ in segment_I_rhythm_timespans.values())
+    start_offset=0,
+    stop_offset=max(_.stop_offset for _ in segment_I_rhythm_timespans.values()),
 )
 
 for voice_name, timespan_list in segment_I_rhythm_timespans.items():
@@ -63,6 +64,7 @@ def make_container(handler, durations):
     container = abjad.Container([])
     container.extend(selections)
     return container
+
 
 for voice_name, timespan_list in segment_I_rhythm_timespans.items():
     for handler, grouper in itertools.groupby(timespan_list, key=key_function):
@@ -297,7 +299,11 @@ for abbrev, name, inst, handler, voice in zip(
 # transformer(score)
 
 score_file = abjad.LilyPondFile.new(
-    score, includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily"]
+    score,
+    includes=[
+        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily",
+    ],
 )
 
 abjad.SegmentMaker.comment_measure_numbers(score)
@@ -357,7 +363,10 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Voice)):
     part.insert(0, signature_copy)
     part_file = abjad.LilyPondFile.new(
         part,
-        includes=["/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily", "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily"],
+        includes=[
+            "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+            "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily",
+        ],
     )
     pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
     path = pathlib.Path(f"part_illustration{count + 1}.pdf")

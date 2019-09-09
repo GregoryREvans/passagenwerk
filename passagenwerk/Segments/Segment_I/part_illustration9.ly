@@ -117,9 +117,11 @@
                 [
 
                 fs''8
+                - \tenuto
                 ]
 
                 a''4.
+                - \accent
                 ~
 
             }
@@ -130,6 +132,7 @@
 
             f''4.
             \mp
+            - \tenuto
             - \tweak stencil #abjad-flared-hairpin
             \<
             <>
@@ -137,11 +140,13 @@
             % [Voice 9 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
 
             f''4
+            - \espressivo
             - \tweak circled-tip ##t
             - \tweak stencil #abjad-flared-hairpin
             \<
 
             aqs''8
+            - \tenuto
             ~
 
             \times 4/5 {
@@ -166,11 +171,13 @@
                             )
                         )
                     )
+                - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 [
 
                 fs''8
+                - \accent
                 ~
                 ]
 
@@ -198,11 +205,13 @@
                 [
 
                 fs''8
+                - \tenuto
                 ~
 
                 fs''16
 
                 a''8
+                - \accent
                 ~
 
                 a''8.
@@ -210,10 +219,13 @@
             }
 
             f''8
+            - \espressivo
 
             fs''16
+            - \tenuto
 
             a''16
+            - \tenuto
             ~
 
             \tweak text #tuplet-number::calc-fraction-text
@@ -230,11 +242,13 @@
 
                 f''4
                 \mf
+                - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
                 fs''16
                 \f
+                - \accent
                 \>
                 ~
                 [
@@ -242,6 +256,7 @@
                 fs''8
 
                 aqs''8.
+                - \espressivo
                 ~
 
             }
@@ -255,6 +270,7 @@
             aqs''8
             \!
             \ff
+            - \tenuto
             \>
             ]
             <>
