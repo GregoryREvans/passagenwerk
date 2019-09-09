@@ -135,6 +135,7 @@ override_command = abjad.LilyPondLiteral(
 abjad.attach(override_command, last_skip, tag="applying ending skips")
 
 for voice in abjad.select(score["Staff Group"]).components(abjad.Voice):
+    last_run = abjad.select(voice).runs()[-1]
     container = abjad.Container()
     sig = time_signatures[-1]
     leaf_duration = sig.duration / 2
@@ -162,6 +163,10 @@ for voice in abjad.select(score["Staff Group"]).components(abjad.Voice):
     abjad.attach(stop_command, final_rest, tag="applying ending skips")
     abjad.attach(rest_literal, penultimate_rest, tag="applying ending skips")
     abjad.attach(mult_rest_literal, final_rest, tag="applying ending skips")
+    if abjad.inspect(last_run[0]).has_indicator(abjad.Dynamic):
+        abjad.attach(abjad.StopHairpin(), penultimate_rest, tag="applying ending skips")
+    else:
+        continue
     voice.append(container[:])
 
 

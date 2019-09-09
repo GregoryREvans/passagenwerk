@@ -490,6 +490,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1039,6 +1040,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1355,6 +1357,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1681,6 +1684,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1982,6 +1986,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -2260,6 +2265,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -2832,6 +2838,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -3412,6 +3419,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -3664,6 +3672,7 @@
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                     \once \override Rest.color = #white                        %! applying ending skips
                     r1 * 1/8
+                    \!                                                         %! applying ending skips
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8

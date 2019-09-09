@@ -53,7 +53,7 @@ pitch_timespan_list = pitch_timespan_maker(
 )
 
 #########
-#dynamic#
+# dynamic#
 #########
 dynamic_target_timespan = abjad.Timespan(0, 10)
 
@@ -74,7 +74,7 @@ dynamic_timespan_list = dynamic_timespan_maker(
 )
 
 ##############
-#articulation#
+# articulation#
 ##############
 articulation_target_timespan = abjad.Timespan(0, 10)
 

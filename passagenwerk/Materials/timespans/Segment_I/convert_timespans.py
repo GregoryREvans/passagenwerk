@@ -1,4 +1,5 @@
 import evans
+
 # from evans.abjad_functions.ConvertTimespans import ConvertTimespans
 from passagenwerk.Materials.score_structure.Segment_I.rhythm_material_pattern import (
     rhythm_material_list,
@@ -40,7 +41,7 @@ segment_I_pitch_timespans = evans.ConvertTimespans.convert_timespans(
 )
 
 #########
-#dynamic#
+# dynamic#
 #########
 dynamic_mat = dynamic_material_list
 
@@ -49,7 +50,7 @@ segment_I_dynamic_timespans = evans.ConvertTimespans.convert_timespans(
 )
 
 ##############
-#articulation#
+# articulation#
 ##############
 articulation_mat = articulation_material_list
 
@@ -60,4 +61,8 @@ segment_I_articulation_timespans = evans.ConvertTimespans.convert_timespans(
 ###############
 # all timespans#
 ###############
-segment_I_timespans = [segment_I_pitch_timespans, segment_I_dynamic_timespans, segment_I_articulation_timespans]
+segment_I_timespans = [
+    segment_I_pitch_timespans,
+    segment_I_dynamic_timespans,
+    segment_I_articulation_timespans,
+]
