@@ -101,16 +101,16 @@
                 af'8.
                 ]
 
-                g'4
+                aqs'4
                 \p
                 - \tweak circled-tip ##t
                 - \tweak stencil #abjad-flared-hairpin
                 \>
 
-                bf'8.
+                aqf'8.
                 [
 
-                aqf'8.
+                af'8.
                 ]
                 <>
                 \!
@@ -158,18 +158,6 @@
                 % [Voice 1 measure 6]                                          %! COMMENT_MEASURE_NUMBERS
 
                 g'8.
-
-                bf'8
-                ~
-
-            }
-
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 4/3 {
-
-                bf'8
-
-                aqf'16
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -184,6 +172,22 @@
                     )
                 - \tweak stencil #constante-hairpin
                 \<
+
+                aqs'8
+                \!
+                \p
+                - \tweak stencil #constante-hairpin
+                \<
+                ~
+
+            }
+
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 4/3 {
+
+                aqs'8
+
+                aqf'16
                 ]
 
             }
@@ -198,31 +202,31 @@
 
                 \times 2/3 {
 
-                    b'32
+                    aqs'32
                     \ppppp
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     [
 
-                    c''64
+                    aqf'64
                     ~
 
-                    c''64.
+                    aqf'64.
 
                 }
 
-                b'16
+                af'16
 
                 \times 2/3 {
 
-                    c''64
+                    g'64
 
-                    dqs''128
+                    bf'128
                     ~
 
-                    dqs''64
+                    bf'64
 
-                    dqf''32
+                    aqf'32
 
                 }
 
@@ -236,6 +240,7 @@
                 }
 
                 b'32
+                \mp
 
             }
 
@@ -245,7 +250,10 @@
                 \times 10/11 {
                     % [Voice 1 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    c''32.
+                    aqs'32.
+                    \mf
+                    - \tweak stencil #abjad-flared-hairpin
+                    \<
 
                     aqf'128
                     ~
@@ -254,52 +262,54 @@
 
                 }
 
-                g'32
+                af'32
                 ~
 
-                g'32
+                af'32
 
                 \times 4/5 {
 
-                    fqs'64
+                    g'64
 
-                    fs'256
+                    bf'256
                     ~
 
-                    fs'64
+                    bf'64
 
-                    gqf'64.
+                    aqf'64.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    g'16
+                    b'16
 
-                    bf'32.
+                    c''32.
 
                 }
 
-                aqf'16
+                b'16
 
             }
 
-            b'8
+            c''8
 
-            bf'8
+            dqs''8
             ~
 
-            bf'8.
-            \mp
-
-            aqs'16
-            \p
+            dqs''8.
+            \f
             - \tweak stencil #constante-hairpin
+            \<
+
+            dqf''16
+            \!
+            - \tweak circled-tip ##t
             \<
             ~
 
-            aqs'16
+            dqf''16
 
             bf16
 
@@ -311,54 +321,60 @@
                 % [Voice 1 measure 9]                                          %! COMMENT_MEASURE_NUMBERS
 
                 bqf4
-
-                b8
                 \mf
-                - \tweak stencil #abjad-flared-hairpin
+
+                bf8
+                \sfp
                 \<
                 ~
                 [
 
-                b8
+                bf8
 
-                bf16
+                bqf16
                 ~
 
             }
             % [Voice 1 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
 
-            bf8
+            bqf8
+            \ff
 
-            b'8
-            \f
+            aqs'8
+            \ppppp
             - \tweak stencil #constante-hairpin
             \<
 
-            c''16
-            \!
-            \sfp
+            aqf'16
+            \mp
             \<
 
-            b'16
+            af'16
+            \mf
 
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
                 % [Voice 1 measure 11]                                         %! COMMENT_MEASURE_NUMBERS
 
-                c''16
+                aqs'16
+                \f
+                - \tweak stencil #abjad-flared-hairpin
+                \>
 
-                dqs''16
+                aqf'16
 
-                dqf''16
-
-                bf'16
-
-                dqf''16
-
-                c''16
+                af'16
 
                 aqs'16
-                \ff
+
+                aqf'16
+
+                af'16
+
+                g'16
+                \sfp
+                - \tweak stencil #constante-hairpin
+                \<
 
             }
 
@@ -366,27 +382,57 @@
             \times 5/4 {
                 % [Voice 1 measure 12]                                         %! COMMENT_MEASURE_NUMBERS
 
+                aqs'8
+                \!
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.4
+                            #:dynamic "f"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
+                - \tweak stencil #abjad-flared-hairpin
+                \>
+
                 aqf'8
-                - \tweak circled-tip ##t
-                \<
 
                 af'8
 
                 g'8
-
-                bf'8
+                \p
+                - \tweak stencil #constante-hairpin
+                \<
 
             }
             % [Voice 1 measure 13]                                             %! COMMENT_MEASURE_NUMBERS
 
-            aqf'16
+            aqs'16
+            \!
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "mf"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
+            - \tweak stencil #constante-hairpin
+            \<
 
-            b'16
+            aqf'16
             ]
-            <>
-            \mf
 
             r4.
+            \!
             % [Voice 1 measure 14]                                             %! COMMENT_MEASURE_NUMBERS
 
             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips

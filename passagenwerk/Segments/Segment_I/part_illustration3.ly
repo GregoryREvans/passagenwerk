@@ -96,13 +96,12 @@
             % [Voice 3 measure 2]                                              %! COMMENT_MEASURE_NUMBERS
 
             f'4
-            \mf
-            - \tweak stencil #abjad-flared-hairpin
+            \mp
+            - \tweak stencil #constante-hairpin
             \<
-            <>
-            \f
 
             r8
+            \!
 
             r2
             % [Voice 3 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
@@ -115,32 +114,44 @@
             \stopStaff \startStaff                                             %! applying cutaway
             % [Voice 3 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
 
-            fs'4.
-            \sfp
-            - \tweak stencil #abjad-flared-hairpin
+            f'4.
+            \mf
             \<
             ~
             % [Voice 3 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
 
-            fs'8
+            f'8
+            \f
             [
 
-            bqs8
+            aqs'8
+            \sfp
+            \<
 
-            aqs16
+            aqs'16
 
-            bf8.
+            aqf'8.
             ~
 
-            bf8.
+            aqf'8.
             \ff
             - \tweak stencil #constante-hairpin
             \<
 
-            aqs16
+            af'16
             \!
-            \p
-            - \tweak stencil #constante-hairpin
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "mf"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             \<
             ~
 
@@ -148,46 +159,78 @@
             \times 12/13 {
                 % [Voice 3 measure 6]                                          %! COMMENT_MEASURE_NUMBERS
 
-                aqs8.
+                af'8.
+                \f
+                - \tweak stencil #constante-hairpin
+                \<
 
-                bf8.
+                aqs'8.
+                \!
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "p"
+                            #:hspace -0.25
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
+                - \tweak stencil #constante-hairpin
+                \<
 
-                dqf'16
+                aqf'16
                 ~
                 ]
 
-                dqf'4
+                aqf'4
 
-                bqs8
+                af'8
                 - \tweak circled-tip ##t
-                - \tweak stencil #abjad-flared-hairpin
                 \<
                 [
+                <>
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
 
             }
             % [Voice 3 measure 7]                                              %! COMMENT_MEASURE_NUMBERS
 
-            d'8
+            aqs'8
+            \f
+            - \tweak stencil #constante-hairpin
+            \<
             ]
-            <>
-            \mf
 
             r8
+            \!
 
             r2
             % [Voice 3 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
 
             r8
 
-            dqs'4.
+            aqs'4.
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
                     #:line (
                         #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.4
-                        #:dynamic "f"
-                        #:hspace -0.2
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
                         #:general-align Y -2 #:normal-text #:larger "”"
                         )
                     )
@@ -195,15 +238,15 @@
             - \tweak stencil #constante-hairpin
             \<
 
-            d'4
-            \p
-            - \tweak stencil #constante-hairpin
+            aqf'4
+            - \tweak circled-tip ##t
+            - \tweak stencil #abjad-flared-hairpin
             \<
 
-            bf8.
+            a8.
             [
 
-            b16
+            aqs16
             ~
             ]
 
@@ -211,21 +254,34 @@
             \times 6/7 {
                 % [Voice 3 measure 9]                                          %! COMMENT_MEASURE_NUMBERS
 
-                b4
+                aqs4
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
 
-                c'16
+                a16
                 \ppppp
+                - \tweak stencil #abjad-flared-hairpin
                 \<
                 ~
                 [
 
-                c'16
+                a16
 
-                cqs'16
+                aqs16
 
             }
 
-            bqs8
+            bf8
             ~
             ]
 
@@ -233,28 +289,45 @@
             \times 6/5 {
                 % [Voice 3 measure 10]                                         %! COMMENT_MEASURE_NUMBERS
 
-                bqs4
+                bf4
                 \mp
 
-                bqf16
-                - \tweak circled-tip ##t
+                a16
+                \f
                 - \tweak stencil #abjad-flared-hairpin
-                \<
+                \>
                 ~
                 [
 
             }
             % [Voice 3 measure 11]                                             %! COMMENT_MEASURE_NUMBERS
 
-            bqf8.
+            a8.
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
+            - \tweak stencil #constante-hairpin
+            \<
 
-            bf16
-
-            b8
+            a16
+            \!
             \mf
+            - \tweak stencil #constante-hairpin
+            \<
+
+            aqs8
             % [Voice 3 measure 12]                                             %! COMMENT_MEASURE_NUMBERS
 
-            c'8
+            a8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -267,12 +340,12 @@
                         )
                     )
                 )
-            - \tweak stencil #constante-hairpin
-            \<
+            \>
             ]
+            <>
+            \p
 
             r2
-            \!
             % [Voice 3 measure 13]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility

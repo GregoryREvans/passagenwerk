@@ -74,7 +74,85 @@
             \clef "varC"
             r4
 
+            bf8
+            \p
+            - \tweak stencil #constante-hairpin
+            \<
+            ~
+            [
+            % [Voice 5 measure 2]                                              %! COMMENT_MEASURE_NUMBERS
+
+            bf16
+
+            bf16
+            - \tweak circled-tip ##t
+            \<
+            ~
+
+            bf16
+            \mf
+
+            bqf16
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.4
+                        #:dynamic "f"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
+            \>
+
+            b8
+            ~
+            ]
+
+            \times 8/9 {
+
+                b4
+
+                bf8
+                ~
+                [
+
+                bf8
+
+                aqs16
+                ~
+
+            }
+            % [Voice 5 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
+
             aqs8
+            \p
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+
+            aqs'4
+            \!
+            \f
+            - \tweak stencil #abjad-flared-hairpin
+            \>
+            ~
+
+            aqs'16
+            [
+
+            aqf'16
+            ~
+
+            aqf'16
+            \sfp
+            - \tweak stencil #constante-hairpin
+            \<
+
+            af'16
+            \!
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -89,43 +167,18 @@
                 )
             - \tweak stencil #constante-hairpin
             \<
-            ~
-            [
-            % [Voice 5 measure 2]                                              %! COMMENT_MEASURE_NUMBERS
+            ]
+            % [Voice 5 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
 
-            aqs16
-
-            bqf16
-            ~
-
-            bqf16
-
-            c'16
+            aqs'4.
             \f
             - \tweak stencil #abjad-flared-hairpin
             \>
-
-            cqs'8
             ~
-            ]
+            % [Voice 5 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
 
-            \times 8/9 {
-
-                cqs'4
-
-                bqs8
-                ~
-                [
-
-                bqs8
-
-                cs'16
-                ~
-
-            }
-            % [Voice 5 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
-
-            cs'8
+            aqs'2.
+            <>
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -138,34 +191,18 @@
                         )
                     )
                 )
-            ]
+            % [Voice 5 measure 6]                                              %! COMMENT_MEASURE_NUMBERS
 
-            dqf'4
-            \mf
-            \<
-            ~
+            r2
 
-            dqf'16
-            [
-
-            dqs'16
-            ~
-
-            dqs'16
-            \f
-
-            fqs'16
+            f'4
             - \tweak circled-tip ##t
             - \tweak stencil #abjad-flared-hairpin
             \<
-            ]
-            % [Voice 5 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
-
-            eqs'4.
             ~
-            % [Voice 5 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
+            % [Voice 5 measure 7]                                              %! COMMENT_MEASURE_NUMBERS
 
-            eqs'2.
+            f'4.
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -180,35 +217,23 @@
                 )
             - \tweak stencil #constante-hairpin
             \<
-            % [Voice 5 measure 6]                                              %! COMMENT_MEASURE_NUMBERS
 
-            r2
+            aqs'8
             \!
-
-            \clef "treble"
-            e''4
             \f
             - \tweak stencil #constante-hairpin
             \<
-            ~
-            % [Voice 5 measure 7]                                              %! COMMENT_MEASURE_NUMBERS
 
-            e''4.
-
-            eqf'8
-
-            dqs'4
+            aqf'4
             ~
             % [Voice 5 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
 
-            dqs'4
+            aqf'4
 
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/5 {
 
-                fs'4.
-
-                eqs'4
+                aqs'4.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -226,22 +251,27 @@
                 <>
                 \!
 
+                aqf'4
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
+                - \tweak stencil #constante-hairpin
+                \<
+
             }
             % [Voice 5 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
-            cqs'4
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.1
-                        #:dynamic "mf"
-                        #:hspace -0.2
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            a4
+            \f
             - \tweak stencil #constante-hairpin
             \<
 
@@ -259,26 +289,36 @@
 
             r8
 
-            dqf'8
-            \sfp
-            \<
+            a8
+            \ff
+            - \tweak stencil #abjad-flared-hairpin
+            \>
             [
 
-            cqs'8
-            \ff
-            - \tweak stencil #constante-hairpin
-            \<
+            aqs8
+            \ppppp
             ]
             % [Voice 5 measure 12]                                             %! COMMENT_MEASURE_NUMBERS
 
-            c'4
+            a4
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
+            - \tweak circled-tip ##t
+            \>
+            <>
             \!
-            \f
-            - \tweak stencil #constante-hairpin
-            \<
 
             r4.
-            \!
             % [Voice 5 measure 13]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility

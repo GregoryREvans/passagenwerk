@@ -5,17 +5,16 @@ import pathlib
 import time
 import datetime
 from passagenwerk.Materials.score_structure.instruments import instruments as insts
-from passagenwerk.Materials.timespans.Segment_I.rhythm_timespans import rhythm_timespans
-from passagenwerk.Materials.timespans.Segment_I.pitch_timespans import pitch_timespans
-from passagenwerk.Materials.timespans.Segment_I.dynamic_timespans import (
-    dynamic_timespans,
+from passagenwerk.Materials.timespans.Segment_I.convert_timespans import (
+    segment_I_rhythm_timespans,
+    segment_I_timespans,
 )
 from passagenwerk.Materials.score_structure.score_structure import score
 from passagenwerk.Materials.score_structure.Segment_I.time_signatures import (
     time_signatures,
 )
 from passagenwerk.Materials.score_structure.Segment_I.time_signatures import bounds
-from passagenwerk.Materials.rhythm.Segment_I.rhythm_handlers import *  # segregate segments and switch to rhythm_handler objects
+from passagenwerk.Materials.rhythm.Segment_I.rhythm_handlers import *
 from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
 from evans.abjad_functions.talea_timespan.timespan_functions import (
     TimespanSpecifier,
@@ -28,10 +27,10 @@ time_1 = time.time()
 print("Interpreting file ...")
 
 global_timespan = abjad.Timespan(
-    start_offset=0, stop_offset=max(_.stop_offset for _ in rhythm_timespans.values())
+    start_offset=0, stop_offset=max(_.stop_offset for _ in segment_I_rhythm_timespans.values())
 )
 
-for voice_name, timespan_list in rhythm_timespans.items():
+for voice_name, timespan_list in segment_I_rhythm_timespans.items():
     silences = abjad.TimespanList([global_timespan])
     silences.extend(timespan_list)
     silences.sort()
@@ -65,8 +64,7 @@ def make_container(handler, durations):
     container.extend(selections)
     return container
 
-
-for voice_name, timespan_list in rhythm_timespans.items():
+for voice_name, timespan_list in segment_I_rhythm_timespans.items():
     for handler, grouper in itertools.groupby(timespan_list, key=key_function):
         durations = [timespan.duration for timespan in grouper]
         container = make_container(handler, durations)
@@ -79,25 +77,26 @@ for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
         time_signature = time_signatures[i]
         abjad.mutate(shard).rewrite_meter(time_signature)  # , boundary_depth=1)
 
-print("Handling Pitches ...")
-for voice_name, sub_timespan_list in pitch_timespans.items():
-    voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
-    voice_tie_collection = LogicalTieCollection()
-    for tie in voice_tie_selection:
-        voice_tie_collection.insert(tie)
-    for target_timespan in sub_timespan_list:
-        selection = abjad.Selection(
-            [
-                _
-                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
-                    target_timespan
-                )
-            ]
-        )
-        if len(selection) < 1:
-            continue
-        else:
-            target_timespan.annotation.handler(selection)
+print("Handlers ...")
+for list in segment_I_timespans:
+    for voice_name, sub_timespan_list in list.items():
+        voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
+        voice_tie_collection = LogicalTieCollection()
+        for tie in voice_tie_selection:
+            voice_tie_collection.insert(tie)
+        for target_timespan in sub_timespan_list:
+            selection = abjad.Selection(
+                [
+                    _
+                    for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
+                        target_timespan
+                    )
+                ]
+            )
+            if len(selection) < 1:
+                continue
+            else:
+                target_timespan.annotation.handler(selection)
 
 print("Adding Multimeasure Rests and cutaway...")
 for voice in abjad.iterate(score["Staff Group"]).components(abjad.Voice):
@@ -164,25 +163,6 @@ for voice in abjad.select(score["Staff Group"]).components(abjad.Voice):
     abjad.attach(mult_rest_literal, final_rest, tag="applying ending skips")
     voice.append(container[:])
 
-print("Handling Dynamics ...")
-for voice_name, sub_timespan_list in dynamic_timespans.items():
-    voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
-    voice_tie_collection = LogicalTieCollection()
-    for tie in voice_tie_selection:
-        voice_tie_collection.insert(tie)
-    for target_timespan in sub_timespan_list:
-        selection = abjad.Selection(
-            [
-                _
-                for _ in voice_tie_collection.find_logical_ties_starting_during_timespan(
-                    target_timespan
-                )
-            ]
-        )
-        if len(selection) < 1:
-            continue
-        else:
-            target_timespan.annotation.handler(selection)
 
 print("Beaming runs ...")
 for voice in abjad.select(score).components(abjad.Voice):

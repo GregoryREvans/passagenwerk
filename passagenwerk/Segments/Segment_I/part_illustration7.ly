@@ -102,17 +102,18 @@
 
                 \times 4/5 {
 
-                    aqf32
-                    \f
-                    \>
+                    a32
+                    - \tweak circled-tip ##t
+                    - \tweak stencil #abjad-flared-hairpin
+                    \<
                     [
 
-                    gqs32.
+                    aqs32.
                     ]
 
                 }
 
-                af4
+                bf4
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 3/5 {
@@ -120,34 +121,23 @@
                     a8
                     [
 
-                    bf16
+                    af16
 
-                    aqs8
+                    aqf8
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/7 {
 
-                    aqf8
+                    aqs8
 
-                    gqs16.
+                    bqf16.
 
                 }
 
-                g8
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "p"
-                            #:hspace -0.25
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                bf8
+                \mf
                 - \tweak stencil #constante-hairpin
                 \<
 
@@ -159,178 +149,8 @@
                 \times 4/5 {
                     % [Voice 7 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    af32
+                    a32
                     \!
-                    \mf
-                    - \tweak stencil #constante-hairpin
-                    \<
-
-                    a32.
-                    ]
-
-                }
-
-                aqs4
-
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 3/5 {
-
-                    aqf8
-                    [
-
-                    aqs16
-
-                    bf8
-
-                }
-
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 6/7 {
-
-                    b8
-
-                    c'16.
-
-                }
-
-                cqs'8
-                \ppppp
-                \<
-
-            }
-
-            \times 16/17 {
-
-                \times 2/3 {
-                    % [Voice 7 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
-
-                    dqf'32
-
-                    cqs'64
-                    ~
-
-                    cqs'64.
-
-                }
-
-                cs'16
-
-                \times 2/3 {
-
-                    d'64
-
-                    cs'128
-                    ~
-
-                    cs'64
-
-                    dqf'32
-
-                }
-
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 5/7 {
-
-                    dqs'16
-
-                    dqf'32.
-
-                }
-
-                d'32
-
-            }
-
-            \times 2/3 {
-
-                cs'8
-
-                d'16
-                ~
-
-            }
-            % [Voice 7 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
-
-            d'16
-
-            dqs'16
-            ]
-
-            eqf'4.
-            \mp
-            - \tweak stencil #constante-hairpin
-            \<
-
-            dqs'4
-            \!
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.4
-                        #:dynamic "f"
-                        #:hspace -0.2
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
-            \>
-
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 6/5 {
-                % [Voice 7 measure 6]                                          %! COMMENT_MEASURE_NUMBERS
-
-                ef'8.
-                [
-
-                e'8
-                ~
-
-            }
-
-            e'8
-            ~
-
-            e'16
-            \p
-
-            ef'16
-            - \tweak circled-tip ##t
-            - \tweak stencil #abjad-flared-hairpin
-            \<
-            ~
-
-            ef'16
-
-            eqf'16
-            ]
-
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 6/7 {
-                % [Voice 7 measure 7]                                          %! COMMENT_MEASURE_NUMBERS
-
-                eqs'4.
-
-                fqs'16
-                \mf
-                - \tweak stencil #constante-hairpin
-                \<
-
-            }
-
-            r4.
-            \!
-            % [Voice 7 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
-
-            r2..
-
-            \times 16/21 {
-
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 10/11 {
-
-                    f'64.
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -345,43 +165,242 @@
                         )
                     - \tweak stencil #constante-hairpin
                     \<
-                    [
 
-                    e'256
-                    ~
-
-                    e'64
+                    aqs32.
+                    ]
 
                 }
 
-                ef'64
-                ~
+                bf4
 
-                ef'64
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 3/5 {
 
-                \times 4/5 {
+                    a8
+                    [
 
-                    eqf'128
+                    af16
 
-                    dqs'512
+                    aqf8
+
+                }
+
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 6/7 {
+
+                    aqs8
+
+                    bqf16.
+
+                }
+
+                bf8
+                \f
+                - \tweak stencil #constante-hairpin
+                \<
+
+            }
+
+            \times 16/17 {
+
+                \times 2/3 {
+                    % [Voice 7 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
+
+                    a32
+                    \sfp
+                    \<
+
+                    aqs64
                     ~
 
-                    dqs'128
+                    aqs64.
 
-                    eqf'128.
+                }
+
+                bf16
+
+                \times 2/3 {
+
+                    a64
+
+                    af128
+                    ~
+
+                    af64
+
+                    a32
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    ef'32
+                    aqs16
 
-                    e'64.
+                    bf32.
 
                 }
 
-                ef'32
+                a32
+
+            }
+
+            \times 2/3 {
+
+                af8
+
+                aqf16
+                ~
+
+            }
+            % [Voice 7 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
+
+            aqf16
+            \ff
+
+            a16
+            \ppppp
+            \<
+            ]
+
+            aqs4.
+            \mp
+            - \tweak stencil #constante-hairpin
+            \<
+
+            a4
+            \!
+            \p
+            - \tweak circled-tip ##t
+            - \tweak stencil #abjad-flared-hairpin
+            \>
+            <>
+            \!
+
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 6/5 {
+                % [Voice 7 measure 6]                                          %! COMMENT_MEASURE_NUMBERS
+
+                a8.
+                \mf
+                \<
+                [
+
+                aqs8
+                ~
+
+            }
+
+            aqs8
+            ~
+
+            aqs16
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.4
+                        #:dynamic "f"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
+            - \tweak stencil #constante-hairpin
+            \<
+
+            bf16
+            \!
+            \p
+            - \tweak stencil #constante-hairpin
+            \<
+            ~
+
+            bf16
+
+            a16
+            ]
+
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 6/7 {
+                % [Voice 7 measure 7]                                          %! COMMENT_MEASURE_NUMBERS
+
+                a4.
+                - \tweak circled-tip ##t
+                \<
+
+                a16
+                <>
+                \mf
+
+            }
+
+            r4.
+            % [Voice 7 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
+
+            r2..
+
+            \times 16/21 {
+
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 10/11 {
+
+                    a64.
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.4
+                                #:dynamic "f"
+                                #:hspace -0.2
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
+                    - \tweak stencil #abjad-flared-hairpin
+                    \>
+                    [
+
+                    aqs256
+                    ~
+
+                    aqs64
+
+                }
+
+                bf64
+                ~
+
+                bf64
+
+                \times 4/5 {
+
+                    a128
+
+                    af512
+                    ~
+
+                    af128
+
+                    aqf128.
+
+                }
+
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 5/7 {
+
+                    aqs32
+
+                    bqf64.
+
+                }
+
+                bf32
+                \p
+                - \tweak stencil #constante-hairpin
+                \<
 
             }
 
@@ -391,45 +410,45 @@
                 \times 6/11 {
                     % [Voice 7 measure 9]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    eqf'32.
+                    a32.
+                    \!
                     \mf
                     - \tweak stencil #abjad-flared-hairpin
                     \<
 
-                    eqs'128
+                    aqs128
                     ~
 
-                    eqs'32
+                    aqs32
 
                 }
 
-                fqs'32
+                bf32
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/9 {
 
-                    fs'64.
+                    a64.
 
-                    \clef "tenorvarC"
-                    g'64.
+                    af64.
 
-                    af'64.
+                    aqf64.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/9 {
 
-                    gqs'32
+                    aqs32
 
-                    gqf'64
+                    bqf64
                     ~
 
-                    gqf'64.
+                    bqf64.
 
                 }
 
-                gqs'32.
+                bf32.
 
             }
 
@@ -439,83 +458,90 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    af'16.
+                    b16.
 
-                    a'64
+                    c'64
                     ~
 
-                    a'16
+                    c'16
 
                 }
 
-                af'64
+                cqs'64
                 ~
 
-                af'16
+                cqs'16
                 ~
 
-                af'64
+                cqs'64
 
                 \times 2/3 {
 
-                    aqf'32.
+                    bqs32.
 
-                    aqs'32.
+                    bqf32.
 
-                    bqf'32.
+                    bf32.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/6 {
 
-                    bf'32.
+                    b32.
 
-                    b'32.
+                    c'32.
 
                 }
 
-                bf'16.
+                cqs'16.
+                \f
 
             }
 
             \times 8/15 {
                 % [Voice 7 measure 10]                                         %! COMMENT_MEASURE_NUMBERS
 
-                fs'64.
+                \clef "tenorvarC"
+                aqs'64.
+                \sfp
+                - \tweak stencil #abjad-flared-hairpin
+                \<
 
-                g'64.
+                aqf'64.
 
-                fqs'32
+                af'32
                 ~
 
-                fqs'64
+                af'64
 
                 \times 2/3 {
 
-                    fs'64.
+                    g'64.
 
-                    fqs'64.
+                    bf'64.
 
-                    eqs'64.
+                    aqf'64.
 
                 }
 
-                dqf'64
+                b'64
                 ~
 
-                dqf'128
+                b'128
 
-                bqs64.
+                c''64.
 
-                aqs32.
+                b'32.
+                \ff
+                - \tweak stencil #constante-hairpin
+                \<
                 ]
-                <>
-                \f
 
             }
 
             r4
+            \!
             % [Voice 7 measure 11]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility
