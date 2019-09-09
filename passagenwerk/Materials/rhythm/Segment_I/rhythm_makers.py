@@ -1,7 +1,7 @@
 import abjad
 import evans
 import abjadext.rmakers
-from evans.abjad_functions.rtm.rtm_maker import RTMMaker_4
+# from evans.abjad_functions.rtm.rtm_maker import RTMMaker_4
 from passagenwerk.Materials.rhythm.Segment_I.rtm_lists import final_rtm_list
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
@@ -27,7 +27,7 @@ rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
     ),
 )
 
-rmaker_two = evans.abjad_functions.rtm.rtm_maker.RTMMaker_4(rtm=final_rtm_list)
+rmaker_two = evans.RTMMaker(rtm=final_rtm_list)
 
 rmaker_three = abjadext.rmakers.TaleaRhythmMaker(
     talea=abjadext.rmakers.Talea(counts=[3, 2, 4, 1, 5], denominator=8),
