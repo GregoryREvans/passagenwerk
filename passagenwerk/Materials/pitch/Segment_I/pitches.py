@@ -1,4 +1,5 @@
 import abjad
+import evans
 from passagenwerk.Materials.score_structure.instruments import (
     instrument_three_range_lowest,
 )
@@ -6,13 +7,6 @@ from passagenwerk.Materials.score_structure.instruments import (
     instrument_three_range_highest,
 )
 import numpy as np
-from evans.general_tools.cyc import cyc
-from evans.general_tools.flatten import flatten
-from evans.general_tools.perm import perm
-from evans.general_tools.random_walk import random_walk
-from evans.general_tools.grouper import grouper
-from evans.general_tools.rotate import rotate
-from evans.general_tools.mirror import mirror
 
 sieve_1a = abjad.index([0, 1, 7], 8)
 sieve_1b = abjad.index([1, 3], 5)
@@ -55,11 +49,11 @@ for x in sieve_l:
         new_sieve_l.append(x)
 
 rotation = len(new_sieve_l) // 3
-mirrored_sieve = mirror(new_sieve_l, sequential_duplicates=False)
-rotated_sieve = rotate(mirrored_sieve, rotation)
+mirrored_sieve = evans.mirror(new_sieve_l, sequential_duplicates=False)
+rotated_sieve = evans.rotate(mirrored_sieve, rotation)
 sieve_list = [
     x
-    for x in random_walk(
+    for x in evans.random_walk(
         random_seed=9,
         length=1000,
         step_list=[1, 1, 4, 2, 3, 1],
@@ -69,7 +63,7 @@ sieve_list = [
 ######
 
 _lst = [5, 6, 9, 11]
-permutations = perm(_lst)
+permutations = evans.perm(_lst)
 c = [
     0,
     11,
@@ -97,12 +91,12 @@ c = [
     0,
 ]
 transpositions = [[l + c[i] for l in permutations[i]] for i in range(len(c))]
-perms = flatten(transpositions)
-cyclic_group = cyc([1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1])
+perms = evans.flatten(transpositions)
+cyclic_group = evans.cyc([1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1])
 group_list = []
 for x in perms:
     group_list.append(next(cyclic_group))
-perm_list = grouper(perms, group_list)  # keep experimenting with this...
+perm_list = evans.grouper(perms, group_list)  # keep experimenting with this...
 # print(permutations)
 # print(transpositions)
 # print(perms)
@@ -114,12 +108,12 @@ for x in range(-12, 26):
     walk_list.append(x)
     walk_list.append(x + 0.5)
 
-mirrored_walk_list = mirror(walk_list, sequential_duplicates=False)
-rotated_walk_list = rotate(mirrored_walk_list, 18)
+mirrored_walk_list = evans.mirror(walk_list, sequential_duplicates=False)
+rotated_walk_list = evans.rotate(mirrored_walk_list, 18)
 
 random_walk_list = [
     x
-    for x in random_walk(
+    for x in evans.random_walk(
         random_seed=2, length=1000, step_list=[1, 2, 2], mapped_list=rotated_walk_list
     )
 ]
@@ -141,10 +135,10 @@ chords = [
 ]
 
 ######
-rotated_walk_list2 = rotate(mirrored_walk_list, 20)
+rotated_walk_list2 = evans.rotate(mirrored_walk_list, 20)
 runs = [
     x
-    for x in random_walk(
+    for x in evans.random_walk(
         random_seed=2,
         length=1000,
         step_list=[1, 2, 1, 2, 3, 1, 2, 3, 4],

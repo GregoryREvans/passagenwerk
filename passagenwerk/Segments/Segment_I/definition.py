@@ -1,4 +1,5 @@
 import abjad
+import evans
 import itertools
 import os
 import pathlib
@@ -19,8 +20,6 @@ from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
 from evans.abjad_functions.talea_timespan.timespan_functions import (
     TimespanSpecifier,
 )  # rename module
-from evans.general_tools.cyc import cyc
-from evans.consort_reviv.LogicalTieCollection import LogicalTieCollection
 
 time_1 = time.time()
 
@@ -83,7 +82,7 @@ print("Handlers ...")
 for list in segment_I_timespans:
     for voice_name, sub_timespan_list in list.items():
         voice_tie_selection = abjad.select(score[voice_name]).logical_ties()
-        voice_tie_collection = LogicalTieCollection()
+        voice_tie_collection = evans.LogicalTieCollection()
         for tie in voice_tie_selection:
             voice_tie_collection.insert(tie)
         for target_timespan in sub_timespan_list:
@@ -227,7 +226,7 @@ mark4 = abjad.RehearsalMark(markup=markup4)
 markup5 = abjad.Markup(r"\bold { D }")
 mark5 = abjad.RehearsalMark(markup=markup5)
 
-instruments = cyc(insts)
+instruments = evans.cyc(insts)
 
 abbreviations = []
 abb = [

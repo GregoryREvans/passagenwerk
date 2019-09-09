@@ -1,3 +1,5 @@
+import evans
+from evans.abjad_functions.ConvertTimespans import ConvertTimespans
 from passagenwerk.Materials.score_structure.Segment_I.rhythm_material_pattern import (
     rhythm_material_list,
 )
@@ -10,7 +12,6 @@ from passagenwerk.Materials.score_structure.Segment_I.dynamic_material_pattern i
 from passagenwerk.Materials.score_structure.Segment_I.articulation_material_pattern import (
     articulation_material_list,
 )
-from evans.abjad_functions.ConvertTimespans import ConvertTimespans
 from passagenwerk.Materials.timespans.Segment_I.make_timespans import (
     rhythm_timespan_list,
     pitch_timespan_list,
