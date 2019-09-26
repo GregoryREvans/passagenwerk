@@ -117,28 +117,27 @@
 
                     af'8.
                     ~
+                    ]
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 14/13 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) "8")
+                    \times 7/13 {
                         % [Voice 1 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        af'8.
-                        ]
+                        af'4.
 
-                        aqs'4
+                        aqs'2
                         \p
                         - \tenuto
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'8.
+                        aqf'4.
                         - \accent
-                        [
 
-                        af'8.
+                        af'4.
                         - \espressivo
-                        ]
                         <>
                         \!
 
@@ -185,6 +184,7 @@
                     - \tenuto
                     ~
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                     \times 4/5 {
                         % [Voice 1 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -211,16 +211,16 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ~
+                        ]
 
                     }
 
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 4/3 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                    \times 2/3 {
 
-                        aqs'8
+                        aqs'4
 
-                        aqf'16
-                        ]
+                        aqf'8
 
                     }
 
@@ -230,8 +230,10 @@
 
                     r2
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 16) "64")
                     \times 16/17 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
                             aqs'32
@@ -251,6 +253,7 @@
 
                         af'16
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
                             g'64
@@ -268,6 +271,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "64")
                         \times 5/7 {
 
                             b'16
@@ -284,9 +288,11 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 21 16) "64")
                     \times 16/21 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "128")
                         \times 10/11 {
                             % [Voice 1 measure 8]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -309,6 +315,7 @@
 
                         af'32
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "128.")
                         \times 4/5 {
 
                             g'64
@@ -326,6 +333,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "64")
                         \times 5/7 {
 
                             b'16
@@ -369,6 +377,7 @@
                     ~
                     ]
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
                     \times 8/9 {
                         % [Voice 1 measure 9]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -409,6 +418,7 @@
                     - \tenuto
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
                         % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS
 
@@ -437,14 +447,16 @@
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
 
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 5/4 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "8")
+                    \times 5/8 {
                         % [Voice 1 measure 12]                                 %! COMMENT_MEASURE_NUMBERS
 
-                        aqs'8
+                        aqs'4
                         \!
                         _ #(make-dynamic-script
                             (markup
@@ -462,13 +474,13 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'8
+                        aqf'4
                         - \tenuto
 
-                        af'8
+                        af'4
                         - \accent
 
-                        g'8
+                        g'4
                         \p
                         - \tweak stencil #constante-hairpin
                         \<
@@ -493,6 +505,7 @@
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
+                    [
 
                     aqf'16
                     - \accent
@@ -542,9 +555,11 @@
                     r4
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
 
                             aqs'8.
@@ -566,6 +581,7 @@
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             g'16.
@@ -579,6 +595,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             b'8
@@ -609,9 +626,11 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 29 16) "128")
                     \times 16/29 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "128")
                         \times 6/11 {
                             % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -636,6 +655,7 @@
 
                         af'128
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
                             g'64.
@@ -650,6 +670,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "128")
                         \times 5/6 {
 
                             b'64.
@@ -668,6 +689,7 @@
 
                     c''4
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "32")
                     \times 8/15 {
 
                         dqs''32.
@@ -683,6 +705,7 @@
 
                         b'32
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "32.")
                         \times 2/3 {
 
                             c''32.
@@ -727,8 +750,10 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) "32")
                     \times 8/13 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "128")
                         \times 4/5 {
                             % [Voice 2 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -758,6 +783,7 @@
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "32")
                         \times 3/5 {
 
                             g'16
@@ -771,6 +797,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "64")
                         \times 6/7 {
 
                             aqs16
@@ -826,6 +853,7 @@
                     \<
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "8")
                     \times 6/7 {
                         % [Voice 2 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -860,6 +888,7 @@
                     ~
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) "8")
                     \times 7/8 {
 
                         aqf'4
@@ -918,8 +947,10 @@
 
                     r4
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 16) "128")
                     \times 16/17 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
                             aqs'64
@@ -940,6 +971,7 @@
                         af'32
                         - \accent
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
                             g'128
@@ -956,6 +988,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
                             b'32
@@ -972,9 +1005,11 @@
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 21 20) "32")
                     \times 20/21 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "64")
                         \times 10/11 {
                             % [Voice 2 measure 12]                             %! COMMENT_MEASURE_NUMBERS
 
@@ -1009,6 +1044,7 @@
 
                         af'16
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64.")
                         \times 4/5 {
 
                             g'32
@@ -1026,6 +1062,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "32")
                         \times 5/7 {
 
                             b'8
@@ -1155,6 +1192,7 @@
                     ~
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) "16")
                     \times 12/13 {
                         % [Voice 3 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -1257,6 +1295,7 @@
                     ]
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
                         % [Voice 3 measure 9]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -1295,13 +1334,14 @@
                     ]
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "8")
+                    \times 3/5 {
                         % [Voice 3 measure 10]                                 %! COMMENT_MEASURE_NUMBERS
 
-                        bf4
+                        bf2
                         \mp
 
-                        a16
+                        a8
                         \f
                         - \espressivo
                         - \tweak stencil #abjad-flared-hairpin
@@ -1421,9 +1461,11 @@
                     \<
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
                             % [Voice 4 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -1445,6 +1487,7 @@
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             g'16.
@@ -1459,6 +1502,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             b'8
@@ -1480,9 +1524,11 @@
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 29 24) "64")
                     \times 24/29 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "64")
                         \times 6/11 {
                             % [Voice 4 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -1521,6 +1567,7 @@
 
                         af'64
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "32.")
                         \times 2/3 {
 
                             f'32.
@@ -1534,6 +1581,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "64")
                         \times 5/6 {
 
                             <b' e''>32.
@@ -1549,6 +1597,7 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "16")
                     \times 8/15 {
                         % [Voice 4 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -1568,6 +1617,7 @@
 
                         a'16
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16.")
                         \times 2/3 {
 
                             <b' e''>16.
@@ -1616,6 +1666,7 @@
                     - \tenuto
                     ~
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
                     \times 4/5 {
                         % [Voice 4 measure 8]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -1654,6 +1705,7 @@
                     \<
                     [
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                     \times 4/5 {
 
                         aqf'8
@@ -1768,6 +1820,7 @@
                     ~
                     ]
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
                     \times 8/9 {
 
                         b4
@@ -1896,9 +1949,10 @@
                     aqf'4
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "4")
+                    \times 3/5 {
 
-                        aqs'4.
+                        aqs'2.
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -1917,7 +1971,7 @@
                         <>
                         \!
 
-                        aqf'4
+                        aqf'2
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2034,6 +2088,7 @@
                     ~
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) "8")
                     \times 7/8 {
                         % [Voice 6 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -2116,6 +2171,7 @@
                     ~
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
                         % [Voice 6 measure 4]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -2145,20 +2201,18 @@
 
                     }
 
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) "8")
+                    \times 4/7 {
                         % [Voice 6 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        a8
+                        a4
                         \f
                         \>
-                        [
 
-                        aqs16
+                        aqs8
                         - \tenuto
-                        ]
 
-                        bf4
+                        bf2
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2317,8 +2371,10 @@
                     r4
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
 
                             a32
@@ -2337,6 +2393,7 @@
                         bf4
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
                             a8
@@ -2352,6 +2409,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
                             aqs8
@@ -2371,8 +2429,10 @@
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
                             % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -2403,6 +2463,7 @@
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
                             a8
@@ -2418,6 +2479,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
                             aqs8
@@ -2435,8 +2497,10 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 16) "64")
                     \times 16/17 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -2456,6 +2520,7 @@
                         bf16
                         - \tenuto
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
                             a64
@@ -2472,6 +2537,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "64")
                         \times 5/7 {
 
                             aqs16
@@ -2487,6 +2553,7 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
                     \times 2/3 {
 
                         af8
@@ -2524,16 +2591,16 @@
                     \!
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 6/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "8")
+                    \times 3/5 {
                         % [Voice 7 measure 6]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        a8.
+                        a4.
                         \mf
                         - \accent
                         \<
-                        [
 
-                        aqs8
+                        aqs4
                         - \espressivo
                         ~
 
@@ -2541,6 +2608,7 @@
 
                     aqs8
                     ~
+                    [
 
                     aqs16
                     _ #(make-dynamic-script
@@ -2573,6 +2641,7 @@
                     ]
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
                         % [Voice 7 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -2592,9 +2661,11 @@
 
                     r2..
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 21 16) "128")
                     \times 16/21 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "256")
                         \times 10/11 {
 
                             a64.
@@ -2629,6 +2700,7 @@
 
                         bf64
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "256.")
                         \times 4/5 {
 
                             a128
@@ -2646,6 +2718,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
                             aqs32
@@ -2663,9 +2736,11 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 8) "64")
                     \times 8/13 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "128")
                         \times 6/11 {
                             % [Voice 7 measure 9]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -2688,6 +2763,7 @@
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "128")
                         \times 5/9 {
 
                             a64.
@@ -2701,6 +2777,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "128")
                         \times 5/9 {
 
                             aqs32
@@ -2720,9 +2797,11 @@
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 29 24) "64")
                     \times 24/29 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "64")
                         \times 6/11 {
 
                             b16.
@@ -2745,6 +2824,7 @@
 
                         cqs'64
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "32.")
                         \times 2/3 {
 
                             bqs32.
@@ -2758,6 +2838,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "64")
                         \times 5/6 {
 
                             b32.
@@ -2774,6 +2855,7 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "64")
                     \times 8/15 {
                         % [Voice 7 measure 10]                                 %! COMMENT_MEASURE_NUMBERS
 
@@ -2792,6 +2874,7 @@
 
                         af'64
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
                             g'64.
@@ -2887,19 +2970,19 @@
                     \stopStaff \startStaff                                     %! applying cutaway
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 14/13 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) "8")
+                    \times 7/13 {
                         % [Voice 8 measure 2]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        bf8.
+                        bf4.
                         \ppppp
                         - \tenuto
                         \<
-                        [
                         <>
                         \mp
 
                         \clef "tenorvarC"
-                        aqs'8.
+                        aqs'4.
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2916,16 +2999,14 @@
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        aqf'16
+                        aqf'8
                         - \tenuto
                         ~
-                        ]
 
-                        aqf'4
+                        aqf'2
 
-                        af'8
+                        af'4
                         - \tenuto
-                        [
 
                     }
                     % [Voice 8 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
@@ -2935,6 +3016,7 @@
                     - \accent
                     - \tweak stencil #abjad-flared-hairpin
                     \>
+                    [
 
                     aqf'16
                     ~
@@ -2975,6 +3057,7 @@
                     r4.
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
                         aqs'16
@@ -3088,8 +3171,10 @@
                     - \espressivo
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
 
                             af'32
@@ -3105,6 +3190,7 @@
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
                             aqs'8
@@ -3119,6 +3205,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
                             g'8
@@ -3136,8 +3223,10 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 16) "128")
                     \times 16/17 {
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
                             % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS
 
@@ -3168,6 +3257,7 @@
                         af'32
                         - \tenuto
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
                             g'128
@@ -3185,6 +3275,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
                             b'32
@@ -3230,9 +3321,11 @@
 
                     aqs'4.
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) "16.")
                     \times 4/7 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "64")
                         \times 10/11 {
                             % [Voice 8 measure 11]                             %! COMMENT_MEASURE_NUMBERS
 
@@ -3257,6 +3350,7 @@
 
                         af'16
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64.")
                         \times 4/5 {
 
                             g'32
@@ -3273,6 +3367,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "32")
                         \times 5/7 {
 
                             b'8
@@ -3301,9 +3396,11 @@
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 10) "16")
                     \times 10/13 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
                             % [Voice 8 measure 12]                             %! COMMENT_MEASURE_NUMBERS
 
@@ -3324,6 +3421,7 @@
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             g'16.
@@ -3337,6 +3435,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
                             b'8
@@ -3369,9 +3468,11 @@
 
                     }
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 29 16) "32")
                     \times 16/29 {
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
                             % [Voice 8 measure 13]                             %! COMMENT_MEASURE_NUMBERS
 
@@ -3398,6 +3499,7 @@
 
                         bf32
 
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16.")
                         \times 2/3 {
 
                             a16.
@@ -3412,6 +3514,7 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "32")
                         \times 5/6 {
 
                             aqs16.
@@ -3470,6 +3573,7 @@
 
                     r4.
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
                     \times 4/5 {
 
                         \clef "treble"
@@ -3522,6 +3626,7 @@
                     - \tenuto
                     ~
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
                     \times 4/5 {
                         % [Voice 9 measure 5]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -3567,6 +3672,7 @@
                     R1 * 3/8
                     \stopStaff \startStaff                                     %! applying cutaway
 
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
                     \times 8/9 {
                         % [Voice 9 measure 7]                                  %! COMMENT_MEASURE_NUMBERS
 
@@ -3600,35 +3706,34 @@
                     a''16
                     - \tenuto
                     ~
+                    ]
 
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "8")
+                    \times 8/15 {
                         % [Voice 9 measure 8]                                  %! COMMENT_MEASURE_NUMBERS
 
-                        a''8.
+                        a''4.
                         ~
 
-                        a''8
-                        ]
+                        a''4
                         <>
                         \!
 
-                        f''4
+                        f''2
                         \mf
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        fs''16
+                        fs''8
                         \f
                         - \accent
                         \>
                         ~
-                        [
 
-                        fs''8
+                        fs''4
 
-                        aqs''8.
+                        aqs''4.
                         - \espressivo
                         ~
 
@@ -3639,6 +3744,7 @@
                     \sfp
                     - \tweak stencil #constante-hairpin
                     \<
+                    [
 
                     aqs''8
                     \!

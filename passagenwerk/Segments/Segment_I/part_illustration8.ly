@@ -95,19 +95,18 @@
             \stopStaff \startStaff                                             %! applying cutaway
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 14/13 {
+            \times 7/13 {
                 % [Voice 8 measure 2]                                          %! COMMENT_MEASURE_NUMBERS
 
-                bf8.
+                bf4.
                 \ppppp
                 - \tenuto
                 \<
-                [
                 <>
                 \mp
 
                 \clef "tenorvarC"
-                aqs'8.
+                aqs'4.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -124,16 +123,14 @@
                 - \tweak stencil #constante-hairpin
                 \<
 
-                aqf'16
+                aqf'8
                 - \tenuto
                 ~
-                ]
 
-                aqf'4
+                aqf'2
 
-                af'8
+                af'4
                 - \tenuto
-                [
 
             }
             % [Voice 8 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
@@ -143,6 +140,7 @@
             - \accent
             - \tweak stencil #abjad-flared-hairpin
             \>
+            [
 
             aqf'16
             ~

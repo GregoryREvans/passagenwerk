@@ -286,13 +286,13 @@
             ]
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 6/5 {
+            \times 3/5 {
                 % [Voice 3 measure 10]                                         %! COMMENT_MEASURE_NUMBERS
 
-                bf4
+                bf2
                 \mp
 
-                a16
+                a8
                 \f
                 - \espressivo
                 - \tweak stencil #abjad-flared-hairpin

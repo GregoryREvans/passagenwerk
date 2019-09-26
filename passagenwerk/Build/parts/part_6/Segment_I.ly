@@ -190,20 +190,17 @@
 
             }
 
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 8/7 {
+            \times 4/7 {
                 % [Voice 6 measure 5]                                          %! COMMENT_MEASURE_NUMBERS
 
-                a8
+                a4
                 \f
                 \>
-                [
 
-                aqs16
+                aqs8
                 - \tenuto
-                ]
 
-                bf4
+                bf2
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout

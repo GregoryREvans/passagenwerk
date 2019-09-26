@@ -110,28 +110,26 @@
 
             af'8.
             ~
+            ]
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 14/13 {
+            \times 7/13 {
                 % [Voice 1 measure 2]                                          %! COMMENT_MEASURE_NUMBERS
 
-                af'8.
-                ]
+                af'4.
 
-                aqs'4
+                aqs'2
                 \p
                 - \tenuto
                 - \tweak circled-tip ##t
                 - \tweak stencil #abjad-flared-hairpin
                 \>
 
-                aqf'8.
+                aqf'4.
                 - \accent
-                [
 
-                af'8.
+                af'4.
                 - \espressivo
-                ]
                 <>
                 \!
 
@@ -204,16 +202,15 @@
                 - \tweak stencil #constante-hairpin
                 \<
                 ~
+                ]
 
             }
 
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 4/3 {
+            \times 2/3 {
 
-                aqs'8
+                aqs'4
 
-                aqf'16
-                ]
+                aqf'8
 
             }
 
@@ -430,14 +427,15 @@
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
+                ]
 
             }
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 5/4 {
+            \times 5/8 {
                 % [Voice 1 measure 12]                                         %! COMMENT_MEASURE_NUMBERS
 
-                aqs'8
+                aqs'4
                 \!
                 _ #(make-dynamic-script
                     (markup
@@ -455,13 +453,13 @@
                 - \tweak stencil #abjad-flared-hairpin
                 \>
 
-                aqf'8
+                aqf'4
                 - \tenuto
 
-                af'8
+                af'4
                 - \accent
 
-                g'8
+                g'4
                 \p
                 - \tweak stencil #constante-hairpin
                 \<
@@ -486,6 +484,7 @@
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
+            [
 
             aqf'16
             - \accent

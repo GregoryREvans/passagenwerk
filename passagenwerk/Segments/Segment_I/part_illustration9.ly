@@ -227,35 +227,33 @@
             a''16
             - \tenuto
             ~
+            ]
 
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 16/15 {
+            \times 8/15 {
                 % [Voice 9 measure 8]                                          %! COMMENT_MEASURE_NUMBERS
 
-                a''8.
+                a''4.
                 ~
 
-                a''8
-                ]
+                a''4
                 <>
                 \!
 
-                f''4
+                f''2
                 \mf
                 - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
-                fs''16
+                fs''8
                 \f
                 - \accent
                 \>
                 ~
-                [
 
-                fs''8
+                fs''4
 
-                aqs''8.
+                aqs''4.
                 - \espressivo
                 ~
 
@@ -266,6 +264,7 @@
             \sfp
             - \tweak stencil #constante-hairpin
             \<
+            [
 
             aqs''8
             \!

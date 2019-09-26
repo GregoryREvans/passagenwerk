@@ -305,16 +305,15 @@
             \!
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 6/5 {
+            \times 3/5 {
                 % [Voice 7 measure 6]                                          %! COMMENT_MEASURE_NUMBERS
 
-                a8.
+                a4.
                 \mf
                 - \accent
                 \<
-                [
 
-                aqs8
+                aqs4
                 - \espressivo
                 ~
 
@@ -322,6 +321,7 @@
 
             aqs8
             ~
+            [
 
             aqs16
             _ #(make-dynamic-script

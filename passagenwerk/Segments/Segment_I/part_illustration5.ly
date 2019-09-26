@@ -258,9 +258,9 @@
             aqf'4
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 6/5 {
+            \times 3/5 {
 
-                aqs'4.
+                aqs'2.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -279,7 +279,7 @@
                 <>
                 \!
 
-                aqf'4
+                aqf'2
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
