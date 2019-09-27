@@ -95,11 +95,11 @@
                     \>
                     [
 
-                    aqf'32
+                    aqf'8
                     - \tenuto
                     ~
 
-                    aqf'8
+                    aqf'32
 
                 }
 
@@ -107,14 +107,14 @@
                 - \tenuto
 
                 \tweak text #tuplet-number::calc-fraction-text
-                \times 5/9 {
+                \times 5/6 {
 
-                    g'16.
+                    g'16
                     - \accent
 
-                    bf'16.
+                    bf'16
 
-                    aqf'16.
+                    aqf'16
                     - \tenuto
 
                 }
@@ -125,11 +125,11 @@
                     b'8
                     - \accent
 
-                    c''16
+                    c''8
                     - \espressivo
                     ~
 
-                    c''16.
+                    c''32
 
                 }
 
@@ -161,42 +161,37 @@
                     - \tweak circled-tip ##t
                     \<
 
-                    aqf'128
+                    aqf'32
                     - \accent
                     ~
 
-                    aqf'32
+                    aqf'128
 
                 }
 
-                af'128
-                ~
+                af'32.
 
-                af'32
-                ~
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 1/1 {
 
-                af'128
-
-                \times 2/3 {
-
-                    g'64.
+                    g'64
                     - \tenuto
 
-                    bf'64.
+                    bf'64
                     - \accent
 
-                    aqf'64.
+                    aqf'64
                     - \espressivo
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
-                \times 5/6 {
+                \times 5/8 {
 
-                    b'64.
+                    b'32
                     - \tenuto
 
-                    c''64.
+                    c''32
                     - \tenuto
 
                 }
@@ -218,18 +213,16 @@
                 dqf''32.
                 - \accent
 
-                b'16
+                b'16.
                 - \espressivo
-                ~
 
-                b'32
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 1/1 {
 
-                \times 2/3 {
-
-                    c''32.
+                    c''32
                     - \tenuto
 
-                    b'32.
+                    b'32
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -246,7 +239,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    c''32.
+                    c''32
                     \!
                     \f
                     - \accent
@@ -255,10 +248,7 @@
 
                 }
 
-                aqf'32
-                ~
-
-                aqf'64
+                aqf'32.
 
                 g'32.
                 - \tenuto
@@ -343,7 +333,7 @@
 
             r8
 
-            a4.
+            a8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -357,11 +347,29 @@
                     )
                 )
             - \tenuto
+            - \tweak stencil #abjad-flared-hairpin
+            \<
+            ~
+
+            a4
+            \f
             - \tweak stencil #constante-hairpin
             \<
 
             a4
-            \f
+            \!
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             - \accent
             - \tweak stencil #constante-hairpin
             \<
@@ -371,21 +379,9 @@
                 % [Voice 2 measure 7]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a2
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "p"
-                            #:hspace -0.25
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
                 - \tweak circled-tip ##t
                 - \tweak stencil #abjad-flared-hairpin
-                \>
+                \<
 
                 aqs'8
                 - \tenuto
@@ -404,10 +400,6 @@
             \times 7/8 {
 
                 aqf'4
-                <>
-                \!
-
-                aqs'4.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -420,29 +412,30 @@
                             )
                         )
                     )
+
+                aqs'4.
+                \f
                 - \espressivo
                 - \tweak stencil #constante-hairpin
                 \<
 
-                aqf'8
+                aqf'4
                 \ff
                 - \accent
                 - \tweak stencil #abjad-flared-hairpin
                 \>
-                ~
-                [
-
-                aqf'8
 
                 af'8
                 - \espressivo
                 ~
-                ]
 
             }
             % [Voice 2 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
-            af'4.
+            af'4
+            ~
+
+            af'8
             <>
             \ppppp
 
@@ -464,17 +457,28 @@
                 \times 2/3 {
 
                     aqs'64
-                    \f
+                    _ #(make-dynamic-script
+                        (markup
+                            #:whiteout
+                            #:line (
+                                #:general-align Y -2 #:normal-text #:larger "“"
+                                #:hspace -0.1
+                                #:dynamic "p"
+                                #:hspace -0.25
+                                #:general-align Y -2 #:normal-text #:larger "”"
+                                )
+                            )
+                        )
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
                     [
 
-                    aqf'128
+                    aqf'64
                     - \tenuto
                     ~
 
-                    aqf'128.
+                    aqf'256
 
                 }
 
@@ -485,11 +489,8 @@
 
                     g'128
 
-                    bf'256
+                    bf'128.
                     - \tenuto
-                    ~
-
-                    bf'128
 
                     aqf'64
                     - \accent
@@ -520,46 +521,30 @@
                     % [Voice 2 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
                     aqs'16.
-                    _ #(make-dynamic-script
-                        (markup
-                            #:whiteout
-                            #:line (
-                                #:general-align Y -2 #:normal-text #:larger "“"
-                                #:hspace -0.1
-                                #:dynamic "p"
-                                #:hspace -0.25
-                                #:general-align Y -2 #:normal-text #:larger "”"
-                                )
-                            )
-                        )
                     - \accent
                     - \tweak circled-tip ##t
-                    - \tweak stencil #abjad-flared-hairpin
-                    \>
-
-                    aqf'64
-                    ~
+                    \<
 
                     aqf'16
+                    ~
+
+                    aqf'64
 
                 }
 
-                af'16
+                af'8
                 - \tenuto
-                ~
-
-                af'16
 
                 \times 4/5 {
 
                     g'32
                     - \accent
 
-                    bf'128
+                    bf'32
                     - \espressivo
                     ~
 
-                    bf'32
+                    bf'128
 
                     aqf'32.
                     - \tenuto
@@ -580,7 +565,18 @@
                 a8
                 ]
                 <>
-                \!
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
 
             }
             % [Voice 2 measure 13]                                             %! COMMENT_MEASURE_NUMBERS

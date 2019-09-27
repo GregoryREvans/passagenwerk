@@ -96,18 +96,7 @@
                 \sfp
 
                 f'4
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "mf"
-                            #:hspace -0.2
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \mf
                 - \espressivo
                 - \tweak stencil #abjad-flared-hairpin
                 \<
@@ -120,7 +109,18 @@
             % [Voice 6 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
 
             fs'4
-            \f
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.4
+                        #:dynamic "f"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             - \tweak stencil #constante-hairpin
             \<
 
@@ -143,18 +143,7 @@
 
             a'16
             \!
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.1
-                        #:dynamic "p"
-                        #:hspace -0.25
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            \p
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
@@ -165,28 +154,16 @@
                 % [Voice 6 measure 4]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a'8
-
-                f'16
-                - \accent
-                - \tweak circled-tip ##t
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                ~
                 ]
 
                 f'4
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "mf"
-                            #:hspace -0.2
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                - \accent
+                - \tweak circled-tip ##t
+                \<
+                ~
+
+                f'16
+                \mf
 
             }
 
@@ -194,25 +171,25 @@
                 % [Voice 6 measure 5]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a4
-                \f
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.4
+                            #:dynamic "f"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
                 \>
 
                 aqs8
                 - \tenuto
 
                 bf2
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "p"
-                            #:hspace -0.25
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \p
                 - \accent
                 - \tweak stencil #constante-hairpin
                 \<
@@ -259,7 +236,18 @@
             r2.
 
             f'4
-            \mf
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "mf"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             - \espressivo
             - \tweak stencil #constante-hairpin
             \<
@@ -267,24 +255,30 @@
             % [Voice 6 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
             f'8
+            [
 
-            f'4.
+            f'8
+            \f
+            - \tenuto
+            - \tweak stencil #abjad-flared-hairpin
+            \>
+            ~
+            ]
+
+            f'4
+            <>
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
                     #:line (
                         #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.4
-                        #:dynamic "f"
-                        #:hspace -0.2
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
                         #:general-align Y -2 #:normal-text #:larger "”"
                         )
                     )
                 )
-            - \tenuto
-            \>
-            <>
-            \p
             % [Voice 6 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility

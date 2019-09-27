@@ -108,7 +108,10 @@
             aqf'16
             - \accent
 
-            af'8.
+            af'16
+            ~
+
+            af'8
             ~
             ]
 
@@ -231,11 +234,11 @@
                     \<
                     [
 
-                    aqf'64
+                    aqf'32
                     - \accent
                     ~
 
-                    aqf'64.
+                    aqf'128
 
                 }
 
@@ -246,11 +249,8 @@
                     g'64
                     - \tenuto
 
-                    bf'128
+                    bf'64.
                     - \accent
-                    ~
-
-                    bf'64
 
                     aqf'32
                     - \espressivo
@@ -285,30 +285,27 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
 
-                    aqf'128
+                    aqf'32
                     - \tenuto
                     ~
 
-                    aqf'32
+                    aqf'128
 
                 }
 
-                af'32
+                af'16
                 - \accent
-                ~
-
-                af'32
 
                 \times 4/5 {
 
                     g'64
                     - \espressivo
 
-                    bf'256
+                    bf'64
                     - \tenuto
                     ~
 
-                    bf'64
+                    bf'256
 
                     aqf'64.
                     - \tenuto
@@ -365,18 +362,15 @@
                 bqf4
                 \mf
 
-                bf8
+                bf4
                 \sfp
                 - \tenuto
                 \<
-                ~
-                [
-
-                bf8
 
                 bqf16
                 - \tenuto
                 ~
+                [
 
             }
             % [Voice 1 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
@@ -490,8 +484,10 @@
             - \accent
             ]
 
-            r4.
+            r8
             \!
+
+            r4
             % [Voice 1 measure 14]                                             %! COMMENT_MEASURE_NUMBERS
 
             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
