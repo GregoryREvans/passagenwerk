@@ -101,51 +101,52 @@
 
                 \clef "treble"
                 f''8
-                \f
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.4
+                            #:dynamic "f"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
                 - \tweak stencil #abjad-flared-hairpin
                 \>
                 [
 
                 fs''8
                 - \tenuto
+
+                a''8
+                - \accent
+                ~
                 ]
 
-                a''4.
-                - \accent
+                a''4
                 ~
 
             }
             % [Voice 9 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
 
             a''4
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.1
-                        #:dynamic "p"
-                        #:hspace -0.25
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            \p
 
             f''8
-            \mp
+            \mf
             - \tenuto
-            - \tweak stencil #abjad-flared-hairpin
             \<
             ~
 
             f''4
-            \mf
+            \f
             % [Voice 9 measure 4]                                              %! COMMENT_MEASURE_NUMBERS
 
             f''4
             - \espressivo
             - \tweak circled-tip ##t
-            - \tweak stencil #abjad-flared-hairpin
             \<
 
             aqs''8
@@ -156,24 +157,24 @@
                 % [Voice 9 measure 5]                                          %! COMMENT_MEASURE_NUMBERS
 
                 aqs''4.
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "mf"
-                            #:hspace -0.2
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \mf
                 - \tweak stencil #constante-hairpin
                 \<
 
                 f''8
                 \!
-                \f
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.4
+                            #:dynamic "f"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
@@ -201,32 +202,22 @@
                 % [Voice 9 measure 7]                                          %! COMMENT_MEASURE_NUMBERS
 
                 f''16
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "p"
-                            #:hspace -0.25
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \p
                 - \tweak circled-tip ##t
                 \>
                 [
 
-                fs''8.
+                fs''8
                 - \tenuto
-                ]
+                ~
 
-                a''4
+                fs''16
+
+                a''8
                 - \accent
                 ~
 
-                a''16
-                [
+                a''8.
 
             }
 
@@ -244,34 +235,26 @@
             \times 8/15 {
                 % [Voice 9 measure 8]                                          %! COMMENT_MEASURE_NUMBERS
 
-                a''2
+                a''4.
                 ~
 
-                a''8
+                a''4
                 <>
                 \!
 
                 f''2
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.1
-                            #:dynamic "mf"
-                            #:hspace -0.2
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \mf
                 - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
-                fs''4.
-                \f
+                fs''8
+                \sfp
                 - \accent
-                \>
+                \<
+                ~
+
+                fs''4
 
                 aqs''4.
                 - \espressivo
@@ -281,19 +264,20 @@
             % [Voice 9 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
             aqs''8
-            \sfp
+            \ff
             - \tweak stencil #constante-hairpin
             \<
             [
 
             aqs''8
             \!
-            \ff
+            \ppppp
             - \tenuto
-            \>
+            - \tweak stencil #abjad-flared-hairpin
+            \<
             ]
             <>
-            \ppppp
+            \mp
 
             r4
             % [Voice 9 measure 10]                                             %! COMMENT_MEASURE_NUMBERS

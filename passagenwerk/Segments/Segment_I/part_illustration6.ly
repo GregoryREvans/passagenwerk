@@ -88,7 +88,7 @@
             \markup { Viola-2 }                                                %! applying staff names and clefs
             \clef "varC"
             f'4.
-            \mp
+            \mf
             - \tenuto
             \<
             ~
@@ -98,22 +98,37 @@
                 % [Voice 6 measure 2]                                          %! COMMENT_MEASURE_NUMBERS
 
                 f'8
-                \mf
+                \f
                 - \tweak stencil #constante-hairpin
                 \<
+                [
 
-                f'4.
+                f'8
                 \!
-                \f
-                - \accent
-                \>
-                <>
                 \sfp
+                - \accent
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                ~
+                ]
 
                 f'4
-                \mf
+                \ff
+
+                f'4
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
                 - \espressivo
-                - \tweak stencil #abjad-flared-hairpin
                 \<
 
                 fs'4
@@ -124,27 +139,16 @@
             % [Voice 6 measure 3]                                              %! COMMENT_MEASURE_NUMBERS
 
             fs'4
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.4
-                        #:dynamic "f"
-                        #:hspace -0.2
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            \f
             - \tweak stencil #constante-hairpin
             \<
 
             f'16
             \!
-            \ff
+            \ppppp
             - \espressivo
             - \tweak stencil #abjad-flared-hairpin
-            \>
+            \<
             [
 
             fs'16
@@ -152,13 +156,24 @@
             ~
 
             fs'8.
-            \ppppp
+            \mp
             - \tweak stencil #constante-hairpin
             \<
 
             a'16
             \!
-            \p
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.1
+                        #:dynamic "p"
+                        #:hspace -0.25
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
@@ -169,16 +184,27 @@
                 % [Voice 6 measure 4]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a'8
-                ]
 
-                f'4
+                f'16
                 - \accent
                 - \tweak circled-tip ##t
                 \<
                 ~
+                ]
 
-                f'16
-                \mf
+                f'4
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "mf"
+                            #:hspace -0.2
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
 
             }
 
@@ -186,25 +212,26 @@
                 % [Voice 6 measure 5]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a4
-                _ #(make-dynamic-script
-                    (markup
-                        #:whiteout
-                        #:line (
-                            #:general-align Y -2 #:normal-text #:larger "“"
-                            #:hspace -0.4
-                            #:dynamic "f"
-                            #:hspace -0.2
-                            #:general-align Y -2 #:normal-text #:larger "”"
-                            )
-                        )
-                    )
+                \f
+                - \tweak stencil #abjad-flared-hairpin
                 \>
 
                 aqs8
                 - \tenuto
 
                 bf2
-                \p
+                _ #(make-dynamic-script
+                    (markup
+                        #:whiteout
+                        #:line (
+                            #:general-align Y -2 #:normal-text #:larger "“"
+                            #:hspace -0.1
+                            #:dynamic "p"
+                            #:hspace -0.25
+                            #:general-align Y -2 #:normal-text #:larger "”"
+                            )
+                        )
+                    )
                 - \accent
                 - \tweak stencil #constante-hairpin
                 \<
@@ -224,9 +251,8 @@
             % [Voice 6 measure 7]                                              %! COMMENT_MEASURE_NUMBERS
 
             f'8
-            \mp
+            \mf
             - \tenuto
-            - \tweak stencil #abjad-flared-hairpin
             \<
             [
 
@@ -245,24 +271,13 @@
             - \tenuto
             ]
             <>
-            \mf
+            \f
             % [Voice 6 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
 
             r2.
 
             f'4
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.1
-                        #:dynamic "mf"
-                        #:hspace -0.2
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            \mf
             - \espressivo
             - \tweak stencil #constante-hairpin
             \<
@@ -273,7 +288,18 @@
             [
 
             f'8
-            \f
+            _ #(make-dynamic-script
+                (markup
+                    #:whiteout
+                    #:line (
+                        #:general-align Y -2 #:normal-text #:larger "“"
+                        #:hspace -0.4
+                        #:dynamic "f"
+                        #:hspace -0.2
+                        #:general-align Y -2 #:normal-text #:larger "”"
+                        )
+                    )
+                )
             - \tenuto
             - \tweak stencil #abjad-flared-hairpin
             \>
@@ -282,18 +308,7 @@
 
             f'4
             <>
-            _ #(make-dynamic-script
-                (markup
-                    #:whiteout
-                    #:line (
-                        #:general-align Y -2 #:normal-text #:larger "“"
-                        #:hspace -0.1
-                        #:dynamic "p"
-                        #:hspace -0.25
-                        #:general-align Y -2 #:normal-text #:larger "”"
-                        )
-                    )
-                )
+            \p
             % [Voice 6 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility

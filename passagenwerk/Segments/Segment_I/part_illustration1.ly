@@ -108,10 +108,7 @@
             aqf'16
             - \accent
 
-            af'16
-            ~
-
-            af'8
+            af'8.
             ~
             ]
 
@@ -128,11 +125,19 @@
                 - \tweak stencil #abjad-flared-hairpin
                 \>
 
-                aqf'4.
+                aqf'4
                 - \accent
+                ~
 
-                af'4.
+                aqf'8
+                [
+
+                af'8
                 - \espressivo
+                ~
+                ]
+
+                af'4
                 <>
                 \!
 
@@ -227,18 +232,21 @@
 
                 \times 2/3 {
 
-                    aqs'32
+                    aqs'64.
                     \ppppp
                     - \tenuto
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    ~
                     [
 
-                    aqf'32
+                    aqs'128
+
+                    aqf'64
                     - \accent
                     ~
 
-                    aqf'128
+                    aqf'64.
 
                 }
 
@@ -249,22 +257,34 @@
                     g'64
                     - \tenuto
 
-                    bf'64.
+                    bf'128
                     - \accent
+                    ~
 
-                    aqf'32
+                    bf'64
+
+                    aqf'128
                     - \espressivo
+                    ~
+
+                    aqf'64.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    b'16
+                    b'32.
                     - \tenuto
+                    ~
 
-                    c''32.
+                    b'64
+
+                    c''64
                     - \tenuto
+                    ~
+
+                    c''32
 
                 }
 
@@ -280,45 +300,66 @@
                 \times 10/11 {
                     % [Voice 1 measure 8]                                      %! COMMENT_MEASURE_NUMBERS
 
-                    aqs'32.
+                    aqs'64.
                     \mf
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    ~
 
-                    aqf'32
+                    aqs'64
+                    ~
+
+                    aqs'128
+
+                    aqf'128
                     - \tenuto
                     ~
 
-                    aqf'128
+                    aqf'32
 
                 }
 
-                af'16
+                af'32
                 - \accent
+                ~
+
+                af'32
 
                 \times 4/5 {
 
                     g'64
                     - \espressivo
 
-                    bf'64
+                    bf'256
                     - \tenuto
                     ~
 
-                    bf'256
+                    bf'64
 
-                    aqf'64.
+                    aqf'256
                     - \tenuto
+                    ~
+
+                    aqf'128.
+                    ~
+
+                    aqf'128
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    b'16
+                    b'32.
                     - \accent
+                    ~
 
-                    c''32.
+                    b'64
+
+                    c''64
+                    ~
+
+                    c''32
 
                 }
 
@@ -354,23 +395,27 @@
             bqf8
             - \espressivo
             ~
-            ]
 
             \times 8/9 {
                 % [Voice 1 measure 9]                                          %! COMMENT_MEASURE_NUMBERS
 
-                bqf4
+                bqf8.
+                ~
+
+                bqf16
                 \mf
 
-                bf4
+                bf8
                 \sfp
                 - \tenuto
                 \<
+                ~
+
+                bf8
 
                 bqf16
                 - \tenuto
                 ~
-                [
 
             }
             % [Voice 1 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
