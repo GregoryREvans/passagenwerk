@@ -1,76 +1,62 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile
-\language "english"                                                            %! abjad.LilyPondFile
+\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
+\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
 
-\header {                                                                      %! abjad.LilyPondFile
+\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile
+\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
     \new Score
     <<
 
         \context TimeSignatureContext = "Global Context"
         {
-            % [Global Context measure 1]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 2]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 7/8                                                          %! scaling time signatures
             s1 * 7/8
-            % [Global Context measure 3]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 4]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 5]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 6]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 7]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 8]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 4/4                                                          %! scaling time signatures
             s1 * 1
-            % [Global Context measure 9]                                       %! COMMENT_MEASURE_NUMBERS
 
             \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 10]                                      %! COMMENT_MEASURE_NUMBERS
 
             \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 11]                                      %! COMMENT_MEASURE_NUMBERS
 
             \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
-            % [Global Context measure 12]                                      %! COMMENT_MEASURE_NUMBERS
 
             \time 5/8                                                          %! scaling time signatures
             s1 * 5/8
-            % [Global Context measure 13]                                      %! COMMENT_MEASURE_NUMBERS
 
             \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
-            % [Global Context measure 14]                                      %! COMMENT_MEASURE_NUMBERS
 
             \once \override TimeSignature.color = #white                       %! applying ending skips
             \time 1/4                                                          %! scaling time signatures
@@ -80,7 +66,6 @@
 
         \context Voice = "Voice 2"
         {
-            % [Voice 2 measure 1]                                              %! COMMENT_MEASURE_NUMBERS
 
             \set Staff.shortInstrumentName =                                   %! applying staff names and clefs
             \markup { "vln. I-2" }                                             %! applying staff names and clefs
@@ -93,7 +78,6 @@
 
             R1 * 3/16
             \stopStaff \startStaff                                             %! applying cutaway
-            % [Voice 2 measure 2]                                              %! COMMENT_MEASURE_NUMBERS
 
             r4
 
@@ -181,7 +165,6 @@
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
-                    % [Voice 2 measure 3]                                      %! COMMENT_MEASURE_NUMBERS
 
                     aqs'64.
                     - \tenuto
@@ -312,7 +295,6 @@
             \times 8/13 {
 
                 \times 4/5 {
-                    % [Voice 2 measure 4]                                      %! COMMENT_MEASURE_NUMBERS
 
                     aqs'64
                     _ #(make-dynamic-script
@@ -372,7 +354,6 @@
             }
 
             r8
-            % [Voice 2 measure 5]                                              %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
@@ -380,7 +361,6 @@
 
             R1 * 3/8
             \stopStaff \startStaff                                             %! applying cutaway
-            % [Voice 2 measure 6]                                              %! COMMENT_MEASURE_NUMBERS
 
             r8
 
@@ -427,7 +407,6 @@
 
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
-                % [Voice 2 measure 7]                                          %! COMMENT_MEASURE_NUMBERS
 
                 a4.
                 - \tweak circled-tip ##t
@@ -447,7 +426,6 @@
                 ~
 
             }
-            % [Voice 2 measure 8]                                              %! COMMENT_MEASURE_NUMBERS
 
             aqf'8
             ~
@@ -508,7 +486,6 @@
                 ]
 
             }
-            % [Voice 2 measure 9]                                              %! COMMENT_MEASURE_NUMBERS
 
             af'4
             ~
@@ -518,7 +495,6 @@
             \ppppp
 
             r8
-            % [Voice 2 measure 10]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
@@ -526,7 +502,6 @@
 
             R1 * 3/16
             \stopStaff \startStaff                                             %! applying cutaway
-            % [Voice 2 measure 11]                                             %! COMMENT_MEASURE_NUMBERS
 
             r4
 
@@ -588,7 +563,6 @@
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 10/11 {
-                    % [Voice 2 measure 12]                                     %! COMMENT_MEASURE_NUMBERS
 
                     aqs'32.
                     _ #(make-dynamic-script
@@ -670,7 +644,6 @@
                 \p
 
             }
-            % [Voice 2 measure 13]                                             %! COMMENT_MEASURE_NUMBERS
 
             \once \override Rest.transparent = ##t                             %! applying invisibility
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
@@ -678,7 +651,6 @@
 
             R1 * 1/4
             \stopStaff \startStaff                                             %! applying cutaway
-            % [Voice 2 measure 14]                                             %! COMMENT_MEASURE_NUMBERS
 
             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
             \once \override Rest.color = #white                                %! applying ending skips
@@ -695,4 +667,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()

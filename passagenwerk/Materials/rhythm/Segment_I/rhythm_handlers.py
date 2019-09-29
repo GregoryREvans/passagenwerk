@@ -3,8 +3,9 @@ import evans
 import abjadext.rmakers
 from passagenwerk.Materials.rhythm.Segment_I.rhythm_makers import *
 
-silence_maker = abjadext.rmakers.NoteRhythmMaker(
-    division_masks=[abjadext.rmakers.SilenceMask(pattern=abjad.index([0], 1))]
+silence_maker = abjadext.rmakers.stack(
+    abjadext.rmakers.NoteRhythmMaker(),
+    abjadext.rmakers.force_rest(abjad.select().leaves(pitched=True)),
 )
 
 
