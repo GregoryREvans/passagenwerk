@@ -175,17 +175,20 @@
 
             }
 
-            \times 4/7 {
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 8/7 {
 
-                a4
+                a8
                 \f
                 - \tweak stencil #abjad-flared-hairpin
                 \>
+                [
 
-                aqs8
+                aqs16
                 - \tenuto
+                ]
 
-                bf2
+                bf4
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout

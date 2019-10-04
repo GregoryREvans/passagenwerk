@@ -256,12 +256,12 @@
             ]
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 3/5 {
+            \times 6/5 {
 
-                bf2
+                bf4
                 \mp
 
-                a8
+                a16
                 \mf
                 - \espressivo
                 \<

@@ -215,12 +215,12 @@
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
-                \times 5/8 {
+                \times 5/4 {
 
-                    <b' e''>16
+                    <b' e''>32
                     - \tenuto
 
-                    f''16
+                    f''32
                     - \accent
 
                 }

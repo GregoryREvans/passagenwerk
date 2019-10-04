@@ -192,9 +192,9 @@
             ]
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 3/4 {
+            \times 3/2 {
 
-                aqs'2
+                aqs'4
                 - \accent
                 - \tweak circled-tip ##t
                 \<
@@ -264,9 +264,9 @@
             aqf'4
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 3/5 {
+            \times 6/5 {
 
-                aqs'2.
+                aqs'4.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -285,7 +285,7 @@
                 <>
                 \p
 
-                aqf'2
+                aqf'4
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout

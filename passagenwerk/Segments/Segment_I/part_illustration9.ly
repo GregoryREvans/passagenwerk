@@ -209,32 +209,34 @@
             a''16
             - \tenuto
             ~
-            ]
 
-            \times 8/15 {
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 16/15 {
 
-                a''4.
+                a''8.
                 ~
 
-                a''4
+                a''8
+                ]
                 <>
                 \!
 
-                f''2
+                f''4
                 \mf
                 - \accent
                 - \tweak stencil #constante-hairpin
                 \<
 
-                fs''8
+                fs''16
                 \sfp
                 - \accent
                 \<
                 ~
+                [
 
-                fs''4
+                fs''8
 
-                aqs''4.
+                aqs''8.
                 - \espressivo
                 ~
 
@@ -244,7 +246,6 @@
             \ff
             - \tweak stencil #constante-hairpin
             \<
-            [
 
             aqs''8
             \!

@@ -80,17 +80,18 @@
             \stopStaff \startStaff                                             %! applying cutaway
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 7/13 {
+            \times 14/13 {
 
-                bf4.
+                bf8.
                 \mp
                 - \tenuto
                 \<
+                [
                 <>
                 \mf
 
                 \clef "tenorvarC"
-                aqs'4
+                aqs'8
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -108,18 +109,18 @@
                 \<
                 ~
 
-                aqs'8
-                [
+                aqs'16
 
-                aqf'8
+                aqf'16
                 - \tenuto
                 ~
                 ]
 
-                aqf'2
+                aqf'4
 
-                af'4
+                af'8
                 - \tenuto
+                [
 
             }
 
@@ -127,7 +128,6 @@
             \f
             - \accent
             \>
-            [
 
             aqf'16
             ~

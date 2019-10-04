@@ -293,15 +293,16 @@
             \!
 
             \tweak text #tuplet-number::calc-fraction-text
-            \times 3/5 {
+            \times 6/5 {
 
-                a4.
+                a8.
                 \mf
                 - \accent
                 - \tweak stencil #abjad-flared-hairpin
                 \<
+                [
 
-                aqs4
+                aqs8
                 - \espressivo
                 ~
 
@@ -309,7 +310,6 @@
 
             aqs8
             ~
-            [
 
             aqs16
             _ #(make-dynamic-script

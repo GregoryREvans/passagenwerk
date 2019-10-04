@@ -102,34 +102,34 @@
 
                     af'8.
                     ~
-                    ]
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) "8")
-                    \times 7/13 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) "16")
+                    \times 14/13 {
 
-                        af'4.
+                        af'8.
+                        ]
 
-                        aqs'2
+                        aqs'4
                         \p
                         - \tenuto
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'4
+                        aqf'8
                         - \accent
                         ~
-
-                        aqf'8
                         [
 
-                        af'8
+                        aqf'16
+
+                        af'16
                         - \espressivo
                         ~
-                        ]
 
-                        af'4
+                        af'8
+                        ]
                         <>
                         \!
 
@@ -199,16 +199,17 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ~
-                        ]
 
                     }
 
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                    \times 2/3 {
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "16")
+                    \times 4/3 {
 
-                        aqs'4
+                        aqs'8
 
-                        aqf'8
+                        aqf'16
+                        ]
 
                     }
 
@@ -461,15 +462,14 @@
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
 
                     }
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "8")
-                    \times 5/8 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "8")
+                    \times 5/4 {
 
-                        aqs'4
+                        aqs'8
                         \!
                         _ #(make-dynamic-script
                             (markup
@@ -487,13 +487,13 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'4
+                        aqf'8
                         - \tenuto
 
-                        af'4
+                        af'8
                         - \accent
 
-                        g'4
+                        g'8
                         \p
                         - \tweak stencil #constante-hairpin
                         \<
@@ -517,7 +517,6 @@
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
-                    [
 
                     aqf'16
                     - \accent
@@ -1370,13 +1369,13 @@
                     ]
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "8")
-                    \times 3/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                    \times 6/5 {
 
-                        bf2
+                        bf4
                         \mp
 
-                        a8
+                        a16
                         \mf
                         - \espressivo
                         \<
@@ -1622,13 +1621,13 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "64")
-                        \times 5/8 {
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "64")
+                        \times 5/4 {
 
-                            <b' e''>16
+                            <b' e''>32
                             - \tenuto
 
-                            f''16
+                            f''32
                             - \accent
 
                         }
@@ -1949,10 +1948,10 @@
                     ]
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "8")
-                    \times 3/4 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 2 3) "8")
+                    \times 3/2 {
 
-                        aqs'2
+                        aqs'4
                         - \accent
                         - \tweak circled-tip ##t
                         \<
@@ -2022,10 +2021,10 @@
                     aqf'4
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "4")
-                    \times 3/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "8")
+                    \times 6/5 {
 
-                        aqs'2.
+                        aqs'4.
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2044,7 +2043,7 @@
                         <>
                         \p
 
-                        aqf'2
+                        aqf'4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2269,18 +2268,21 @@
 
                     }
 
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 4) "8")
-                    \times 4/7 {
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) "16")
+                    \times 8/7 {
 
-                        a4
+                        a8
                         \f
                         - \tweak stencil #abjad-flared-hairpin
                         \>
+                        [
 
-                        aqs8
+                        aqs16
                         - \tenuto
+                        ]
 
-                        bf2
+                        bf4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2672,16 +2674,17 @@
                     \!
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "8")
-                    \times 3/5 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                    \times 6/5 {
 
-                        a4.
+                        a8.
                         \mf
                         - \accent
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        [
 
-                        aqs4
+                        aqs8
                         - \espressivo
                         ~
 
@@ -2689,7 +2692,6 @@
 
                     aqs8
                     ~
-                    [
 
                     aqs16
                     _ #(make-dynamic-script
@@ -3091,18 +3093,19 @@
                     \stopStaff \startStaff                                     %! applying cutaway
 
                     \tweak text #tuplet-number::calc-fraction-text
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 7) "8")
-                    \times 7/13 {
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) "16")
+                    \times 14/13 {
 
-                        bf4.
+                        bf8.
                         \mp
                         - \tenuto
                         \<
+                        [
                         <>
                         \mf
 
                         \clef "tenorvarC"
-                        aqs'4
+                        aqs'8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -3120,18 +3123,18 @@
                         \<
                         ~
 
-                        aqs'8
-                        [
+                        aqs'16
 
-                        aqf'8
+                        aqf'16
                         - \tenuto
                         ~
                         ]
 
-                        aqf'2
+                        aqf'4
 
-                        af'4
+                        af'8
                         - \tenuto
+                        [
 
                     }
 
@@ -3139,7 +3142,6 @@
                     \f
                     - \accent
                     \>
-                    [
 
                     aqf'16
                     ~
@@ -3868,33 +3870,35 @@
                     a''16
                     - \tenuto
                     ~
-                    ]
 
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "8")
-                    \times 8/15 {
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 16) "16")
+                    \times 16/15 {
 
-                        a''4.
+                        a''8.
                         ~
 
-                        a''4
+                        a''8
+                        ]
                         <>
                         \!
 
-                        f''2
+                        f''4
                         \mf
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        fs''8
+                        fs''16
                         \sfp
                         - \accent
                         \<
                         ~
+                        [
 
-                        fs''4
+                        fs''8
 
-                        aqs''4.
+                        aqs''8.
                         - \espressivo
                         ~
 
@@ -3904,7 +3908,6 @@
                     \ff
                     - \tweak stencil #constante-hairpin
                     \<
-                    [
 
                     aqs''8
                     \!
