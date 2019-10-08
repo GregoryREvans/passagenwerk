@@ -596,43 +596,44 @@
             \times 8/15 {
 
                 \clef "tenorvarC"
-                aqs'64.
+                bf'64.
                 \ff
                 - \accent
                 \>
 
-                aqf'64.
+                aqs'64.
 
-                af'32
+                aqf'32
                 - \tenuto
                 ~
 
-                af'64
+                aqf'64
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 1/1 {
 
-                    g'64
+                    af'64
                     - \accent
 
-                    bf'64
+                    b'64
                     - \espressivo
 
-                    aqf'64
+                    aqs'64
                     - \tenuto
 
                 }
 
-                b'64
+                c''64
                 - \tenuto
                 ~
 
-                b'128
+                c''128
 
-                c''64.
+                \clef "treble"
+                cs''64.
                 - \accent
 
-                b'32.
+                c''32.
                 \ppppp
                 - \tweak stencil #constante-hairpin
                 \<

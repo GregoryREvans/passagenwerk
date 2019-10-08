@@ -1,18 +1,18 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
 
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
+\score {                                                                       %! abjad.LilyPondFile
     \new Score
     <<
 
@@ -81,13 +81,13 @@
 
             r4.
 
-            aqs'4
+            bf'4
             \mf
             - \tenuto
             - \tweak stencil #abjad-flared-hairpin
             \<
 
-            aqf'4
+            aqs'4
             \f
             - \accent
             - \tweak stencil #constante-hairpin
@@ -99,7 +99,7 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    aqs'16.
+                    bf'16.
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -118,32 +118,32 @@
                     ~
                     [
 
-                    aqs'16
+                    bf'16
                     ~
 
-                    aqs'32
+                    bf'32
 
-                    aqf'32
+                    aqs'32
                     - \tenuto
                     ~
 
-                    aqf'8
+                    aqs'8
 
                 }
 
-                af'8
+                aqf'8
                 - \accent
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/6 {
 
-                    g'16
+                    af'16
                     - \espressivo
 
-                    bf'16
+                    b'16
                     - \tenuto
 
-                    aqf'16
+                    aqs'16
                     - \tenuto
 
                 }
@@ -151,24 +151,24 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/9 {
 
-                    b'16.
+                    c''16.
                     - \accent
                     ~
 
-                    b'32
+                    c''32
 
-                    c''16
+                    cs''16
                     ~
 
-                    c''16.
+                    cs''16.
 
                 }
 
-                b'16
+                c''16
                 - \tenuto
                 ~
 
-                b'8
+                c''8
                 \p
                 - \tweak stencil #constante-hairpin
                 \<
@@ -181,7 +181,7 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    aqs'16.
+                    bf'16.
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -199,22 +199,22 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqf'64
+                    aqs'64
                     - \espressivo
                     ~
 
-                    aqf'16
+                    aqs'16
 
                 }
 
-                af'64
+                aqf'64
                 - \tenuto
                 ~
 
-                af'16
+                aqf'16
                 ~
 
-                af'64
+                aqf'64
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 1/1 {
@@ -319,26 +319,26 @@
             f'8
             [
 
-            aqs'8
+            bf'8
             - \tenuto
             ~
             ]
 
-            aqs'4
+            bf'4
             ~
 
             \times 4/5 {
 
-                aqs'4
+                bf'4
                 \ff
 
-                aqs'8
+                bf'8
                 \ppppp
                 - \accent
                 \<
                 ~
 
-                aqs'4
+                bf'4
                 \mp
                 - \tweak stencil #constante-hairpin
                 \<
@@ -350,17 +350,17 @@
 
             r4
 
-            aqs'4
+            bf'4
             \mf
             - \espressivo
             - \tweak stencil #abjad-flared-hairpin
             \<
             ~
 
-            aqs'4.
+            bf'4.
             \f
 
-            aqs'8
+            bf'8
             - \accent
             - \tweak circled-tip ##t
             \<
@@ -368,9 +368,9 @@
 
             \times 4/5 {
 
-                aqf'8
+                aqs'8
 
-                af'8.
+                aqf'8.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -420,4 +420,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile

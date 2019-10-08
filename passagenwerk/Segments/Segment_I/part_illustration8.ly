@@ -1,18 +1,18 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
 
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
+\score {                                                                       %! abjad.LilyPondFile
     \new Score
     <<
 
@@ -91,7 +91,7 @@
                 \mf
 
                 \clef "tenorvarC"
-                aqs'8
+                bf'8
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -109,37 +109,37 @@
                 \<
                 ~
 
-                aqs'16
+                bf'16
 
-                aqf'16
+                aqs'16
                 - \tenuto
                 ~
                 ]
 
-                aqf'4
+                aqs'4
 
-                af'8
+                aqf'8
                 - \tenuto
                 [
 
             }
 
-            aqs'16
+            bf'16
             \f
             - \accent
             \>
 
-            aqf'16
+            aqs'16
             ~
             ]
 
-            aqf'4
+            aqs'4
             ~
 
-            aqf'16
+            aqs'16
             [
 
-            af'8.
+            aqf'8.
             - \tenuto
             ]
             <>
@@ -170,17 +170,17 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
 
-                aqs'16
+                bf'16
                 - \accent
                 - \tweak circled-tip ##t
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 [
 
-                aqf'16
+                aqs'16
                 - \espressivo
 
-                af'16
+                aqf'16
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -197,20 +197,20 @@
                 - \tweak stencil #constante-hairpin
                 \<
 
-                g'16
+                af'16
                 \!
                 \f
                 - \accent
                 - \tweak stencil #abjad-flared-hairpin
                 \>
 
-                bf'16
+                b'16
                 - \espressivo
 
-                aqf'16
+                aqs'16
                 - \tenuto
 
-                b'16
+                c''16
                 \sfp
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -218,49 +218,50 @@
 
             }
 
-            aqs'16
+            bf'16
             \!
             \ff
             - \accent
             - \tweak stencil #abjad-flared-hairpin
             \>
 
-            aqf'16
-
-            af'16
-            - \tenuto
-
-            g'16
-            - \accent
-
             aqs'16
-            - \espressivo
 
             aqf'16
             - \tenuto
 
             af'16
-            - \tenuto
-
-            g'16
-            \ppppp
             - \accent
 
             bf'16
+            - \espressivo
+
+            aqs'16
+            - \tenuto
+
+            aqf'16
+            - \tenuto
+
+            af'16
+            \ppppp
+            - \accent
+
+            b'16
             \f
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
 
-            aqf'16
+            aqs'16
             - \accent
 
-            b'16
-
             c''16
+
+            \clef "treble"
+            cs''16
             - \tenuto
 
-            aqs'16
+            bf'16
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -278,7 +279,7 @@
             - \tweak stencil #abjad-flared-hairpin
             \>
 
-            aqf'16
+            aqs'16
             - \espressivo
 
             \tweak text #tuplet-number::calc-fraction-text
@@ -286,32 +287,32 @@
 
                 \times 4/5 {
 
-                    af'32
+                    aqf'32
                     - \tenuto
 
-                    g'64
+                    af'64
                     - \tenuto
                     ~
 
-                    g'32
+                    af'32
 
                 }
 
-                bf'8
+                b'8
                 - \accent
                 ~
 
-                bf'8
+                b'8
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 3/5 {
 
-                    aqs'8
+                    bf'8
 
-                    aqf'16
+                    aqs'16
                     - \tenuto
 
-                    af'8
+                    aqf'8
                     - \accent
 
                 }
@@ -319,21 +320,21 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/7 {
 
-                    g'16.
+                    af'16.
                     - \espressivo
                     ~
 
-                    g'32
+                    af'32
 
-                    bf'32
+                    b'32
                     - \tenuto
                     ~
 
-                    bf'16
+                    b'16
 
                 }
 
-                aqf'8
+                aqs'8
                 - \tenuto
                 <>
                 \!
@@ -344,7 +345,7 @@
 
                 \times 2/3 {
 
-                    aqs'128.
+                    bf'128.
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -361,55 +362,55 @@
                     \<
                     ~
 
-                    aqs'256
+                    bf'256
 
-                    aqf'128
+                    aqs'128
                     ~
 
-                    aqf'128.
+                    aqs'128.
 
                 }
 
-                af'32
+                aqf'32
                 - \tenuto
 
                 \times 2/3 {
 
-                    g'128
+                    af'128
                     - \accent
 
-                    bf'256
+                    b'256
                     - \espressivo
                     ~
 
-                    bf'128
+                    b'128
 
-                    aqf'256
+                    aqs'256
                     - \tenuto
                     ~
 
-                    aqf'128.
+                    aqs'128.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    b'64.
+                    c''64.
                     - \tenuto
                     ~
 
-                    b'128
-
                     c''128
+
+                    cs''128
                     - \accent
                     ~
 
-                    c''64
+                    cs''64
 
                 }
 
-                b'64
+                c''64
                 \f
                 - \tweak stencil #constante-hairpin
                 \<
@@ -424,7 +425,7 @@
 
             r8
 
-            aqs'8
+            bf'8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -442,63 +443,63 @@
             \<
             ~
 
-            aqs'4
+            bf'4
             ~
 
-            aqs'4.
+            bf'4.
 
             \times 4/7 {
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 10/11 {
 
-                    aqs'16.
+                    bf'16.
                     - \accent
                     - \tweak circled-tip ##t
                     \<
                     [
 
-                    aqf'64
+                    aqs'64
                     - \espressivo
                     ~
 
-                    aqf'16
+                    aqs'16
 
                 }
 
-                af'16
+                aqf'16
                 - \tenuto
                 ~
 
-                af'16
+                aqf'16
 
                 \times 4/5 {
 
-                    g'32
+                    af'32
                     - \tenuto
 
-                    bf'128
+                    b'128
                     - \accent
                     ~
 
-                    bf'32
+                    b'32
 
-                    aqf'32.
+                    aqs'32.
 
                 }
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/7 {
 
-                    b'8
+                    c''8
                     - \tenuto
 
-                    c''16.
+                    cs''16.
                     - \accent
 
                 }
 
-                b'8
+                c''8
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -521,38 +522,38 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    aqs'16.
+                    bf'16.
                     \f
                     - \tenuto
                     - \tweak stencil #abjad-flared-hairpin
                     \>
                     ~
 
-                    aqs'16
+                    bf'16
                     ~
 
-                    aqs'32
+                    bf'32
 
-                    aqf'32
+                    aqs'32
                     - \tenuto
                     ~
 
-                    aqf'8
+                    aqs'8
 
                 }
 
-                af'8
+                aqf'8
                 - \accent
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/6 {
 
-                    g'16
+                    af'16
 
-                    bf'16
+                    b'16
                     - \tenuto
 
-                    aqf'16
+                    aqs'16
                     - \accent
 
                 }
@@ -560,25 +561,25 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/9 {
 
-                    b'16.
+                    c''16.
                     - \espressivo
                     ~
 
-                    b'32
+                    c''32
 
-                    c''16
+                    cs''16
                     - \tenuto
                     ~
 
-                    c''16.
+                    cs''16.
 
                 }
 
-                b'16
+                c''16
                 - \tenuto
                 ~
 
-                b'8
+                c''8
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -684,4 +685,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile

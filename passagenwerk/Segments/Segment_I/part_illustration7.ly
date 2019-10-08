@@ -1,18 +1,18 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
 
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
+\score {                                                                       %! abjad.LilyPondFile
     \new Score
     <<
 
@@ -611,43 +611,44 @@
             \times 8/15 {
 
                 \clef "tenorvarC"
-                aqs'64.
+                bf'64.
                 \ff
                 - \accent
                 \>
 
-                aqf'64.
+                aqs'64.
 
-                af'32
+                aqf'32
                 - \tenuto
                 ~
 
-                af'64
+                aqf'64
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 1/1 {
 
-                    g'64
+                    af'64
                     - \accent
 
-                    bf'64
+                    b'64
                     - \espressivo
 
-                    aqf'64
+                    aqs'64
                     - \tenuto
 
                 }
 
-                b'64
+                c''64
                 - \tenuto
                 ~
 
-                b'128
+                c''128
 
-                c''64.
+                \clef "treble"
+                cs''64.
                 - \accent
 
-                b'32.
+                c''32.
                 \ppppp
                 - \tweak stencil #constante-hairpin
                 \<
@@ -694,4 +695,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile

@@ -1,18 +1,18 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
+\version "2.19.83"                                                             %! abjad.LilyPondFile
+\language "english"                                                            %! abjad.LilyPondFile
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
 
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
+\header {                                                                      %! abjad.LilyPondFile
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
+\score {                                                                       %! abjad.LilyPondFile
     \new Score
     <<
 
@@ -107,23 +107,23 @@
             \f
             [
 
-            aqs'8
+            bf'8
             \sfp
             - \accent
             \<
 
-            aqs'16
+            bf'16
 
-            aqf'8.
+            aqs'8.
             - \tenuto
             ~
 
-            aqf'8.
+            aqs'8.
             \ff
             - \tweak stencil #constante-hairpin
             \<
 
-            af'16
+            aqf'16
             \!
             - \tenuto
             - \tweak circled-tip ##t
@@ -134,12 +134,12 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/13 {
 
-                af'8.
+                aqf'8.
                 \mf
                 - \tweak stencil #constante-hairpin
                 \<
 
-                aqs'8
+                bf'8
                 \!
                 _ #(make-dynamic-script
                     (markup
@@ -158,16 +158,16 @@
                 \<
                 ~
 
-                aqs'16
+                bf'16
 
-                aqf'16
+                aqs'16
                 - \espressivo
                 ~
                 ]
 
-                aqf'4
+                aqs'4
 
-                af'8
+                aqf'8
                 \p
                 - \tenuto
                 - \tweak circled-tip ##t
@@ -179,7 +179,7 @@
 
             }
 
-            aqs'8
+            bf'8
             \mf
             - \tenuto
             - \tweak stencil #constante-hairpin
@@ -193,7 +193,7 @@
 
             r8
 
-            aqs'8
+            bf'8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -211,9 +211,9 @@
             \<
             ~
 
-            aqs'4
+            bf'4
 
-            aqf'4
+            aqs'4
             \p
             - \tweak circled-tip ##t
             \>
@@ -331,4 +331,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
+}                                                                              %! abjad.LilyPondFile
