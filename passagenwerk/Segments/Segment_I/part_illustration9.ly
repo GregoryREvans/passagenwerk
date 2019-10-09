@@ -1,18 +1,18 @@
-\version "2.19.83"                                                             %! abjad.LilyPondFile
-\language "english"                                                            %! abjad.LilyPondFile
+\version "2.19.83"                                                             %! abjad.LilyPondFile._get_format_pieces()
+\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
 
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
+\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
 
-\header {                                                                      %! abjad.LilyPondFile
+\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
     tagline = ##f
-}                                                                              %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
 
 \layout {}
 
 \paper {}
 
-\score {                                                                       %! abjad.LilyPondFile
+\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
     \new Score
     <<
 
@@ -131,13 +131,13 @@
             - \tweak circled-tip ##t
             \<
 
-            bf''8
+            aqs''8
             - \tenuto
             ~
 
             \times 4/5 {
 
-                bf''4.
+                aqs''4.
                 \mf
                 - \tweak stencil #constante-hairpin
                 \<
@@ -236,18 +236,18 @@
 
                 fs''8
 
-                bf''8.
+                aqs''8.
                 - \espressivo
                 ~
 
             }
 
-            bf''8
+            aqs''8
             \ff
             - \tweak stencil #constante-hairpin
             \<
 
-            bf''8
+            aqs''8
             \!
             \ppppp
             - \tenuto
@@ -302,4 +302,4 @@
 
         }
     >>
-}                                                                              %! abjad.LilyPondFile
+}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()

@@ -116,13 +116,13 @@
             - \tweak circled-tip ##t
             \<
 
-            bf''8
+            aqs''8
             - \tenuto
             ~
 
             \times 4/5 {
 
-                bf''4.
+                aqs''4.
                 \mf
                 - \tweak stencil #constante-hairpin
                 \<
@@ -221,18 +221,18 @@
 
                 fs''8
 
-                bf''8.
+                aqs''8.
                 - \espressivo
                 ~
 
             }
 
-            bf''8
+            aqs''8
             \ff
             - \tweak stencil #constante-hairpin
             \<
 
-            bf''8
+            aqs''8
             \!
             \ppppp
             - \tenuto

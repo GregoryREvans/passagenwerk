@@ -66,13 +66,13 @@
 
             r4.
 
-            bf'4
+            aqs'4
             \mf
             - \tenuto
             - \tweak stencil #abjad-flared-hairpin
             \<
 
-            aqs'4
+            aqf'4
             \f
             - \accent
             - \tweak stencil #constante-hairpin
@@ -84,7 +84,7 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    bf'16.
+                    aqs'16.
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -103,32 +103,32 @@
                     ~
                     [
 
-                    bf'16
+                    aqs'16
                     ~
 
-                    bf'32
-
                     aqs'32
+
+                    aqf'32
                     - \tenuto
                     ~
 
-                    aqs'8
+                    aqf'8
 
                 }
 
-                aqf'8
+                af'8
                 - \accent
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/6 {
 
-                    af'16
+                    g'16
                     - \espressivo
 
-                    b'16
+                    bf'16
                     - \tenuto
 
-                    aqs'16
+                    aqf'16
                     - \tenuto
 
                 }
@@ -136,24 +136,24 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 5/9 {
 
-                    c''16.
+                    b'16.
                     - \accent
                     ~
 
-                    c''32
+                    b'32
 
-                    cs''16
+                    c''16
                     ~
 
-                    cs''16.
+                    c''16.
 
                 }
 
-                c''16
+                b'16
                 - \tenuto
                 ~
 
-                c''8
+                b'8
                 \p
                 - \tweak stencil #constante-hairpin
                 \<
@@ -166,7 +166,7 @@
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/11 {
 
-                    bf'16.
+                    aqs'16.
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -184,22 +184,22 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqs'64
+                    aqf'64
                     - \espressivo
                     ~
 
-                    aqs'16
+                    aqf'16
 
                 }
 
-                aqf'64
+                af'64
                 - \tenuto
                 ~
 
-                aqf'16
+                af'16
                 ~
 
-                aqf'64
+                af'64
 
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 1/1 {
@@ -304,26 +304,26 @@
             f'8
             [
 
-            bf'8
+            aqs'8
             - \tenuto
             ~
             ]
 
-            bf'4
+            aqs'4
             ~
 
             \times 4/5 {
 
-                bf'4
+                aqs'4
                 \ff
 
-                bf'8
+                aqs'8
                 \ppppp
                 - \accent
                 \<
                 ~
 
-                bf'4
+                aqs'4
                 \mp
                 - \tweak stencil #constante-hairpin
                 \<
@@ -335,17 +335,17 @@
 
             r4
 
-            bf'4
+            aqs'4
             \mf
             - \espressivo
             - \tweak stencil #abjad-flared-hairpin
             \<
             ~
 
-            bf'4.
+            aqs'4.
             \f
 
-            bf'8
+            aqs'8
             - \accent
             - \tweak circled-tip ##t
             \<
@@ -353,9 +353,9 @@
 
             \times 4/5 {
 
-                aqs'8
+                aqf'8
 
-                aqf'8.
+                af'8.
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout

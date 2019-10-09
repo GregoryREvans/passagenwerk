@@ -229,12 +229,12 @@
 
             fs'8
 
-            bf'8
+            aqs'8
             ~
 
-            bf'16
+            aqs'16
 
-            aqs'8.
+            aqf'8.
             - \tenuto
             ]
             <>
