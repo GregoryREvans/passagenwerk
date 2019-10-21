@@ -79,7 +79,7 @@
             R1 * 3/16
             \stopStaff \startStaff                                             %! applying cutaway
 
-            f'4
+            dqf'4
             \mp
             - \tenuto
             - \tweak stencil #constante-hairpin
@@ -97,33 +97,33 @@
             R1 * 5/16
             \stopStaff \startStaff                                             %! applying cutaway
 
-            f'4.
+            af4.
             \mf
             - \tenuto
             \<
             ~
 
-            f'8
+            af8
             \f
             [
 
-            aqs'8
+            a8
             \sfp
             - \accent
             \<
 
-            aqs'16
+            b'16
 
-            aqf'8.
+            bf'8.
             - \tenuto
             ~
 
-            aqf'8.
+            bf'8.
             \ff
             - \tweak stencil #constante-hairpin
             \<
 
-            af'16
+            aqs'16
             \!
             - \tenuto
             - \tweak circled-tip ##t
@@ -134,12 +134,12 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/13 {
 
-                af'8.
+                aqs'8.
                 \mf
                 - \tweak stencil #constante-hairpin
                 \<
 
-                aqs'8
+                bf'8
                 \!
                 _ #(make-dynamic-script
                     (markup
@@ -158,16 +158,16 @@
                 \<
                 ~
 
-                aqs'16
+                bf'16
 
-                aqf'16
+                dqf''16
                 - \espressivo
                 ~
                 ]
 
-                aqf'4
+                dqf''4
 
-                af'8
+                c''8
                 \p
                 - \tenuto
                 - \tweak circled-tip ##t
@@ -193,7 +193,7 @@
 
             r8
 
-            aqs'8
+            f'8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -211,46 +211,46 @@
             \<
             ~
 
-            aqs'4
+            f'4
 
-            aqf'4
+            fs'4
             \p
             - \tweak circled-tip ##t
             \>
 
-            a8.
+            a'8.
             - \tenuto
             [
 
-            aqs16
+            <b' e''>16
             - \accent
             ~
 
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
 
-                aqs8.
+                <b' e''>8.
                 ~
 
-                aqs16
+                <b' e''>16
                 <>
                 \!
 
-                a16
+                f''16
                 \ppppp
                 - \accent
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 ~
 
-                a16
+                f''16
 
-                aqs16
+                bf''16
                 - \espressivo
 
             }
 
-            bf8
+            af''8
             - \tenuto
             ~
             ]
@@ -258,10 +258,10 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/5 {
 
-                bf4
+                af''4
                 \mp
 
-                a16
+                d'16
                 \mf
                 - \espressivo
                 \<
@@ -270,7 +270,7 @@
 
             }
 
-            a8.
+            d'8.
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -286,17 +286,17 @@
             - \tweak stencil #constante-hairpin
             \<
 
-            a16
+            dqf'16
             \!
             \p
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
 
-            aqs8
+            bf8
             - \tenuto
 
-            a8
+            bqs8
             - \accent
             - \tweak circled-tip ##t
             - \tweak stencil #abjad-flared-hairpin
@@ -316,10 +316,16 @@
             R1 * 1/4
             \stopStaff \startStaff                                             %! applying cutaway
 
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-            \once \override Rest.color = #white                                %! applying ending skips
+            \once \override Rest.transparent = ##t                             %! applying invisibility
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+            \once \override Rest.color = #white                                %! applying indicators
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
             r1 * 1/8
-            \!                                                                 %! applying ending skips
+
+            R1 * 1/8
+            \stopStaff \startStaff                                             %! applying cutaway
+
+            r2.
 
             \once \override MultiMeasureRest.color = #white                    %! applying ending skips
             R1 * 1/8

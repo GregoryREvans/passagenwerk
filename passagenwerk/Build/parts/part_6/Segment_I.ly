@@ -57,7 +57,7 @@
             \set Staff.instrumentName =                                        %! applying staff names and clefs
             \markup { Viola-2 }                                                %! applying staff names and clefs
             \clef "varC"
-            f'4.
+            aqs4.
             \mf
             - \tenuto
             \<
@@ -66,13 +66,13 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 7/8 {
 
-                f'8
+                aqs8
                 \f
                 - \tweak stencil #constante-hairpin
                 \<
                 [
 
-                f'8
+                bqf8
                 \!
                 \sfp
                 - \accent
@@ -81,10 +81,10 @@
                 ~
                 ]
 
-                f'4
+                bqf4
                 \ff
 
-                f'4
+                c'4
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -100,18 +100,18 @@
                 - \espressivo
                 \<
 
-                fs'4
+                cqs'4
                 - \tenuto
                 ~
 
             }
 
-            fs'4
+            cqs'4
             \f
             - \tweak stencil #constante-hairpin
             \<
 
-            f'16
+            af'16
             \!
             \ppppp
             - \espressivo
@@ -119,16 +119,16 @@
             \<
             [
 
-            fs'16
+            g'16
             - \tenuto
             ~
 
-            fs'8.
+            g'8.
             \mp
             - \tweak stencil #constante-hairpin
             \<
 
-            a'16
+            bf'16
             \!
             _ #(make-dynamic-script
                 (markup
@@ -150,16 +150,16 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
 
-                a'8
+                bf'8
 
-                f'16
+                aqf'16
                 - \accent
                 - \tweak circled-tip ##t
                 \<
                 ~
                 ]
 
-                f'4
+                aqf'4
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -178,17 +178,18 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 8/7 {
 
-                a8
+                \clef "treble"
+                <c'' fs''>8
                 \f
                 - \tweak stencil #abjad-flared-hairpin
                 \>
                 [
 
-                aqs16
+                e''16
                 - \tenuto
                 ]
 
-                bf4
+                cs''4
                 _ #(make-dynamic-script
                     (markup
                         #:whiteout
@@ -217,24 +218,24 @@
             R1 * 3/8
             \stopStaff \startStaff                                             %! applying cutaway
 
-            f'8
+            c'8
             \mf
             - \tenuto
             \<
             [
 
-            fs'8
+            <b ef'>8
             - \accent
             ~
 
-            fs'8
+            <b ef'>8
 
-            aqs'8
+            b'8
             ~
 
-            aqs'16
+            b'16
 
-            aqf'8.
+            c''8.
             - \tenuto
             ]
             <>
@@ -242,17 +243,17 @@
 
             r2.
 
-            f'4
+            dqs'4
             \mf
             - \espressivo
             - \tweak stencil #constante-hairpin
             \<
             ~
 
-            f'8
+            dqs'8
             [
 
-            f'8
+            eqf'8
             _ #(make-dynamic-script
                 (markup
                     #:whiteout
@@ -271,7 +272,7 @@
             ~
             ]
 
-            f'4
+            eqf'4
             <>
             \p
 
@@ -303,10 +304,16 @@
             R1 * 1/4
             \stopStaff \startStaff                                             %! applying cutaway
 
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-            \once \override Rest.color = #white                                %! applying ending skips
+            \once \override Rest.transparent = ##t                             %! applying invisibility
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+            \once \override Rest.color = #white                                %! applying indicators
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
             r1 * 1/8
-            \!                                                                 %! applying ending skips
+
+            R1 * 1/8
+            \stopStaff \startStaff                                             %! applying cutaway
+
+            r2.
 
             \once \override MultiMeasureRest.color = #white                    %! applying ending skips
             R1 * 1/8

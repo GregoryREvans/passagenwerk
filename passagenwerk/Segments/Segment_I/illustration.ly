@@ -110,25 +110,25 @@
                         af'8.
                         ]
 
-                        aqs'4
+                        g'4
                         \p
                         - \tenuto
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'8
+                        bf'8
                         - \accent
                         ~
                         [
 
-                        aqf'16
+                        bf'16
 
-                        af'16
+                        aqf'16
                         - \espressivo
                         ~
 
-                        af'8
+                        aqf'8
                         ]
                         <>
                         \!
@@ -192,7 +192,7 @@
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        aqs'8
+                        bf'8
                         \!
                         \p
                         - \accent
@@ -206,7 +206,7 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "16")
                     \times 4/3 {
 
-                        aqs'8
+                        bf'8
 
                         aqf'16
                         ]
@@ -224,7 +224,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
-                            aqs'64.
+                            b'64.
                             \ppppp
                             - \tenuto
                             - \tweak stencil #abjad-flared-hairpin
@@ -232,35 +232,35 @@
                             ~
                             [
 
-                            aqs'128
+                            b'128
 
-                            aqf'64
+                            c''64
                             - \accent
                             ~
 
-                            aqf'64.
+                            c''64.
 
                         }
 
-                        af'16
+                        b'16
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
-                            g'64
+                            c''64
                             - \tenuto
 
-                            bf'128
+                            dqs''128
                             - \accent
                             ~
 
-                            bf'64
+                            dqs''64
 
-                            aqf'128
+                            dqf''128
                             - \espressivo
                             ~
 
-                            aqf'64.
+                            dqf''64.
 
                         }
 
@@ -295,16 +295,16 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "128")
                         \times 10/11 {
 
-                            aqs'64.
+                            c''64.
                             \mf
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             ~
 
-                            aqs'64
+                            c''64
                             ~
 
-                            aqs'128
+                            c''128
 
                             aqf'128
                             - \tenuto
@@ -314,32 +314,32 @@
 
                         }
 
-                        af'32
+                        g'32
                         - \accent
                         ~
 
-                        af'32
+                        g'32
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "128.")
                         \times 4/5 {
 
-                            g'64
+                            fqs'64
                             - \espressivo
 
-                            bf'256
+                            fs'256
                             - \tenuto
                             ~
 
-                            bf'64
+                            fs'64
 
-                            aqf'256
+                            gqf'256
                             - \tenuto
                             ~
 
-                            aqf'128.
+                            gqf'128.
                             ~
 
-                            aqf'128
+                            gqf'128
 
                         }
 
@@ -347,44 +347,44 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "64")
                         \times 5/7 {
 
-                            b'32.
+                            g'32.
                             - \accent
                             ~
 
-                            b'64
+                            g'64
 
-                            c''64
+                            bf'64
                             ~
 
-                            c''32
+                            bf'32
 
                         }
 
-                        b'16
+                        aqf'16
                         - \tenuto
 
                     }
 
-                    c''8
+                    b'8
                     - \accent
 
-                    dqs''8
+                    bf'8
                     - \espressivo
                     ~
 
-                    dqs''8.
+                    bf'8.
                     \f
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    dqf''16
+                    aqs'16
                     \!
                     - \tenuto
                     - \tweak circled-tip ##t
                     \<
                     ~
 
-                    dqf''16
+                    aqs'16
 
                     bf16
                     - \accent
@@ -402,34 +402,34 @@
                         bqf16
                         \mf
 
-                        bf8
+                        b8
                         \sfp
                         - \tenuto
                         \<
                         ~
 
-                        bf8
+                        b8
 
-                        bqf16
+                        bf16
                         - \tenuto
                         ~
 
                     }
 
-                    bqf8
+                    bf8
                     \ff
 
-                    aqs'8
+                    b'8
                     \ppppp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqf'16
+                    c''16
                     \mp
                     \<
 
-                    af'16
+                    b'16
                     \mf
                     - \tenuto
 
@@ -437,27 +437,27 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
-                        aqs'16
+                        c''16
                         \f
                         - \accent
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'16
+                        dqs''16
                         - \espressivo
 
-                        af'16
+                        dqf''16
                         - \tenuto
 
-                        aqs'16
+                        bf'16
                         - \tenuto
 
-                        aqf'16
+                        dqf''16
                         - \accent
 
-                        af'16
+                        c''16
 
-                        g'16
+                        aqs'16
                         \sfp
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -469,7 +469,7 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "8")
                     \times 5/4 {
 
-                        aqs'8
+                        aqf'8
                         \!
                         _ #(make-dynamic-script
                             (markup
@@ -487,20 +487,20 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        aqf'8
+                        af'8
                         - \tenuto
 
-                        af'8
+                        g'8
                         - \accent
 
-                        g'8
+                        bf'8
                         \p
                         - \tweak stencil #constante-hairpin
                         \<
 
                     }
 
-                    aqs'16
+                    aqf'16
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -518,7 +518,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqf'16
+                    b'16
                     - \accent
                     ]
 
@@ -527,10 +527,16 @@
 
                     r4
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -572,7 +578,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
 
-                            aqs'16.
+                            b'16.
                             \f
                             - \espressivo
                             - \tweak stencil #abjad-flared-hairpin
@@ -580,32 +586,32 @@
                             ~
                             [
 
-                            aqs'16
+                            b'16
                             ~
 
-                            aqs'32
+                            b'32
 
-                            aqf'32
+                            c''32
                             - \tenuto
                             ~
 
-                            aqf'8
+                            c''8
 
                         }
 
-                        af'8
+                        b'8
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "32")
                         \times 5/6 {
 
-                            g'16
+                            c''16
                             - \accent
 
-                            bf'16
-
                             aqf'16
+
+                            g'16
                             - \tenuto
 
                         }
@@ -614,25 +620,25 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
-                            b'16.
+                            fqs'16.
                             - \accent
                             ~
 
-                            b'32
+                            fqs'32
 
-                            c''16
+                            fs'16
                             - \espressivo
                             ~
 
-                            c''16.
+                            fs'16.
 
                         }
 
-                        b'16
+                        gqf'16
                         - \tenuto
                         ~
 
-                        b'8
+                        gqf'8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -655,42 +661,42 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "128")
                         \times 6/11 {
 
-                            aqs'64.
+                            a64.
                             - \tenuto
                             - \tweak circled-tip ##t
                             \<
                             ~
 
-                            aqs'64
+                            a64
                             ~
 
-                            aqs'128
+                            a128
 
-                            aqf'128
+                            aqs128
                             - \accent
                             ~
 
-                            aqf'32
+                            aqs32
 
                         }
 
-                        af'128
+                        bf128
                         ~
 
-                        af'32
+                        bf32
                         ~
 
-                        af'128
+                        bf128
 
                         \scaleDurations #'(1 . 1) {
 
-                            g'64
+                            a64
                             - \tenuto
 
-                            bf'64
+                            af64
                             - \accent
 
-                            aqf'64
+                            aqf64
                             - \espressivo
 
                         }
@@ -699,50 +705,50 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "128")
                         \times 5/6 {
 
-                            b'64
+                            aqs64
                             - \tenuto
                             ~
 
-                            b'128
+                            aqs128
 
-                            c''128
+                            bqf128
                             - \tenuto
                             ~
 
-                            c''64
+                            bqf64
 
                         }
 
-                        b'32.
+                        bf32.
                         - \accent
                         ]
 
                     }
 
-                    c''4
+                    b4
 
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "32")
                     \times 8/15 {
 
-                        dqs''32.
+                        c'32.
                         - \tenuto
                         [
 
-                        dqf''32.
+                        cqs'32.
                         - \accent
 
-                        b'16
+                        bqs16
                         - \espressivo
                         ~
 
-                        b'32
+                        bqs32
 
                         \scaleDurations #'(1 . 1) {
 
-                            c''32
+                            bqf32
                             - \tenuto
 
-                            b'32
+                            bf32
                             _ #(make-dynamic-script
                                 (markup
                                     #:whiteout
@@ -759,7 +765,7 @@
                             - \tweak stencil #constante-hairpin
                             \<
 
-                            c''32
+                            b32
                             \!
                             \f
                             - \accent
@@ -768,15 +774,15 @@
 
                         }
 
-                        aqf'32
+                        c'32
                         ~
 
-                        aqf'64
+                        c'64
 
-                        g'32.
+                        cqs'32.
                         - \tenuto
 
-                        fqs'16.
+                        dqf'16.
                         - \accent
 
                     }
@@ -787,7 +793,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "128")
                         \times 4/5 {
 
-                            aqs'64
+                            cqs'64
                             _ #(make-dynamic-script
                                 (markup
                                     #:whiteout
@@ -804,24 +810,24 @@
                             - \tweak circled-tip ##t
                             \>
 
-                            aqf'64.
+                            c'64.
                             - \tenuto
 
                         }
 
-                        af'8
+                        b8
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "32")
                         \times 3/5 {
 
-                            g'16
+                            bf16
                             - \accent
 
-                            bf'32
+                            aqs32
 
-                            a16
+                            aqf16
                             - \tenuto
 
                         }
@@ -830,10 +836,10 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "64")
                         \times 6/7 {
 
-                            aqs16
+                            gqs16
                             - \accent
 
-                            bf32.
+                            af32.
                             - \espressivo
 
                         }
@@ -857,7 +863,7 @@
 
                     r8
 
-                    a8
+                    g'8
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -875,12 +881,12 @@
                     \<
                     ~
 
-                    a4
+                    g'4
                     \f
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    a4
+                    bf'4
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -902,33 +908,33 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "8")
                     \times 6/7 {
 
-                        a4.
+                        aqf'4.
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         ~
 
-                        a8
+                        aqf'8
                         [
 
-                        aqs'8
+                        bf8
                         - \tenuto
                         ]
 
-                        aqf'4
+                        aqs4
                         - \accent
                         ~
 
                     }
 
-                    aqf'8
+                    aqs8
                     ~
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) "8")
                     \times 7/8 {
 
-                        aqf'4
+                        aqs4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -942,13 +948,13 @@
                                 )
                             )
 
-                        aqs'4
+                        aqf4
                         \f
                         - \espressivo
                         \>
                         ~
 
-                        aqs'8
+                        aqf8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -965,7 +971,7 @@
                         \<
                         [
 
-                        aqf'8
+                        gqs8
                         \!
                         \ff
                         - \accent
@@ -973,19 +979,19 @@
                         \>
                         ~
 
-                        aqf'8
+                        gqs8
 
-                        af'8
+                        g8
                         - \espressivo
                         ~
                         ]
 
                     }
 
-                    af'4
+                    g4
                     ~
 
-                    af'8
+                    g8
                     <>
                     \ppppp
 
@@ -1006,22 +1012,22 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
-                            aqs'64
+                            c''64
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             [
 
-                            aqf'128
+                            b'128
                             - \tenuto
                             ~
 
-                            aqf'128.
+                            b'128.
 
                         }
 
-                        af'32
+                        bf'32
                         - \accent
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
@@ -1029,13 +1035,13 @@
 
                             g'128
 
-                            bf'256
+                            fs'256
                             - \tenuto
                             ~
 
-                            bf'128
+                            fs'128
 
-                            aqf'64
+                            eqf'64
                             - \accent
 
                         }
@@ -1044,15 +1050,15 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
-                            b'32
+                            eqs'32
                             - \espressivo
 
-                            c''64.
+                            eqf'64.
                             - \tenuto
 
                         }
 
-                        b'64
+                        eqs'64
                         - \tenuto
 
                     }
@@ -1065,7 +1071,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "64")
                         \times 10/11 {
 
-                            aqs'32.
+                            dqf'32.
                             _ #(make-dynamic-script
                                 (markup
                                     #:whiteout
@@ -1082,44 +1088,44 @@
                             \>
                             ~
 
-                            aqs'32
+                            dqf'32
                             ~
 
-                            aqs'64
+                            dqf'64
 
-                            aqf'64
+                            dqs'64
                             ~
 
-                            aqf'16
+                            dqs'16
 
                         }
 
-                        af'16
+                        fqs'16
                         - \tenuto
                         ~
 
-                        af'16
+                        fqs'16
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64.")
                         \times 4/5 {
 
-                            g'32
+                            eqs'32
                             - \accent
 
-                            bf'128
+                            eqf'128
                             - \espressivo
                             ~
 
-                            bf'32
+                            eqf'32
 
-                            aqf'128
+                            dqs'128
                             - \tenuto
                             ~
 
-                            aqf'64.
+                            dqs'64.
                             ~
 
-                            aqf'64
+                            dqs'64
 
                         }
 
@@ -1127,21 +1133,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "32")
                         \times 5/7 {
 
-                            b'16.
+                            fs'16.
                             - \tenuto
                             ~
 
-                            b'32
+                            fs'32
 
-                            c''32
+                            eqs'32
                             - \accent
                             ~
 
-                            c''16
+                            eqs'16
 
                         }
 
-                        a8
+                        d'8
                         ]
                         <>
                         \p
@@ -1155,10 +1161,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1190,7 +1202,7 @@
                     R1 * 3/16
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    f'4
+                    dqf'4
                     \mp
                     - \tenuto
                     - \tweak stencil #constante-hairpin
@@ -1208,33 +1220,33 @@
                     R1 * 5/16
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    f'4.
+                    af4.
                     \mf
                     - \tenuto
                     \<
                     ~
 
-                    f'8
+                    af8
                     \f
                     [
 
-                    aqs'8
+                    a8
                     \sfp
                     - \accent
                     \<
 
-                    aqs'16
+                    b'16
 
-                    aqf'8.
+                    bf'8.
                     - \tenuto
                     ~
 
-                    aqf'8.
+                    bf'8.
                     \ff
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    af'16
+                    aqs'16
                     \!
                     - \tenuto
                     - \tweak circled-tip ##t
@@ -1246,12 +1258,12 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) "16")
                     \times 12/13 {
 
-                        af'8.
+                        aqs'8.
                         \mf
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        aqs'8
+                        bf'8
                         \!
                         _ #(make-dynamic-script
                             (markup
@@ -1270,16 +1282,16 @@
                         \<
                         ~
 
-                        aqs'16
+                        bf'16
 
-                        aqf'16
+                        dqf''16
                         - \espressivo
                         ~
                         ]
 
-                        aqf'4
+                        dqf''4
 
-                        af'8
+                        c''8
                         \p
                         - \tenuto
                         - \tweak circled-tip ##t
@@ -1305,7 +1317,7 @@
 
                     r8
 
-                    aqs'8
+                    f'8
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -1323,18 +1335,18 @@
                     \<
                     ~
 
-                    aqs'4
+                    f'4
 
-                    aqf'4
+                    fs'4
                     \p
                     - \tweak circled-tip ##t
                     \>
 
-                    a8.
+                    a'8.
                     - \tenuto
                     [
 
-                    aqs16
+                    <b' e''>16
                     - \accent
                     ~
 
@@ -1342,28 +1354,28 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
-                        aqs8.
+                        <b' e''>8.
                         ~
 
-                        aqs16
+                        <b' e''>16
                         <>
                         \!
 
-                        a16
+                        f''16
                         \ppppp
                         - \accent
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         ~
 
-                        a16
+                        f''16
 
-                        aqs16
+                        bf''16
                         - \espressivo
 
                     }
 
-                    bf8
+                    af''8
                     - \tenuto
                     ~
                     ]
@@ -1372,10 +1384,10 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
                     \times 6/5 {
 
-                        bf4
+                        af''4
                         \mp
 
-                        a16
+                        d'16
                         \mf
                         - \espressivo
                         \<
@@ -1384,7 +1396,7 @@
 
                     }
 
-                    a8.
+                    d'8.
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -1400,17 +1412,17 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    a16
+                    dqf'16
                     \!
                     \p
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqs8
+                    bf8
                     - \tenuto
 
-                    a8
+                    bqs8
                     - \accent
                     - \tweak circled-tip ##t
                     - \tweak stencil #abjad-flared-hairpin
@@ -1430,10 +1442,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1467,13 +1485,13 @@
 
                     r4.
 
-                    aqs'4
+                    aqs4
                     \mf
                     - \tenuto
                     - \tweak stencil #abjad-flared-hairpin
                     \<
 
-                    aqf'4
+                    bf4
                     \f
                     - \accent
                     - \tweak stencil #constante-hairpin
@@ -1487,7 +1505,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
 
-                            aqs'16.
+                            aqs16.
                             \!
                             _ #(make-dynamic-script
                                 (markup
@@ -1506,33 +1524,33 @@
                             ~
                             [
 
-                            aqs'16
+                            aqs16
                             ~
 
-                            aqs'32
+                            aqs32
 
-                            aqf'32
+                            aqf32
                             - \tenuto
                             ~
 
-                            aqf'8
+                            aqf8
 
                         }
 
-                        af'8
+                        aqs8
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "32")
                         \times 5/6 {
 
-                            g'16
+                            bf16
                             - \espressivo
 
-                            bf'16
+                            b16
                             - \tenuto
 
-                            aqf'16
+                            c'16
                             - \tenuto
 
                         }
@@ -1541,24 +1559,24 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
-                            b'16.
+                            cqs'16.
                             - \accent
                             ~
 
-                            b'32
+                            cqs'32
 
-                            c''16
+                            dqf'16
                             ~
 
-                            c''16.
+                            dqf'16.
 
                         }
 
-                        b'16
+                        cqs'16
                         - \tenuto
                         ~
 
-                        b'8
+                        cqs'8
                         \p
                         - \tweak stencil #constante-hairpin
                         \<
@@ -1573,7 +1591,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "64")
                         \times 6/11 {
 
-                            aqs'16.
+                            cs'16.
                             \!
                             _ #(make-dynamic-script
                                 (markup
@@ -1591,32 +1609,32 @@
                             - \tweak stencil #constante-hairpin
                             \<
 
-                            aqf'64
+                            d'64
                             - \espressivo
                             ~
 
-                            aqf'16
+                            d'16
 
                         }
 
-                        af'64
+                        cs'64
                         - \tenuto
                         ~
 
-                        af'16
+                        cs'16
                         ~
 
-                        af'64
+                        cs'64
 
                         \scaleDurations #'(1 . 1) {
 
-                            f'32
+                            dqf'32
                             - \tenuto
 
-                            fs'32
+                            dqs'32
                             - \accent
 
-                            a'32
+                            dqf'32
 
                         }
 
@@ -1624,15 +1642,15 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "64")
                         \times 5/4 {
 
-                            <b' e''>32
+                            d'32
                             - \tenuto
 
-                            f''32
+                            cs'32
                             - \accent
 
                         }
 
-                        bf''16.
+                        d'16.
                         - \espressivo
 
                     }
@@ -1640,42 +1658,42 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "16")
                     \times 8/15 {
 
-                        f'16.
+                        dqs'16.
                         \f
                         - \tenuto
                         \>
 
-                        fs'16.
+                        eqf'16.
                         - \tenuto
 
-                        a'8
+                        dqs'8
                         - \accent
                         ~
 
-                        a'16
+                        dqs'16
 
                         \scaleDurations #'(1 . 1) {
 
-                            <b' e''>16
+                            ef'16
 
-                            f''16
+                            e'16
                             - \tenuto
 
-                            bf''16
+                            ef'16
                             - \accent
 
                         }
 
-                        af''16
+                        eqf'16
                         - \espressivo
                         ~
 
-                        af''32
+                        eqf'32
 
-                        <g b>16.
+                        eqs'16.
                         - \tenuto
 
-                        af8.
+                        fqs'8.
                         - \tenuto
                         ]
                         <>
@@ -1711,27 +1729,27 @@
                     f'8
                     [
 
-                    aqs'8
+                    e'8
                     - \tenuto
                     ~
                     ]
 
-                    aqs'4
+                    e'4
                     ~
 
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
                     \times 4/5 {
 
-                        aqs'4
+                        e'4
                         \ff
 
-                        aqs'8
+                        ef'8
                         \ppppp
                         - \accent
                         \<
                         ~
 
-                        aqs'4
+                        ef'4
                         \mp
                         - \tweak stencil #constante-hairpin
                         \<
@@ -1743,17 +1761,17 @@
 
                     r4
 
-                    aqs'4
+                    eqf'4
                     \mf
                     - \espressivo
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     ~
 
-                    aqs'4.
+                    eqf'4.
                     \f
 
-                    aqs'8
+                    aqs8
                     - \accent
                     - \tweak circled-tip ##t
                     \<
@@ -1762,9 +1780,9 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                     \times 4/5 {
 
-                        aqf'8
+                        bf8
 
-                        af'8.
+                        dqf'8.
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -1799,10 +1817,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -1829,7 +1853,7 @@
                     \clef "varC"
                     r4
 
-                    bf8
+                    <g b>8
                     \f
                     - \accent
                     - \tweak stencil #constante-hairpin
@@ -1837,9 +1861,9 @@
                     ~
                     [
 
-                    bf16
+                    <g b>16
 
-                    bf16
+                    af16
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -1858,11 +1882,11 @@
                     \>
                     ~
 
-                    bf16
+                    af16
                     <>
                     \!
 
-                    bqf16
+                    cs'16
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -1879,36 +1903,37 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
 
-                    b8
+                    \clef "treble"
+                    d''8
                     - \tenuto
                     ~
 
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
                     \times 8/9 {
 
-                        b8.
+                        d''8.
                         ~
 
-                        b16
+                        d''16
 
-                        bf8
+                        fs''8
                         - \accent
                         ~
 
-                        bf8
+                        fs''8
 
-                        aqs16
+                        <ef'' af''>16
                         ~
 
                     }
 
-                    aqs8
+                    <ef'' af''>8
                     \f
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
 
-                    aqs'4
+                    a4
                     \!
                     \sfp
                     - \tenuto
@@ -1916,19 +1941,19 @@
                     \<
                     ~
 
-                    aqs'16
+                    a16
                     [
 
-                    aqf'16
+                    ef'16
                     - \tenuto
                     ~
 
-                    aqf'16
+                    ef'16
                     \ff
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    af'16
+                    bf16
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -1951,7 +1976,7 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 2 3) "8")
                     \times 3/2 {
 
-                        aqs'4
+                        cs'4
                         - \accent
                         - \tweak circled-tip ##t
                         \<
@@ -1980,16 +2005,16 @@
 
                     r2
 
-                    f'4
+                    bqs4
                     \f
                     - \espressivo
                     \>
                     ~
 
-                    f'4
+                    bqs4
                     ~
 
-                    f'8
+                    bqs8
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -2006,7 +2031,7 @@
                     \<
                     [
 
-                    aqs'8
+                    d'8
                     \!
                     \mf
                     - \tenuto
@@ -2014,17 +2039,17 @@
                     \<
                     ]
 
-                    aqf'4
+                    dqs'4
                     - \tenuto
                     ~
 
-                    aqf'4
+                    dqs'4
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "8")
                     \times 6/5 {
 
-                        aqs'4.
+                        d'4.
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2043,7 +2068,7 @@
                         <>
                         \p
 
-                        aqf'4
+                        dqf'4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2061,7 +2086,7 @@
 
                     }
 
-                    a4
+                    aqf'4
                     \f
                     - \tenuto
                     - \tweak stencil #constante-hairpin
@@ -2079,17 +2104,17 @@
 
                     r8
 
-                    a8
+                    eqs'8
                     \ppppp
                     - \accent
                     \<
                     [
 
-                    aqs8
+                    fs'8
                     \mp
                     ]
 
-                    a4
+                    eqf'4
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -2120,10 +2145,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -2148,7 +2179,7 @@
                     \set Staff.instrumentName =                                %! applying staff names and clefs
                     \markup { Viola-2 }                                        %! applying staff names and clefs
                     \clef "varC"
-                    f'4.
+                    aqs4.
                     \mf
                     - \tenuto
                     \<
@@ -2158,13 +2189,13 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 7) "8")
                     \times 7/8 {
 
-                        f'8
+                        aqs8
                         \f
                         - \tweak stencil #constante-hairpin
                         \<
                         [
 
-                        f'8
+                        bqf8
                         \!
                         \sfp
                         - \accent
@@ -2173,10 +2204,10 @@
                         ~
                         ]
 
-                        f'4
+                        bqf4
                         \ff
 
-                        f'4
+                        c'4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2192,18 +2223,18 @@
                         - \espressivo
                         \<
 
-                        fs'4
+                        cqs'4
                         - \tenuto
                         ~
 
                     }
 
-                    fs'4
+                    cqs'4
                     \f
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    f'16
+                    af'16
                     \!
                     \ppppp
                     - \espressivo
@@ -2211,16 +2242,16 @@
                     \<
                     [
 
-                    fs'16
+                    g'16
                     - \tenuto
                     ~
 
-                    fs'8.
+                    g'8.
                     \mp
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    a'16
+                    bf'16
                     \!
                     _ #(make-dynamic-script
                         (markup
@@ -2243,16 +2274,16 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
-                        a'8
+                        bf'8
 
-                        f'16
+                        aqf'16
                         - \accent
                         - \tweak circled-tip ##t
                         \<
                         ~
                         ]
 
-                        f'4
+                        aqf'4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2272,17 +2303,18 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) "16")
                     \times 8/7 {
 
-                        a8
+                        \clef "treble"
+                        <c'' fs''>8
                         \f
                         - \tweak stencil #abjad-flared-hairpin
                         \>
                         [
 
-                        aqs16
+                        e''16
                         - \tenuto
                         ]
 
-                        bf4
+                        cs''4
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -2311,24 +2343,24 @@
                     R1 * 3/8
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    f'8
+                    c'8
                     \mf
                     - \tenuto
                     \<
                     [
 
-                    fs'8
+                    <b ef'>8
                     - \accent
                     ~
 
-                    fs'8
+                    <b ef'>8
 
-                    aqs'8
+                    b'8
                     ~
 
-                    aqs'16
+                    b'16
 
-                    aqf'8.
+                    c''8.
                     - \tenuto
                     ]
                     <>
@@ -2336,17 +2368,17 @@
 
                     r2.
 
-                    f'4
+                    dqs'4
                     \mf
                     - \espressivo
                     - \tweak stencil #constante-hairpin
                     \<
                     ~
 
-                    f'8
+                    dqs'8
                     [
 
-                    f'8
+                    eqf'8
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -2365,7 +2397,7 @@
                     ~
                     ]
 
-                    f'4
+                    eqf'4
                     <>
                     \p
 
@@ -2397,10 +2429,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -2441,36 +2479,37 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
 
-                            a32
+                            eqs'32
                             - \tenuto
                             - \tweak circled-tip ##t
                             \<
                             [
 
-                            aqs64
+                            fqs'64
                             - \accent
                             ~
 
-                            aqs32
+                            fqs'32
 
                         }
 
-                        bf8
+                        eqs'8
                         ~
 
-                        bf8
+                        eqs'8
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
-                            a8
+                            \clef "tenorvarC"
+                            g'8
                             - \tenuto
 
-                            af16
+                            fs'16
                             - \accent
 
-                            aqf8
+                            eqf'8
                             - \espressivo
 
                         }
@@ -2479,21 +2518,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
-                            aqs16.
+                            eqs'16.
                             - \tenuto
                             ~
 
-                            aqs32
+                            eqs'32
 
-                            bqf32
+                            fqs'32
                             - \tenuto
                             ~
 
-                            bqf16
+                            fqs'16
 
                         }
 
-                        bf8
+                        fs'8
                         \mf
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -2508,7 +2547,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
 
-                            a32
+                            dqs'32
                             \!
                             _ #(make-dynamic-script
                                 (markup
@@ -2525,31 +2564,31 @@
                             - \tweak stencil #constante-hairpin
                             \<
 
-                            aqs64
+                            dqf'64
                             - \tenuto
                             ~
 
-                            aqs32
+                            dqf'32
 
                         }
 
-                        bf8
+                        eqf'8
                         - \accent
                         ~
 
-                        bf8
+                        eqf'8
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
-                            a8
+                            eqs'8
                             - \espressivo
 
-                            af16
+                            eqf'16
                             - \tenuto
 
-                            aqf8
+                            dqs'8
                             - \tenuto
 
                         }
@@ -2558,20 +2597,20 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
-                            aqs16.
+                            fs'16.
                             - \accent
                             ~
 
-                            aqs32
+                            fs'32
 
-                            bqf32
+                            g'32
                             ~
 
-                            bqf16
+                            g'16
 
                         }
 
-                        bf8
+                        fqs'8
                         \sfp
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -2585,34 +2624,34 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
-                            a32
+                            fs'32
                             \ff
                             - \espressivo
                             \>
 
-                            aqs64
+                            fqs'64
                             - \tenuto
                             ~
 
-                            aqs64.
+                            fqs'64.
 
                         }
 
-                        bf16
+                        eqs'16
                         - \tenuto
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "64.")
                         \times 2/3 {
 
-                            a64
+                            dqf'64
                             - \accent
 
-                            af128
+                            bqs128
                             ~
 
-                            af64
+                            bqs64
 
-                            a32
+                            f'32
                             - \tenuto
 
                         }
@@ -2621,15 +2660,16 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "64")
                         \times 5/7 {
 
-                            aqs16
+                            b'16
                             - \accent
 
-                            bf32.
+                            bf'32.
                             - \espressivo
 
                         }
 
-                        a32
+                        \clef "treble"
+                        e''32
                         - \tenuto
 
                     }
@@ -2637,34 +2677,34 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
                     \times 2/3 {
 
-                        af8
+                        <d' d''>8
                         - \tenuto
 
-                        aqf16
+                        f'16
                         - \accent
                         ~
 
                     }
 
-                    aqf16
+                    f'16
                     \ppppp
 
-                    a16
+                    cs'16
                     \mp
                     - \tweak stencil #abjad-flared-hairpin
                     \<
 
-                    aqs8
+                    g'8
                     - \tenuto
                     ~
                     ]
 
-                    aqs4
+                    g'4
                     \mf
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    a4
+                    a'4
                     \!
                     \p
                     - \tenuto
@@ -2677,23 +2717,23 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
                     \times 6/5 {
 
-                        a8.
+                        <c'' d''>8.
                         \mf
                         - \accent
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
 
-                        aqs8
+                        af'8
                         - \espressivo
                         ~
 
                     }
 
-                    aqs8
+                    af'8
                     ~
 
-                    aqs16
+                    af'16
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -2709,7 +2749,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    bf16
+                    e'16
                     \!
                     \p
                     - \tenuto
@@ -2717,28 +2757,28 @@
                     \<
                     ~
 
-                    bf16
+                    e'16
 
-                    a16
+                    a'16
                     - \tenuto
 
                     \tweak text #tuplet-number::calc-fraction-text
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
-                        a8.
+                        <ef' g'>8.
                         - \accent
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         ~
 
-                        a8
+                        <ef' g'>8
                         ~
 
-                        a16
+                        <ef' g'>16
 
-                        a16
+                        ef'16
                         ]
                         <>
                         \mf
@@ -2760,7 +2800,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "256")
                         \times 10/11 {
 
-                            a128.
+                            g'128.
                             _ #(make-dynamic-script
                                 (markup
                                     #:whiteout
@@ -2778,45 +2818,45 @@
                             ~
                             [
 
-                            a128
+                            g'128
                             ~
 
-                            a256
+                            g'256
 
-                            aqs256
+                            c''256
                             - \accent
                             ~
 
-                            aqs64
+                            c''64
 
                         }
 
-                        bf64
+                        bf'64
                         - \espressivo
                         ~
 
-                        bf64
+                        bf'64
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "256.")
                         \times 4/5 {
 
-                            a128
+                            fs'128
                             - \tenuto
 
-                            af512
+                            <fs bf>512
                             - \tenuto
                             ~
 
-                            af128
+                            <fs bf>128
 
-                            aqf512
+                            g512
                             - \accent
                             ~
 
-                            aqf256.
+                            g256.
                             ~
 
-                            aqf256
+                            g256
 
                         }
 
@@ -2824,20 +2864,20 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
-                            aqs64.
+                            c'64.
                             ~
 
-                            aqs128
+                            c'128
 
-                            bqf128
+                            g''128
                             - \tenuto
                             ~
 
-                            bqf64
+                            g''64
 
                         }
 
-                        bf32
+                        ef''32
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -2852,7 +2892,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "128")
                         \times 6/11 {
 
-                            a64.
+                            <e'' a''>64.
                             \!
                             \f
                             - \accent
@@ -2860,33 +2900,33 @@
                             \>
                             ~
 
-                            a64
+                            <e'' a''>64
                             ~
 
-                            a128
+                            <e'' a''>128
 
-                            aqs128
+                            c'128
                             - \espressivo
                             ~
 
-                            aqs32
+                            c'32
 
                         }
 
-                        bf32
+                        a32
                         - \tenuto
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "128")
                         \times 5/6 {
 
-                            a64
+                            af64
                             - \tenuto
 
-                            af64
+                            <d' f''>64
                             - \accent
 
-                            aqf64
+                            d''64
 
                         }
 
@@ -2894,25 +2934,25 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "128")
                         \times 5/9 {
 
-                            aqs64.
+                            g''64.
                             - \tenuto
                             ~
 
-                            aqs128
+                            g''128
 
-                            bqf64
+                            cs''64
                             - \accent
                             ~
 
-                            bqf64.
+                            cs''64.
 
                         }
 
-                        bf64
+                        d'64
                         - \espressivo
                         ~
 
-                        bf32
+                        d'32
 
                     }
 
@@ -2924,40 +2964,40 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "64")
                         \times 6/11 {
 
-                            b32.
+                            <bf e'>32.
                             - \tenuto
                             ~
 
-                            b32
+                            <bf e'>32
                             ~
+
+                            <bf e'>64
 
                             b64
-
-                            c'64
                             - \tenuto
                             ~
 
-                            c'16
+                            b16
 
                         }
 
-                        cqs'64
+                        ef''64
                         - \accent
                         ~
 
-                        cqs'16
+                        ef''16
                         ~
 
-                        cqs'64
+                        ef''64
 
                         \scaleDurations #'(1 . 1) {
 
-                            bqs32
+                            f''32
 
-                            bqf32
+                            c''32
                             - \tenuto
 
-                            bf32
+                            <fs' b'>32
                             - \accent
 
                         }
@@ -2966,21 +3006,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "64")
                         \times 5/6 {
 
-                            b32
+                            c'32
                             - \espressivo
                             ~
 
-                            b64
-
                             c'64
+
+                            cs'64
                             - \tenuto
                             ~
 
-                            c'32
+                            cs'32
 
                         }
 
-                        cqs'16.
+                        e'16.
                         \sfp
                         - \tenuto
 
@@ -2989,43 +3029,42 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 8) "64")
                     \times 8/15 {
 
-                        \clef "tenorvarC"
-                        aqs'64.
+                        b'64.
                         \ff
                         - \accent
                         \>
 
-                        aqf'64.
+                        bf'64.
 
-                        af'32
+                        g'32
                         - \tenuto
                         ~
 
-                        af'64
+                        g'64
 
                         \scaleDurations #'(1 . 1) {
 
-                            g'64
+                            fs'64
                             - \accent
 
-                            bf'64
+                            eqf'64
                             - \espressivo
 
-                            aqf'64
+                            eqs'64
                             - \tenuto
 
                         }
 
-                        b'64
+                        eqf'64
                         - \tenuto
                         ~
 
-                        b'128
+                        eqf'128
 
-                        c''64.
+                        eqs'64.
                         - \accent
 
-                        b'32.
+                        dqf'32.
                         \ppppp
                         - \tweak stencil #constante-hairpin
                         \<
@@ -3057,10 +3096,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -3096,7 +3141,8 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) "16")
                     \times 14/13 {
 
-                        bf8.
+                        \clef "tenorvarC"
+                        <a' ef''>8.
                         \mp
                         - \tenuto
                         \<
@@ -3104,8 +3150,8 @@
                         <>
                         \mf
 
-                        \clef "tenorvarC"
-                        aqs'8
+                        \clef "treble"
+                        cs''8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -3123,14 +3169,14 @@
                         \<
                         ~
 
-                        aqs'16
+                        cs''16
 
-                        aqf'16
+                        bf'16
                         - \tenuto
                         ~
                         ]
 
-                        aqf'4
+                        bf'4
 
                         af'8
                         - \tenuto
@@ -3138,22 +3184,22 @@
 
                     }
 
-                    aqs'16
+                    aqs16
                     \f
                     - \accent
                     \>
 
-                    aqf'16
+                    aqf16
                     ~
                     ]
 
-                    aqf'4
+                    aqf4
                     ~
 
-                    aqf'16
+                    aqf16
                     [
 
-                    af'8.
+                    aqs8.
                     - \tenuto
                     ]
                     <>
@@ -3185,17 +3231,17 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
                     \times 6/7 {
 
-                        aqs'16
+                        aqf16
                         - \accent
                         - \tweak circled-tip ##t
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
 
-                        aqf'16
+                        bqs16
                         - \espressivo
 
-                        af'16
+                        bf16
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -3212,20 +3258,20 @@
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        g'16
+                        cqs'16
                         \!
                         \f
                         - \accent
                         - \tweak stencil #abjad-flared-hairpin
                         \>
 
-                        bf'16
+                        dqf'16
                         - \espressivo
 
-                        aqf'16
+                        cqs'16
                         - \tenuto
 
-                        b'16
+                        dqf'16
                         \sfp
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -3233,49 +3279,49 @@
 
                     }
 
-                    aqs'16
+                    bf16
                     \!
                     \ff
                     - \accent
                     - \tweak stencil #abjad-flared-hairpin
                     \>
 
-                    aqf'16
+                    bqs16
 
-                    af'16
+                    aqs16
                     - \tenuto
 
-                    g'16
+                    aqf16
                     - \accent
 
-                    aqs'16
+                    aqs16
                     - \espressivo
 
-                    aqf'16
+                    aqf16
                     - \tenuto
 
-                    af'16
+                    aqf16
                     - \tenuto
 
-                    g'16
+                    g16
                     \ppppp
                     - \accent
 
-                    bf'16
+                    aqs16
                     \f
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqf'16
+                    aqf16
                     - \accent
 
-                    b'16
+                    aqs16
 
-                    c''16
+                    aqf16
                     - \tenuto
 
-                    aqs'16
+                    bqs16
                     _ #(make-dynamic-script
                         (markup
                             #:whiteout
@@ -3293,7 +3339,7 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \>
 
-                    aqf'16
+                    dqf'16
                     - \espressivo
 
                     \tweak text #tuplet-number::calc-fraction-text
@@ -3303,33 +3349,33 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64")
                         \times 4/5 {
 
-                            af'32
+                            b32
                             - \tenuto
 
-                            g'64
+                            bqs64
                             - \tenuto
                             ~
 
-                            g'32
+                            bqs32
 
                         }
 
-                        bf'8
+                        b8
                         - \accent
                         ~
 
-                        bf'8
+                        b8
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 3) "16")
                         \times 3/5 {
 
-                            aqs'8
+                            e'8
 
-                            aqf'16
+                            ef'16
                             - \tenuto
 
-                            af'8
+                            eqf'8
                             - \accent
 
                         }
@@ -3338,21 +3384,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "32")
                         \times 6/7 {
 
-                            g'16.
+                            eqs'16.
                             - \espressivo
                             ~
 
-                            g'32
+                            eqs'32
 
-                            bf'32
+                            fqs'32
                             - \tenuto
                             ~
 
-                            bf'16
+                            fqs'16
 
                         }
 
-                        aqf'8
+                        fs'8
                         - \tenuto
                         <>
                         \!
@@ -3365,7 +3411,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
-                            aqs'128.
+                            g'128.
                             _ #(make-dynamic-script
                                 (markup
                                     #:whiteout
@@ -3382,35 +3428,35 @@
                             \<
                             ~
 
-                            aqs'256
+                            g'256
 
-                            aqf'128
+                            af'128
                             ~
 
-                            aqf'128.
+                            af'128.
 
                         }
 
-                        af'32
+                        gqs'32
                         - \tenuto
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "128.")
                         \times 2/3 {
 
-                            g'128
+                            gqf'128
                             - \accent
 
-                            bf'256
+                            gqs'256
                             - \espressivo
                             ~
 
-                            bf'128
+                            gqs'128
 
-                            aqf'256
+                            af'256
                             - \tenuto
                             ~
 
-                            aqf'128.
+                            af'128.
 
                         }
 
@@ -3418,21 +3464,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "128")
                         \times 5/7 {
 
-                            b'64.
+                            a'64.
                             - \tenuto
                             ~
 
-                            b'128
+                            a'128
 
-                            c''128
+                            af'128
                             - \accent
                             ~
 
-                            c''64
+                            af'64
 
                         }
 
-                        b'64
+                        aqf'64
                         \f
                         - \tweak stencil #constante-hairpin
                         \<
@@ -3477,39 +3523,39 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "64")
                         \times 10/11 {
 
-                            aqs'16.
+                            bqf'16.
                             - \accent
                             - \tweak circled-tip ##t
                             \<
                             [
 
-                            aqf'64
+                            bf'64
                             - \espressivo
                             ~
 
-                            aqf'16
+                            bf'16
 
                         }
 
-                        af'16
+                        b'16
                         - \tenuto
                         ~
 
-                        af'16
+                        b'16
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "64.")
                         \times 4/5 {
 
-                            g'32
+                            bf'32
                             - \tenuto
 
-                            bf'128
+                            bqf'128
                             - \accent
                             ~
 
-                            bf'32
+                            bqf'32
 
-                            aqf'32.
+                            aqs'32.
 
                         }
 
@@ -3517,15 +3563,15 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "32")
                         \times 5/7 {
 
-                            b'8
+                            aqf'8
                             - \tenuto
 
-                            c''16.
+                            a'16.
                             - \accent
 
                         }
 
-                        b'8
+                        af'8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -3550,39 +3596,39 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
 
-                            aqs'16.
+                            a'16.
                             \f
                             - \tenuto
                             - \tweak stencil #abjad-flared-hairpin
                             \>
                             ~
 
-                            aqs'16
+                            a'16
                             ~
 
-                            aqs'32
+                            a'32
 
-                            aqf'32
+                            aqs'32
                             - \tenuto
                             ~
 
-                            aqf'8
+                            aqs'8
 
                         }
 
-                        af'8
+                        aqf'8
                         - \accent
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "32")
                         \times 5/6 {
 
-                            g'16
+                            gqs'16
 
-                            bf'16
+                            af'16
                             - \tenuto
 
-                            aqf'16
+                            g'16
                             - \accent
 
                         }
@@ -3591,25 +3637,25 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 5) "32")
                         \times 5/9 {
 
-                            b'16.
+                            af'16.
                             - \espressivo
                             ~
 
-                            b'32
+                            af'32
 
-                            c''16
+                            gqs'16
                             - \tenuto
                             ~
 
-                            c''16.
+                            gqs'16.
 
                         }
 
-                        b'16
+                        gqf'16
                         - \tenuto
                         ~
 
-                        b'8
+                        gqf'8
                         _ #(make-dynamic-script
                             (markup
                                 #:whiteout
@@ -3634,7 +3680,7 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 6) "32")
                         \times 6/11 {
 
-                            a16.
+                            fqs'16.
                             \!
                             \mf
                             - \accent
@@ -3642,36 +3688,36 @@
                             \<
                             ~
 
-                            a16
+                            fqs'16
                             ~
 
-                            a32
+                            fqs'32
 
-                            aqs32
+                            fs'32
                             ~
 
-                            aqs8
+                            fs'8
 
                         }
 
-                        bf32
+                        f'32
                         - \tenuto
                         ~
 
-                        bf8
+                        f'8
                         ~
 
-                        bf32
+                        f'32
 
                         \scaleDurations #'(1 . 1) {
 
-                            a16
+                            fs'16
                             - \accent
 
-                            af16
+                            fqs'16
                             - \espressivo
 
-                            aqf16
+                            gqf'16
                             - \tenuto
 
                         }
@@ -3680,21 +3726,21 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "32")
                         \times 5/6 {
 
-                            aqs16
+                            fqs'16
                             - \tenuto
                             ~
 
-                            aqs32
+                            fqs'32
 
-                            bqf32
+                            f'32
                             - \accent
                             ~
 
-                            bqf16
+                            f'16
 
                         }
 
-                        bf8.
+                        fs'8.
                         \mp
                         - \tweak stencil #constante-hairpin
                         \<
@@ -3702,10 +3748,17 @@
 
                     }
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+                    \!                                                         %! applying indicators
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
@@ -3760,49 +3813,49 @@
                         \>
                         [
 
-                        fs''8
+                        eqs''8
                         - \tenuto
 
-                        a''8
+                        fqs''8
                         - \accent
                         ~
                         ]
 
-                        a''4
+                        fqs''4
                         ~
 
                     }
 
-                    a''4
+                    fqs''4
                     \p
 
-                    f''8
+                    eqs''8
                     \mf
                     - \tenuto
                     \<
                     ~
 
-                    f''4
+                    eqs''4
                     \f
 
-                    f''4
+                    e''4
                     - \espressivo
                     - \tweak circled-tip ##t
                     \<
 
-                    aqs''8
+                    bf'8
                     - \tenuto
                     ~
 
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
                     \times 4/5 {
 
-                        aqs''4.
+                        bf'4.
                         \mf
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        f''8
+                        g'8
                         \!
                         _ #(make-dynamic-script
                             (markup
@@ -3821,14 +3874,14 @@
                         \<
                         [
 
-                        fs''8
+                        aqf'8
                         - \accent
                         ~
                         ]
 
                     }
 
-                    fs''4
+                    aqf'4
 
                     \once \override Rest.transparent = ##t                     %! applying invisibility
                     \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
@@ -3841,33 +3894,34 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
                     \times 8/9 {
 
-                        f''16
+                        b'16
                         \p
                         - \tweak circled-tip ##t
                         \>
                         [
 
-                        fs''8
+                        bqs'8
                         - \tenuto
                         ~
 
-                        fs''16
+                        bqs'16
 
-                        a''8
+                        cqs''8
                         - \accent
                         ~
 
-                        a''8.
+                        cqs''8.
 
                     }
 
-                    f''8
+                    ef''8
                     - \espressivo
 
-                    fs''16
+                    <d'' fs''>16
                     - \tenuto
 
-                    a''16
+                    \ottava 1
+                    cs'''16
                     - \tenuto
                     ~
 
@@ -3875,41 +3929,42 @@
                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 16) "16")
                     \times 16/15 {
 
-                        a''8.
+                        cs'''8.
                         ~
 
-                        a''8
+                        cs'''8
                         ]
                         <>
                         \!
 
-                        f''4
+                        \ottava 0
+                        af''4
                         \mf
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
 
-                        fs''16
+                        b''16
                         \sfp
                         - \accent
                         \<
                         ~
                         [
 
-                        fs''8
+                        b''8
 
-                        aqs''8.
+                        g''8.
                         - \espressivo
                         ~
 
                     }
 
-                    aqs''8
+                    g''8
                     \ff
                     - \tweak stencil #constante-hairpin
                     \<
 
-                    aqs''8
+                    <af'' bf''>8
                     \!
                     \ppppp
                     - \tenuto
@@ -3949,10 +4004,16 @@
                     R1 * 1/4
                     \stopStaff \startStaff                                     %! applying cutaway
 
-                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                    \once \override Rest.color = #white                        %! applying ending skips
+                    \once \override Rest.transparent = ##t                     %! applying invisibility
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying indicators
+                    \once \override Rest.color = #white                        %! applying indicators
+                    \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                     r1 * 1/8
-                    \!                                                         %! applying ending skips
+
+                    R1 * 1/8
+                    \stopStaff \startStaff                                     %! applying cutaway
+
+                    r2.
 
                     \once \override MultiMeasureRest.color = #white            %! applying ending skips
                     R1 * 1/8
