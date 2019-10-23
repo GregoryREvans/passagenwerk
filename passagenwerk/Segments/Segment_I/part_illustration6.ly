@@ -19,6 +19,7 @@
         \context TimeSignatureContext = "Global Context"
         {
 
+            \tempo 4=90
             \time 3/8                                                          %! scaling time signatures
             s1 * 3/8
 
@@ -326,6 +327,7 @@
             r1 * 1/8
 
             R1 * 1/8
+            \bar "||"
             \stopStaff \startStaff                                             %! applying cutaway
 
             r2.
