@@ -7,14 +7,14 @@ from passagenwerk.Materials.rhythm.Segment_I.rtm_lists import final_rtm_list
 
 
 rmaker_one = abjadext.rmakers.stack(
-    abjadext.rmakers.note()
-    # abjadext.rmakers.talea(
-    #     [2, 1, 6, 4, 3, 5], 16, extra_counts=[0, -1, 0, 1, -1, 0, 1]
-    # ),
-    # abjadext.rmakers.trivialize(abjad.select().tuplets()),
-    # abjadext.rmakers.extract_trivial(abjad.select().tuplets()),
-    # abjadext.rmakers.rewrite_rest_filled(abjad.select().tuplets()),
-    # abjadext.rmakers.rewrite_sustained(abjad.select().tuplets()),
+    # abjadext.rmakers.note()
+    abjadext.rmakers.talea(
+        [2, 1, 6, 4, 3, 5], 16, extra_counts=[0, -1, 0, 1, -1, 0, 1]
+    ),
+    abjadext.rmakers.trivialize(abjad.select().tuplets()),
+    abjadext.rmakers.extract_trivial(abjad.select().tuplets()),
+    abjadext.rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    abjadext.rmakers.rewrite_sustained(abjad.select().tuplets()),
 )
 
 

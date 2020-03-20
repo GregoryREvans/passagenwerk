@@ -1,7 +1,5 @@
 import evans
 import pathlib
-
-# from evans.abjad_functions.ConvertTimespans import ConvertTimespans
 from passagenwerk.Materials.score_structure.Segment_I.rhythm_material_pattern import (
     rhythm_material_list,
 )
@@ -22,9 +20,9 @@ from passagenwerk.Materials.timespans.Segment_I.make_timespans import (
 )
 from passagenwerk.Materials.score_structure.Segment_I.time_signatures import bounds
 
-#######
+########
 # rhythm#
-#######
+########
 rhythm_mat = rhythm_material_list
 
 segment_I_rhythm_timespans = evans.ConvertTimespans.convert_timespans(
@@ -34,6 +32,7 @@ segment_I_rhythm_timespans = evans.ConvertTimespans.convert_timespans(
     segment_name="Segment_I_rhythm_timespans",
     current_directory=pathlib.Path(__file__).parent,
     add_silence=True,
+    split=True,
 )
 
 #######
