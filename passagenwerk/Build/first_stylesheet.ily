@@ -1,6 +1,6 @@
 % 2018-07-17 19:54
 
-\version "2.19.83"
+\version "2.19.84"
 \language "english"
 #(set-default-paper-size "11x17portrait")
 #(set-global-staff-size 13)
@@ -137,13 +137,24 @@
         \remove Time_signature_engraver
     }
        \context {
-        \StaffGroup
+        \GrandStaff
+		systemStartDelimiter = #'SystemStartSquare
     }
+	\context {
+	 \PianoStaff
+	 systemStartDelimiter = #'SystemStartBrace
+ }
+ \context {
+  \StaffGroup
+  systemStartDelimiter = #'SystemStartBracket
+}
+
+
 }
 
 \paper {
 	%{ system-separator-markup = \slashSeparator %}
-	system-separator-markup = \markup { \fill-line { \slashSeparator \slashSeparator } }
+	system-separator-markup = \markup { \slashSeparator }
 	%system-system-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 5))
 	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
 
