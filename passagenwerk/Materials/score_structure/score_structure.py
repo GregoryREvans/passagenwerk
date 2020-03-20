@@ -30,19 +30,15 @@ score = abjad.Score(
                         abjad.StaffGroup(
                             [
                                 abjad.Staff(
-                                    [
-                                    abjad.Voice(name="Voice 1")
-                                    ],
+                                    [abjad.Voice(name="Voice 1")],
                                     name="Staff 1",
                                     lilypond_type="Staff",
                                 ),
                                 abjad.Staff(
-                                    [
-                                    abjad.Voice(name="Voice 2")
-                                    ],
+                                    [abjad.Voice(name="Voice 2")],
                                     name="Staff 2",
                                     lilypond_type="Staff",
-                                )
+                                ),
                             ],
                             name="violin 1 Staff Group",
                             lilypond_type="PianoStaff",
@@ -50,19 +46,15 @@ score = abjad.Score(
                         abjad.StaffGroup(
                             [
                                 abjad.Staff(
-                                    [
-                                    abjad.Voice(name="Voice 3")
-                                    ],
+                                    [abjad.Voice(name="Voice 3")],
                                     name="Staff 3",
                                     lilypond_type="Staff",
                                 ),
                                 abjad.Staff(
-                                    [
-                                    abjad.Voice(name="Voice 4")
-                                    ],
+                                    [abjad.Voice(name="Voice 4")],
                                     name="Staff 4",
                                     lilypond_type="Staff",
-                                )
+                                ),
                             ],
                             name="violin 2 Staff Group",
                             lilypond_type="PianoStaff",
@@ -73,47 +65,37 @@ score = abjad.Score(
                 abjad.StaffGroup(
                     [
                         abjad.Staff(
-                            [
-                            abjad.Voice(name="Voice 5")
-                            ],
+                            [abjad.Voice(name="Voice 5")],
                             name="Staff 5",
                             lilypond_type="Staff",
                         ),
                         abjad.Staff(
-                            [
-                            abjad.Voice(name="Voice 6")
-                            ],
+                            [abjad.Voice(name="Voice 6")],
                             name="Staff 6",
                             lilypond_type="Staff",
-                        )
+                        ),
                     ],
                     name="viola Staff Group",
                 ),
                 abjad.StaffGroup(
                     [
                         abjad.Staff(
-                            [
-                            abjad.Voice(name="Voice 7")
-                            ],
+                            [abjad.Voice(name="Voice 7")],
                             name="Staff 7",
                             lilypond_type="Staff",
                         ),
                         abjad.Staff(
-                            [
-                            abjad.Voice(name="Voice 8")
-                            ],
+                            [abjad.Voice(name="Voice 8")],
                             name="Staff 8",
                             lilypond_type="Staff",
-                        )
+                        ),
                     ],
                     name="cello Staff Group",
                 ),
                 abjad.StaffGroup(
                     [
                         abjad.Staff(
-                            [
-                            abjad.Voice(name="Voice 9")
-                            ],
+                            [abjad.Voice(name="Voice 9")],
                             name="Staff 9",
                             lilypond_type="Staff",
                         )

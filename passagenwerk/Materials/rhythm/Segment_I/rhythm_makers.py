@@ -19,9 +19,7 @@ rmaker_one = abjadext.rmakers.stack(
 
 
 # rmaker_two = evans.RTMMaker(rtm=final_rtm_list)
-rmaker_two = abjadext.rmakers.stack(
-    abjadext.rmakers.note()
-)
+rmaker_two = abjadext.rmakers.stack(abjadext.rmakers.note())
 
 
 rmaker_three = abjadext.rmakers.stack(
