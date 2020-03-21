@@ -164,30 +164,114 @@
 
                             r2
 
-                            b'4
+                            \times 16/17 {
 
-                            c''4
+                                \times 2/3 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b'32
+                                    [
+
+                                    c''32
+                                    ~
+
+                                    c''128
+
+                                }
+
+                                b'16
+
+                                \times 2/3 {
+
+                                    c''64
+
+                                    dqs''64.
+
+                                    dqf''32
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/7 {
+
+                                    b'16
+
+                                    c''32.
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                b'32
+                                ]
+
+                            }
+
+                            \times 16/21 {
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 10/11 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''32.
+                                    [
+
+                                    aqf'32
+                                    ~
+
+                                    aqf'128
+
+                                }
+
+                                g'16
+
+                                \times 4/5 {
+
+                                    fqs'64
+
+                                    fs'64
+                                    ~
+
+                                    fs'256
+
+                                    gqf'64.
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/7 {
+
+                                    g'16
+
+                                    bf'32.
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                aqf'16
+                                ]
+
+                            }
 
                             \override Staff.Stem.stemlet-length = 0.75
                             b'8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            c''8
+                            bf'8
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c''8.
+                            bf'8.
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            dqs''16
+                            aqs'16
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            dqs''16
+                            aqs'16
                             [
 
                             bf16
@@ -214,18 +298,59 @@
 
                             b'8
 
+                            c''16
+
                             \revert Staff.Stem.stemlet-length
-                            c''8
+                            b'16
                             ]
 
-                            b'4.
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
 
-                            dqf''4.
-                            ~
+                                \override Staff.Stem.stemlet-length = 0.75
+                                c''16
+                                [
 
-                            dqf''4
+                                dqs''16
 
-                            b'8
+                                dqf''16
+
+                                bf'16
+
+                                dqf''16
+
+                                c''16
+
+                                \revert Staff.Stem.stemlet-length
+                                aqs'16
+                                ]
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                aqf'8
+                                [
+
+                                af'8
+
+                                g'8
+
+                                \revert Staff.Stem.stemlet-length
+                                bf'8
+                                ]
+
+                            }
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            aqf'16
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            b'16
+                            ]
 
                             r8
 
@@ -268,18 +393,168 @@
 
                             r4
 
-                            c''8
-                            ~
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/13 {
 
-                            c''2
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 6/11 {
 
-                            a8
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b'8.
+                                    [
 
-                            aqs4
+                                    c''8
+                                    ~
 
-                            bf4
+                                    c''32
 
-                            a4
+                                }
+
+                                b'8
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/6 {
+
+                                    c''16
+
+                                    aqf'16
+
+                                    g'16
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/9 {
+
+                                    fqs'8
+
+                                    fs'8
+                                    ~
+
+                                    fs'32
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                gqf'8.
+                                ]
+
+                            }
+
+                            \times 16/29 {
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 6/11 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a32.
+                                    [
+
+                                    aqs32
+                                    ~
+
+                                    aqs128
+
+                                }
+
+                                bf32.
+
+                                \scaleDurations #'(1 . 1) {
+
+                                    a64
+
+                                    af64
+
+                                    aqf64
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/4 {
+
+                                    aqs64
+
+                                    bqf64
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                bf32.
+                                ]
+
+                            }
+
+                            b4
+
+                            \times 8/15 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                c'32.
+                                [
+
+                                cqs'32.
+
+                                bqs16.
+
+                                \scaleDurations #'(1 . 1) {
+
+                                    bqf32
+
+                                    bf32
+
+                                    b32
+
+                                }
+
+                                c'32.
+
+                                cqs'32.
+
+                                \revert Staff.Stem.stemlet-length
+                                dqf'16.
+                                ]
+
+                            }
+
+                            \times 8/13 {
+
+                                \times 4/5 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cqs'64
+                                    [
+
+                                    c'64.
+
+                                }
+
+                                b8
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 3/5 {
+
+                                    bf16
+
+                                    aqs32
+
+                                    aqf16
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 6/7 {
+
+                                    gqs16
+
+                                    af32.
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                a16
+                                ]
+
+                            }
 
                             r8
 
@@ -290,28 +565,46 @@
 
                             r8
 
-                            dqs''8
+                            g'8
                             ~
 
-                            dqs''2
+                            g'4
 
-                            dqf''2.
+                            bf'4
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            af8
-                            [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
 
-                            \revert Staff.Stem.stemlet-length
-                            aqf8
-                            ~
-                            ]
+                                aqf'2
 
-                            aqf2.
+                                bf8
 
-                            aqs4
-                            ~
+                                aqs4
+                                ~
+
+                            }
 
                             aqs8
+                            ~
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 7/8 {
+
+                                aqs4
+
+                                aqf4.
+
+                                gqs4
+
+                                g8
+                                ~
+
+                            }
+
+                            g4
+                            ~
+
+                            g8
 
                             r8
 
@@ -322,12 +615,94 @@
 
                             r4
 
-                            c''8
+                            \times 16/17 {
 
-                            b'4.
-                            ~
+                                \times 2/3 {
 
-                            b'4
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''64
+                                    [
+
+                                    b'64
+                                    ~
+
+                                    b'256
+
+                                }
+
+                                bf'32
+
+                                \times 2/3 {
+
+                                    g'128
+
+                                    fs'128.
+
+                                    eqf'64
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/7 {
+
+                                    eqs'32
+
+                                    eqf'64.
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                eqs'64
+                                ]
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 20/21 {
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 10/11 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    dqf'16.
+                                    [
+
+                                    dqs'16
+                                    ~
+
+                                    dqs'64
+
+                                }
+
+                                fqs'8
+
+                                \times 4/5 {
+
+                                    eqs'32
+
+                                    eqf'32
+                                    ~
+
+                                    eqf'128
+
+                                    dqs'32.
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/7 {
+
+                                    fs'8
+
+                                    eqs'16.
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                d'8
+                                ]
+
+                            }
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             r1 * 1/4
@@ -374,7 +749,7 @@
 
                             R1 * 3/16
 
-                            c''4
+                            dqf'4
 
                             r8
 
@@ -385,14 +760,15 @@
 
                             R1 * 5/16
 
-                            bqf4.
+                            af4.
+                            ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            bf8
+                            af8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            b8
+                            a8
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -400,16 +776,16 @@
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            c''8.
+                            bf'8.
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c''8.
+                            bf'8.
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            b'16
+                            aqs'16
                             ~
                             ]
 
@@ -417,27 +793,27 @@
                             \times 12/13 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                b'8.
+                                aqs'8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                c''8.
+                                bf'8.
                                 ]
 
-                                aqf'4
+                                dqf''4
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                aqf'16
+                                dqf''16
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                g'8
+                                c''8
                                 ]
 
                             }
 
-                            fqs'8
+                            aqs'8
 
                             r8
 
@@ -484,22 +860,22 @@
 
                                 af''4
 
-                                aqf'16
+                                d'16
                                 ~
 
                             }
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            aqf'8.
+                            d'8.
                             [
 
-                            g'16
+                            dqf'16
 
                             \revert Staff.Stem.stemlet-length
-                            fqs'8
+                            bf8
                             ]
 
-                            fs'8
+                            bqs8
 
                             r4
 
@@ -547,16 +923,131 @@
 
                             r4.
 
-                            gqf'2
+                            aqs4
 
-                            c'4.
-                            ~
+                            bf4
 
-                            c'4
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/13 {
 
-                            cqs'4.
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 6/11 {
 
-                            bqs2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqs8.
+                                    [
+
+                                    aqf8
+                                    ~
+
+                                    aqf32
+
+                                }
+
+                                aqs8
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/6 {
+
+                                    bf16
+
+                                    b16
+
+                                    c'16
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/9 {
+
+                                    cqs'8
+
+                                    dqf'8
+                                    ~
+
+                                    dqf'32
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                cqs'8.
+                                ]
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 24/29 {
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 6/11 {
+
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cs'16.
+                                    [
+
+                                    d'16
+                                    ~
+
+                                    d'64
+
+                                }
+
+                                cs'16.
+
+                                \scaleDurations #'(1 . 1) {
+
+                                    dqf'32
+
+                                    dqs'32
+
+                                    dqf'32
+
+                                }
+
+                                \tweak text #tuplet-number::calc-fraction-text
+                                \times 5/4 {
+
+                                    d'32
+
+                                    cs'32
+
+                                }
+
+                                \revert Staff.Stem.stemlet-length
+                                d'16.
+                                ]
+
+                            }
+
+                            \times 8/15 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                dqs'16.
+                                [
+
+                                eqf'16.
+
+                                dqs'8.
+
+                                \scaleDurations #'(1 . 1) {
+
+                                    ef'16
+
+                                    e'16
+
+                                    ef'16
+
+                                }
+
+                                eqf'16.
+
+                                eqs'16.
+
+                                \revert Staff.Stem.stemlet-length
+                                fqs'8.
+                                ]
+
+                            }
 
                             r4
 
@@ -565,28 +1056,48 @@
 
                             R1 * 3/8
 
-                            bqf2.
+                            f'4
+                            ~
 
-                            bf2
+                            \override Staff.Stem.stemlet-length = 0.75
+                            f'8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            e'8
+                            ~
+                            ]
+
+                            e'4
+                            ~
+
+                            \times 4/5 {
+
+                                e'4
+
+                                ef'4.
+
+                            }
 
                             r2
 
                             r4
 
-                            b4
+                            eqf'4
+                            ~
 
-                            g'4.
+                            eqf'4.
 
-                            bf'8
+                            aqs8
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                aqf'8
+                                bf8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                b'8.
+                                dqf'8.
                                 ]
 
                             }
@@ -702,15 +1213,35 @@
 
                         r2
 
-                        bf'4
+                        bqs4
+                        ~
 
-                        aqs'2.
+                        bqs4
+                        ~
 
-                        bf'4
+                        \override Staff.Stem.stemlet-length = 0.75
+                        bqs8
+                        [
 
-                        dqf''2.
+                        \revert Staff.Stem.stemlet-length
+                        d'8
+                        ]
 
-                        fs'4
+                        dqs'4
+                        ~
+
+                        dqs'4
+
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/5 {
+
+                            d'4.
+
+                            dqf'4
+
+                        }
+
+                        aqf'4
 
                         r4
 
@@ -721,9 +1252,15 @@
 
                         r8
 
-                        c''4
+                        \override Staff.Stem.stemlet-length = 0.75
+                        eqs'8
+                        [
 
-                        aqs'4
+                        \revert Staff.Stem.stemlet-length
+                        fs'8
+                        ]
+
+                        eqf'4
 
                         r8
 
@@ -765,13 +1302,35 @@
                         \markup { Viola-2 }                                    %! applying staff names and clefs
                         \clef "varC"
                         aqs4.
+                        ~
 
-                        bqf2..
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 7/8 {
 
-                        gqf'4
+                            aqs8
+
+                            bqf4.
+
+                            c'4
+
+                            cqs'4
+                            ~
+
+                        }
+
+                        cqs'4
 
                         \override Staff.Stem.stemlet-length = 0.75
+                        af'16
+                        [
+
+                        \revert Staff.Stem.stemlet-length
                         g'16
+                        ~
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        g'8.
                         [
 
                         \revert Staff.Stem.stemlet-length
@@ -779,24 +1338,15 @@
                         ~
                         ]
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        bf'8.
-                        [
-
-                        \revert Staff.Stem.stemlet-length
-                        aqf'16
-                        ~
-                        ]
-
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
 
-                            aqf'8
+                            bf'8
 
-                            b'4
+                            aqf'4
                             ~
 
-                            b'16
+                            aqf'16
 
                         }
 
@@ -836,23 +1386,33 @@
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        bf'8
+                        b'8
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        bf'16
+                        b'16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        aqs'8.
+                        c''8.
                         ]
 
                         r2.
 
-                        c'4
+                        dqs'4
+                        ~
 
-                        cqs'2
+                        \override Staff.Stem.stemlet-length = 0.75
+                        dqs'8
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        eqf'8
+                        ~
+                        ]
+
+                        eqf'4
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
                         r1 * 3/16
@@ -916,73 +1476,193 @@
 
                         r4
 
-                        \clef "tenorvarC"
-                        aqf'8
-                        ~
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 10/13 {
 
-                        aqf'2
+                            \times 4/5 {
 
-                        af'4.
-                        ~
+                                \override Staff.Stem.stemlet-length = 0.75
+                                eqs'32
+                                [
 
-                        af'4
+                                \revert Staff.Stem.stemlet-length
+                                fqs'32.
+                                ]
 
-                        g'4
+                            }
+
+                            eqs'4
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 3/5 {
+
+                                \clef "tenorvarC"
+                                \override Staff.Stem.stemlet-length = 0.75
+                                g'8
+                                [
+
+                                fs'16
+
+                                eqf'8
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
+
+                                eqs'8
+
+                                fqs'16.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            fs'8
+                            ]
+
+                        }
+
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 10/13 {
+
+                            \times 4/5 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                dqs'32
+                                [
+
+                                \revert Staff.Stem.stemlet-length
+                                dqf'32.
+                                ]
+
+                            }
+
+                            eqf'4
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 3/5 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                eqs'8
+                                [
+
+                                eqf'16
+
+                                dqs'8
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
+
+                                fs'8
+
+                                g'16.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            fqs'8
+                            ]
+
+                        }
+
+                        \times 16/17 {
+
+                            \times 2/3 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                fs'32
+                                [
+
+                                fqs'32
+                                ~
+
+                                fqs'128
+
+                            }
+
+                            eqs'16
+
+                            \times 2/3 {
+
+                                dqf'64
+
+                                bqs64.
+
+                                f'32
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+
+                                b'16
+
+                                bf'32.
+
+                            }
+
+                            \clef "treble"
+                            \revert Staff.Stem.stemlet-length
+                            e''32
+                            ]
+
+                        }
 
                         \times 2/3 {
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            f'8
+                            <d' d''>8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            b'16
+                            f'16
                             ~
                             ]
 
                         }
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        b'16
+                        f'16
                         [
 
-                        bf'16
+                        cs'16
 
-                        \clef "treble"
                         \revert Staff.Stem.stemlet-length
-                        e''8
+                        g'8
                         ~
                         ]
 
-                        e''4
+                        g'4
 
-                        <d' d''>4
+                        a'4
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/5 {
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            f'8.
+                            <c'' d''>8.
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            cs'8
+                            af'8
                             ~
                             ]
 
                         }
 
-                        cs'8
+                        af'8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        cs'16
+                        af'16
                         [
 
-                        g'16
+                        e'16
                         ~
 
-                        g'16
+                        e'16
 
                         \revert Staff.Stem.stemlet-length
                         a'16
@@ -991,9 +1671,9 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
 
-                            <c'' d''>4.
+                            <ef' g'>4.
 
-                            dqf'16
+                            ef'16
 
                         }
 
@@ -1005,20 +1685,172 @@
 
                         r8
 
-                        af'8
+                        \times 16/21 {
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        e'8
-                        [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
 
-                        \revert Staff.Stem.stemlet-length
-                        a'8
-                        ~
-                        ]
+                                \override Staff.Stem.stemlet-length = 0.75
+                                g'64.
+                                [
 
-                        a'4
+                                c''64
+                                ~
 
-                        bf'8
+                                c''256
+
+                            }
+
+                            bf'32
+
+                            \times 4/5 {
+
+                                fs'128
+
+                                <fs bf>128
+                                ~
+
+                                <fs bf>512
+
+                                g128.
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+
+                                c'32
+
+                                g''64.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            ef''32
+                            ]
+
+                        }
+
+                        \times 8/13 {
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/11 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                <e'' a''>32.
+                                [
+
+                                c'32
+                                ~
+
+                                c'128
+
+                            }
+
+                            a32
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/6 {
+
+                                af64
+
+                                <d' f''>64
+
+                                d''64
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/9 {
+
+                                g''32
+
+                                cs''32
+                                ~
+
+                                cs''128
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            d'32.
+                            ]
+
+                        }
+
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 24/29 {
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/11 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                <bf e'>16.
+                                [
+
+                                b16
+                                ~
+
+                                b64
+
+                            }
+
+                            ef''16.
+
+                            \scaleDurations #'(1 . 1) {
+
+                                f''32
+
+                                c''32
+
+                                <fs' b'>32
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+
+                                c'32
+
+                                cs'32
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            e'16.
+                            ]
+
+                        }
+
+                        \times 8/15 {
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            b'64.
+                            [
+
+                            bf'64.
+
+                            g'32.
+
+                            \scaleDurations #'(1 . 1) {
+
+                                fs'64
+
+                                eqf'64
+
+                                eqs'64
+
+                            }
+
+                            eqf'64.
+
+                            eqs'64.
+
+                            \revert Staff.Stem.stemlet-length
+                            dqf'32.
+                            ]
+
+                        }
 
                         r4
 
@@ -1075,46 +1907,47 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 14/13 {
 
+                            \clef "tenorvarC"
                             \override Staff.Stem.stemlet-length = 0.75
-                            <ef' g'>8.
+                            <a' ef''>8.
                             [
 
-                            \clef "tenorvarC"
+                            \clef "treble"
                             \revert Staff.Stem.stemlet-length
-                            g'8.
+                            cs''8.
                             ]
 
-                            c''4
+                            bf'4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c''16
+                            bf'16
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            bf'8
+                            af'8
                             ]
 
                         }
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        bf'16
+                        aqs16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        aqf'16
+                        aqf16
                         ~
                         ]
 
-                        aqf'4
+                        aqf4
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        aqf'16
+                        aqf16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        b'8.
+                        aqs8.
                         ]
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1126,25 +1959,159 @@
 
                         r8
 
-                        c''8
-                        ~
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/7 {
 
-                        c''4
+                            \override Staff.Stem.stemlet-length = 0.75
+                            aqf16
+                            [
 
-                        b'2.
+                            bqs16
+
+                            bf16
+
+                            cqs'16
+
+                            dqf'16
+
+                            cqs'16
+
+                            \revert Staff.Stem.stemlet-length
+                            dqf'16
+                            ]
+
+                        }
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        bf'8
+                        bf16
+                        [
+
+                        bqs16
+
+                        aqs16
+
+                        \revert Staff.Stem.stemlet-length
+                        aqf16
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        aqs16
+                        [
+
+                        aqf16
+
+                        aqf16
+
+                        \revert Staff.Stem.stemlet-length
+                        g16
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        aqs16
+                        [
+
+                        aqf16
+
+                        aqs16
+
+                        \revert Staff.Stem.stemlet-length
+                        aqf16
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        bqs16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        g'8
-                        ~
+                        dqf'16
                         ]
 
-                        g'2
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 10/13 {
 
-                        cqs'8
+                            \times 4/5 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                b32
+                                [
+
+                                \revert Staff.Stem.stemlet-length
+                                bqs32.
+                                ]
+
+                            }
+
+                            b4
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 3/5 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                e'8
+                                [
+
+                                ef'16
+
+                                eqf'8
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
+
+                                eqs'8
+
+                                fqs'16.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            fs'8
+                            ]
+
+                        }
+
+                        \times 16/17 {
+
+                            \times 2/3 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                g'64
+                                [
+
+                                af'64
+                                ~
+
+                                af'256
+
+                            }
+
+                            gqs'32
+
+                            \times 2/3 {
+
+                                gqf'128
+
+                                gqs'128.
+
+                                af'64
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+
+                                a'32
+
+                                af'64.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            aqf'64
+                            ]
+
+                        }
 
                         r8
 
@@ -1152,28 +2119,151 @@
 
                         r8
 
-                        c'8
+                        aqs'8
                         ~
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        c'8
-                        [
-
-                        \revert Staff.Stem.stemlet-length
-                        b8
-                        ]
-
-                        bf4.
-
-                        aqs4.
-
-                        aqf4.
+                        aqs'4
                         ~
 
-                        aqf4
+                        aqs'4.
 
-                        gqs2
-                        \bar "||"
+                        \times 4/7 {
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                bqf'16.
+                                [
+
+                                bf'16
+                                ~
+
+                                bf'64
+
+                            }
+
+                            b'8
+
+                            \times 4/5 {
+
+                                bf'32
+
+                                bqf'32
+                                ~
+
+                                bqf'128
+
+                                aqs'32.
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+
+                                aqf'8
+
+                                a'16.
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            af'8
+                            ]
+
+                        }
+
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 10/13 {
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/11 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                a'8.
+                                [
+
+                                aqs'8
+                                ~
+
+                                aqs'32
+
+                            }
+
+                            aqf'8
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/6 {
+
+                                gqs'16
+
+                                af'16
+
+                                g'16
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/9 {
+
+                                af'8
+
+                                gqs'8
+                                ~
+
+                                gqs'32
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            gqf'8.
+                            ]
+
+                        }
+
+                        \times 16/29 {
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/11 {
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                fqs'8.
+                                [
+
+                                fs'8
+                                ~
+
+                                fs'32
+
+                            }
+
+                            f'8.
+
+                            \scaleDurations #'(1 . 1) {
+
+                                fs'16
+
+                                fqs'16
+
+                                gqf'16
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+
+                                fqs'16
+
+                                f'16
+
+                            }
+
+                            \revert Staff.Stem.stemlet-length
+                            fs'8.
+                            ]
+                            \bar "||"
+
+                        }
 
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
                         \once \override Rest.color = #white                    %! applying ending skips
@@ -1216,22 +2306,50 @@
 
                         r4.
 
-                        \clef "tenorvarC"
-                        af'2
+                        \times 4/5 {
 
-                        a'4.
+                            \clef "treble"
+                            \override Staff.Stem.stemlet-length = 0.75
+                            f''8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            eqs''8
+                            ]
+
+                            fqs''4.
+                            ~
+
+                        }
+
+                        fqs''4
+
+                        eqs''8
                         ~
 
-                        a'4
+                        eqs''4
+
+                        e''4
 
                         bf'8
+                        ~
 
-                        \clef "treble"
-                        fs''4
+                        \times 4/5 {
 
-                        eqf''2
+                            bf'4.
 
-                        eqs''4
+                            \override Staff.Stem.stemlet-length = 0.75
+                            g'8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            aqf'8
+                            ~
+                            ]
+
+                        }
+
+                        aqf'4
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
                         r1 * 3/8
@@ -1241,64 +2359,62 @@
                         \times 8/9 {
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            eqf''16
+                            b'16
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            eqs''8.
+                            bqs'8.
                             ]
 
-                            dqf''4
+                            cqs''4
                             ~
 
-                            dqf''16
+                            cqs''16
 
                         }
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        fs''8
+                        ef''8
                         [
 
-                        <fs' bf'>16
+                        <d'' fs''>16
 
+                        \ottava 1
                         \revert Staff.Stem.stemlet-length
-                        g'16
+                        cs'''16
                         ~
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
 
-                            g'4
+                            cs'''4
                             ~
 
-                            g'16
+                            cs'''16
 
-                            c''4
+                            \ottava 0
+                            af''4
 
-                            \ottava 1
                             \override Staff.Stem.stemlet-length = 0.75
-                            g'''8.
+                            b''8.
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            ef'''8.
+                            g''8.
                             ~
                             ]
 
                         }
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        ef'''8
+                        g''8
                         [
 
-                        \ottava 1
                         \revert Staff.Stem.stemlet-length
-                        <e''' a'''>8
+                        <af'' bf''>8
                         ]
 
-                        \ottava 0
-                        \ottava 0
                         r4
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
