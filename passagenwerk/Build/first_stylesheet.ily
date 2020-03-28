@@ -85,8 +85,8 @@
 		%\override BarLine.stencil = ##f
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
-		\override Beam.beam-thickness = #0.8
-        \override Beam.length-fraction = #1.5
+		%{ \override Beam.beam-thickness = #0.8 %}
+        %{ \override Beam.length-fraction = #1.5 %}
 		\override Clef.whiteout-style = #'outline
   		\override Clef.whiteout = 1
 		\override DynamicText.font-size = #-2
@@ -96,13 +96,14 @@
 		\override Glissando.breakable = ##t
 		%{ \override Glissando.thickness = #2 %}
 		\override Glissando.thickness = #1.8
-		\override Stem.thickness = #0.5
+		%{ \override Stem.thickness = #0.5 %}
 		\override Staff.thickness = #0.5
 		\override MetronomeMark.font-size = 3
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 0))
+		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 0))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.slope = #0.3
 		%{ \override StemTremolo.shape = #'rectangle %}
@@ -113,14 +114,14 @@
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #1.5
 		%{ \override TupletBracket.staff-padding = #1.5 %}
-		\override TupletBracket.staff-padding = #4
+		\override TupletBracket.staff-padding = #1.5
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
 		\override TupletBracket.direction = #up
 		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
 		%{ subdivideBeams = ##t %}
-		proportionalNotationDuration = #(ly:make-moment 1 35)
+		proportionalNotationDuration = #(ly:make-moment 1 15)
         tupletFullLength = ##t
     }
 	\context {
@@ -139,14 +140,17 @@
        \context {
         \GrandStaff
 		systemStartDelimiter = #'SystemStartSquare
+		%{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
     }
 	\context {
 	 \PianoStaff
 	 systemStartDelimiter = #'SystemStartBrace
+	 %{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
  }
  \context {
   \StaffGroup
   systemStartDelimiter = #'SystemStartBracket
+  %{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
 }
 
 
