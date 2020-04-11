@@ -215,13 +215,13 @@
                                 b'8
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 3/5 {
+                                \times 6/5 {
 
-                                    c''16
+                                    c''32
 
-                                    dqs''32
+                                    dqs''64
 
-                                    dqf''16
+                                    dqf''32
 
                                 }
 
@@ -482,42 +482,42 @@
                             \times 8/13 {
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 6/11 {
+                                \times 12/11 {
                                     % [Voice 2 measure 3]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    a32.
+                                    a64.
                                     [
 
-                                    aqs32
+                                    aqs64
                                     ~
 
-                                    aqs128
+                                    aqs256
 
                                 }
 
                                 bf32
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 5/9 {
+                                \times 10/9 {
 
-                                    a64.
+                                    a128.
 
-                                    af64.
+                                    af128.
 
-                                    aqf64.
+                                    aqf128.
 
                                 }
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 5/9 {
+                                \times 10/9 {
 
-                                    aqs32
+                                    aqs64
 
-                                    bqf32
+                                    bqf64
                                     ~
 
-                                    bqf128
+                                    bqf256
 
                                 }
 
@@ -532,16 +532,16 @@
                             \times 16/29 {
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 6/11 {
+                                \times 12/11 {
 
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c'16.
+                                    c'32.
                                     [
 
-                                    cqs'16
+                                    cqs'32
                                     ~
 
-                                    cqs'64
+                                    cqs'128
 
                                 }
 
@@ -572,33 +572,34 @@
 
                             }
 
-                            \times 8/15 {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 16/15 {
                                 % [Voice 2 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                cqs'32.
+                                cqs'64.
                                 [
 
-                                c'32.
+                                c'64.
 
-                                b16.
+                                b32.
 
                                 \scaleDurations #'(1 . 1) {
 
-                                    bf32
+                                    bf64
 
-                                    aqs32
+                                    aqs64
 
-                                    aqf32
+                                    aqf64
 
                                 }
 
-                                gqs32.
+                                gqs64.
 
-                                af32.
+                                af64.
 
                                 \revert Staff.Stem.stemlet-length
-                                a16.
+                                a32.
                                 ]
 
                             }
@@ -684,13 +685,13 @@
                                 bf'16
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 3/5 {
+                                \times 6/5 {
 
-                                    g'32
+                                    g'64
 
-                                    fs'64
+                                    fs'128
 
-                                    eqf'32
+                                    eqf'64
 
                                 }
 
@@ -1054,42 +1055,42 @@
                             \times 12/13 {
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 6/11 {
+                                \times 12/11 {
                                     % [Voice 4 measure 4]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    cs'16.
+                                    cs'32.
                                     [
 
-                                    d'16
+                                    d'32
                                     ~
 
-                                    d'64
+                                    d'128
 
                                 }
 
                                 cs'16
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 5/9 {
+                                \times 10/9 {
 
-                                    dqf'32.
+                                    dqf'64.
 
-                                    dqs'32.
+                                    dqs'64.
 
-                                    dqf'32.
+                                    dqf'64.
 
                                 }
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 5/9 {
+                                \times 10/9 {
 
-                                    d'16
+                                    d'32
 
-                                    cs'16
+                                    cs'32
                                     ~
 
-                                    cs'64
+                                    cs'128
 
                                 }
 
@@ -1102,17 +1103,17 @@
                             \times 16/29 {
 
                                 \tweak text #tuplet-number::calc-fraction-text
-                                \times 6/11 {
+                                \times 12/11 {
                                     % [Voice 4 measure 5]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    dqs'8.
+                                    dqs'16.
                                     [
 
-                                    eqf'8
+                                    eqf'16
                                     ~
 
-                                    eqf'32
+                                    eqf'64
 
                                 }
 
@@ -1304,13 +1305,9 @@
                         \revert Staff.Stem.stemlet-length
                         bf16
                         ]
+                        % [Voice 5 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        \scaleDurations #'(1 . 1) {
-                            % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            cs'4.
-
-                        }
+                        cs'4.
                         % [Voice 5 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1658,15 +1655,15 @@
                             eqf'4
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
+                            \times 6/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                eqs'8
+                                eqs'16
                                 [
 
-                                eqf'16
+                                eqf'32
 
-                                dqs'8
+                                dqs'16
 
                             }
 
@@ -1701,13 +1698,13 @@
                             eqs'8
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
+                            \times 6/5 {
 
-                                dqf'16
+                                dqf'32
 
-                                bqs32
+                                bqs64
 
-                                f'16
+                                f'32
 
                             }
 
@@ -1899,41 +1896,41 @@
                         \times 12/13 {
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 6/11 {
+                            \times 12/11 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                <bf e'>16.
+                                <bf e'>32.
                                 [
 
-                                b16
+                                b32
                                 ~
 
-                                b64
+                                b128
 
                             }
 
                             ef''16
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 5/9 {
+                            \times 10/9 {
 
-                                f''32.
+                                f''64.
 
-                                c''32.
+                                c''64.
 
-                                <fs' b'>32.
+                                <fs' b'>64.
 
                             }
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 5/9 {
+                            \times 10/9 {
 
-                                c'16
+                                c'32
 
-                                cs'16
+                                cs'32
                                 ~
 
-                                cs'64
+                                cs'128
 
                             }
 
@@ -1946,17 +1943,17 @@
                         \times 16/29 {
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 6/11 {
+                            \times 12/11 {
                                 % [Voice 7 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                b'32.
+                                b'64.
                                 [
 
-                                bf'32
+                                bf'64
                                 ~
 
-                                bf'128
+                                bf'256
 
                             }
 
@@ -2218,13 +2215,13 @@
                             gqf'16
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
+                            \times 6/5 {
 
-                                gqs'32
+                                gqs'64
 
-                                af'64
+                                af'128
 
-                                a'32
+                                a'64
 
                             }
 
@@ -2354,42 +2351,42 @@
                         \times 8/13 {
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 6/11 {
+                            \times 12/11 {
                                 % [Voice 8 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                fs'8.
+                                fs'16.
                                 [
 
-                                f'8
+                                f'16
                                 ~
 
-                                f'32
+                                f'64
 
                             }
 
                             fs'8
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 5/9 {
+                            \times 10/9 {
 
-                                fqs'16.
+                                fqs'32.
 
-                                gqf'16.
+                                gqf'32.
 
-                                fqs'16.
+                                fqs'32.
 
                             }
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 5/9 {
+                            \times 10/9 {
 
-                                f'8
+                                f'16
 
-                                fs'8
+                                fs'16
                                 ~
 
-                                fs'32
+                                fs'64
 
                             }
 
