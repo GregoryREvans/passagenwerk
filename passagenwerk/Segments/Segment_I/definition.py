@@ -1,17 +1,17 @@
+import pathlib
+
 import abjad
 import evans
-import pathlib
+from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
+from passagenwerk.Materials.score_structure.Segment_I.time_signatures import (
+    time_signatures,
+)
 from passagenwerk.Materials.score_structure.instruments import instruments as insts
+from passagenwerk.Materials.score_structure.score_structure import score
 from passagenwerk.Materials.timespans.Segment_I.convert_timespans import (
     segment_I_rhythm_timespans,
     segment_I_timespans,
 )
-from passagenwerk.Materials.score_structure.score_structure import score
-from passagenwerk.Materials.score_structure.Segment_I.time_signatures import (
-    time_signatures,
-)
-from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
-
 
 maker = evans.SegmentMaker(
     instruments=insts,

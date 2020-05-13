@@ -1,6 +1,5 @@
 import evans
 
-
 dynamic_handler_one = evans.DynamicHandler(
     dynamic_list=["f", "p", "niente", "mf"],  # niente + leak is weird
     flare_boolean_vector=[1, 0, 0, 1],

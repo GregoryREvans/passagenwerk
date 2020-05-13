@@ -1,12 +1,11 @@
+import numpy as np
+
 import abjad
 import evans
 from passagenwerk.Materials.score_structure.instruments import (
+    instrument_three_range_highest,
     instrument_three_range_lowest,
 )
-from passagenwerk.Materials.score_structure.instruments import (
-    instrument_three_range_highest,
-)
-import numpy as np
 
 sieve_1a = abjad.index([0, 1, 7], 8)
 sieve_1b = abjad.index([1, 3], 5)

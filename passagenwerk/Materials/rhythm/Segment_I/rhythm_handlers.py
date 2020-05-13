@@ -1,6 +1,6 @@
 import abjad
-import evans
 import abjadext.rmakers
+import evans
 from passagenwerk.Materials.rhythm.Segment_I.rhythm_makers import *
 
 silence_maker = abjadext.rmakers.stack(

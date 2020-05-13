@@ -1,10 +1,10 @@
 import evans
 from passagenwerk.Materials.pitch.Segment_I.pitches import (
-    sieve_list,
-    random_walk_list,
-    perm_list,
     chords,
+    perm_list,
+    random_walk_list,
     runs,
+    sieve_list,
 )
 
 pitch_handler_one = evans.PitchHandler(pitch_list=sieve_list, continuous=True)

@@ -1,10 +1,8 @@
 import abjad
-import evans
 import abjadext.rmakers
-
+import evans
 # from evans.abjad_functions.rtm.rtm_maker import RTMMaker_4
 from passagenwerk.Materials.rhythm.Segment_I.rtm_lists import final_rtm_list
-
 
 rmaker_one = abjadext.rmakers.stack(
     abjadext.rmakers.talea(

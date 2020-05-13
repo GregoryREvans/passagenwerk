@@ -1,7 +1,7 @@
 import numpy as np
+
 import evans
 from passagenwerk.Materials.pitch.Segment_I.pitch_handlers import *
-
 
 transition_prob = {
     "pitch_handler_one": {

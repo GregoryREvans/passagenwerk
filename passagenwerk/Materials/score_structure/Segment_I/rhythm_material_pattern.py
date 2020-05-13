@@ -1,7 +1,7 @@
 import numpy as np
+
 import evans
 from passagenwerk.Materials.rhythm.Segment_I.rhythm_handlers import *
-
 
 transition_prob = {
     "rhythm_handler_one": {
