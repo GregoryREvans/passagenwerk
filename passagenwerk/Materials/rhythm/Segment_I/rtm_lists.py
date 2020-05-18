@@ -1,6 +1,5 @@
 import evans
 
-
 nested_list = [1, [[1, [1, 1]], 1, [1, [1, 1, 1]], [1, [1, 1]], 1]]
 rtm = evans.nested_list_to_rtm(nested_list)
 flat = evans.flatten(nested_list)
