@@ -1,4 +1,7 @@
-from passagenwerk.Materials.articulations.Segment_I.articulation_handlers import *
+from passagenwerk.Materials.articulations.Segment_I.articulation_handlers import (
+    articulation_handler_one,
+    articulation_handler_two,
+)
 
 key_list_1 = [
     "articulation_handler_one",

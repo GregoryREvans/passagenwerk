@@ -20,6 +20,9 @@ before_install:
     # upgrade pip:
     - pip install --upgrade pip
 
+    # install flake8:
+    - pip install flake8
+
     # install isort:
     - pip install isort
 
@@ -76,10 +79,12 @@ before_install:
     - echo $PACKAGE
     - which isort-check
     - which black-check
+    - which flake8-check-local
 
 script:
     - isort-check $PACKAGE
     - black-check $PACKAGE
+    - flake8-check-local $PACKAGE
     - py.test -rf $PACKAGE/test.py
 
 notifications:

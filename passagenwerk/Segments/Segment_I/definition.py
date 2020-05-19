@@ -1,6 +1,5 @@
 import pathlib
 
-import abjad
 import evans
 from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
 from passagenwerk.Materials.score_structure.Segment_I.time_signatures import (
