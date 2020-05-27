@@ -1,3 +1,5 @@
+import typing
+
 import abjad
 import evans
 from passagenwerk.Materials.score_structure.instruments import (
@@ -25,7 +27,7 @@ sieve_7 = sieve_7a & sieve_7b
 sieve = sieve_1 | sieve_2 | sieve_3 | sieve_4 | sieve_5 | sieve_6 | sieve_7
 
 nums = [x for x in sieve.get_boolean_vector(total_length=100)]
-_list = [-12]
+_list: typing.List = [-12]
 for x in nums:
     base = _list[-1]
     _list.append(base + 0.5)
