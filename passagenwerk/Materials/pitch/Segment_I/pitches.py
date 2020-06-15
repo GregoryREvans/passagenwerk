@@ -59,7 +59,7 @@ sieve_list = [
         mapped_list=rotated_sieve,
     )
 ]
-######
+# #####
 
 _lst = [5, 6, 9, 11]
 permutations = evans.perm(_lst)
@@ -101,7 +101,7 @@ perm_list = evans.grouper(perms, group_list)  # keep experimenting with this...
 # print(perms)
 # print(perm_list)
 
-######
+# #####
 walk_list = []
 for x in range(-12, 26):
     walk_list.append(x)
@@ -117,7 +117,7 @@ random_walk_list = [
     )
 ]
 
-######
+# #####
 chords = [
     [3, 4],
     [3, 7],
@@ -133,7 +133,7 @@ chords = [
     [4, 15],
 ]
 
-######
+# #####
 rotated_walk_list2 = evans.rotate(mirrored_walk_list, 20)
 runs = [
     x
