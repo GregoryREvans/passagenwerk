@@ -42,17 +42,11 @@ maker = evans.SegmentMaker(
     score_template=score,
     time_signatures=time_signatures,
     clef_handlers=clef_handlers,
-    voicewise_persistent_indicators=None,
-    # voicewise_stem_directions=["up", "down", "up", "down"],
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=True,
     score_includes=[
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/first_stylesheet.ily",
-    ],
-    parts_includes=[
-        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
-        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/Build/parts_stylesheet.ily",
     ],
     segment_name="Segment_I",
     current_directory=pathlib.Path(__file__).parent,
@@ -64,7 +58,6 @@ maker = evans.SegmentMaker(
     tempo=((1, 4), 60),
     rehearsal_mark="",
     page_break_counts=[90],
-    midi=False,
 )
 
 maker.build_segment()
