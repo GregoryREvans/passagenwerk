@@ -2,6 +2,7 @@ import typing
 
 import abjad
 import evans
+
 from passagenwerk.Materials.score_structure.instruments import (
     instrument_three_range_highest,
     instrument_three_range_lowest,
