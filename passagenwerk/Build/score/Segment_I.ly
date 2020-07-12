@@ -1,4 +1,4 @@
-    
+
     \context Score = "passagenwerk Score"
     <<
 
