@@ -1,5 +1,3 @@
-import pathlib
-
 import evans
 
 from passagenwerk.Materials.score_structure.Segment_I.articulation_material_pattern import (
