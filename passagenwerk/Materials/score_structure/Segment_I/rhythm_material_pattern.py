@@ -13,15 +13,15 @@ key_list_1 = [
     "rhythm_handler_one",
     "rhythm_handler_one",
     "rhythm_handler_one",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_one",
     "rhythm_handler_six",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_one",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_three",
     "rhythm_handler_three",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_three",
     "rhythm_handler_three",
     "rhythm_handler_one",
@@ -29,7 +29,7 @@ key_list_1 = [
     "rhythm_handler_one",
     "rhythm_handler_three",
     "rhythm_handler_three",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
     "rhythm_handler_one",
@@ -44,7 +44,7 @@ key_list_1 = [
     "rhythm_handler_one",
     "rhythm_handler_four",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
 ]
 
 # np.random.seed(11)
@@ -52,11 +52,11 @@ key_list_1 = [
 key_list_2 = [
     "rhythm_handler_one",
     "rhythm_handler_one",
-    "rhythm_handler_two",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_one",
     "rhythm_handler_six",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
 ]
@@ -64,7 +64,7 @@ key_list_2 = [
 # np.random.seed(5)
 # key_list_3 = [x for x in material_chain.generate_states(current_state='rhythm_handler_one', no=20)]
 key_list_3 = [
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_three",
     "rhythm_handler_three",
     "rhythm_handler_three",
@@ -74,7 +74,7 @@ key_list_3 = [
     "rhythm_handler_four",
     "rhythm_handler_three",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
     "rhythm_handler_one",
@@ -91,23 +91,23 @@ key_list_3 = [
     "rhythm_handler_four",
     "rhythm_handler_four",
     "rhythm_handler_six",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
 ]
 
 # np.random.seed(17)
 # key_list_4 = [x for x in material_chain.generate_states(current_state='rhythm_handler_two', no=20)]
 key_list_4 = [
-    "rhythm_handler_two",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_one",
     "rhythm_handler_one",
     "rhythm_handler_one",
     "rhythm_handler_three",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
     "rhythm_handler_one",
@@ -124,7 +124,7 @@ key_list_4 = [
     "rhythm_handler_four",
     "rhythm_handler_four",
     "rhythm_handler_three",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
 ]
 
 # np.random.seed(13)
@@ -138,10 +138,10 @@ key_list_5 = [
     "rhythm_handler_one",
     "rhythm_handler_one",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_four",
-    "rhythm_handler_two",
+    # "rhythm_handler_two",
     "rhythm_handler_four",
     "rhythm_handler_three",
     "rhythm_handler_four",
