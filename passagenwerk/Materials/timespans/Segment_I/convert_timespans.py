@@ -32,6 +32,8 @@ segment_I_rhythm_timespans = evans.timespan.make_split_list(
     rhythm_timespan_list, bounds
 )
 
+# segment_I_rhythm_timespans = rhythm_timespan_list
+
 # ######
 # pitch#
 # ######

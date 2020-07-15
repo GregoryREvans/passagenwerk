@@ -10,21 +10,20 @@
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "Didot") \fontsize #3.5 \center-column {"to the University of Iowa Symphony Orchestra"}
-	title =  \markup \override #'(font-name . "Didot") \fontsize #16 \bold\center-column {"Passagenwerk" }
-	subtitle = \markup \override #'(font-name . "Didot") \center-column { \line{ \fontsize #23 ".                                   ."} \line{ \fontsize #7 "for string ensemble"} \line{ \fontsize #23 ".                                   ."} }
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #3 \center-column {"after Walter Benjamin"}
-	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
-	%{ arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"} %}
+	dedication = \markup \override #'(font-name . "STIXGeneral") \fontsize #3.5 \center-column {"to the University of Iowa Symphony Orchestra"}
+	title =  \markup \override #'(font-name . "STIXGeneral") \fontsize #16 \bold\center-column {"Passagenwerk" }
+	subtitle = \markup \override #'(font-name . "STIXGeneral") \center-column { \line{ \fontsize #23 ".                                   ."} \line{ \fontsize #7 "for string ensemble"} \line{ \fontsize #23 ".                                   ."} }
+	subsubtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #3 \center-column {"after Walter Benjamin"}
+	composer = \markup \override #'(font-name . "STIXGeneral") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
 \layout {
-    \accidentalStyle forget
+    \accidentalStyle dodecaphonic
 	%\accidentalStyle modern
 	%\accidentalStyle modern-cautionary
     %{ indent = #0 %}
 	ragged-last = ##t
-    %{ ragged-right = ##t %}
+    ragged-right = ##t
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -39,7 +38,7 @@
 		\override BarNumber.Y-extent = #'(0 . 0)
 		\override BarNumber.Y-offset = 0
 		\override BarNumber.extra-offset = #'(-4 . 0)
-		%\override BarNumber.font-name = "Didot"
+		%\override BarNumber.font-name = "STIXGeneral"
 		%{ \override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print) %}
 		\override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print)
 		\override BarNumber.font-size = 5
@@ -57,7 +56,7 @@
 		\override RehearsalMark.Y-offset = -2.5
 		\override RehearsalMark.break-align-symbols = #'(time-signature)
 		\override RehearsalMark.break-visibility = #end-of-line-invisible
-		\override RehearsalMark.font-name = "Didot"
+		\override RehearsalMark.font-name = "STIXGeneral"
 		\override RehearsalMark.font-size = 9.5
 		\override RehearsalMark.outside-staff-priority = 500
 		\override RehearsalMark.self-alignment-X = #center
@@ -73,37 +72,36 @@
 		\override TimeSignature.whiteout = ##t
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 13) (minimum-distance . 13) (padding . 4) (stretchability . 0))
     }
-    \context {
-        \Score
+	\context {
+		\Score
 		\remove Metronome_mark_engraver
-        \remove Bar_number_engraver
+		\remove Bar_number_engraver
 		\remove Mark_engraver
-        \accepts TimeSignatureContext
+		\accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
 		\override BarLine.hair-thickness = #0.9
 		\override BarLine.thick-thickness = #2.7
-		%\override BarLine.stencil = ##f
-        \override Beam.breakable = ##t
+		%{ \override BarLine.stencil = ##f %}
+		\override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
-		%{ \override Beam.beam-thickness = #0.8 %}
-        %{ \override Beam.length-fraction = #1.5 %}
+ 		%{ \override Beam.beam-thickness = #0.8 %}
+ 		%{ \override Beam.length-fraction = #1.5 %}
 		\override Clef.whiteout-style = #'outline
-  		\override Clef.whiteout = 1
+		\override Clef.whiteout = 1
 		\override DynamicText.font-size = #-2
 		\override DynamicLineSpanner.staff-padding = 5 %was 4.5
-        %{ \override DynamicLineSpanner.Y-extent = #'(-1.5 . 1.5) %}
-		\override Hairpin.bound-padding = #2 %is this necessary?
+		%{ \override DynamicLineSpanner.Y-extent = #'(-1.5 . 1.5) %}
+		%{ \override Hairpin.bound-padding = #2 %is this necessary? %}
 		\override Glissando.breakable = ##t
-		%{ \override Glissando.thickness = #2 %}
-		\override Glissando.thickness = #1.8
+		\override Glissando.thickness = #1.8 %was 2
 		%{ \override Stem.thickness = #0.5 %}
 		\override Staff.thickness = #0.5
 		\override MetronomeMark.font-size = 3
-        \override SpacingSpanner.strict-grace-spacing = ##t
-        \override SpacingSpanner.strict-note-spacing = ##t
-        \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 0))
-		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 0))
+		\override SpacingSpanner.strict-grace-spacing = ##t
+		\override SpacingSpanner.strict-note-spacing = ##t
+		\override SpacingSpanner.uniform-stretching = ##t
+		\override StaffGrouper.staff-staff-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 0))
+		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 0))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.slope = #0.3
 		%{ \override StemTremolo.shape = #'rectangle %}
@@ -111,47 +109,47 @@
 		%{ \override StemTremolo.flag-count = #3 %}
 		\override StemTremolo.beam-thickness = #0.3
 		\override TupletBracket.bracket-visibility = ##t
-        \override TupletBracket.minimum-length = #3
-        \override TupletBracket.padding = #1.5
+		\override TupletBracket.minimum-length = #3
+		\override TupletBracket.padding = #1.5
 		%{ \override TupletBracket.staff-padding = #1.5 %}
 		\override TupletBracket.staff-padding = #1.5
-        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+		\override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
 		\override TupletBracket.direction = #up
 		\override TupletNumber.font-size = 0.5
-        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+		\override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
 		%{ subdivideBeams = ##t %}
-		proportionalNotationDuration = #(ly:make-moment 1 15)
-        tupletFullLength = ##t
-    }
+		proportionalNotationDuration = #(ly:make-moment 1 25)
+		tupletFullLength = ##t
+	}
 	\context {
-        \Voice
-        \remove Forbid_line_break_engraver
-    }
-    \context {
-        \Staff
+		\Voice
+		\remove Forbid_line_break_engraver
+	}
+	\context {
+		\Staff
 		\remove Time_signature_engraver
 		fontSize = #-1
-    }
-    \context {
-        \RhythmicStaff
-        \remove Time_signature_engraver
-    }
-       \context {
-        \GrandStaff
+	}
+	\context {
+		\RhythmicStaff
+		\remove Time_signature_engraver
+	}
+	\context {
+		\GrandStaff
 		systemStartDelimiter = #'SystemStartSquare
 		%{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
     }
 	\context {
-	 \PianoStaff
-	 systemStartDelimiter = #'SystemStartBrace
-	 %{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
- }
- \context {
-  \StaffGroup
-  systemStartDelimiter = #'SystemStartBracket
+		\PianoStaff
+		systemStartDelimiter = #'SystemStartBrace
+		%{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
+	}
+	\context {
+ 		\StaffGroup
+		systemStartDelimiter = #'SystemStartBracket
   %{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0)) %}
-}
+	}
 
 
 }
@@ -179,10 +177,10 @@
 	evenHeaderMarkup = \markup ""
 	oddFooterMarkup = \markup
         \fill-line {
-            \override #'(font-name . "Didot")
+            \override #'(font-name . "STIXGeneral")
                 \bold \fontsize #3 "Passagenwerk"
             \concat {
-                \override #'(font-name . "Didot")
+                \override #'(font-name . "STIXGeneral")
                     \bold \fontsize #3
                         %{ \on-the-fly #print-page-number-check-first %}
                         \fromproperty #'page:page-number-string
@@ -191,12 +189,12 @@
     evenFooterMarkup = \markup
         \fill-line {
             \concat {
-                \override #'(font-name . "Didot")
+                \override #'(font-name . "STIXGeneral")
                     \bold \fontsize #3
                         %{ \on-the-fly #print-page-number-check-first %}
                         \fromproperty #'page:page-number-string
                 }
-            \override #'(font-name . "Didot")
+            \override #'(font-name . "STIXGeneral")
                 \bold \fontsize #3 "Passagenwerk"
             }
 }
