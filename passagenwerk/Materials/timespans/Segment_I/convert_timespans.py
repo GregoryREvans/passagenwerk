@@ -19,6 +19,7 @@ from passagenwerk.Materials.timespans.Segment_I.make_timespans import (
     pitch_timespan_list,
     rhythm_timespan_list,
 )
+
 from .make_timespans import music_specifiers
 
 voice_names = [specifier for specifier in music_specifiers]
