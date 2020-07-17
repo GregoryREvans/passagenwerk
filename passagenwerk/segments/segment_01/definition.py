@@ -3,11 +3,11 @@ import pathlib
 import evans
 
 from passagenwerk.materials.pitch.segment_01.clef_handlers import clef_handlers
+from passagenwerk.materials.score_structure.instruments import instruments as insts
+from passagenwerk.materials.score_structure.score_structure import score
 from passagenwerk.materials.score_structure.segment_01.time_signatures import (
     time_signatures,
 )
-from passagenwerk.materials.score_structure.instruments import instruments as insts
-from passagenwerk.materials.score_structure.score_structure import score
 from passagenwerk.materials.timespans.segment_01.convert_timespans import (
     segment_01_rhythm_timespans,
     segment_01_timespans,
