@@ -1,4 +1,4 @@
-from passagenwerk.Materials.pitch.Segment_I.pitch_handlers import (
+from passagenwerk.materials.pitch.segment_01.pitch_handlers import (
     pitch_handler_four,
     pitch_handler_one,
     pitch_handler_six,

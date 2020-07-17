@@ -1,4 +1,4 @@
-from passagenwerk.Materials.rhythm.Segment_I.rhythm_handlers import (
+from passagenwerk.materials.rhythm.segment_01.rhythm_handlers import (
     rhythm_handler_four,
     rhythm_handler_one,
     rhythm_handler_six,

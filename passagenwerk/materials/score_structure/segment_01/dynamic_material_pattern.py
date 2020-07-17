@@ -1,4 +1,4 @@
-from passagenwerk.Materials.dynamics.Segment_I.dynamic_handlers import (
+from passagenwerk.materials.dynamics.segment_01.dynamic_handlers import (
     dynamic_handler_one,
     dynamic_handler_two,
 )

@@ -1,19 +1,19 @@
 import evans
 
-from passagenwerk.Materials.score_structure.Segment_I.articulation_material_pattern import (
+from passagenwerk.materials.score_structure.segment_01.articulation_material_pattern import (
     articulation_material_list,
 )
-from passagenwerk.Materials.score_structure.Segment_I.dynamic_material_pattern import (
+from passagenwerk.materials.score_structure.segment_01.dynamic_material_pattern import (
     dynamic_material_list,
 )
-from passagenwerk.Materials.score_structure.Segment_I.pitch_material_pattern import (
+from passagenwerk.materials.score_structure.segment_01.pitch_material_pattern import (
     pitch_material_list,
 )
-from passagenwerk.Materials.score_structure.Segment_I.rhythm_material_pattern import (
+from passagenwerk.materials.score_structure.segment_01.rhythm_material_pattern import (
     rhythm_material_list,
 )
-from passagenwerk.Materials.score_structure.Segment_I.time_signatures import bounds
-from passagenwerk.Materials.timespans.Segment_I.make_timespans import (
+from passagenwerk.materials.score_structure.segment_01.time_signatures import bounds
+from passagenwerk.materials.timespans.segment_01.make_timespans import (
     articulation_timespan_list,
     dynamic_timespan_list,
     pitch_timespan_list,
@@ -34,11 +34,11 @@ for voice in voice_names:
         if span.voice_name == voice:
             span._handler = rhythm_mat(r=1)[0]
 
-segment_I_rhythm_timespans = evans.timespan.make_split_list(
+segment_01_rhythm_timespans = evans.timespan.make_split_list(
     rhythm_timespan_list, bounds
 )
 
-# segment_I_rhythm_timespans = rhythm_timespan_list
+# segment_01_rhythm_timespans = rhythm_timespan_list
 
 # ######
 # pitch#
@@ -50,7 +50,7 @@ for voice in voice_names:
         if span.voice_name == voice:
             span._handler = pitch_mat(r=1)[0]
 
-segment_I_pitch_timespans = pitch_timespan_list
+segment_01_pitch_timespans = pitch_timespan_list
 
 # ########
 # dynamic#
@@ -62,7 +62,7 @@ for voice in voice_names:
         if span.voice_name == voice:
             span._handler = dynamic_mat(r=1)[0]
 
-segment_I_dynamic_timespans = dynamic_timespan_list
+segment_01_dynamic_timespans = dynamic_timespan_list
 
 # #############
 # articulation#
@@ -74,13 +74,13 @@ for voice in voice_names:
         if span.voice_name == voice:
             span._handler = articulation_mat(r=1)[0]
 
-segment_I_articulation_timespans = articulation_timespan_list
+segment_01_articulation_timespans = articulation_timespan_list
 
 # ##############
 # all timespans#
 # ##############
-segment_I_timespans = [
-    segment_I_pitch_timespans,
-    # segment_I_dynamic_timespans,
-    # segment_I_articulation_timespans,
+segment_01_timespans = [
+    segment_01_pitch_timespans,
+    # segment_01_dynamic_timespans,
+    # segment_01_articulation_timespans,
 ]

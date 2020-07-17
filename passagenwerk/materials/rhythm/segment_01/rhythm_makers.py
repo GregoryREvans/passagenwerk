@@ -2,7 +2,7 @@ import abjad
 import abjadext.rmakers
 import evans
 
-from passagenwerk.Materials.rhythm.Segment_I.rtm_lists import final_rtm_list
+from passagenwerk.materials.rhythm.segment_01.rtm_lists import final_rtm_list
 
 rmaker_one = abjadext.rmakers.stack(
     abjadext.rmakers.talea(

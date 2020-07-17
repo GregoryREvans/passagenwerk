@@ -1,6 +1,6 @@
 import evans
 
-from passagenwerk.Materials.pitch.Segment_I.pitches import (
+from passagenwerk.materials.pitch.segment_01.pitches import (
     chords,
     perm_list,
     random_walk_list,

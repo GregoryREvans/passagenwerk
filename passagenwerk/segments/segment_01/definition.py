@@ -2,15 +2,15 @@ import pathlib
 
 import evans
 
-from passagenwerk.Materials.pitch.Segment_I.clef_handlers import clef_handlers
-from passagenwerk.Materials.score_structure.Segment_I.time_signatures import (
+from passagenwerk.materials.pitch.segment_01.clef_handlers import clef_handlers
+from passagenwerk.materials.score_structure.segment_01.time_signatures import (
     time_signatures,
 )
-from passagenwerk.Materials.score_structure.instruments import instruments as insts
-from passagenwerk.Materials.score_structure.score_structure import score
-from passagenwerk.Materials.timespans.Segment_I.convert_timespans import (
-    segment_I_rhythm_timespans,
-    segment_I_timespans,
+from passagenwerk.materials.score_structure.instruments import instruments as insts
+from passagenwerk.materials.score_structure.score_structure import score
+from passagenwerk.materials.timespans.segment_01.convert_timespans import (
+    segment_01_rhythm_timespans,
+    segment_01_timespans,
 )
 
 maker = evans.SegmentMaker(
@@ -38,8 +38,8 @@ maker = evans.SegmentMaker(
         "cb.",
     ],
     name_staves=True,
-    rhythm_timespans=segment_I_rhythm_timespans,
-    handler_timespans=segment_I_timespans,
+    rhythm_timespans=segment_01_rhythm_timespans,
+    handler_timespans=segment_01_timespans,
     score_template=score,
     time_signatures=time_signatures,
     clef_handlers=clef_handlers,
@@ -49,7 +49,7 @@ maker = evans.SegmentMaker(
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/first_stylesheet.ily",
     ],
-    segment_name="Segment_I",
+    segment_name="segment_01",
     current_directory=pathlib.Path(__file__).resolve().parent,
     cutaway=False,
     beam_pattern="meter",
