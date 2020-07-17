@@ -1,3 +1,4 @@
+import abjad
 import evans
 
 from passagenwerk.materials.score_structure.segment_01.articulation_material_pattern import (
@@ -40,6 +41,15 @@ segment_01_rhythm_timespans = evans.timespan.make_split_list(
 
 # segment_01_rhythm_timespans = rhythm_timespan_list
 
+rhythm_commands = []
+for span in segment_01_rhythm_timespans:
+    r_command = evans.RhythmCommand(
+        voice_name=span.voice_name,
+        timespan=abjad.Timespan(span.start_offset, span.stop_offset),
+        handler=span.handler,
+    )
+    rhythm_commands.append(r_command)
+
 # ######
 # pitch#
 # ######
@@ -51,6 +61,15 @@ for voice in voice_names:
             span._handler = pitch_mat(r=1)[0]
 
 segment_01_pitch_timespans = pitch_timespan_list
+
+pitch_commands = []
+for span in segment_01_pitch_timespans:
+    command = evans.HandlerCommand(
+        voice_name=span.voice_name,
+        timespan=abjad.Timespan(span.start_offset, span.stop_offset),
+        handler=span.handler,
+    )
+    pitch_commands.append(command)
 
 # ########
 # dynamic#
@@ -77,10 +96,8 @@ for voice in voice_names:
 segment_01_articulation_timespans = articulation_timespan_list
 
 # ##############
-# all timespans#
+# all commands#
 # ##############
-segment_01_timespans = [
-    segment_01_pitch_timespans,
-    # segment_01_dynamic_timespans,
-    # segment_01_articulation_timespans,
+handler_commands = [
+    pitch_commands,
 ]
