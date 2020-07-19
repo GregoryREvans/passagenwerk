@@ -4,6 +4,7 @@ import abjad
 import evans
 
 from passagenwerk.materials.pitch.segment_01.clef_handlers import clef_handlers
+from passagenwerk.materials.pitch.segment_01.pitch_handlers import global_pitch_handler
 from passagenwerk.materials.score_structure.instruments import instruments as insts
 from passagenwerk.materials.score_structure.score_structure import score
 from passagenwerk.materials.score_structure.segment_01.time_signatures import (
@@ -53,6 +54,11 @@ maker = evans.SegmentMaker(
         ),
         "skips",
         handler_commands,
+        evans.call(
+            "vertical",
+            global_pitch_handler,
+            evans.return_vertical_moment_ties,
+        ),
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,

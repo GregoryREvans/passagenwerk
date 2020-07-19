@@ -1,21 +1,26 @@
 import evans
+from abjadext import microtones
 
-from passagenwerk.materials.pitch.segment_01.pitches import (
-    chords,
-    perm_list,
-    random_walk_list,
-    runs,
-    sieve_list,
+pitch_handler_one = evans.PitchHandler(pitch_list=[12], continuous=True)
+
+pitch_handler_two = evans.PitchHandler(pitch_list=[0], continuous=True)
+
+pitch_handler_three = evans.PitchHandler(pitch_list=[-12], continuous=True)
+
+pitch_handler_four = evans.PitchHandler(pitch_list=[-24], continuous=True)
+
+pitch_class_segment = microtones.PitchClassSegment([0, 1, 4, 6])
+
+pitch_class_segment += pitch_class_segment.invert(5)
+pitch_class_segment += pitch_class_segment.multiply(1.5)
+pitch_class_segment += pitch_class_segment.retrograde()
+
+global_pitch_handler = evans.PitchHandler(
+    pitch_list=[
+        evans.to_nearest_eighth_tone(_)
+        for _ in pitch_class_segment
+    ],
+    continuous=True,
+    to_ties=True,
+    apply_all=True,
 )
-
-pitch_handler_one = evans.PitchHandler(pitch_list=sieve_list, continuous=True)
-
-pitch_handler_two = evans.PitchHandler(pitch_list=sieve_list, continuous=True)
-
-pitch_handler_three = evans.PitchHandler(pitch_list=random_walk_list, continuous=True)
-
-pitch_handler_four = evans.PitchHandler(pitch_list=perm_list, continuous=True)
-
-pitch_handler_five = evans.PitchHandler(pitch_list=chords, continuous=True)
-
-pitch_handler_six = evans.PitchHandler(pitch_list=runs, continuous=True)

@@ -108,13 +108,19 @@
                             \markup { "Violin I-1" }                           %! applying staff names and clefs
                             \clef "treble"
                             \override Staff.Stem.stemlet-length = 0.75
-                            aqs'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''8
                             [
 
-                            aqf'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''16
 
                             \revert Staff.Stem.stemlet-length
-                            af'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''8.
                             ~
                             ]
 
@@ -123,16 +129,24 @@
                             \times 14/13 {
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                af'8.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''8.
 
-                                g'4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''4
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                bf'8.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                c''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                aqf'8.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                df''8.
                                 ]
 
                             }
@@ -153,19 +167,27 @@
                             r4
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            aqs'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            aqf'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            af'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            g'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef''8.
                             ~
                             ]
 
@@ -174,167 +196,133 @@
                                 % [Voice 1 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'8.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                ef''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                bf'8
-                                ~
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''8
                                 ]
 
                             }
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "16")
-                            \times 4/3 {
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                bf'8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                aqf'16
-                                ]
-
-                            }
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''4
 
                             r4
                             % [Voice 1 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r2
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            b'8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            c''8
-                            ~
-                            ]
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
-                            \times 4/5 {
-                                % [Voice 1 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "16")
+                            \times 4/3 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                c''8.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                b'8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                c''16
+                                ~
                                 ]
 
                             }
+                            % [Voice 1 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c''16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''8
                             [
 
-                            dqs''16
-
-                            dqf''16
-
                             \revert Staff.Stem.stemlet-length
-                            b'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf''8
                             ]
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''4
+                            ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c''16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
                             [
 
-                            b'16
-
-                            c''16
-
                             \revert Staff.Stem.stemlet-length
-                            aqf'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''8
+                            ~
                             ]
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            bf16
-                            [
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''4
+                            ~
 
-                            bqf16
-
-                            b16
-
-                            \revert Staff.Stem.stemlet-length
-                            bf16
-                            ]
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
-                            \times 8/9 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
+                            \times 4/5 {
                                 % [Voice 1 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \override Staff.Stem.stemlet-length = 0.75
-                                aqs16
-                                [
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-quarter-flat-markup
+                                df''4
 
-                                bqf16
-
-                                c'16
-
-                                cqs'16
-
-                                bqs16
-
-                                cs'16
-
-                                ef'16
-
-                                eqf'16
-
-                                \revert Staff.Stem.stemlet-length
-                                dqs'16
-                                ]
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''4.
+                                ~
 
                             }
                             % [Voice 1 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            b'8
-                            [
-
-                            c''8
-
-                            b'16
-
-                            \revert Staff.Stem.stemlet-length
-                            c''16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''4.
                             ~
-                            ]
                             % [Voice 1 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c''4.
-                            % [Voice 1 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''8
 
-                            g'4
-
-                            fqs'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''4
                             ~
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            fqs'16
-                            [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
+                            \times 5/6 {
+                                % [Voice 1 measure 12]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \revert Staff.Stem.stemlet-length
-                            fs'8.
-                            ~
-                            ]
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-quarter-flat-markup
+                                df''4.
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
-                            \times 2/3 {
-                                % [Voice 1 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                fs'8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                gqf'16
-                                ]
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''4.
 
                             }
+                            % [Voice 1 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''8
 
                             r8
 
@@ -380,28 +368,73 @@
 
                             r4
 
-                            dqs''8
-                            ~
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "16")
+                            \times 10/11 {
 
-                            dqs''4
+                                \override Staff.Stem.stemlet-length = 0.75
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                ef''8.
+                                [
 
-                            dqf''4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''8
+
+                                \revert Staff.Stem.stemlet-length
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''16
+                                ]
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''4
+                                ~
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''16
+                                ~
+
+                            }
                             % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            a4.
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''16
                             ~
+                            ]
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''4
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                a4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''8
 
-                                aqs8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''4
 
                             }
                             % [Voice 2 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            bf4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''4
 
                             r8
                             % [Voice 2 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -415,59 +448,113 @@
                             r8
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "8")
-                            \times 5/4 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
+                            \times 5/6 {
 
-                                b'4.
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''4.
 
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
                                 c''8
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''4
                                 ~
 
                             }
                             % [Voice 2 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c''4
-
-                            a4
-
-                            af4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''4
                             ~
-                            % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            af8
-
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 14) "16")
-                            \times 14/13 {
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                aqf16
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                aqs16
-                                ]
-
-                                bqf4.
-
-                                bf4
-
-                                b16
-                                ~
-
-                            }
-                            % [Voice 2 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            b8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
                             ~
                             ]
 
-                            c'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''4
+                            % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
+                            ~
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''16
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8.
+                            ~
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef''8
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef''8.
+                            ~
+                            ]
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
+                            \times 6/7 {
+                                % [Voice 2 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                ef''8.
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''4
+
+                            }
 
                             r8
                             % [Voice 2 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -480,39 +567,32 @@
 
                             r4
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
-                            \times 2/3 {
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
+                            \times 5/6 {
+                                % [Voice 2 measure 12]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''2
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'16
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                df''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                bf'8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                c''8
                                 ]
 
                             }
-                            % [Voice 2 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            aqf'16
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            b'16
-                            ~
-                            ]
-
-                            b'4
-                            ~
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            b'16
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            bf'8.
-                            ]
                             % [Voice 2 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -561,21 +641,11 @@
                             r1 * 3/16
 
                             R1 * 3/16
+                            % [Voice 3 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "16")
-                            \times 4/3 {
-                                % [Voice 3 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                aqs'16
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                bf'8
-                                ]
-
-                            }
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''4
 
                             r8
 
@@ -588,43 +658,87 @@
                             R1 * 5/16
                             % [Voice 3 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            cqs'8.
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            bqs8.
-                            ]
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''4.
+                            ~
                             % [Voice 3 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            bqf2
-                            ~
-
                             \override Staff.Stem.stemlet-length = 0.75
-                            bqf8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            b'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
+                            ~
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8.
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+                            ~
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''8
                             ~
                             ]
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "8")
-                            \times 6/5 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) "16")
+                            \times 12/13 {
                                 % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                b'4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-quarter-flat-markup
+                                df''4
 
-                                c''4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''4
 
-                                aqf'8
+                                \override Staff.Stem.stemlet-length = 0.75
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                c''8.
+                                [
+
+                                \revert Staff.Stem.stemlet-length
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''8
                                 ~
+                                ]
 
                             }
                             % [Voice 3 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            aqf'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf''8
 
                             r8
 
@@ -633,49 +747,150 @@
 
                             r8
 
-                            f'8
-                            ~
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''16
+                            [
 
-                            f'4
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''16
+                            ]
 
-                            fs'2
-                            ~
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df''16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf''16
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''16
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''16
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''16
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''16
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''16
+                            ]
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "8")
-                            \times 3/4 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
+                            \times 6/7 {
                                 % [Voice 3 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                fs'8
+                                \override Staff.Stem.stemlet-length = 0.75
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''16
+                                [
 
-                                a'4.
-                                ~
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''16
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''16
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                df''16
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''16
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''16
+
+                                \revert Staff.Stem.stemlet-length
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                c''16
+                                ]
 
                             }
 
-                            a'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
                             ~
                             % [Voice 3 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            a'4.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''4.
                             ~
-                            % [Voice 3 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            a'8
-                            [
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                            \times 2/3 {
+                                % [Voice 3 measure 11]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            dqf''8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''4
 
-                            c''16
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                ef''8
 
-                            \revert Staff.Stem.stemlet-length
-                            aqs'16
-                            ~
-                            ]
+                            }
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''8
                             % [Voice 3 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            aqs'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8
 
                             r4
 
@@ -727,77 +942,90 @@
 
                             r4.
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) "16")
-                            \times 8/7 {
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                aqf'16
-                                [
-
-                                af'8
-
-                                g'16
-
-                                \revert Staff.Stem.stemlet-length
-                                bf'8.
-                                ~
-                                ]
-
-                            }
-                            % [Voice 4 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
                             \override Staff.Stem.stemlet-length = 0.75
-                            bf'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            bf8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''8
                             ~
                             ]
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            bf16
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            b8.
-                            ]
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''4
 
                             \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "16")
-                            \times 6/7 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "16")
+                            \times 10/11 {
+                                % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''16
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''4.
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                ef''4
+
+                            }
+
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                            \times 6/5 {
                                 % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                c'4
-                                ~
-
                                 \override Staff.Stem.stemlet-length = 0.75
-                                c'16
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                bf''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                cqs'8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                e''8
+                                ~
                                 ]
 
                             }
                             % [Voice 4 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            dqf'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e''8.
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            cqs'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            cqs'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             [
 
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''16
+
                             \revert Staff.Stem.stemlet-length
-                            c'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef''8
                             ]
 
                             r4
@@ -807,60 +1035,65 @@
                             r1 * 3/8
 
                             R1 * 3/8
+                            % [Voice 4 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "8")
-                            \times 6/7 {
-                                % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df''4
 
-                                b4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''2
+                            ~
+                            % [Voice 4 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                bf8
-
-                                aqs2
-                                ~
-
-                            }
-
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "8")
-                            \times 4/3 {
-                                % [Voice 4 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                aqs8
-
-                                aqf4
-
-                            }
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''2
 
                             r2
                             % [Voice 4 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r4
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''4
+                            ~
 
-                                gqs8
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "8")
+                            \times 3/4 {
+                                % [Voice 4 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                af4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''4.
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                a''8
+                                ~
 
                             }
-                            % [Voice 4 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            aqf'4.
-                            ~
                             % [Voice 4 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            aqf'8
-                            [
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a''8
 
-                            b'8
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
+                            \times 4/5 {
 
-                            \revert Staff.Stem.stemlet-length
-                            c''8
-                            ]
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \flat-markup
+                                gf''4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \one-quarter-flat-markup
+                                df''16
+
+                            }
                             % [Voice 4 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -915,42 +1148,71 @@
                         \clef "varC"
                         r4
 
-                        <b' e''>8
-                        ~
-                        % [Voice 5 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        <b' e''>4.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        bf'8
                         ~
 
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
-                        \times 4/5 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                        \times 6/5 {
+                            % [Voice 5 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            <b' e''>8
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf'16
+                            [
 
-                            f''4.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8.
 
-                            \clef "treble"
-                            bf''8
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf'16
+                            ]
+
+                        }
+
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) "8")
+                        \times 4/3 {
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef'4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8
                             ~
 
                         }
                         % [Voice 5 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        bf''8
-
-                        af''4
-                        ~
-
-                        af''4
-                        % [Voice 5 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c'4.
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        <g b>8.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df'8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        g'8.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e'8
+                        ~
                         ]
+                        % [Voice 5 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e'4.
                         % [Voice 5 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -961,48 +1223,52 @@
 
                         r2
 
-                        b'4
-                        % [Voice 5 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        bf'8.
-                        [
-
-                        \revert Staff.Stem.stemlet-length
-                        g'16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df'4
                         ~
-                        ]
-
-                        g'4
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        fs'8
-                        [
-
-                        eqf'16
-
-                        \revert Staff.Stem.stemlet-length
-                        eqs'16
-                        ~
-                        ]
-                        % [Voice 5 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        eqs'4
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) "16")
-                        \times 12/11 {
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "8")
+                        \times 6/7 {
+                            % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            eqf'4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df'4
 
-                            eqs'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a'4
 
-                            dqf'4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef'4.
+                            ~
 
                         }
+                        % [Voice 5 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        ef'8
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'8
+                        ]
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'2.
                         % [Voice 5 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        fqs'4
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a'4
 
                         r4
                         % [Voice 5 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1015,17 +1281,31 @@
 
                         r8
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        dqs'8
-                        [
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a'4
 
-                        \revert Staff.Stem.stemlet-length
-                        fqs'8
-                        ~
-                        ]
-                        % [Voice 5 measure 12]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
+                        \times 4/5 {
+                            % [Voice 5 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        fqs'4
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf'16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf'8
+                            ]
+
+                        }
 
                         r8
 
@@ -1062,98 +1342,143 @@
 
                     \context Voice = "Voice 6"
                     {
-                        % [Voice 6 measure 1]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        \set Staff.shortInstrumentName =                       %! applying staff names and clefs
-                        \markup { vla.-2 }                                     %! applying staff names and clefs
-                        \set Staff.instrumentName =                            %! applying staff names and clefs
-                        \markup { Viola-2 }                                    %! applying staff names and clefs
-                        \clef "varC"
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                        \times 6/5 {
+                            % [Voice 6 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \set Staff.shortInstrumentName =                   %! applying staff names and clefs
+                            \markup { vla.-2 }                                 %! applying staff names and clefs
+                            \set Staff.instrumentName =                        %! applying staff names and clefs
+                            \markup { Viola-2 }                                %! applying staff names and clefs
+                            \clef "varC"
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df'4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a'16
+                            ~
+
+                        }
+                        % [Voice 6 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
                         \override Staff.Stem.stemlet-length = 0.75
-                        d'16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a'8.
                         [
 
-                        cs'16
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'8.
+                        ]
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df'4
                         ~
 
-                        cs'16
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df'16
+                        [
 
-                        dqs'16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c'16
+                        ~
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c'16
 
                         \revert Staff.Stem.stemlet-length
-                        ef'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'16
+                        ]
+                        % [Voice 6 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'4
+                        ~
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'16
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'16
+                        ~
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'8.
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a'16
                         ~
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 14) "16")
-                        \times 14/15 {
-                            % [Voice 6 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            ef'4
-
-                            e'4
-
-                            fqs'8.
-
-                            eqf'4
-                            ~
-
-                        }
-                        % [Voice 6 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        eqf'16
-                        [
-
-                        fs'16
-                        ~
-
-                        fs'16
-
-                        gqf'16
-
-                        \revert Staff.Stem.stemlet-length
-                        g'8
-                        ~
-                        ]
-
-                        g'4
-                        ~
-                        % [Voice 6 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        g'16
-                        [
-
-                        bf'16
-                        ~
-
-                        bf'8.
-
-                        \revert Staff.Stem.stemlet-length
-                        af16
-                        ~
-                        ]
-
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
-                        \times 8/9 {
-                            % [Voice 6 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            af8
-
-                            cs'4
-                            ~
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
+                        \times 6/5 {
+                            % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            cs'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a'8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            d''8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8.
+                            ~
                             ]
 
                         }
+                        % [Voice 6 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c'8
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        bf'8
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e'16
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'8.
+                        ]
 
                         r4
                         % [Voice 6 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1164,44 +1489,65 @@
                         R1 * 3/8
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 12) "16")
-                        \times 12/11 {
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) "16")
+                        \times 12/13 {
                             % [Voice 6 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            fs''16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8.
 
-                            <ef'' af''>4.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            ef'4
 
-                            aqf'4
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df'8.
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df'8.
+                            ]
 
                         }
                         % [Voice 6 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         r2.
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        a16
-                        [
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a'4
 
-                        bf16
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) "16")
+                        \times 8/7 {
+                            % [Voice 6 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        aqs16
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf'8
+                            [
 
-                        \revert Staff.Stem.stemlet-length
-                        aqf16
-                        ]
-                        % [Voice 6 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c'8
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        gqs8
-                        [
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e'16
 
-                        \revert Staff.Stem.stemlet-length
-                        g8
-                        ~
-                        ]
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df'8
+                            ]
 
-                        g4
+                        }
                         % [Voice 6 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1276,26 +1622,62 @@
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
                         \times 5/6 {
 
-                            eqs'2
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df4
 
-                            eqf'4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df4.
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e8
                             ~
 
                         }
-                        % [Voice 7 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        eqf'8
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "8")
+                        \times 5/4 {
+                            % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        dqs'4
-                        ~
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e8
 
-                        dqs'4
-                        ~
-                        % [Voice 7 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a4.
+                            ~
 
-                        dqs'4
+                        }
 
-                        a8
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                        \times 2/3 {
+                            % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a8
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df8
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df8
+                            ]
+
+                        }
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8
                         ~
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -1303,44 +1685,57 @@
                         \times 6/7 {
                             % [Voice 7 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf2
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
                             a4.
-
-                            ef'4.
-
-                            bf8
-                            ~
 
                         }
                         % [Voice 7 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c4
+                        ~
+
                         \override Staff.Stem.stemlet-length = 0.75
-                        bf8.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        cs'16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df8
                         ~
                         ]
 
-                        cs'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df4
                         ~
-
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "8")
-                        \times 3/4 {
-
-                            cs'4.
-
-                            \clef "treble"
-                            <c'' fs''>8
-
-                        }
                         % [Voice 7 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        e''4
-                        ~
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df8.
+                        [
 
-                        e''8
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df16
+                        ~
+                        ]
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
 
                         r8
 
@@ -1351,41 +1746,33 @@
 
                         r8
 
-                        cs''8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
                         ~
                         % [Voice 7 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        cs''8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c8
                         ~
                         ]
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        c'16
-                        [
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c4
+                        % [Voice 7 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        \revert Staff.Stem.stemlet-length
-                        <b ef'>8.
-                        ~
-                        ]
-
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
-                        \times 2/3 {
-                            % [Voice 7 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            <b ef'>8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            b'16
-                            ]
-
-                        }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        ef8
 
                         r4
                         % [Voice 7 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1443,60 +1830,90 @@
                         r1 * 3/16
 
                         R1 * 3/16
-                        % [Voice 8 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        f'16
-                        [
-
-                        \clef "tenorvarC"
-                        \revert Staff.Stem.stemlet-length
-                        b'16
-                        ]
-
-                        bf'4
-                        ~
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        bf'8
-                        [
-
-                        \clef "treble"
-                        \revert Staff.Stem.stemlet-length
-                        e''8
-                        ~
-                        ]
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        e''8
-                        [
-
-                        \revert Staff.Stem.stemlet-length
-                        <d' d''>8
-                        ~
-                        ]
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 10) "16")
-                        \times 10/9 {
-                            % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            <d' d''>16
-
-                            fs'4
-                            ~
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) "8")
+                        \times 7/6 {
+                            % [Voice 8 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            fs'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
                             [
 
-                            eqs'8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            bf8
 
                             \revert Staff.Stem.stemlet-length
-                            d'16
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df8
                             ]
 
                         }
+                        % [Voice 8 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a16
+                        [
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c16
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf16
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        ef16
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df16
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a16
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf16
+                        [
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a16
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c16
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf16
+                        ]
                         % [Voice 8 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1509,47 +1926,87 @@
 
                         r8
 
-                        dqf'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        dqf'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        d'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8
                         ~
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) "8")
-                        \times 6/7 {
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 13 12) "16")
+                        \times 12/13 {
                             % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            d'2
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
+                            [
 
-                            dqf'4.
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e8.
+                            ]
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e4
                             ~
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a16
+                            ]
 
                         }
                         % [Voice 8 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        dqf'8
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e8
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a8
                         ~
+                        ]
 
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) "8")
-                        \times 5/4 {
-
-                            dqf'4.
-
-                            af8
-                            ~
-
-                        }
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a2
+                        ~
                         % [Voice 8 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        af8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a8
 
                         r8
 
@@ -1558,36 +2015,69 @@
 
                         r8
 
-                        a8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        a8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        df8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        aqs8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8
                         ~
                         ]
-                        % [Voice 8 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        aqs4
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "8")
+                        \times 3/4 {
+                            % [Voice 8 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        aqf8
-                        ~
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df4.
+
+                        }
                         % [Voice 8 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        aqf4.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf4.
                         % [Voice 8 measure 12]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        aqs4.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a4.
                         ~
 
-                        aqs4
-                        % [Voice 8 measure 13]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a4
+                        ~
 
-                        bf2
-                        \bar "||"
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
+                        \times 4/5 {
+                            % [Voice 8 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df4.
+                            \bar "||"
+
+                        }
                         % [Voice 8 measure 14]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
@@ -1633,10 +2123,21 @@
 
                         r4.
 
-                        \clef "tenorvarC"
-                        b'4
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a8
+                        [
 
-                        c''4
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e8
+                        ]
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e4
                         ~
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -1644,33 +2145,44 @@
                         \times 5/4 {
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c''8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            e4.
 
-                            \clef "treble"
-                            cqs''4.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \one-quarter-flat-markup
+                            df8
                             ~
 
                         }
                         % [Voice 9 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        cqs''8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \one-quarter-flat-markup
+                        df8
 
-                        bf'4
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c4
                         ~
+                        % [Voice 9 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "16")
-                        \times 8/9 {
-                            % [Voice 9 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        c2
 
-                            bf'8
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                        \times 2/3 {
 
-                            bqs'4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a8
 
-                            aqs'8.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a4
 
                         }
-
-                        bf'4
                         % [Voice 9 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1680,43 +2192,78 @@
                         % [Voice 9 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        aqs'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        bf'8
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8.
+                        ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        f''16
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        cs''8.
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8.
                         ]
 
-                        g''4
-                        ~
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf4
 
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 8) "8")
-                        \times 8/9 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 16) "16")
+                        \times 16/15 {
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g''8
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf8
+                            [
 
-                            a''2
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            df16
+                            ]
 
-                            \ottava 1
-                            <c''' d'''>8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c4.
 
-                            \ottava 0
-                            af''4.
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            a8
                             ~
 
                         }
                         % [Voice 9 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        af''4
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        a16
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf8.
+                        ]
 
                         r4
                         % [Voice 9 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()

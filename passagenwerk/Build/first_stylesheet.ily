@@ -4,8 +4,6 @@
 \language "english"
 #(set-default-paper-size "11x17portrait")
 #(set-global-staff-size 13)
-\include "ekmel.ily"
-\ekmelicStyle evans
 
 \header {
 	tagline = ##f
@@ -19,8 +17,6 @@
 
 \layout {
     \accidentalStyle dodecaphonic
-	%\accidentalStyle modern
-	%\accidentalStyle modern-cautionary
     %{ indent = #0 %}
 	ragged-last = ##t
     ragged-right = ##t
@@ -125,6 +121,7 @@
 	\context {
 		\Voice
 		\remove Forbid_line_break_engraver
+		\override Accidental.font-size = 1
 	}
 	\context {
 		\Staff

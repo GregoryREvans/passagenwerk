@@ -7,9 +7,6 @@ from passagenwerk.materials.score_structure.segment_01.articulation_material_pat
 from passagenwerk.materials.score_structure.segment_01.dynamic_material_pattern import (
     dynamic_material_list,
 )
-from passagenwerk.materials.score_structure.segment_01.pitch_material_pattern import (
-    pitch_material_list,
-)
 from passagenwerk.materials.score_structure.segment_01.rhythm_material_pattern import (
     rhythm_material_list,
 )
@@ -19,6 +16,12 @@ from passagenwerk.materials.timespans.segment_01.make_timespans import (
     dynamic_timespan_list,
     pitch_timespan_list,
     rhythm_timespan_list,
+)
+from passagenwerk.materials.pitch.segment_01.pitch_handlers import (
+    pitch_handler_one,
+    pitch_handler_two,
+    pitch_handler_three,
+    pitch_handler_four,
 )
 
 from .make_timespans import music_specifiers
@@ -30,10 +33,11 @@ voice_names = [specifier for specifier in music_specifiers]
 # #######
 rhythm_mat = evans.CyclicList(rhythm_material_list, continuous=True)
 
-for voice in voice_names:
-    for span in rhythm_timespan_list:
-        if span.voice_name == voice:
-            span._handler = rhythm_mat(r=1)[0]
+iter_rhythm_timespan_list = [t for t in rhythm_timespan_list]
+iter_rhythm_timespan_list.sort(key=lambda _: _)
+
+for span in iter_rhythm_timespan_list:
+    span._handler = rhythm_mat(r=1)[0]
 
 segment_01_rhythm_timespans = evans.timespan.make_split_list(
     rhythm_timespan_list, bounds
@@ -55,12 +59,24 @@ evans.intercalate_silences(rhythm_commands)
 # ######
 # pitch#
 # ######
-pitch_mat = evans.CyclicList(pitch_material_list, continuous=True)
+voicewise_material = abjad.OrderedDict(
+    [
+        ("Voice 1", pitch_handler_one),
+        ("Voice 2", pitch_handler_one),
+        ("Voice 3", pitch_handler_one),
+        ("Voice 4", pitch_handler_one),
+        ("Voice 5", pitch_handler_two),
+        ("Voice 6", pitch_handler_two),
+        ("Voice 7", pitch_handler_three),
+        ("Voice 8", pitch_handler_three),
+        ("Voice 9", pitch_handler_four),
+    ]
+)
 
 for voice in voice_names:
     for span in pitch_timespan_list:
         if span.voice_name == voice:
-            span._handler = pitch_mat(r=1)[0]
+            span._handler = voicewise_material[voice]
 
 segment_01_pitch_timespans = pitch_timespan_list
 
