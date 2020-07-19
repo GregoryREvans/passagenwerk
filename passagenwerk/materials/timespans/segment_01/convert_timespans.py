@@ -1,6 +1,12 @@
 import abjad
 import evans
 
+from passagenwerk.materials.pitch.segment_01.pitch_handlers import (
+    pitch_handler_four,
+    pitch_handler_one,
+    pitch_handler_three,
+    pitch_handler_two,
+)
 from passagenwerk.materials.score_structure.segment_01.articulation_material_pattern import (
     articulation_material_list,
 )
@@ -16,12 +22,6 @@ from passagenwerk.materials.timespans.segment_01.make_timespans import (
     dynamic_timespan_list,
     pitch_timespan_list,
     rhythm_timespan_list,
-)
-from passagenwerk.materials.pitch.segment_01.pitch_handlers import (
-    pitch_handler_one,
-    pitch_handler_two,
-    pitch_handler_three,
-    pitch_handler_four,
 )
 
 from .make_timespans import music_specifiers

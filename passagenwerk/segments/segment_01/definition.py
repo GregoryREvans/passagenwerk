@@ -55,9 +55,7 @@ maker = evans.SegmentMaker(
         "skips",
         handler_commands,
         evans.call(
-            "vertical",
-            global_pitch_handler,
-            evans.return_vertical_moment_ties,
+            "vertical", global_pitch_handler, evans.return_vertical_moment_ties,
         ),
         evans.call(
             "score",

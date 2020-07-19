@@ -120,18 +120,18 @@
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                a''4
+                                e''4
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                c''8.
+                                \tweak Accidental.text \flat-markup
+                                bf''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                df''8.
+                                \tweak Accidental.text \natural-markup
+                                g''8.
                                 ]
 
                             }
@@ -154,25 +154,25 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            c''8
+                            e''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''8
+                            e''8
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''16
+                            af''16
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            ef''8.
+                            af''8.
                             ~
                             ]
 
@@ -183,20 +183,20 @@
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                ef''8.
+                                af''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                a''8
+                                e''8
                                 ]
 
                             }
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''4
+                            \tweak Accidental.text \natural-markup
+                            c''4
 
                             r4
                             % [Voice 1 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -209,14 +209,14 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                a''8
+                                \tweak Accidental.text \flat-markup
+                                bf''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                c''16
+                                \tweak Accidental.text \flat-markup
+                                bf''16
                                 ~
                                 ]
 
@@ -225,14 +225,14 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            c''8
+                            \tweak Accidental.text \flat-markup
+                            bf''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            bf''8
+                            \tweak Accidental.text \natural-markup
+                            f''8
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -248,14 +248,14 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''8
+                            \tweak Accidental.text \natural-markup
+                            c''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''4
+                            \tweak Accidental.text \natural-markup
+                            c''4
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
@@ -263,8 +263,8 @@
                                 % [Voice 1 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \one-quarter-flat-markup
-                                df''4
+                                \tweak Accidental.text \natural-markup
+                                c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
@@ -285,8 +285,8 @@
                             gf''8
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''4
+                            \tweak Accidental.text \flat-markup
+                            gf''4
                             ~
 
                             \tweak text #tuplet-number::calc-fraction-text
@@ -295,12 +295,12 @@
                                 % [Voice 1 measure 12]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \one-quarter-flat-markup
-                                df''4.
+                                \tweak Accidental.text \flat-markup
+                                gf''4.
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                e''4.
+                                \tweak Accidental.text \flat-markup
+                                bf''4.
 
                             }
                             % [Voice 1 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -359,28 +359,28 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                ef''8.
+                                \tweak Accidental.text \natural-markup
+                                d''8.
                                 [
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                a''8
+                                \tweak Accidental.text \flat-markup
+                                bf''8
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                a''16
+                                e''16
                                 ]
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                gf''4
+                                \tweak Accidental.text \natural-markup
+                                c''4
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                gf''16
+                                \tweak Accidental.text \natural-markup
+                                c''16
                                 ~
 
                             }
@@ -388,27 +388,27 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''16
+                            \tweak Accidental.text \natural-markup
+                            c''16
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''4
+                            \tweak Accidental.text \flat-markup
+                            gf''4
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                a''8
+                                c''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
@@ -418,8 +418,8 @@
                             % [Voice 2 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''4
+                            \tweak Accidental.text \natural-markup
+                            c''4
 
                             r8
                             % [Voice 2 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -438,11 +438,11 @@
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                gf''4.
+                                df''4.
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                c''8
+                                \tweak Accidental.text \flat-markup
+                                gf''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
@@ -466,63 +466,63 @@
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''8
+                            c''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''4
+                            c''4
                             % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            e''8
+                            b''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e''8
+                            \tweak Accidental.text \flat-markup
+                            bf''8
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e''16
+                            \tweak Accidental.text \flat-markup
+                            bf''16
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8.
+                            \tweak Accidental.text \flat-markup
+                            bf''8.
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8
+                            \tweak Accidental.text \flat-markup
+                            bf''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            ef''8
+                            \tweak Accidental.text \natural-markup
+                            d''8
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''16
+                            \tweak Accidental.text \natural-markup
+                            d''16
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            ef''8.
+                            af''8.
                             ~
                             ]
 
@@ -533,7 +533,7 @@
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                ef''8.
+                                af''8.
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
@@ -553,8 +553,8 @@
                             r4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8
+                            \tweak Accidental.text \flat-markup
+                            bf''8
 
                             \tweak text #tuplet-number::calc-fraction-text
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
@@ -563,18 +563,18 @@
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                gf''2
+                                df''2
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                df''8
+                                \tweak Accidental.text \natural-markup
+                                g''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                c''8
+                                \tweak Accidental.text \flat-markup
+                                gf''8
                                 ]
 
                             }
@@ -630,7 +630,7 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            e''4
+                            f''4
 
                             r8
 
@@ -644,51 +644,51 @@
                             % [Voice 3 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e''4.
+                            \tweak Accidental.text \flat-markup
+                            bf''4.
                             ~
                             % [Voice 3 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e''8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8
-                            ~
-                            ]
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8.
+                            \tweak Accidental.text \flat-markup
+                            bf''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''16
+                            bf''8
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''16
+                            bf''8.
                             [
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''16
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''8
+                            \tweak Accidental.text \natural-markup
+                            d''16
+                            ~
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            d''16
+                            [
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \flat-markup
+                            gf''16
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            c''8
                             ~
                             ]
 
@@ -698,12 +698,12 @@
                                 % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \one-quarter-flat-markup
-                                df''4
+                                \tweak Accidental.text \natural-markup
+                                c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                bf''4
+                                \tweak Accidental.text \natural-markup
+                                f''4
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -713,8 +713,8 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                bf''8
+                                \tweak Accidental.text \natural-markup
+                                b''8
                                 ~
                                 ]
 
@@ -722,8 +722,8 @@
                             % [Voice 3 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            bf''8
+                            \tweak Accidental.text \natural-markup
+                            b''8
 
                             r8
 
@@ -735,13 +735,13 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''16
+                            e''16
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            c''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -751,48 +751,48 @@
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            bf''16
+                            \tweak Accidental.text \natural-markup
+                            b''16
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''16
+                            \tweak Accidental.text \natural-markup
+                            g''16
 
                             \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            f''16
+                            ]
+
+                            \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
                             e''16
-                            ]
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            c''16
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''16
+                            e''16
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''16
+                            af''16
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
@@ -800,8 +800,8 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            c''16
+                            \tweak Accidental.text \flat-markup
+                            bf''16
                             ]
 
                             \tweak text #tuplet-number::calc-fraction-text
@@ -812,46 +812,46 @@
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                e''16
+                                b''16
                                 [
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \natural-markup
+                                f''16
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
                                 bf''16
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                e''16
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
                                 df''16
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                bf''16
+                                \tweak Accidental.text \natural-markup
+                                b''16
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                gf''16
+                                \tweak Accidental.text \natural-markup
+                                g''16
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                c''16
+                                e''16
                                 ]
 
                             }
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''8
+                            e''8
                             ~
                             % [Voice 3 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a''4.
+                            e''4.
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -860,11 +860,11 @@
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                a''4
+                                e''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                ef''8
+                                af''8
 
                             }
 
@@ -875,7 +875,7 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            e''8
+                            b''8
 
                             r4
 
@@ -930,19 +930,19 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''8
+                            af''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''8
+                            df''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf''4
+                            df''4
 
                             \tweak text #tuplet-number::calc-fraction-text
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 11 10) "16")
@@ -950,16 +950,16 @@
                                 % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                bf''16
+                                \tweak Accidental.text \natural-markup
+                                b''16
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \natural-markup
-                                e''4.
+                                f''4.
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                ef''4
+                                af''4
 
                             }
 
@@ -970,8 +970,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \flat-markup
-                                bf''8.
+                                \tweak Accidental.text \natural-markup
+                                f''8.
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -992,25 +992,25 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''16
+                            \tweak Accidental.text \natural-markup
+                            g''16
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''16
+                            \tweak Accidental.text \natural-markup
+                            g''16
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''16
+                            \tweak Accidental.text \flat-markup
+                            gf''16
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            ef''8
+                            \tweak Accidental.text \natural-markup
+                            d''8
                             ]
 
                             r4
@@ -1023,18 +1023,18 @@
                             % [Voice 4 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df''4
+                            \tweak Accidental.text \flat-markup
+                            gf''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''2
+                            \tweak Accidental.text \natural-markup
+                            d''2
                             ~
                             % [Voice 4 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf''2
+                            \tweak Accidental.text \natural-markup
+                            d''2
 
                             r2
                             % [Voice 4 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1042,8 +1042,8 @@
                             r4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''4
+                            \tweak Accidental.text \flat-markup
+                            bf''4
                             ~
 
                             \tweak text #tuplet-number::calc-fraction-text
@@ -1052,31 +1052,31 @@
                                 % [Voice 4 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                a''4.
+                                \tweak Accidental.text \flat-markup
+                                bf''4.
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \natural-markup
-                                a''8
+                                \tweak Accidental.text \flat-markup
+                                gf''8
                                 ~
 
                             }
                             % [Voice 4 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a''8
+                            \tweak Accidental.text \flat-markup
+                            gf''8
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                             \times 4/5 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \flat-markup
-                                gf''4
+                                af''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \one-quarter-flat-markup
-                                df''16
+                                \tweak Accidental.text \natural-markup
+                                c''16
 
                             }
                             % [Voice 4 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1134,8 +1134,8 @@
                         r4
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        bf'8
+                        \tweak Accidental.text \natural-markup
+                        b'8
                         ~
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -1145,18 +1145,18 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            bf'16
+                            \tweak Accidental.text \natural-markup
+                            b'16
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            c'8.
+                            e'8.
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf'16
+                            \tweak Accidental.text \natural-markup
+                            d'16
                             ]
 
                         }
@@ -1167,7 +1167,7 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            ef'4
+                            af'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
@@ -1183,21 +1183,21 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df'8
+                        \tweak Accidental.text \flat-markup
+                        gf'8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        e'8
+                        b'8
                         ~
                         ]
                         % [Voice 5 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        e'4.
+                        b'4.
                         % [Voice 5 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Rest.transparent = ##t                 %! applying invisibility
@@ -1223,12 +1223,12 @@
                             df'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a'4
+                            \tweak Accidental.text \flat-markup
+                            gf'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            ef'4.
+                            af'4.
                             ~
 
                         }
@@ -1237,13 +1237,13 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
-                        ef'8
+                        af'8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf'8
+                        \tweak Accidental.text \natural-markup
+                        c'8
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -1253,7 +1253,7 @@
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a'4
+                        e'4
 
                         r4
                         % [Voice 5 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1268,7 +1268,7 @@
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a'4
+                        c'4
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                         \times 4/5 {
@@ -1276,18 +1276,18 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            c'8
+                            \tweak Accidental.text \flat-markup
+                            bf'8
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            bf'16
+                            \tweak Accidental.text \natural-markup
+                            f'16
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf'8
+                            \tweak Accidental.text \natural-markup
+                            c'8
                             ]
 
                         }
@@ -1343,8 +1343,8 @@
                             df'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a'16
+                            \tweak Accidental.text \flat-markup
+                            bf'16
                             ~
 
                         }
@@ -1352,42 +1352,15 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        a'8.
+                        \tweak Accidental.text \flat-markup
+                        bf'8.
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf'8.
-                        ]
-
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df'4
-                        ~
-
-                        \override Staff.Stem.stemlet-length = 0.75
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df'16
-                        [
-
-                        \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        c'16
-                        ~
-
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c'16
-
-                        \revert Staff.Stem.stemlet-length
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf'16
+                        c'8.
                         ]
-                        % [Voice 6 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
@@ -1400,23 +1373,50 @@
                         gf'16
                         [
 
-                        \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
                         gf'16
                         ~
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'16
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \flat-markup
+                        gf'16
                         ]
+                        % [Voice 6 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        g'4
+                        ~
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf'8.
+                        \tweak Accidental.text \natural-markup
+                        g'16
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a'16
+                        d'16
+                        ~
+                        ]
+
+                        \override Staff.Stem.stemlet-length = 0.75
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        d'8.
+                        [
+
+                        \revert Staff.Stem.stemlet-length
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e'16
                         ~
                         ]
 
@@ -1428,7 +1428,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a'8
+                            e'8
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -1449,20 +1449,20 @@
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        bf'8
+                        \tweak Accidental.text \natural-markup
+                        b'8
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        e'16
+                        f'16
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf'8.
+                        \tweak Accidental.text \natural-markup
+                        c'8.
                         ]
 
                         r4
@@ -1480,22 +1480,22 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            c'8.
+                            e'8.
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            ef'4
+                            \tweak Accidental.text \natural-markup
+                            d'4
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df'8.
+                            \tweak Accidental.text \flat-markup
+                            gf'8.
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df'8.
+                            \tweak Accidental.text \natural-markup
+                            c'8.
                             ]
 
                         }
@@ -1505,7 +1505,7 @@
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a'4
+                        c'4
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) "16")
@@ -1515,7 +1515,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf'8
+                            df'8
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -1524,12 +1524,12 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            e'16
+                            f'16
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df'8
+                            \tweak Accidental.text \flat-markup
+                            gf'8
                             ]
 
                         }
@@ -1608,12 +1608,12 @@
                         \times 5/6 {
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df4
+                            \tweak Accidental.text \natural-markup
+                            c4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df4.
+                            \tweak Accidental.text \natural-markup
+                            c4.
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
@@ -1633,7 +1633,7 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a4.
+                            e4.
                             ~
 
                         }
@@ -1645,12 +1645,12 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a8
+                            e8
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            df8
+                            \tweak Accidental.text \natural-markup
+                            g8
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -1675,52 +1675,52 @@
                             gf2
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a4.
+                            \tweak Accidental.text \flat-markup
+                            gf4.
 
                         }
                         % [Voice 7 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c4
+                        \tweak Accidental.text \flat-markup
+                        bf4
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c8
+                        \tweak Accidental.text \flat-markup
+                        bf8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        g8
                         ~
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        df4
+                        \tweak Accidental.text \natural-markup
+                        g4
                         ~
                         % [Voice 7 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        df8.
+                        \tweak Accidental.text \natural-markup
+                        g8.
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df16
+                        \tweak Accidental.text \natural-markup
+                        c16
                         ~
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
 
                         r8
 
@@ -1732,32 +1732,32 @@
                         r8
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
                         ~
                         % [Voice 7 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c8
+                        \tweak Accidental.text \flat-markup
+                        gf8
                         ~
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c4
+                        \tweak Accidental.text \flat-markup
+                        gf4
                         % [Voice 7 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        ef8
+                        \tweak Accidental.text \natural-markup
+                        d8
 
                         r4
                         % [Voice 7 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1823,17 +1823,13 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf8
+                            \tweak Accidental.text \natural-markup
+                            g8
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df8
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a8
+                            \tweak Accidental.text \flat-markup
+                            gf8
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
@@ -1841,7 +1837,11 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            bf8
+                            gf8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \natural-markup
+                            f8
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -1854,50 +1854,50 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        a16
+                        \tweak Accidental.text \flat-markup
+                        bf16
                         [
+
+                        \tweak Accidental.stencil #ly:text-interface::print
+                        \tweak Accidental.text \natural-markup
+                        e16
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
                         c16
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf16
+                        \tweak Accidental.text \natural-markup
+                        d16
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        ef16
-
-                        \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df16
+                        \tweak Accidental.text \natural-markup
+                        c16
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        a16
+                        \tweak Accidental.text \flat-markup
+                        gf16
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
-                        gf16
+                        af16
                         [
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        a16
+                        \tweak Accidental.text \flat-markup
+                        bf16
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c16
+                        \tweak Accidental.text \flat-markup
+                        bf16
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
-                        gf16
+                        df16
                         ]
                         % [Voice 8 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1912,14 +1912,14 @@
                         r8
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
                         [
 
                         \revert Staff.Stem.stemlet-length
@@ -1943,18 +1943,18 @@
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            e8.
+                            b8.
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e4
+                            \tweak Accidental.text \flat-markup
+                            bf4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e16
+                            \tweak Accidental.text \flat-markup
+                            bf16
                             [
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -1963,8 +1963,8 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a16
+                            \tweak Accidental.text \flat-markup
+                            bf16
                             ]
 
                         }
@@ -1973,25 +1973,25 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        e8
+                        f8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a8
+                        e8
                         ~
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a2
+                        e2
                         ~
                         % [Voice 8 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a8
+                        e8
 
                         r8
 
@@ -2001,20 +2001,20 @@
                         r8
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        g8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        g8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf8
+                        \tweak Accidental.text \natural-markup
+                        c8
                         ~
                         ]
 
@@ -2024,29 +2024,29 @@
                             % [Voice 8 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf8
+                            \tweak Accidental.text \natural-markup
+                            c8
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df4.
+                            \tweak Accidental.text \natural-markup
+                            c4.
 
                         }
                         % [Voice 8 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf4.
+                        \tweak Accidental.text \natural-markup
+                        d4.
                         % [Voice 8 measure 12]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a4.
+                        e4.
                         ~
 
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a4
+                        e4
                         ~
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
@@ -2055,7 +2055,7 @@
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a4
+                            e4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
@@ -2111,18 +2111,18 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        a8
+                        c8
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \natural-markup
-                        e8
+                        b8
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        e4
+                        \tweak Accidental.text \flat-markup
+                        bf4
                         ~
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -2131,41 +2131,41 @@
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            e4.
+                            \tweak Accidental.text \flat-markup
+                            bf4.
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \one-quarter-flat-markup
-                            df8
+                            \tweak Accidental.text \natural-markup
+                            c8
                             ~
 
                         }
                         % [Voice 9 measure 4]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \one-quarter-flat-markup
-                        df8
+                        \tweak Accidental.text \natural-markup
+                        c8
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c4
+                        \tweak Accidental.text \flat-markup
+                        gf4
                         ~
                         % [Voice 9 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        c2
+                        \tweak Accidental.text \flat-markup
+                        gf2
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                         \times 2/3 {
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \natural-markup
-                            a8
+                            c8
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a4
+                            \tweak Accidental.text \flat-markup
+                            bf4
 
                         }
                         % [Voice 9 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -2178,27 +2178,27 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf16
+                        \tweak Accidental.text \natural-markup
+                        g16
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf8.
+                        \tweak Accidental.text \natural-markup
+                        c8.
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf16
+                        \tweak Accidental.text \natural-markup
+                        c16
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
                         \tweak Accidental.text \flat-markup
-                        gf8.
+                        af8.
                         ]
 
                         \tweak Accidental.stencil #ly:text-interface::print
@@ -2213,13 +2213,13 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \flat-markup
-                            gf8
+                            df8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            df16
+                            \tweak Accidental.text \natural-markup
+                            g16
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -2227,12 +2227,12 @@
                             c4.
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \flat-markup
-                            gf4
+                            \tweak Accidental.text \natural-markup
+                            c4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \natural-markup
-                            a8
+                            \tweak Accidental.text \flat-markup
+                            bf8
                             ~
 
                         }
@@ -2240,14 +2240,14 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \natural-markup
-                        a16
+                        \tweak Accidental.text \flat-markup
+                        bf16
                         [
 
                         \revert Staff.Stem.stemlet-length
                         \tweak Accidental.stencil #ly:text-interface::print
-                        \tweak Accidental.text \flat-markup
-                        gf8.
+                        \tweak Accidental.text \natural-markup
+                        c8.
                         ]
 
                         r4

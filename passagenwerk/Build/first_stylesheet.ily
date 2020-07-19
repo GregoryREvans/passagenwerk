@@ -8,11 +8,11 @@
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "STIXGeneral") \fontsize #3.5 \center-column {"to the University of Iowa Symphony Orchestra"}
-	title =  \markup \override #'(font-name . "STIXGeneral") \fontsize #16 \bold\center-column {"Passagenwerk" }
-	subtitle = \markup \override #'(font-name . "STIXGeneral") \center-column { \line{ \fontsize #23 ".                                   ."} \line{ \fontsize #7 "for string ensemble"} \line{ \fontsize #23 ".                                   ."} }
-	subsubtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #3 \center-column {"after Walter Benjamin"}
-	composer = \markup \override #'(font-name . "STIXGeneral") \fontsize #2.3 {"Gregory Rowland Evans"}
+	dedication = \markup \override #'(font-name . "STIXGeneral") \fontsize #3.4 \center-column {"t o   t h e   U n i v e r s i t y   o f   I o w a   S y m p h o n y   O r c h e s t r a"}
+	title =  \markup \override #'(font-name . "STIXGeneral") \fontsize #16 \bold\center-column {"PRESAGE" }
+	subtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #5.27 "f   o   r       s   t   r   i   n   g       e   n   s   e   m   b   l   e"
+	%{ subsubtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #3 \center-column {"after Walter Benjamin"} %}
+	composer = \markup \override #'(font-name . "STIXGeneral") \fontsize #2.3 {"Gregory Rowland Evans (*1995)"}
 }
 
 \layout {
@@ -36,9 +36,10 @@
 		\override BarNumber.extra-offset = #'(-4 . 0)
 		%\override BarNumber.font-name = "STIXGeneral"
 		%{ \override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print) %}
-		\override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print)
+		%{ \override BarNumber.stencil = #(make-stencil-boxer 0.1 0.7 ly:text-interface::print) %}
 		\override BarNumber.font-size = 5
 		\override BarNumber.padding = 4
+		\override BarNumber.font-name = "STIXGeneral"
 		%\override BarNumber.stencil = ##f
 		\override MetronomeMark.X-extent = #'(0 . 0)
 		\override MetronomeMark.Y-extent = #'(0 . 0)
@@ -46,7 +47,7 @@
 		\override MetronomeMark.extra-offset = #'(0 . 1)
 		\override MetronomeMark.font-size = 3
 		%\override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
-		\override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
+		%{ \override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print) %}
 		\override RehearsalMark.X-extent = #'(0 . 0)
 		\override RehearsalMark.X-offset = 6
 		\override RehearsalMark.Y-offset = -2.5
@@ -61,11 +62,12 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #4
+        \override TimeSignature.font-size = #9
         \override TimeSignature.self-alignment-X = #center
 		%\override TimeSignature.stencil = ##f
 		\override TimeSignature.whiteout-style = #'outline
 		\override TimeSignature.whiteout = ##t
+		\override TimeSignature.font-name = "STIXGeneral"
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 13) (minimum-distance . 13) (padding . 4) (stretchability . 0))
     }
 	\context {
@@ -96,8 +98,8 @@
 		\override SpacingSpanner.strict-grace-spacing = ##t
 		\override SpacingSpanner.strict-note-spacing = ##t
 		\override SpacingSpanner.uniform-stretching = ##t
-		\override StaffGrouper.staff-staff-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 0))
-		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 0))
+		\override StaffGrouper.staff-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 0))
+		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 0))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.slope = #0.3
 		%{ \override StemTremolo.shape = #'rectangle %}
@@ -106,9 +108,9 @@
 		\override StemTremolo.beam-thickness = #0.3
 		\override TupletBracket.bracket-visibility = ##t
 		\override TupletBracket.minimum-length = #3
-		\override TupletBracket.padding = #1.5
+		\override TupletBracket.padding = #1.55
 		%{ \override TupletBracket.staff-padding = #1.5 %}
-		\override TupletBracket.staff-padding = #1.5
+		\override TupletBracket.staff-padding = #1.55
 		\override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
 		\override TupletBracket.direction = #up
 		\override TupletNumber.font-size = 0.5
@@ -175,7 +177,7 @@
 	oddFooterMarkup = \markup
         \fill-line {
             \override #'(font-name . "STIXGeneral")
-                \bold \fontsize #3 "Passagenwerk"
+                \bold \fontsize #3 "Presage - GR Evans"
             \concat {
                 \override #'(font-name . "STIXGeneral")
                     \bold \fontsize #3
@@ -192,6 +194,6 @@
                         \fromproperty #'page:page-number-string
                 }
             \override #'(font-name . "STIXGeneral")
-                \bold \fontsize #3 "Passagenwerk"
+                \bold \fontsize #3 "Presage - GR Evans"
             }
 }
