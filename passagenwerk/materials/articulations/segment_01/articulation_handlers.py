@@ -10,7 +10,7 @@ articulation_handler_one = evans.ArticulationHandler(
         "espressivo",
         "tenuto",
     ],
-    continuous=True,
+    forget=False,
 )
 
 articulation_handler_two = evans.ArticulationHandler(
@@ -23,7 +23,7 @@ articulation_handler_two = evans.ArticulationHandler(
         "tenuto",
         "accent",
     ],
-    continuous=True,
+    forget=False,
 )
 
 articulation_handler_three = evans.ArticulationHandler(
@@ -36,20 +36,20 @@ articulation_handler_three = evans.ArticulationHandler(
         "tenuto",
         "tenuto",
     ],
-    continuous=True,
+    forget=False,
 )
 
 articulation_handler_four = evans.ArticulationHandler(
     articulation_list=["tenuto", "tenuto", "accent", "tenuto", "espressivo"],
-    continuous=True,
+    forget=False,
 )
 
 articulation_handler_five = evans.ArticulationHandler(
     articulation_list=["tenuto", "tenuto", "accent", "tenuto", "espressivo"],
-    continuous=True,
+    forget=False,
 )
 
 articulation_handler_six = evans.ArticulationHandler(
     articulation_list=["tenuto", "tenuto", "accent", "tenuto", "espressivo"],
-    continuous=True,
+    forget=False,
 )

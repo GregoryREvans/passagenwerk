@@ -31,7 +31,7 @@ voice_names = [specifier for specifier in music_specifiers]
 # #######
 # rhythm#
 # #######
-rhythm_mat = evans.CyclicList(rhythm_material_list, continuous=True)
+rhythm_mat = evans.CyclicList(rhythm_material_list, forget=False)
 
 iter_rhythm_timespan_list = [t for t in rhythm_timespan_list]
 iter_rhythm_timespan_list.sort(key=lambda _: _)
@@ -92,7 +92,7 @@ for span in segment_01_pitch_timespans:
 # ########
 # dynamic#
 # ########
-dynamic_mat = evans.CyclicList(dynamic_material_list, continuous=True)
+dynamic_mat = evans.CyclicList(dynamic_material_list, forget=False)
 
 for voice in voice_names:
     for span in dynamic_timespan_list:
@@ -104,7 +104,7 @@ segment_01_dynamic_timespans = dynamic_timespan_list
 # #############
 # articulation#
 # #############
-articulation_mat = evans.CyclicList(articulation_material_list, continuous=True)
+articulation_mat = evans.CyclicList(articulation_material_list, forget=False)
 
 for voice in voice_names:
     for span in articulation_timespan_list:
