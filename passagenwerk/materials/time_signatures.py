@@ -1,6 +1,6 @@
 import abjad
 
-demo_pairs = (
+pairs_01 = (
     (4, 4),
     (4, 4),
     (3, 4),
@@ -24,10 +24,14 @@ demo_pairs = (
     (5, 4),
 )
 
-demo_meters = [abjad.Meter(_) for _ in demo_pairs]
+meters_01 = [abjad.Meter(_) for _ in pairs_01]
 
-demo_signatures = [abjad.TimeSignature(_) for _ in demo_meters]
+signatures_01 = [abjad.TimeSignature(_) for _ in meters_01]
 
-demo_signatures.append(abjad.TimeSignature((3, 16)))  # for ending skip
+signatures_01.append(abjad.TimeSignature((3, 16)))  # for ending skip
 
-demo_bounds = abjad.math.cumulative_sums([_.duration for _ in demo_signatures])
+bounds_01 = abjad.math.cumulative_sums([_.duration for _ in signatures_01])
+
+quarter_bounds_01 = abjad.math.cumulative_sums(
+    [abjad.Duration((1, 4)) for _ in range(86)]
+)

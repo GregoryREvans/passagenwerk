@@ -9,7 +9,8 @@
 } %! LilyPondFile
 
 \score{
+	\keepWithTag #'voice1
 	{
-	\include "segment_01.ly"
+	\include "../../score/segment_01.ly"
 	}
 }

@@ -18,15 +18,49 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'demo_handler',
+            'anuran_handler',
+            abjad.OrderedDict(
+                [
+                    ('state', 21),
+                    ]
+                ),
+            ),
+        (
+            'heterophony_handler',
             abjad.OrderedDict(
                 [
                     (
                         'state',
                         abjad.OrderedDict(
                             [
-                                ('divisions_consumed', 11),
-                                ('logical_ties_produced', 11),
+                                ('divisions_consumed', 260),
+                                ('incomplete_last_note', True),
+                                ('logical_ties_produced', 158),
+                                ('talea_weight_consumed', 624),
+                                ]
+                            ),
+                        ),
+                    ]
+                ),
+            ),
+        (
+            'guerrero_handler',
+            abjad.OrderedDict(
+                [
+                    ('state', 23),
+                    ]
+                ),
+            ),
+        (
+            'scratch_handler',
+            abjad.OrderedDict(
+                [
+                    (
+                        'state',
+                        abjad.OrderedDict(
+                            [
+                                ('divisions_consumed', 1),
+                                ('logical_ties_produced', 1),
                                 ]
                             ),
                         ),
