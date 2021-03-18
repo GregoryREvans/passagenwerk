@@ -2,17 +2,15 @@ import abjad
 handler_to_value = abjad.OrderedDict(
     [
         (
-            'Rhythm Handler',
+            'silence_handler',
             abjad.OrderedDict(
                 [
                     (
                         'state',
                         abjad.OrderedDict(
                             [
-                                ('divisions_consumed', 41),
-                                ('incomplete_last_note', True),
-                                ('logical_ties_produced', 74),
-                                ('talea_weight_consumed', 271),
+                                ('divisions_consumed', 3),
+                                ('logical_ties_produced', 3),
                                 ]
                             ),
                         ),
@@ -20,15 +18,15 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'silence_maker',
+            'demo_handler',
             abjad.OrderedDict(
                 [
                     (
                         'state',
                         abjad.OrderedDict(
                             [
-                                ('divisions_consumed', 1),
-                                ('logical_ties_produced', 1),
+                                ('divisions_consumed', 11),
+                                ('logical_ties_produced', 11),
                                 ]
                             ),
                         ),

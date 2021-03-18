@@ -3,20 +3,14 @@ import pathlib
 import abjad
 import evans
 
-from passagenwerk.materials.pitch.segment_01.clef_handlers import clef_handlers
-from passagenwerk.materials.pitch.segment_01.pitch_handlers import global_pitch_handler
-from passagenwerk.materials.score_structure.instruments import instruments as insts
-from passagenwerk.materials.score_structure.score_structure import score
-from passagenwerk.materials.score_structure.segment_01.time_signatures import (
-    time_signatures,
-)
-from passagenwerk.materials.timespans.segment_01.convert_timespans import (
-    handler_commands,
-    rhythm_commands,
-)
+from passagenwerk.materials.instruments import clef_handlers, instruments
+from passagenwerk.materials.pitch import demo
+from passagenwerk.materials.score_structure import score
+from passagenwerk.materials.time_signatures import demo_signatures
+from passagenwerk.materials.timespans import demo_rhythm_commands
 
 maker = evans.SegmentMaker(
-    instruments=insts,
+    instruments=instruments,
     names=[
         '"Violin I-1"',
         '"Violin I-2"',
@@ -41,7 +35,7 @@ maker = evans.SegmentMaker(
     ],
     name_staves=True,
     commands=[
-        rhythm_commands,
+        demo_rhythm_commands,
         evans.call(
             "score",
             evans.SegmentMaker.transform_brackets,
@@ -53,10 +47,9 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         "skips",
-        handler_commands,
         evans.call(
             "vertical",
-            global_pitch_handler,
+            demo,
             evans.return_vertical_moment_ties,
         ),
         evans.call(
@@ -66,13 +59,13 @@ maker = evans.SegmentMaker(
         ),
     ],
     score_template=score,
-    time_signatures=time_signatures,
+    time_signatures=demo_signatures,
     clef_handlers=clef_handlers,
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=True,
     score_includes=[
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
-        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/first_stylesheet.ily",
+        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
     ],
     segment_name="segment_01",
     current_directory=pathlib.Path(__file__).resolve().parent,
@@ -82,6 +75,7 @@ maker = evans.SegmentMaker(
     barline="||",
     tempo=((1, 4), 60),
     rehearsal_mark="",
+    fermata="scripts.ufermata",
     page_break_counts=[90],
 )
 
