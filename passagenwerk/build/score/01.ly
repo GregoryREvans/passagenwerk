@@ -1,10 +1,3 @@
-\version "2.19.84"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
-
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily" %! abjad.LilyPondFile._get_formatted_includes()
-
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
 
     \context Score = "passagenwerk Score"
     <<
@@ -2438,7 +2431,6 @@
                             \times 2/3 {
                                 % [Voice 6 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 as''8
                                 [
@@ -3391,6 +3383,7 @@
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                             \times 4/5 {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 8 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \clef "treble"
@@ -4000,10 +3993,21 @@
                             }
                             % [Voice 9 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            e'2.
+                            r8
+
+                            \clef "bass"
+                            e,,8
                             ~
 
-                            e'2
+                            e,,2
+                            ~
+
+                            e,,4
+                            ~
+
+                            e,,8
+
+                            r8
                             % [Voice 9 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             fs'4
@@ -4014,6 +4018,7 @@
 
                                 fs'8
 
+                                \clef "tenorvarC"
                                 c''4
                                 ~
 
@@ -4197,4 +4202,3 @@
         >>
 
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()

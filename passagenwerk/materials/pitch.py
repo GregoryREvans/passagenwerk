@@ -2,15 +2,6 @@ import evans
 
 demo = evans.PitchHandler([1], forget=False)
 
-##
-##
-
-partials = ["1", "9/4", "11/4", "5/4", "7/2", "25/8"]
-sorted_partials = evans.RatioSegment(partials).sorted()
-spectrum = [evans.JIPitch("cs,", _, with_quarter_tones=True) for _ in partials]
-
-spectrum_handler = evans.PitchHandler(spectrum, forget=False)
-
 
 ##
 ##
@@ -151,9 +142,46 @@ heterophony_pitch_handler = evans.PitchHandler(
 ##
 ##
 
-scratch_pitch_handler = evans.PitchHandler(
-    [
-        "e'",
-    ],
-    forget=False,
+vn_I_1_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "25/2", with_quarter_tones=True)], forget=False
 )
+vn_I_2_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "11/1", with_quarter_tones=True)], forget=False
+)
+vn_II_1_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "9/1", with_quarter_tones=True)], forget=False
+)
+vn_II_2_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "7/1", with_quarter_tones=True)], forget=False
+)
+va_1_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "7/1", with_quarter_tones=True)], forget=False
+)
+va_2_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "5/1", with_quarter_tones=True)], forget=False
+)
+vc_1_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "3/2", with_quarter_tones=True)], forget=False
+)
+vc_2_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "1/1", with_quarter_tones=True)], forget=False
+)
+cb_spectrum = evans.PitchHandler(
+    [evans.JIPitch("cs,", "1/1", with_quarter_tones=True)], forget=False
+)
+
+##
+##
+
+vn_I_1_scratch = evans.PitchHandler(["e''"], forget=False)
+vn_I_2_scratch = evans.PitchHandler(["e''"], forget=False)
+vn_II_1_scratch = evans.PitchHandler(["as'"], forget=False)
+vn_II_2_scratch = evans.PitchHandler(["as'"], forget=False)
+va_1_scratch = evans.PitchHandler(["e'"], forget=False)
+va_2_scratch = evans.PitchHandler(["bqs"], forget=False)
+vc_1_scratch = evans.PitchHandler(["ds"], forget=False)
+vc_2_scratch = evans.PitchHandler(["gqs,"], forget=False)
+cb_scratch = evans.PitchHandler(["e,,"], forget=False)
+
+##
+##

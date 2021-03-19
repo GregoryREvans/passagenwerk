@@ -86,10 +86,10 @@ clef_handler_four = evans.ClefHandler(
 )
 
 clef_handler_five = evans.ClefHandler(
-    clef="alto", add_extended_clefs=True, add_ottavas=True
+    clef="alto", add_extended_clefs=False, add_ottavas=True
 )
 clef_handler_six = evans.ClefHandler(
-    clef="alto", add_extended_clefs=True, add_ottavas=True
+    clef="alto", add_extended_clefs=False, add_ottavas=True
 )
 
 clef_handler_seven = evans.ClefHandler(

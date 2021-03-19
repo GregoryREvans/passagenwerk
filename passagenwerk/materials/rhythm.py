@@ -115,19 +115,6 @@ guerrero_handler = evans.RhythmHandler(
 ##
 ##
 
-scratch_maker = rmakers.stack(
-    rmakers.NoteRhythmMaker(),
-)
-
-scratch_handler = evans.RhythmHandler(
-    rmaker=scratch_maker,
-    forget=True,
-    name="scratch_handler",
-)
-
-##
-##
-
 heterophony_maker = rmakers.stack(
     rmakers.talea(
         [
@@ -154,4 +141,60 @@ heterophony_handler = evans.RhythmHandler(
     rmaker=heterophony_maker,
     forget=False,
     name="heterophony_handler",
+)
+
+##
+##
+
+spectrum_maker = rmakers.stack(
+    rmakers.talea(
+        [
+            5,
+            4,
+            3,
+            2,
+            3,
+            4,
+            5,
+            6,
+        ],
+        8,
+        extra_counts=[1, 0, 1, -1, 0, 1, 2, 2],
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+spectrum_handler = evans.RhythmHandler(
+    rmaker=spectrum_maker,
+    forget=False,
+    name="spectrum_handler",
+)
+
+##
+##
+
+scratch_maker = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (-1 8 -1))",
+            "(1 (-2 7 -1))",
+            "(1 (-3 6 -1))",
+            "(1 (-4 5 -1))",
+            "(1 (-3 6 -1))",
+            "(1 (-2 7 -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+scratch_handler = evans.RhythmHandler(
+    rmaker=scratch_maker,
+    forget=False,
+    name="scratch_handler",
 )

@@ -4,48 +4,11 @@ import abjad
 import baca
 import evans
 
+from passagenwerk.lib import mark_60, mark_108, met_108, rehearsal_mark_a, with_sharps
 from passagenwerk.materials.instruments import clef_handlers, instruments
 from passagenwerk.materials.score_structure import score
 from passagenwerk.materials.time_signatures import signatures_01
 from passagenwerk.materials.timespans import handler_commands_01, rhythm_commands_01
-
-met_60 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60)
-mark_60 = abjad.LilyPondLiteral(
-    [
-        r"^ \markup {",
-        r"  \huge",
-        r"  \concat {",
-        f"      {str(met_60)[8:]}",
-        r"  }",
-        r"}",
-    ],
-    format_slot="after",
-)
-
-met_108 = abjad.MetronomeMark((1, 4), 108)
-met_108_mark = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 108)
-mark_108 = abjad.LilyPondLiteral(
-    [
-        r"^ \markup {",
-        r"  \huge",
-        r"  \concat {",
-        f"      {str(met_108_mark)[8:]}",
-        r"  }",
-        r"}",
-    ],
-    format_slot="after",
-)
-
-rehearsal_mark = abjad.Markup(
-    r"""\markup { \box { \override #'(font-name . "STIXGeneral Bold") \caps { A } } }""",
-    direction=abjad.Up,
-    literal=True,
-)
-
-
-def with_sharps(selections):
-    abjad.iterpitches.respell_with_sharps(selections)
-
 
 maker = evans.SegmentMaker(
     instruments=instruments,
@@ -102,6 +65,14 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         evans.attach(
+            "Voice 8",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(7),
+        ),
+        evans.attach(
             "Global Context",
             mark_60,
             baca.leaf(0),
@@ -118,7 +89,7 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
-            rehearsal_mark,
+            rehearsal_mark_a,
             baca.leaf(10),
         ),
     ],
@@ -131,7 +102,7 @@ maker = evans.SegmentMaker(
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
     ],
-    segment_name="segment_01",
+    segment_name="01",
     current_directory=pathlib.Path(__file__).resolve().parent,
     cutaway=True,
     beam_pattern="meter",

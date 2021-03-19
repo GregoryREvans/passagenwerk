@@ -1,8 +1,25 @@
 from passagenwerk.materials.pitch import (
     anuran_pitch_handler,
+    cb_scratch,
+    cb_spectrum,
     guerrero_pitch_handler,
     heterophony_pitch_handler,
-    scratch_pitch_handler,
+    va_1_scratch,
+    va_1_spectrum,
+    va_2_scratch,
+    va_2_spectrum,
+    vc_1_scratch,
+    vc_1_spectrum,
+    vc_2_scratch,
+    vc_2_spectrum,
+    vn_II_1_scratch,
+    vn_II_1_spectrum,
+    vn_II_2_scratch,
+    vn_II_2_spectrum,
+    vn_I_1_scratch,
+    vn_I_1_spectrum,
+    vn_I_2_scratch,
+    vn_I_2_spectrum,
 )
 from passagenwerk.materials.rhythm import (
     anuran_handler,
@@ -10,7 +27,10 @@ from passagenwerk.materials.rhythm import (
     heterophony_handler,
     scratch_handler,
     silence_handler,
+    spectrum_handler,
 )
+
+## 01
 
 rhythm_materials_01 = [
     silence_handler,  # vnI-1
@@ -137,7 +157,105 @@ pitch_materials_01 = [
     anuran_pitch_handler,
     silence_handler,
     heterophony_pitch_handler,
-    scratch_pitch_handler,
+    cb_scratch,
     heterophony_pitch_handler,
     heterophony_pitch_handler,
+]
+
+## 02
+
+rhythm_materials_02 = [
+    spectrum_handler,  # vnI-1
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    spectrum_handler,  # vnI-2
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    spectrum_handler,  # vnII-1
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    spectrum_handler,  # vnII-2
+    scratch_handler,
+    silence_handler,
+    spectrum_handler,  # va-1
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    spectrum_handler,  # va-2
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    spectrum_handler,  # vc-1
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    spectrum_handler,  # vc-2
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+    spectrum_handler,  # cb
+    scratch_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,
+]
+
+pitch_materials_02 = [
+    vn_I_1_spectrum,  # vnI-1
+    vn_I_1_scratch,
+    silence_handler,
+    vn_I_1_scratch,
+    silence_handler,
+    vn_I_1_scratch,
+    vn_I_2_spectrum,  # vnI-2
+    vn_I_2_scratch,
+    silence_handler,
+    vn_I_2_scratch,
+    vn_II_1_spectrum,  # vnII-1
+    vn_II_1_scratch,
+    silence_handler,
+    vn_II_1_scratch,
+    vn_II_2_spectrum,  # vnII-2
+    vn_II_2_scratch,
+    silence_handler,
+    va_1_spectrum,  # va-1
+    va_1_scratch,
+    silence_handler,
+    va_1_scratch,
+    silence_handler,
+    va_1_scratch,
+    va_2_spectrum,  # va-2
+    va_2_scratch,
+    silence_handler,
+    va_2_scratch,
+    silence_handler,
+    vc_1_spectrum,  # vc-1
+    vc_1_scratch,
+    silence_handler,
+    vc_1_scratch,
+    silence_handler,
+    vc_2_spectrum,  # vc-2
+    vc_2_scratch,
+    silence_handler,
+    vc_2_scratch,
+    silence_handler,
+    vc_2_scratch,
+    silence_handler,
+    cb_spectrum,  # cb
+    cb_scratch,
+    silence_handler,
+    cb_scratch,
+    silence_handler,
 ]

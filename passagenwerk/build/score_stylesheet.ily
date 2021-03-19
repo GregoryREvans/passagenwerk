@@ -1,7 +1,7 @@
 \version "2.19.84"
 \language "english"
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 13)
+#(set-global-staff-size 12)
 
 \header {
 	tagline = ##f

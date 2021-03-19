@@ -55,15 +55,7 @@ handler_to_value = abjad.OrderedDict(
             'scratch_handler',
             abjad.OrderedDict(
                 [
-                    (
-                        'state',
-                        abjad.OrderedDict(
-                            [
-                                ('divisions_consumed', 1),
-                                ('logical_ties_produced', 1),
-                                ]
-                            ),
-                        ),
+                    ('state', 0),
                     ]
                 ),
             ),
