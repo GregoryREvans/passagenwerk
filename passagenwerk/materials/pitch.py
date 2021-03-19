@@ -185,3 +185,5 @@ cb_scratch = evans.PitchHandler(["e,,"], forget=False)
 
 ##
 ##
+
+rain_pitch_handler = evans.PitchHandler(["c'"], forget=False)

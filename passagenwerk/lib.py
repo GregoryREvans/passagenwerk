@@ -74,6 +74,24 @@ mark_120 = abjad.LilyPondLiteral(
     format_slot="after",
 )
 
+start_percussion_staff = abjad.LilyPondLiteral(
+    [
+        r"\override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)",
+        r"\override Staff.NoteHead.no-ledgers = ##t",
+        r"\override Staff.Accidental.stencil = ##f",
+    ],
+    format_slot="before",
+)
+
+cancel_percussion_staff = abjad.LilyPondLiteral(
+    [
+        r"\revert Staff.StaffSymbol.line-positions",
+        r"\revert Staff.NoteHead.no-ledgers",
+        r"\revert Staff.Accidental.stencil",
+    ],
+    format_slot="after",
+)
+
 ##
 ## REHEARSAL MARKS
 ##
@@ -161,5 +179,17 @@ rehearsal_mark_n = abjad.Markup(
 ##
 
 
+def transpose_contrabass(selections):
+    abjad.iterpitches.transpose_from_sounding_pitch(selections)
+
+
 def with_sharps(selections):
     abjad.iterpitches.respell_with_sharps(selections)
+
+
+def make_percussion_staff(selections):
+    first_leaf = abjad.select(selections).leaf(0)
+    last_leaf = abjad.select(selections).leaf(-1)
+    abjad.attach(start_percussion_staff, first_leaf)
+    abjad.attach(abjad.Clef("percussion"), first_leaf)
+    abjad.attach(cancel_percussion_staff, last_leaf)

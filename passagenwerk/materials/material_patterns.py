@@ -4,6 +4,7 @@ from passagenwerk.materials.pitch import (
     cb_spectrum,
     guerrero_pitch_handler,
     heterophony_pitch_handler,
+    rain_pitch_handler,
     va_1_scratch,
     va_1_spectrum,
     va_2_scratch,
@@ -25,6 +26,7 @@ from passagenwerk.materials.rhythm import (
     anuran_handler,
     guerrero_handler,
     heterophony_handler,
+    rain_handler,
     scratch_handler,
     silence_handler,
     spectrum_handler,
@@ -258,4 +260,62 @@ pitch_materials_02 = [
     silence_handler,
     cb_scratch,
     silence_handler,
+]
+
+# # 03
+
+rhythm_materials_03 = [
+    silence_handler,  # vnI-1
+    rain_handler,
+    silence_handler,
+    silence_handler,  # vnI-2
+    rain_handler,
+    silence_handler,
+    silence_handler,  # vnII-1
+    rain_handler,
+    silence_handler,
+    silence_handler,  # vnII-2
+    rain_handler,
+    silence_handler,
+    silence_handler,  # va-1
+    rain_handler,
+    silence_handler,
+    silence_handler,  # va-2
+    rain_handler,
+    silence_handler,
+    silence_handler,  # vc-1
+    rain_handler,
+    silence_handler,
+    silence_handler,  # vc-2
+    rain_handler,
+    silence_handler,
+    rain_handler,  # cb
+]
+
+pitch_materials_03 = [
+    silence_handler,  # vnI-1
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # vnI-2
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # vnII-1
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # vnII-2
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # va-1
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # va-2
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # vc-1
+    rain_pitch_handler,
+    silence_handler,
+    silence_handler,  # vc-2
+    rain_pitch_handler,
+    silence_handler,
+    rain_pitch_handler,  # cb
 ]

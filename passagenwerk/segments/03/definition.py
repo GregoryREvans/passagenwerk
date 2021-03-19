@@ -1,0 +1,221 @@
+import pathlib
+
+import abjad
+import baca
+import evans
+
+from passagenwerk.lib import (
+    make_percussion_staff,
+    mark_45,
+    rehearsal_mark_d,
+    with_sharps,
+)
+from passagenwerk.materials.instruments import instruments
+from passagenwerk.materials.score_structure import score
+from passagenwerk.materials.time_signatures import signatures_03
+from passagenwerk.materials.timespans import handler_commands_03, rhythm_commands_03
+
+maker = evans.SegmentMaker(
+    instruments=instruments,
+    names=[
+        '"Violin I-1"',
+        '"Violin I-2"',
+        '"Violin II-1"',
+        '"Violin II-2"',
+        '"Viola-1"',
+        '"Viola-2"',
+        '"Violoncello-1"',
+        '"Violoncello-2"',
+        '"Contrabass"',
+    ],
+    abbreviations=[
+        '"vln. I-1"',
+        '"vln. I-2"',
+        '"vln. II-1"',
+        '"vln. II-2"',
+        '"vla.-1"',
+        '"vla.-2"',
+        '"vc.-1"',
+        '"vc.-2"',
+        '"cb."',
+    ],
+    name_staves=True,
+    commands=[
+        rhythm_commands_03,
+        evans.call(
+            "score",
+            evans.SegmentMaker.transform_brackets,
+            abjad.select().components(abjad.Score),
+        ),
+        evans.call(
+            "score",
+            evans.SegmentMaker.rewrite_meter,
+            abjad.select().components(abjad.Score),
+        ),
+        "skips",
+        handler_commands_03,
+        evans.call(
+            "score",
+            with_sharps,
+            abjad.select().components(abjad.Score),
+        ),
+        # evans.call(
+        #     "vertical",
+        #     demo,
+        #     evans.return_vertical_moment_ties,
+        # ),
+        evans.call(
+            "score",
+            evans.SegmentMaker.beam_score,
+            abjad.select().components(abjad.Score),
+        ),
+        evans.call(
+            "Voice 1",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 2",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 3",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 4",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 5",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 6",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 7",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 8",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 9",
+            make_percussion_staff,
+            abjad.select().run(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                format_slot="absolute_before",
+            ),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Global Context",
+            mark_45,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Global Context",
+            rehearsal_mark_d,
+            baca.leaf(0),
+        ),
+    ],
+    score_template=score,
+    time_signatures=signatures_03,
+    clef_handlers=None,
+    tuplet_bracket_noteheads=False,
+    add_final_grand_pause=False,
+    score_includes=[
+        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
+    ],
+    segment_name="03",
+    current_directory=pathlib.Path(__file__).resolve().parent,
+    cutaway=True,
+    beam_pattern="meter",
+    beam_rests=False,
+    barline="||",
+    tempo=((1, 4), 45),
+    rehearsal_mark="",
+    fermata="scripts.ufermata",
+    page_break_counts=[90],
+)
+
+maker.build_segment()

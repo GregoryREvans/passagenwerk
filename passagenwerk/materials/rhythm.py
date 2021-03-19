@@ -198,3 +198,33 @@ scratch_handler = evans.RhythmHandler(
     forget=False,
     name="scratch_handler",
 )
+
+##
+##
+
+rain_maker = rmakers.stack(
+    rmakers.talea(
+        [
+            5,
+            4,
+            3,
+            2,
+            3,
+            4,
+            5,
+            6,
+        ],
+        4,
+        extra_counts=[1, 0, 1, -1, 0, 1, 2, 2],
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+rain_handler = evans.RhythmHandler(
+    rmaker=rain_maker,
+    forget=False,
+    name="rain_handler",
+)
