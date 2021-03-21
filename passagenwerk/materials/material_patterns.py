@@ -461,3 +461,7 @@ pitch_materials_05 = [
     cb_clock,
     silence_handler,
 ]
+
+## 06
+
+rhythm_materials_06 = [heterophony_handler]

@@ -14,16 +14,19 @@ from passagenwerk.materials.material_patterns import (
     rhythm_materials_03,
     rhythm_materials_04,
     rhythm_materials_05,
+    rhythm_materials_06,
 )
 from passagenwerk.materials.time_signatures import (
     bounds_01,
     bounds_02,
     bounds_03,
     bounds_05,
+    bounds_06,
     quarter_bounds_01,
     quarter_bounds_02,
     quarter_bounds_03,
     quarter_bounds_05,
+    quarter_bounds_06,
 )
 
 music_specifiers = abjad.OrderedDict(
@@ -460,6 +463,50 @@ for span in temp_05:
     rhythm_commands_05.append(r_command)
 
 evans.timespan.intercalate_silences(rhythm_commands_05)
+
+# # 06
+
+target_timespan_06 = abjad.Timespan(0, (27, 4))
+
+timespan_maker_06 = tsmakers.TaleaTimespanMaker(
+    initial_silence_talea=rmakers.Talea(
+        counts=([0, 0, 0, 0, 3, 3, 6, 6, 6]), denominator=4
+    ),
+    playing_talea=rmakers.Talea(counts=([5, 3, 1, 2, 6]), denominator=8),
+    playing_groupings=([1]),
+    silence_talea=rmakers.Talea(counts=([5, 3, 4, 3]), denominator=8),
+)
+
+timespan_list_06 = timespan_maker_06(
+    music_specifiers=music_specifiers, target_timespan=target_timespan_06
+)
+
+cyc_rhythm_materials_06 = evans.CyclicList(rhythm_materials_06, forget=False)
+
+for voice in voice_names:
+    for span in timespan_list_06:
+        if span.voice_name == voice:
+            span._handler = cyc_rhythm_materials_06(r=1)[0]
+
+rhythm_timespans_06 = evans.timespan.make_split_list(timespan_list_06, bounds_06)
+
+temp_06 = abjad.TimespanList()
+
+for timespan in rhythm_timespans_06:
+    timespan_as_split_list = timespan.split_at_offsets(quarter_bounds_06)
+    for sub_span in timespan_as_split_list:
+        temp_06.append(sub_span)
+
+rhythm_commands_06 = []
+for span in temp_06:
+    r_command = evans.RhythmCommand(
+        voice_name=span.voice_name,
+        timespan=abjad.Timespan(span.start_offset, span.stop_offset),
+        handler=span.handler,
+    )
+    rhythm_commands_06.append(r_command)
+
+evans.timespan.intercalate_silences(rhythm_commands_06)
 
 # #######
 # pitch#

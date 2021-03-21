@@ -129,3 +129,21 @@ bounds_05 = abjad.math.cumulative_sums([_.duration for _ in signatures_05])
 quarter_bounds_05 = abjad.math.cumulative_sums(
     [abjad.Duration((1, 4)) for _ in range(67)]
 )
+
+##
+## 06
+##
+
+pairs_06 = ((3, 4) for _ in range(9))
+
+meters_06 = [abjad.Meter(_) for _ in pairs_06]
+
+signatures_06 = [abjad.TimeSignature(_) for _ in meters_06]
+
+signatures_06.append(abjad.TimeSignature((3, 16)))  # for ending skip
+
+bounds_06 = abjad.math.cumulative_sums([_.duration for _ in signatures_06])
+
+quarter_bounds_06 = abjad.math.cumulative_sums(
+    [abjad.Duration((1, 4)) for _ in range(27)]
+)
