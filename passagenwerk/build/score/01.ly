@@ -3913,36 +3913,38 @@
 
                             R1 * 1/2
                             \stopStaff \startStaff                             %! applying cutaway
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            a4
+                            \clef "tenorvarC"
+                            a'4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            a8
+                            a'8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            a8
+                            a'8
                             ~
                             ]
 
-                            a4
+                            a'4
                             % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            a4
+                            a'4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            a8
+                            a'8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            a8
+                            a'8
                             ~
                             ]
 
-                            a4
+                            a'4
 
                             r4
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -3969,26 +3971,27 @@
 
                             R1 * 5/8
                             \stopStaff \startStaff                             %! applying cutaway
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 9 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \clef "treble"
                             \override Staff.Stem.stemlet-length = 0.75
-                            fs'8
+                            fs''8
                             [
 
-                            \clef "tenorvarC"
                             \revert Staff.Stem.stemlet-length
-                            c''8
+                            c'''8
                             ]
 
-                            as'4
+                            as''4
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                as'8
+                                as''8
 
-                                g'4
+                                g''4
 
                             }
                             % [Voice 9 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -3996,60 +3999,60 @@
                             r8
 
                             \clef "bass"
-                            e,,8
+                            e,8
                             ~
 
-                            e,,2
+                            e,2
                             ~
 
-                            e,,4
+                            e,4
                             ~
 
-                            e,,8
+                            e,8
 
                             r8
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 9 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            fs'4
+                            \clef "treble"
+                            fs''4
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                fs'8
+                                fs''8
 
-                                \clef "tenorvarC"
-                                c''4
+                                c'''4
                                 ~
 
                             }
 
-                            c''4
+                            c'''4
                             % [Voice 9 measure 14]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            as'2
+                            as''2
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            as'8
+                            as''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            g'8
+                            g''8
                             ~
                             ]
                             % [Voice 9 measure 15]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g'2
+                            g''2
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            g'8
+                            g''8
                             [
 
-                            \clef "treble"
                             \revert Staff.Stem.stemlet-length
-                            cs''8
+                            cs'''8
                             ~
                             ]
 
@@ -4057,128 +4060,128 @@
                             \times 2/3 {
                                 % [Voice 9 measure 16]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                cs''4
+                                cs'''4
 
-                                g'8
+                                g''8
                                 ~
 
                             }
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            g'8
+                            g''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            a'8
+                            a''8
                             ~
                             ]
 
-                            a'4
+                            a''4
                             % [Voice 9 measure 17]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            fs'8
+                            fs''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            c''8
+                            c'''8
                             ~
                             ]
 
-                            c''4
+                            c'''4
 
-                            as'4
+                            as''4
                             ~
 
-                            as'4
+                            as''4
 
-                            g'4
+                            g''4
                             ~
                             % [Voice 9 measure 18]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            g'8
+                            g''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            cs''8
+                            cs'''8
                             ~
                             ]
 
-                            cs''2
+                            cs'''2
 
-                            g'2
+                            g''2
                             ~
                             % [Voice 9 measure 19]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g'4
+                            g''4
 
-                            a'4
+                            a''4
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                a'8
+                                a''8
 
-                                c''4
+                                c'''4
 
                             }
 
-                            cs''4
+                            cs'''4
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                cs''4
+                                cs'''4
 
-                                as'8
+                                as''8
 
                             }
                             % [Voice 9 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            gs'4
+                            gs''4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            gs'8
+                            gs''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            d''8
+                            d'''8
                             ~
                             ]
 
-                            d''4
+                            d'''4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            d''8
+                            d'''8
                             [
 
                             \revert Staff.Stem.stemlet-length
-                            gs'8
+                            gs''8
                             ~
                             ]
 
-                            gs'4
+                            gs''4
                             % [Voice 9 measure 21]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            b'2
+                            b''2
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
-                                b'4
+                                b''4
 
-                                cs''8
+                                cs'''8
                                 ~
 
                             }
 
-                            cs''2
+                            cs'''2
                             \bar "||"
                             % [Voice 9 measure 22]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 

@@ -100,7 +100,7 @@ clef_handler_eight = evans.ClefHandler(
 )
 
 clef_handler_nine = evans.ClefHandler(
-    clef="bass", add_extended_clefs=True, add_ottavas=True
+    clef="bass", add_extended_clefs=True, add_ottavas=False
 )
 
 clef_handlers = [

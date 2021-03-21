@@ -19,6 +19,11 @@ anuran_pitch_handler = evans.PitchHandler(
     forget=False,
 )
 
+va_1_anuran_pitch_handler = evans.PitchHandler(
+    ["g'"],
+    forget=False,
+)
+
 ##
 ##
 
@@ -187,3 +192,16 @@ cb_scratch = evans.PitchHandler(["e,,"], forget=False)
 ##
 
 rain_pitch_handler = evans.PitchHandler(["c'"], forget=False)
+
+##
+##
+
+vn_I_1_clock = evans.PitchHandler(["as''"], forget=False)
+vn_I_2_clock = evans.PitchHandler(["a'"], forget=False)
+vn_II_1_clock = evans.PitchHandler(["as''"], forget=False)
+vn_II_2_clock = evans.PitchHandler(["a'"], forget=False)
+va_1_clock = evans.PitchHandler(["fs"], forget=False)
+va_2_clock = evans.PitchHandler(["e"], forget=False)
+vc_1_clock = evans.PitchHandler(["e"], forget=False)
+vc_2_clock = evans.PitchHandler(["ds,"], forget=False)
+cb_clock = evans.PitchHandler(["d,"], forget=False)

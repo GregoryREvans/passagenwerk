@@ -5,6 +5,7 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    clef_whitespace,
     make_percussion_staff,
     mark_45,
     rehearsal_mark_d,
@@ -116,74 +117,47 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Voice 1",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 3",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 4",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 5",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 6",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 7",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 8",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 9",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(

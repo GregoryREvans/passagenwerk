@@ -60,6 +60,20 @@ mark_108 = abjad.LilyPondLiteral(
     format_slot="after",
 )
 
+met_115 = abjad.MetronomeMark((1, 4), 115)
+met_115_mark = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 115)
+mark_115 = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \huge",
+        r"  \concat {",
+        f"      {str(met_115_mark)[8:]}",
+        r"  }",
+        r"}",
+    ],
+    format_slot="after",
+)
+
 met_120 = abjad.MetronomeMark((1, 4), 120)
 met_120_mark = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 120)
 mark_120 = abjad.LilyPondLiteral(
@@ -90,6 +104,16 @@ cancel_percussion_staff = abjad.LilyPondLiteral(
         r"\revert Staff.Accidental.stencil",
     ],
     format_slot="after",
+)
+
+persistent_cancel_percussion_staff = abjad.LilyPondLiteral(
+    r"\stopStaff \startStaff",
+    format_slot="before",
+)
+
+clef_whitespace = abjad.LilyPondLiteral(
+    r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+    format_slot="absolute_before",
 )
 
 ##
@@ -180,7 +204,11 @@ rehearsal_mark_n = abjad.Markup(
 
 
 def transpose_contrabass(selections):
-    abjad.iterpitches.transpose_from_sounding_pitch(selections)
+    octave = abjad.NamedInterval("+P8")
+    for leaf in abjad.select(selections).leaves(pitched=True):
+        old_pitch = leaf.written_pitch
+        new_pitch = octave.transpose(old_pitch)
+        leaf.written_pitch = new_pitch
 
 
 def with_sharps(selections):

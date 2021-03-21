@@ -16,14 +16,14 @@ silence_handler = evans.RhythmHandler(
 ##
 ##
 
-demo_maker = rmakers.stack(
+note_maker = rmakers.stack(
     rmakers.NoteRhythmMaker(),
 )
 
-demo_handler = evans.RhythmHandler(
-    rmaker=demo_maker,
+note_handler = evans.RhythmHandler(
+    rmaker=note_maker,
     forget=True,
-    name="demo_handler",
+    name="note_handler",
 )
 
 ##
@@ -66,6 +66,30 @@ anuran_handler = evans.RhythmHandler(
     rmaker=anuran_maker,
     forget=False,
     name="anuran_handler",
+)
+
+va_1_anuran_maker = rmakers.stack(  # modify
+    evans.RTMMaker(
+        [
+            "(1 (1 -1 1 -1))",  # va-1 01
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1))",
+            "(1 (-1 1 -1 1))",
+            "(1 (-1 1 -1 1))",
+            "(1 (-1 1 -1))",
+            "(1 (1 -1 1 -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+va_1_anuran = evans.RhythmHandler(
+    rmaker=va_1_anuran_maker,
+    forget=False,
+    name="va_1_anuran",
 )
 
 ##
@@ -199,6 +223,29 @@ scratch_handler = evans.RhythmHandler(
     name="scratch_handler",
 )
 
+scratch_maker_alt = rmakers.stack(  # modify
+    evans.RTMMaker(
+        [
+            "(1 (-1 6 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-4 3 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-2 5 -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+scratch_handler_alt = evans.RhythmHandler(
+    rmaker=scratch_maker_alt,
+    forget=False,
+    name="scratch_handler_alt",
+)
+
 ##
 ##
 
@@ -227,4 +274,21 @@ rain_handler = evans.RhythmHandler(
     rmaker=rain_maker,
     forget=False,
     name="rain_handler",
+)
+
+##
+##
+
+clock_maker = rmakers.stack(
+    rmakers.even_division([8]),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+clock_handler = evans.RhythmHandler(
+    rmaker=clock_maker,
+    forget=False,
+    name="clock_handler",
 )

@@ -8,15 +8,18 @@ from passagenwerk.lib import (
     clef_whitespace,
     mark_60,
     mark_108,
+    mark_115,
     met_108,
-    rehearsal_mark_a,
+    met_115,
+    rehearsal_mark_f,
+    rehearsal_mark_g,
     transpose_contrabass,
     with_sharps,
 )
 from passagenwerk.materials.instruments import clef_handlers, instruments
 from passagenwerk.materials.score_structure import score
-from passagenwerk.materials.time_signatures import signatures_01
-from passagenwerk.materials.timespans import handler_commands_01, rhythm_commands_01
+from passagenwerk.materials.time_signatures import signatures_05
+from passagenwerk.materials.timespans import handler_commands_05, rhythm_commands_05
 
 maker = evans.SegmentMaker(
     instruments=instruments,
@@ -44,7 +47,7 @@ maker = evans.SegmentMaker(
     ],
     name_staves=True,
     commands=[
-        rhythm_commands_01,
+        rhythm_commands_05,
         evans.call(
             "score",
             evans.SegmentMaker.transform_brackets,
@@ -56,7 +59,7 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         "skips",
-        handler_commands_01,
+        handler_commands_05,
         evans.call(
             "Voice 9",
             transpose_contrabass,
@@ -78,24 +81,24 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         evans.attach(
-            "Voice 8",
-            clef_whitespace,
-            baca.leaf(7),
-        ),
-        evans.attach(
-            "Voice 9",
+            "Voice 7",
             clef_whitespace,
             baca.leaf(0, pitched=True),
         ),
         evans.attach(
-            "Voice 9",
+            "Voice 8",
             clef_whitespace,
-            baca.leaf(8, pitched=True),
+            baca.leaf(0, pitched=True),
         ),
         evans.attach(
-            "Voice 9",
+            "Voice 7",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.leaf(39, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            clef_whitespace,
+            baca.leaf(43, pitched=True),
         ),
         evans.attach(
             "Global Context",
@@ -104,22 +107,37 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
+            met_115,
+            baca.leaf(11),
+        ),
+        evans.attach(
+            "Global Context",
+            mark_115,
+            baca.leaf(11),
+        ),
+        evans.attach(
+            "Global Context",
             met_108,
-            baca.leaf(7),
+            baca.leaf(15),
         ),
         evans.attach(
             "Global Context",
             mark_108,
-            baca.leaf(7),
+            baca.leaf(15),
         ),
         evans.attach(
             "Global Context",
-            rehearsal_mark_a,
-            baca.leaf(10),
+            rehearsal_mark_f,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Global Context",
+            rehearsal_mark_g,
+            baca.leaf(11),
         ),
     ],
     score_template=score,
-    time_signatures=signatures_01,
+    time_signatures=signatures_05,
     clef_handlers=clef_handlers,
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=True,
@@ -127,7 +145,7 @@ maker = evans.SegmentMaker(
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
     ],
-    segment_name="01",
+    segment_name="05",
     current_directory=pathlib.Path(__file__).resolve().parent,
     cutaway=True,
     beam_pattern="meter",

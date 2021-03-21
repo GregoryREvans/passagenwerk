@@ -4,7 +4,14 @@ import abjad
 import baca
 import evans
 
-from passagenwerk.lib import mark_90, rehearsal_mark_b, rehearsal_mark_c, with_sharps
+from passagenwerk.lib import (
+    clef_whitespace,
+    mark_90,
+    rehearsal_mark_b,
+    rehearsal_mark_c,
+    transpose_contrabass,
+    with_sharps,
+)
 from passagenwerk.materials.instruments import clef_handlers, instruments
 from passagenwerk.materials.score_structure import score
 from passagenwerk.materials.time_signatures import signatures_02
@@ -50,6 +57,11 @@ maker = evans.SegmentMaker(
         "skips",
         handler_commands_02,
         evans.call(
+            "Voice 9",
+            transpose_contrabass,
+            abjad.select().runs(),
+        ),
+        evans.call(
             "score",
             with_sharps,
             abjad.select().components(abjad.Score),
@@ -66,34 +78,22 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Voice 6",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0),
         ),
         evans.attach(
             "Voice 7",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0),
         ),
         evans.attach(
             "Voice 8",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0),
         ),
         evans.attach(
             "Voice 9",
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-                format_slot="absolute_before",
-            ),
+            clef_whitespace,
             baca.leaf(0),
         ),
         evans.attach(
