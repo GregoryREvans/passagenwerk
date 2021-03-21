@@ -12,7 +12,15 @@ from passagenwerk.lib import (
     with_sharps,
 )
 from passagenwerk.materials.instruments import clef_handlers, instruments
-from passagenwerk.materials.pitch import heterophony_pitch_handler
+from passagenwerk.materials.pitch import (
+    c1_octave,
+    c2_octave,
+    c3_octave,
+    c4_octave,
+    c5_octave,
+    c6_octave,
+    heterophony_pitch_handler,
+)
 from passagenwerk.materials.score_structure import score
 from passagenwerk.materials.time_signatures import signatures_06
 from passagenwerk.materials.timespans import rhythm_commands_06
@@ -57,48 +65,53 @@ maker = evans.SegmentMaker(
         "skips",
         evans.call(
             "Voice 1",
-            heterophony_pitch_handler,
+            c6_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 2",
-            heterophony_pitch_handler,
+            c6_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 3",
-            heterophony_pitch_handler,
+            c5_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 4",
-            heterophony_pitch_handler,
+            c5_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 5",
-            heterophony_pitch_handler,
+            c4_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 6",
-            heterophony_pitch_handler,
+            c3_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 7",
-            heterophony_pitch_handler,
+            c3_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 8",
-            heterophony_pitch_handler,
+            c2_octave,
             abjad.select().runs(),
         ),
         evans.call(
             "Voice 9",
-            heterophony_pitch_handler,
+            c1_octave,
             abjad.select().runs(),
+        ),
+        evans.call(
+            "vertical",
+            heterophony_pitch_handler,
+            evans.return_vertical_moment_ties,
         ),
         evans.call(
             "Voice 9",
@@ -110,11 +123,6 @@ maker = evans.SegmentMaker(
             with_sharps,
             abjad.select().components(abjad.Score),
         ),
-        # evans.call(
-        #     "vertical",
-        #     demo,
-        #     evans.return_vertical_moment_ties,
-        # ),
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
@@ -124,11 +132,6 @@ maker = evans.SegmentMaker(
             "Voice 8",
             clef_whitespace,
             baca.leaf(0),
-        ),
-        evans.attach(
-            "Voice 9",
-            clef_whitespace,
-            baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Global Context",

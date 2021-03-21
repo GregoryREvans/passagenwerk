@@ -141,6 +141,7 @@ seg = seg.transpose(12)
 
 heterophony_pitch_handler = evans.PitchHandler(
     seg,
+    apply_all=True,
     forget=True,
 )
 
@@ -205,3 +206,12 @@ va_2_clock = evans.PitchHandler(["e"], forget=False)
 vc_1_clock = evans.PitchHandler(["e"], forget=False)
 vc_2_clock = evans.PitchHandler(["ds,"], forget=False)
 cb_clock = evans.PitchHandler(["d,"], forget=False)
+
+##
+
+c1_octave = evans.PitchHandler(["c,,"], forget=False)
+c2_octave = evans.PitchHandler(["c,"], forget=False)
+c3_octave = evans.PitchHandler(["c"], forget=False)
+c4_octave = evans.PitchHandler(["c'"], forget=False)
+c5_octave = evans.PitchHandler(["c''"], forget=False)
+c6_octave = evans.PitchHandler(["c'''"], forget=False)

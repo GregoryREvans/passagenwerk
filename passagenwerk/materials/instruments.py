@@ -72,24 +72,24 @@ voice_to_name_dict = {
 }
 
 clef_handler_one = evans.ClefHandler(
-    clef="treble", add_extended_clefs=True, add_ottavas=True
+    clef="treble", add_extended_clefs=True, add_ottavas=False
 )
 clef_handler_two = evans.ClefHandler(
-    clef="treble", add_extended_clefs=True, add_ottavas=True
+    clef="treble", add_extended_clefs=True, add_ottavas=False
 )
 
 clef_handler_three = evans.ClefHandler(
-    clef="treble", add_extended_clefs=True, add_ottavas=True
+    clef="treble", add_extended_clefs=True, add_ottavas=False
 )
 clef_handler_four = evans.ClefHandler(
     clef="treble", add_extended_clefs=True, add_ottavas=True
 )
 
 clef_handler_five = evans.ClefHandler(
-    clef="alto", add_extended_clefs=False, add_ottavas=True
+    clef="alto", add_extended_clefs=False, add_ottavas=False
 )
 clef_handler_six = evans.ClefHandler(
-    clef="alto", add_extended_clefs=False, add_ottavas=True
+    clef="alto", add_extended_clefs=False, add_ottavas=False
 )
 
 clef_handler_seven = evans.ClefHandler(
