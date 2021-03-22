@@ -16,6 +16,10 @@
         \include "04.ly"
         \include "05.ly"
         \include "06.ly"
+        \include "07.ly"
+        \include "08.ly"
+        \include "09.ly"
+        \include "10.ly"
 	}
 %\midi{}
 }

@@ -142,6 +142,7 @@ seg = seg.transpose(12)
 heterophony_pitch_handler = evans.PitchHandler(
     seg,
     apply_all=True,
+    apply_all_spelling="sharp",
     forget=True,
 )
 
@@ -206,6 +207,83 @@ va_2_clock = evans.PitchHandler(["e"], forget=False)
 vc_1_clock = evans.PitchHandler(["e"], forget=False)
 vc_2_clock = evans.PitchHandler(["ds,"], forget=False)
 cb_clock = evans.PitchHandler(["d,"], forget=False)
+
+##
+##
+
+vn_I_1_gravity = evans.PitchHandler(
+    ["a", "a", "a", "b", "ds'", "ds'", "ds'", "ds'", "ds'", "ds'", "ds'", "e'"],
+    forget=False,
+)
+vn_I_2_gravity = evans.PitchHandler(
+    ["a", "a", "a", "atqs", "f'", "f'", "f'", "f'", "f'", "f'", "f'", "fs'"],
+    forget=False,
+)
+vn_II_1_gravity = evans.PitchHandler(
+    [
+        "a",
+        "a",
+        "a",
+        "as",
+        "atqs",
+        "atqs",
+        "atqs",
+        "atqs",
+        "atqs",
+        "atqs",
+        "atqs",
+        "bqs",
+    ],
+    forget=False,
+)
+vn_II_2_gravity = evans.PitchHandler(
+    ["a", "a", "a", "aqs", "as", "as", "as", "as", "as", "as", "as", "b"], forget=False
+)
+va_1_gravity = evans.PitchHandler(["fs", "fs", "fs", "ftqs", "g", "aqs"], forget=False)
+va_2_gravity = evans.PitchHandler(["cs", "cs", "cs", "ctqs", "d", "eqs"], forget=False)
+vc_1_gravity = evans.PitchHandler(
+    [
+        ["fs,", "b,"],
+        ["fs,", "b,"],
+        ["fs,", "b,"],
+        ["ftqs,", "bqs,"],
+        ["g,", "c"],
+        ["aqs,", "dqs,"],
+    ],
+    forget=False,
+)
+vc_2_gravity = evans.PitchHandler(
+    [
+        ["ds,", "gs,"],
+        ["ds,", "gs,"],
+        ["ds,", "gs,"],
+        ["dtqs,", "gtqs,"],
+        ["e,", "a,"],
+        ["ftqs,", "bqs,"],
+    ],
+    forget=False,
+)
+cb_gravity = evans.PitchHandler(
+    [
+        ["f,,", "as,,"],
+        ["f,,", "as,,"],
+        ["f,,", "as,,"],
+        "atqs,,",
+        "b,,",
+        "cqs,",
+        "d,",
+        "fs,",
+        "f,",
+        "fqs,",
+        "g,",
+        "a,",
+        "c",
+        "cs",
+        "e",
+        "f",
+    ],
+    forget=False,
+)
 
 ##
 

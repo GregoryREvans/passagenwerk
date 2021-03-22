@@ -85,127 +85,81 @@
                                 \clef "treble"
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                g'''2
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c''''8
-
-                                r8
+                                g'''2.
+                                ~
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r2
-
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                f'''4
-                                ~
+                                g'''4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs''''8
+
+                                r8
+
+                                r4
                                 % [Voice 1 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f'''8
-
-                                r8
-
                                 r4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'''8
-
-                                r8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''2
+                                ~
                                 % [Voice 1 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''2
+
                                 r4
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'''8
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'''8
-
-                                r8
                                 % [Voice 1 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
+                                r8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                e'''4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b'''4
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''8
                                 ~
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''2
                                 % [Voice 1 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \override Staff.Stem.stemlet-length = 0.75
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b'''8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c''''8
-                                ]
-
                                 r2
-                                % [Voice 1 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''''8
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''''4
                                 ~
+                                % [Voice 1 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''''8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as'''8
-                                ]
-                                % [Voice 1 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs''''2
 
                                 r4
+                                % [Voice 1 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'''8
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as'''4
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''2
+                                ~
                                 % [Voice 1 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r2
-
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f'''8
-
-                                r8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''2.
                                 \bar "||"
 
                             }
@@ -222,154 +176,96 @@
 
                             \context Voice = "Voice 2"
                             {
+                                % [Voice 2 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
-                                    % [Voice 2 measure 1]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                                \set Staff.shortInstrumentName =               %! applying staff names and clefs
+                                \markup { \hcenter-in #12 "vln. I-2" }         %! applying staff names and clefs
+                                \set Staff.instrumentName =                    %! applying staff names and clefs
+                                \markup { \hcenter-in #14 "Violin I-2" }       %! applying staff names and clefs
+                                \clef "treble"
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                c''''2
 
-                                    \set Staff.shortInstrumentName =           %! applying staff names and clefs
-                                    \markup { \hcenter-in #12 "vln. I-2" }     %! applying staff names and clefs
-                                    \set Staff.instrumentName =                %! applying staff names and clefs
-                                    \markup { \hcenter-in #14 "Violin I-2" }   %! applying staff names and clefs
-                                    \clef "treble"
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
-                                    as'''4
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    a'''8
-
-                                }
+                                r4
+                                % [Voice 2 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r4
 
                                 r8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''''8
-                                ~
-
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
-                                    % [Voice 2 measure 2]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
-                                    cs''''8
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    d''''4
-
-                                }
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''''4
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''8
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''''8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as'''8
 
                                 r8
                                 % [Voice 2 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r2
+                                r4
 
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
-
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    b'''8
-                                    [
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    c''''8
-
-                                    \revert Staff.Stem.stemlet-length
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    g'''8
-                                    ~
-                                    ]
-
-                                }
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                b'''2
                                 % [Voice 2 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs'''2.
+                                ~
+                                % [Voice 2 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs'''2
+
+                                r4
+                                % [Voice 2 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                r4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                d''''4
+                                ~
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                d''''8
+
+                                r8
+                                % [Voice 2 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                r4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                g'''2
+                                ~
+                                % [Voice 2 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
                                 g'''4
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                a'''8
-
-                                r8
-
-                                r4
-                                % [Voice 2 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b'''4
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b'''8
-
-                                r8
-
-                                r4
-                                % [Voice 2 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs'''8
-
-                                r4
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as'''8
-                                ~
-                                % [Voice 2 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as'''8
-
-                                r8
-
                                 r2
-                                % [Voice 2 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f'''4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs'''2
                                 % [Voice 2 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \once \override Rest.transparent = ##t         %! applying invisibility
-                                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
-                                r1 * 3/8
+                                r8
 
-                                R1 * 3/8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs'''8
+                                ~
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs'''2
                                 \bar "||"
-                                \stopStaff \startStaff                         %! applying cutaway
 
                             }
 
@@ -397,162 +293,118 @@
                                 \set Staff.instrumentName =                    %! applying staff names and clefs
                                 \markup { \hcenter-in #14 "Violin II-1" }      %! applying staff names and clefs
                                 \clef "treble"
-                                \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs''8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''8
-                                ~
-                                ]
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as''2
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''4
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''8
-
-                                r8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs'''4
                                 % [Voice 3 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r4
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b''4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b''8
-
                                 r8
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''8
+                                ~
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''4
+                                ~
                                 % [Voice 3 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r4
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b''8
-
-                                r4
-                                % [Voice 3 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs'''8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c'''8
-
-                                r8
-
-                                r4
-                                % [Voice 3 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r4
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as''8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''8
+                                [
+
+                                \revert Staff.Stem.stemlet-length
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs'''8
+                                ~
+                                ]
+
+                                \override Staff.Stem.stemlet-length = 0.75
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs'''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                f''8
+                                e''8
                                 ~
                                 ]
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                f''4
-                                % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                                e''4
+                                ~
+                                % [Voice 3 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                b''8
-                                [
+                                e''4
 
-                                \revert Staff.Stem.stemlet-length
+                                r2
+                                % [Voice 3 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c'''8
-                                ]
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs''4
+                                ~
 
-                                r4
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs''8
 
                                 r8
 
+                                r4
+                                % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                cs'''4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''2
                                 ~
                                 % [Voice 3 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b''8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''4
                                 ~
-                                ]
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b''4
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''8
+
+                                r8
 
                                 r4
                                 % [Voice 3 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r4
 
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    c'''4
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    g''8
-                                    ~
-
-                                }
-
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''8
-
-                                r8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs''2
+                                ~
                                 % [Voice 3 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
-
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                d'''8
-
-                                r8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs''2
 
                                 r4
                                 \bar "||"
@@ -578,163 +430,99 @@
                                 \set Staff.instrumentName =                    %! applying staff names and clefs
                                 \markup { \hcenter-in #14 "Violin II-2" }      %! applying staff names and clefs
                                 \clef "treble"
-                                \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c'''8
-                                [
-
-                                \ottava 1
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs'''8
-                                ]
-
-                                \ottava 0
-                                r2
-                                % [Voice 4 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''4
-                                ~
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''8
-                                ~
-                                ]
-                                % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g''8
-
-                                r8
-
-                                r4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs''4
-                                ~
-                                % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs''4
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs''8
 
                                 r8
 
                                 r4
+                                % [Voice 4 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                g''2.
+                                % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                r2
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                as''4
+                                % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                f''2.
                                 % [Voice 4 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                fs''8
+
+                                r8
+
+                                r4
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                a''4
+                                ~
+                                % [Voice 4 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                a''2.
+                                % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                                r2
 
                                 r8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                g''8
+                                e''8
                                 ~
-
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    g''4
-
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
-                                    fs''8
-
-                                }
-
-                                r4
-                                % [Voice 4 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as''8
-
-                                r2
-                                % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
-                                ~
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs''8
-
-                                r8
-
-                                r4
                                 % [Voice 4 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs''4
+                                \tweak Accidental.text \abjad-natural-markup
+                                e''2
 
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                                \times 2/3 {
+                                r4
+                                % [Voice 4 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
-                                    fs''8
+                                r8
 
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-natural-markup
-                                    c'''4
-                                    ~
-
-                                }
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''8
+                                ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c'''8
+                                \tweak Accidental.text \abjad-sharp-markup
+                                gs''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
-                                g''8
+                                c'''8
+                                ~
                                 ]
-                                % [Voice 4 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \once \override Rest.transparent = ##t         %! applying invisibility
-                                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
-                                r1 * 3/8
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \abjad-natural-markup
+                                c'''8
 
-                                R1 * 3/8
+                                r8
                                 \bar "||"
-                                \stopStaff \startStaff                         %! applying cutaway
 
                             }
 
@@ -773,154 +561,115 @@
                             % [Voice 5 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs'4
-                            ~
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g'8
-                                ~
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            g'8
-
-                            r8
+                            a'2.
+                            ~
                             % [Voice 5 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            r8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            f'8
+                            g'2
                             ~
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            f'8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            fs'8
-                            ]
                             % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            r8
-
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            d''8
+                            g'8
+
+                            r8
 
                             r4
+
+                            r8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs'8
+                            ~
                             % [Voice 5 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
-
-                            r8
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs'8
-                            ~
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs'8
-
-                            r8
-                            % [Voice 5 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g'4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs''8
-                                ~
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs''4
-                            ~
-                            % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs''4
-
-                            r2
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-                                % [Voice 5 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs'8
-                                ~
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs'4
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs''8
-
-                            r8
-                            % [Voice 5 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            g'8
+                            c''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            g'8
+                            c''8
 
                             r8
+
+                            r4
+                            % [Voice 5 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            as'4
+
+                            r2
+                            % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            r8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f'8
+                            ~
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f'2
+                            ~
+                            % [Voice 5 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f'4
+                            ~
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f'8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a'8
+                            ~
+                            ]
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a'4
+                            ~
+                            % [Voice 5 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a'4
+                            ~
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a'8
+
+                            r8
+
+                            r4
                             \bar "||"
 
                         }
@@ -953,120 +702,84 @@
                             % [Voice 6 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as8
-
-                            r8
-
-                            r2
+                            \tweak Accidental.text \abjad-natural-markup
+                            c'2.
+                            ~
                             % [Voice 6 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            e8
-                            [
+                            c'4
+                            ~
 
-                            \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            fs8
-                            ]
-
-                            r4
+                            \tweak Accidental.text \abjad-natural-markup
+                            c'8
 
                             r8
 
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as8
-                            ~
+                            r4
                             % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as4
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as4
-                            ~
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as8
-
-                            r8
+                            \tweak Accidental.text \abjad-natural-markup
+                            b2
                             % [Voice 6 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            r8
-
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as8
-                            ~
+                            \tweak Accidental.text \abjad-natural-markup
+                            c'4
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f4
-                                ~
-
-                            }
+                            r2
                             % [Voice 6 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            f4
-
-                            r4
+                            c'8
 
                             r8
 
+                            r4
+
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            d'8
+                            b4
                             ~
                             % [Voice 6 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            d'4
+                            b4
 
-                            r2
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            as2
+                            ~
                             % [Voice 6 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            as2
+                            ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            b8
-
-                            r4
+                            \tweak Accidental.text \abjad-sharp-markup
+                            as8
 
                             r8
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            a8
                             % [Voice 6 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs'8
+                            \once \override Rest.transparent = ##t             %! applying invisibility
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
+                            r1 * 3/8
 
-                            r8
-
-                            r2
+                            R1 * 3/8
                             \bar "||"
+                            \stopStaff \startStaff                             %! applying cutaway
 
                         }
 
@@ -1111,133 +824,68 @@
                             % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs2
-                            ~
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            c'8
-                            ]
+                            b2
+
+                            r4
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r2
+                            r4
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
+                            r8
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                cs'8
-                                ~
-
-                            }
-                            % [Voice 7 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs'8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             f8
                             ~
-                            ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             f8
 
                             r8
-
-                            r4
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-                                % [Voice 7 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g8
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs'8
-
-                            r8
-
-                            r4
-                            % [Voice 7 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            % [Voice 7 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            g8
+                            g2
+                            ~
+                            % [Voice 7 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g2.
+                            % [Voice 7 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b2
 
                             r4
                             % [Voice 7 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as8
-                            [
+                            r4
 
-                            \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            f8
-                            ]
+                            f4
 
-                            r2
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b8
+
+                            r8
                             % [Voice 7 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            as4
-                            ~
+                            \once \override Rest.transparent = ##t             %! applying invisibility
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
+                            r1 * 3/8
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                b8
-                                ~
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            b4
+                            R1 * 3/8
                             \bar "||"
+                            \stopStaff \startStaff                             %! applying cutaway
 
                         }
 
@@ -1275,21 +923,84 @@
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
+                            % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-                                % [Voice 8 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            d4
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as,8
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f,2
+                            % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f,4
-                                ~
+                            r4
 
-                            }
+                            r8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b,8
+                            ~
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b,4
+                            ~
+                            % [Voice 8 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b,4
+                            ~
+
+                            \override Staff.Stem.stemlet-length = 0.75
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b,8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g,8
+                            ~
+                            ]
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g,4
+                            % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            r2
+
+                            r8
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g,8
+                            ~
+                            % [Voice 8 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g,2.
+                            ~
+                            % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            g,8
+
+                            r8
+
+                            r4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            f,4
+                            ~
+                            % [Voice 8 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
@@ -1301,116 +1012,6 @@
                             f,8
 
                             r8
-                            % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                g,8
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                gs,4
-                                ~
-
-                            }
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            gs,8
-
-                            r8
-                            % [Voice 8 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r2
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            a,8
-
-                            r8
-                            % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            a,4
-
-                            r4
-                            % [Voice 8 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r4
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            b,8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            f,8
-                            ~
-                            ]
-
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                f,4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                e,8
-                                ~
-
-                            }
-                            % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            e,8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            b,8
-                            ]
-
-                            r4
-
-                            r8
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            c8
-                            ~
-                            % [Voice 8 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            c4
-
-                            \override Staff.Stem.stemlet-length = 0.75
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            b,8
-                            [
-
-                            \revert Staff.Stem.stemlet-length
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs8
-                            ]
 
                             r4
                             \bar "||"
@@ -1455,106 +1056,97 @@
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
+                            % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-                                % [Voice 9 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                as,4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                a,8
-                                ~
-
-                            }
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs,4
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            a,8
+                            g,8
 
                             r8
 
                             r4
                             % [Voice 9 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            cs8
-
                             r8
 
-                            r4
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a,8
+                            ~
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            a,2
+                            ~
                             % [Voice 9 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            g,4
-
-                            r2
-                            % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
-                            fs,4
+                            a,4
                             ~
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
-                            \times 2/3 {
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
-                                fs,4
-
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-natural-markup
-                                c8
-                                ~
-
-                            }
-
+                            \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
-                            c4
-                            % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                            a,8
+                            [
+
+                            \revert Staff.Stem.stemlet-length
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            cs8
+                            ]
 
                             r4
+                            % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r8
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            g,8
-                            ~
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            g,4
-                            % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-natural-markup
-                            a,4
-
-                            r2
-                            % [Voice 9 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                            r8
-
-                            \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs,8
                             ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs,2
+                            ~
+                            % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs,4
+                            ~
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs,8
+
+                            r8
 
                             r4
+                            % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            r4
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-sharp-markup
+                            gs,8
+
+                            r8
+
+                            r4
+                            % [Voice 9 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                            \tweak Accidental.stencil #ly:text-interface::print
+                            \tweak Accidental.text \abjad-natural-markup
+                            b,4
+
+                            r2
                             \bar "||"
 
                         }

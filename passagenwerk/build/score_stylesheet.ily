@@ -63,7 +63,7 @@
 		\accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
 		\override BarLine.hair-thickness = #0.9
-		\override BarLine.thick-thickness = #2.7
+		\override BarLine.thick-thickness = #8
 		\override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
 		\override Clef.whiteout-style = #'outline

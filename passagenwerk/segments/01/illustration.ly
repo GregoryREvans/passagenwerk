@@ -362,7 +362,7 @@
                                 % [Voice 1 measure 11]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -373,7 +373,7 @@
                                     c''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     as'4
 
                                 }
@@ -389,7 +389,7 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
                                 [
 
@@ -413,14 +413,14 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 ~
                                 ]
                                 % [Voice 1 measure 14]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
                                 ~
 
@@ -428,7 +428,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     as'8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -452,14 +452,14 @@
                                     g'4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''8
                                     ~
 
                                 }
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''2
                                 ~
 
@@ -468,7 +468,7 @@
                                     % [Voice 1 measure 16]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -510,7 +510,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
                                 ]
 
@@ -519,7 +519,7 @@
                                 c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'2
                                 % [Voice 1 measure 18]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -528,12 +528,12 @@
                                 g'2
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 ~
 
@@ -541,7 +541,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -592,7 +592,7 @@
                                     c''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''4
                                     ~
 
@@ -600,18 +600,18 @@
                                 % [Voice 1 measure 20]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'8
                                 ~
                                 ]
@@ -620,7 +620,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     gs'4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -643,7 +643,7 @@
                                     d''4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     gs'8
                                     ~
 
@@ -651,13 +651,13 @@
                                 % [Voice 1 measure 21]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'4
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'8
                                 [
 
@@ -678,7 +678,7 @@
                                 b'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 \bar "||"
                                 % [Voice 1 measure 22]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -953,7 +953,7 @@
                                 % [Voice 2 measure 11]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -1025,7 +1025,7 @@
                                 % [Voice 2 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -1041,7 +1041,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 ]
                                 % [Voice 2 measure 14]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1059,14 +1059,14 @@
                                     g'8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''4
                                     ~
 
                                 }
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 ~
 
@@ -1075,7 +1075,7 @@
                                     % [Voice 2 measure 15]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -1414,13 +1414,13 @@
                                 % [Voice 3 measure 11]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
                                 [
 
@@ -1439,7 +1439,7 @@
                                     c''4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     as'8
 
                                 }
@@ -1455,7 +1455,7 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
                                 [
 
@@ -1472,7 +1472,7 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 [
 
@@ -1489,7 +1489,7 @@
                                 g'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''2
                                 % [Voice 3 measure 15]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1532,7 +1532,7 @@
                                 c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
                                 ~
 
@@ -1540,7 +1540,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     fs'8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -1550,7 +1550,7 @@
                                 }
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
                                 ~
 
@@ -1558,7 +1558,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     as'4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -1569,13 +1569,13 @@
                                 % [Voice 3 measure 18]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''8
                                 [
 
@@ -1622,40 +1622,40 @@
                                     c''4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''8
                                     ~
 
                                 }
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''2
                                 ~
                                 % [Voice 3 measure 20]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''8
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 ~
                                 ]
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     gs'4
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -1680,7 +1680,7 @@
                                     [
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     gs'8
 
                                     \revert Staff.Stem.stemlet-length
@@ -1698,7 +1698,7 @@
                                 b'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''2
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -1986,7 +1986,7 @@
                                 % [Voice 4 measure 11]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
                                 ~
 
@@ -1994,7 +1994,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     fs'8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -2064,7 +2064,7 @@
                                 % [Voice 4 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -2081,7 +2081,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 ~
                                 ]
@@ -2090,7 +2090,7 @@
                                 \times 2/3 {
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     as'8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -2109,7 +2109,7 @@
                                     % [Voice 4 measure 15]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
@@ -2165,7 +2165,7 @@
                                     c''8
 
                                     \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \abjad-flat-markup
+                                    \tweak Accidental.text \abjad-sharp-markup
                                     cs''4
 
                                 }
@@ -2438,7 +2438,7 @@
                             % [Voice 5 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'2
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -2455,7 +2455,7 @@
                             % [Voice 5 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
@@ -2463,7 +2463,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -2479,7 +2479,7 @@
                             % [Voice 5 measure 14]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -2495,7 +2495,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''8
                             ]
                             % [Voice 5 measure 15]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -2529,36 +2529,36 @@
                             c''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
                             ~
                             % [Voice 5 measure 17]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''8
                             [
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
@@ -2566,7 +2566,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -2585,14 +2585,14 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'8
                             ~
                             ]
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'8
                             [
 
@@ -2609,7 +2609,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''8
                             [
 
@@ -2652,32 +2652,32 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
                             ~
                             % [Voice 5 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'2
                             ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'4
                             % [Voice 5 measure 21]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -2686,7 +2686,7 @@
                             d''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'4
                             ~
 
@@ -2694,7 +2694,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -2704,7 +2704,7 @@
                             }
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
                             ~
 
@@ -2712,7 +2712,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -2994,13 +2994,13 @@
                             % [Voice 6 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'8
                             [
 
@@ -3077,13 +3077,13 @@
                             % [Voice 6 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'2
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'8
                             [
 
@@ -3108,7 +3108,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'8
                             ~
                             ]
@@ -3118,7 +3118,7 @@
                                 % [Voice 6 measure 15]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3136,13 +3136,13 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
                             ~
 
@@ -3152,7 +3152,7 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''8
                                 [
 
@@ -3516,7 +3516,7 @@
                             % [Voice 7 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
 
                             \clef "tenorvarC"
@@ -3533,7 +3533,7 @@
                                 c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
 
                             }
@@ -3548,7 +3548,7 @@
                             % [Voice 7 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'2
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -3562,7 +3562,7 @@
                             c''2
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'4
                             ~
 
@@ -3571,7 +3571,7 @@
                                 % [Voice 7 measure 15]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3582,7 +3582,7 @@
 
                             \clef "treble"
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''2
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -3627,13 +3627,13 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
@@ -3641,7 +3641,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3664,7 +3664,7 @@
                                 c''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'8
                                 ~
 
@@ -3672,7 +3672,7 @@
                             % [Voice 7 measure 18]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'2
                             ~
 
@@ -3680,7 +3680,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3698,7 +3698,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3731,21 +3731,21 @@
                             c''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''2
                             % [Voice 7 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'2
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'4
                             ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'4
                             ~
 
@@ -3753,7 +3753,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -3777,7 +3777,7 @@
                                 d''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 gs'4
                                 ~
 
@@ -3785,7 +3785,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs'8
                             [
 
@@ -3804,7 +3804,7 @@
                                 b'8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs''4
                                 \bar "||"
 
@@ -4092,7 +4092,7 @@
                             % [Voice 8 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -4103,7 +4103,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'8
                             ~
                             ]
@@ -4112,7 +4112,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -4179,7 +4179,7 @@
                             % [Voice 8 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs'4
                             ~
 
@@ -4187,7 +4187,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -4211,13 +4211,13 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as'2
                             % [Voice 8 measure 15]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -4227,7 +4227,7 @@
                             % [Voice 8 measure 16]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -4524,7 +4524,7 @@
                             \clef "treble"
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs''8
                             [
 
@@ -4535,7 +4535,7 @@
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as''4
                             ~
 
@@ -4543,7 +4543,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -4573,7 +4573,7 @@
 
                             \clef "treble"
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs''4
                             ~
 
@@ -4581,7 +4581,7 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 fs''8
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -4597,13 +4597,13 @@
                             % [Voice 9 measure 14]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as''2
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as''8
                             [
 
@@ -4628,7 +4628,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs'''8
                             ~
                             ]
@@ -4638,7 +4638,7 @@
                                 % [Voice 9 measure 16]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs'''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -4668,7 +4668,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             fs''8
                             [
 
@@ -4684,12 +4684,12 @@
                             c'''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as''4
                             ~
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             as''4
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -4706,13 +4706,13 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs'''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs'''2
 
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -4744,7 +4744,7 @@
                             }
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs'''4
                             ~
 
@@ -4752,24 +4752,24 @@
                             \times 2/3 {
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs'''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 as''8
 
                             }
                             % [Voice 9 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs''4
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs''8
                             [
 
@@ -4793,13 +4793,13 @@
 
                             \revert Staff.Stem.stemlet-length
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs''8
                             ~
                             ]
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             gs''4
                             % [Voice 9 measure 21]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -4816,14 +4816,14 @@
                                 b''4
 
                                 \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \abjad-flat-markup
+                                \tweak Accidental.text \abjad-sharp-markup
                                 cs'''8
                                 ~
 
                             }
 
                             \tweak Accidental.stencil #ly:text-interface::print
-                            \tweak Accidental.text \abjad-flat-markup
+                            \tweak Accidental.text \abjad-sharp-markup
                             cs'''2
                             \bar "||"
                             % [Voice 9 measure 22]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()

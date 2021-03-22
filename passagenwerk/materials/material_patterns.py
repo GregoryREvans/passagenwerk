@@ -1,6 +1,7 @@
 from passagenwerk.materials.pitch import (
     anuran_pitch_handler,
     cb_clock,
+    cb_gravity,
     cb_scratch,
     cb_spectrum,
     guerrero_pitch_handler,
@@ -8,35 +9,45 @@ from passagenwerk.materials.pitch import (
     rain_pitch_handler,
     va_1_anuran_pitch_handler,
     va_1_clock,
+    va_1_gravity,
     va_1_scratch,
     va_1_spectrum,
     va_2_clock,
+    va_2_gravity,
     va_2_scratch,
     va_2_spectrum,
     vc_1_clock,
+    vc_1_gravity,
     vc_1_scratch,
     vc_1_spectrum,
     vc_2_clock,
+    vc_2_gravity,
     vc_2_scratch,
     vc_2_spectrum,
     vn_II_1_clock,
+    vn_II_1_gravity,
     vn_II_1_scratch,
     vn_II_1_spectrum,
     vn_II_2_clock,
+    vn_II_2_gravity,
     vn_II_2_scratch,
     vn_II_2_spectrum,
     vn_I_1_clock,
+    vn_I_1_gravity,
     vn_I_1_scratch,
     vn_I_1_spectrum,
     vn_I_2_clock,
+    vn_I_2_gravity,
     vn_I_2_scratch,
     vn_I_2_spectrum,
 )
 from passagenwerk.materials.rhythm import (
     anuran_handler,
     clock_handler,
+    gravity_handler,
     guerrero_handler,
     heterophony_handler,
+    heterophony_handler_alt,
     note_handler,
     rain_handler,
     scratch_handler,
@@ -464,4 +475,242 @@ pitch_materials_05 = [
 
 ## 06
 
-rhythm_materials_06 = [heterophony_handler]
+rhythm_materials_06 = [heterophony_handler_alt]
+
+## 07
+
+rhythm_materials_07 = [
+    gravity_handler,  # vnI-1
+    silence_handler,
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    rain_handler,
+    gravity_handler,  # vnI-2
+    silence_handler,
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    rain_handler,
+    gravity_handler,  # vnII-1
+    silence_handler,
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    rain_handler,
+    gravity_handler,  # vnII-2
+    silence_handler,
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    rain_handler,
+    silence_handler,  # va-1
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    silence_handler,  # va-2
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    silence_handler,  # vc-1
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    silence_handler,  # vc-2
+    gravity_handler,
+    scratch_handler_alt,
+    gravity_handler,
+    gravity_handler,  # cb
+]
+
+pitch_materials_07 = [
+    vn_I_1_gravity,  # vnI-1
+    silence_handler,
+    vn_I_1_gravity,
+    vn_I_1_scratch,
+    vn_I_1_gravity,
+    rain_pitch_handler,
+    vn_I_2_gravity,  # vnI-2
+    silence_handler,
+    vn_I_2_gravity,
+    vn_I_2_scratch,
+    vn_I_2_gravity,
+    rain_pitch_handler,
+    vn_II_1_gravity,  # vnII-1
+    silence_handler,
+    vn_II_1_gravity,
+    vn_II_1_scratch,
+    vn_II_1_gravity,
+    rain_pitch_handler,
+    vn_II_2_gravity,  # vnII-2
+    silence_handler,
+    vn_II_2_gravity,
+    vn_II_2_scratch,
+    vn_II_2_gravity,
+    rain_pitch_handler,
+    silence_handler,  # va-1
+    va_1_gravity,
+    va_1_scratch,
+    va_1_gravity,
+    silence_handler,  # va-2
+    va_2_gravity,
+    va_2_scratch,
+    va_2_gravity,
+    silence_handler,  # vc-1
+    vc_1_gravity,
+    vc_1_scratch,
+    vc_1_gravity,
+    silence_handler,  # vc-2
+    vc_2_gravity,
+    vc_2_scratch,
+    vc_2_gravity,
+    cb_gravity,  # cb
+]
+
+## 08
+
+rhythm_materials_08 = [
+    gravity_handler,  # vnI-1
+    silence_handler,
+    scratch_handler,
+    guerrero_handler,  # vnI-2
+    silence_handler,
+    guerrero_handler,
+    silence_handler,
+    scratch_handler,
+    silence_handler,  # vnII-1
+    scratch_handler,
+    guerrero_handler,  # vnII-2
+    silence_handler,
+    guerrero_handler,
+    scratch_handler,
+    silence_handler,
+    silence_handler,  # va-1
+    scratch_handler,
+    silence_handler,
+    guerrero_handler,  # va-2
+    silence_handler,
+    guerrero_handler,
+    scratch_handler,
+    silence_handler,
+    silence_handler,  # vc-1
+    scratch_handler,
+    silence_handler,
+    guerrero_handler,  # vc-2
+    scratch_handler,
+    guerrero_handler,
+    spectrum_handler,
+    silence_handler,  # cb
+    scratch_handler,
+    silence_handler,
+    spectrum_handler,
+]
+
+pitch_materials_08 = [
+    vn_I_1_gravity,  # vnI-1
+    silence_handler,
+    vn_I_1_scratch,
+    guerrero_pitch_handler,  # vnI-2
+    silence_handler,
+    guerrero_pitch_handler,
+    silence_handler,
+    vn_I_2_scratch,
+    silence_handler,  # vnII-1
+    vn_II_1_scratch,
+    guerrero_pitch_handler,  # vnII-2
+    silence_handler,
+    guerrero_pitch_handler,
+    vn_II_2_scratch,
+    silence_handler,
+    silence_handler,  # va-1
+    va_1_scratch,
+    silence_handler,
+    guerrero_pitch_handler,  # va-2
+    silence_handler,
+    guerrero_pitch_handler,
+    va_2_scratch,
+    silence_handler,
+    silence_handler,  # vc-1
+    vc_1_scratch,
+    silence_handler,
+    guerrero_pitch_handler,  # vc-2
+    vc_2_scratch,
+    guerrero_pitch_handler,
+    va_2_spectrum,
+    silence_handler,  # cb
+    cb_scratch,
+    silence_handler,
+    cb_spectrum,
+]
+
+## 09
+
+rhythm_materials_09 = [
+    rain_handler,  # vnI-1
+    silence_handler,
+    rain_handler,  # vnI-2
+    silence_handler,
+    rain_handler,  # vnII-1
+    silence_handler,
+    rain_handler,  # vnII-2
+    silence_handler,
+    silence_handler,  # va-1
+    va_1_anuran,
+    silence_handler,
+    va_1_anuran,
+    silence_handler,  # va-2
+    spectrum_handler,
+    silence_handler,
+    spectrum_handler,  # vc-1
+    silence_handler,
+    anuran_handler,
+    silence_handler,
+    silence_handler,  # vc-2
+    anuran_handler,
+    silence_handler,
+    spectrum_handler,  # cb
+    silence_handler,
+]
+
+pitch_materials_09 = [
+    rain_pitch_handler,  # vnI-1
+    silence_handler,
+    rain_pitch_handler,  # vnI-2
+    silence_handler,
+    rain_pitch_handler,  # vnII-1
+    silence_handler,
+    rain_pitch_handler,  # vnII-2
+    silence_handler,
+    silence_handler,  # va-1
+    va_1_anuran_pitch_handler,
+    silence_handler,
+    va_1_anuran_pitch_handler,
+    silence_handler,  # va-2
+    va_2_spectrum,
+    silence_handler,
+    vc_1_spectrum,  # vc-1
+    silence_handler,
+    va_1_anuran_pitch_handler,
+    silence_handler,
+    silence_handler,  # vc-2
+    va_1_anuran_pitch_handler,
+    silence_handler,
+    cb_spectrum,  # cb
+    silence_handler,
+]
+
+## 10
+
+rhythm_materials_10 = [clock_handler]
+
+pitch_materials_10 = [
+    vn_I_1_clock,
+    vn_I_2_clock,
+    vn_II_1_clock,
+    vn_II_2_clock,
+    va_1_clock,
+    va_2_clock,
+    vc_1_clock,
+    vc_2_clock,
+    cb_clock,
+]

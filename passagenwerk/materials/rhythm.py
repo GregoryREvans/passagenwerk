@@ -167,6 +167,34 @@ heterophony_handler = evans.RhythmHandler(
     name="heterophony_handler",
 )
 
+heterophony_maker_alt = rmakers.stack(
+    rmakers.talea(
+        [
+            4,
+            1,
+            3,
+            5,
+            4,
+            6,
+            7,
+            3,
+            2,
+        ],
+        4,
+        extra_counts=[3, 2, 0, 1, 0, 1],
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+heterophony_handler_alt = evans.RhythmHandler(
+    rmaker=heterophony_maker_alt,
+    forget=False,
+    name="heterophony_handler_alt",
+)
+
 ##
 ##
 
@@ -291,4 +319,99 @@ clock_handler = evans.RhythmHandler(
     rmaker=clock_maker,
     forget=False,
     name="clock_handler",
+)
+
+
+##
+##
+
+gravity_maker = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1 1 2))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+            "(1 (1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+gravity_handler = evans.RhythmHandler(
+    rmaker=gravity_maker,
+    forget=False,
+    name="gravity_handler",
 )

@@ -4,6 +4,23 @@ import abjad
 ## MARKUP
 ##
 
+c = abjad.LilyPondLiteral(
+    [
+        r"""_ \markup {""",
+        r"""    \override #'(font-name . "STIXGeneral")""",
+        r"""    \with-color #white""",
+        r"""    \right-column {""",
+        r"""        \line { "\hspace #0.75 ............" }""",
+        r"""        \with-color #black""",
+        r"""        \line { Panama City Beach, Fl. \hspace #0.75 - \hspace #0.75 Iowa City, Ia. }""",
+        r"""        \with-color #black""",
+        r"""        \line { \hspace #0.75 March 2021 }""",
+        r"""    }""",
+        r"""}""",
+    ],
+    format_slot="absolute_after",
+)
+
 met_45 = abjad.MetronomeMark((1, 4), 45)
 met_45_mark = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 45)
 mark_45 = abjad.LilyPondLiteral(
@@ -90,6 +107,8 @@ mark_120 = abjad.LilyPondLiteral(
 
 start_percussion_staff = abjad.LilyPondLiteral(
     [
+        r"\stopStaff",
+        r"\startStaff",
         r"\override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)",
         r"\override Staff.NoteHead.no-ledgers = ##t",
         r"\override Staff.Accidental.stencil = ##f",
@@ -102,6 +121,8 @@ cancel_percussion_staff = abjad.LilyPondLiteral(
         r"\revert Staff.StaffSymbol.line-positions",
         r"\revert Staff.NoteHead.no-ledgers",
         r"\revert Staff.Accidental.stencil",
+        r"\stopStaff",
+        r"\startStaff",
     ],
     format_slot="after",
 )
@@ -206,9 +227,16 @@ rehearsal_mark_n = abjad.Markup(
 def transpose_contrabass(selections):
     octave = abjad.NamedInterval("+P8")
     for leaf in abjad.select(selections).leaves(pitched=True):
-        old_pitch = leaf.written_pitch
-        new_pitch = octave.transpose(old_pitch)
-        leaf.written_pitch = new_pitch
+        if isinstance(leaf, abjad.Note):
+            old_pitch = leaf.written_pitch
+            new_pitch = octave.transpose(old_pitch)
+            leaf.written_pitch = new_pitch
+        elif isinstance(leaf, abjad.Chord):
+            old_pitches = leaf.written_pitches
+            new_pitches = [octave.transpose(old_pitch) for old_pitch in old_pitches]
+            leaf.written_pitches = new_pitches
+        else:
+            continue
 
 
 def with_sharps(selections):
@@ -221,3 +249,7 @@ def make_percussion_staff(selections):
     abjad.attach(start_percussion_staff, first_leaf)
     abjad.attach(abjad.Clef("percussion"), first_leaf)
     abjad.attach(cancel_percussion_staff, last_leaf)
+
+
+def make_gliss(selections):
+    abjad.glissando(selections[:])

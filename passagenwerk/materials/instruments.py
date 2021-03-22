@@ -82,7 +82,7 @@ clef_handler_three = evans.ClefHandler(
     clef="treble", add_extended_clefs=True, add_ottavas=False
 )
 clef_handler_four = evans.ClefHandler(
-    clef="treble", add_extended_clefs=True, add_ottavas=True
+    clef="treble", add_extended_clefs=True, add_ottavas=False
 )
 
 clef_handler_five = evans.ClefHandler(
