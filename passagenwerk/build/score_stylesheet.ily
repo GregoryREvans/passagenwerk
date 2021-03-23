@@ -77,8 +77,8 @@
 		%{ \override SpacingSpanner.strict-grace-spacing = ##t
 		\override SpacingSpanner.strict-note-spacing = ##t
 		\override SpacingSpanner.uniform-stretching = ##t %}
-		\override StaffGrouper.staff-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 0))
-		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 0))
+		\override StaffGrouper.staff-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 2))
+		\override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 2))
 		\override Stem.stemlet-length = #1.15
 		%{ \override StemTremolo.slope = #0.3
 		\override StemTremolo.shape = #'beam-like
@@ -130,7 +130,7 @@
 
 \paper {
 	system-separator-markup = \markup { \slashSeparator }
-	system-system-spacing = #'((basic-distance . 21) (minimum-distance . 21) (padding . 5))
+	system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
 
 	indent = 20\mm
     short-indent = 15\mm

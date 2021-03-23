@@ -5,6 +5,7 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    arco_markup,
     clef_whitespace,
     mark_108,
     rehearsal_mark_h,
@@ -132,6 +133,96 @@ maker = evans.SegmentMaker(
             "Voice 8",
             clef_whitespace,
             baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("pp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            arco_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            arco_markup,
+            baca.leaf(0, pitched=True),
         ),
         evans.attach(
             "Global Context",

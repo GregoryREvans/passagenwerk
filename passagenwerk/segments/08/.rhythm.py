@@ -2,7 +2,7 @@ import abjad
 handler_to_value = abjad.OrderedDict(
     [
         (
-            'gravity_handler',
+            'gravity_handler_alt',
             abjad.OrderedDict(
                 [
                     ('state', 4),

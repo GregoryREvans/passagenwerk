@@ -165,6 +165,7 @@
 
                                     \override Staff.Stem.stemlet-length = 0.75
                                     gqs''16
+                                    \mp
                                     [
 
                                     gqs''16
@@ -357,6 +358,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                                 \times 2/3 {
@@ -767,6 +770,8 @@
 
                                     \override Staff.Stem.stemlet-length = 0.75
                                     g''8
+                                    \mf
+                                    ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                     [
 
                                     g''8
@@ -948,6 +953,9 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
@@ -956,6 +964,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 g''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -1020,6 +1030,9 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
@@ -1113,6 +1126,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -1316,6 +1331,7 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 fs'8
+                                \mp
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -1409,6 +1425,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'4
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
@@ -1805,6 +1823,8 @@
 
                                     \override Staff.Stem.stemlet-length = 0.75
                                     g''16
+                                    \mf
+                                    ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                     [
 
                                     g''16
@@ -1981,6 +2001,9 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                                 ~
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -2002,6 +2025,8 @@
 
                                     \override Staff.Stem.stemlet-length = 0.75
                                     g''8
+                                    \mf
+                                    ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                     [
 
                                     g''8
@@ -2059,6 +2084,9 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs'2
+                                \p
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
@@ -2169,6 +2197,8 @@
 
                                     \override Staff.Stem.stemlet-length = 0.75
                                     gs''16
+                                    \mf
+                                    ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                     [
 
                                     gs''16
@@ -2348,6 +2378,7 @@
                             \markup { \hcenter-in #14 "Viola-1" }              %! applying staff names and clefs
                             \clef "varC"
                             g'4
+                            \mp
 
                             r4
 
@@ -2433,6 +2464,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'2
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
@@ -2807,6 +2840,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 as''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 as''8
@@ -2989,6 +3024,9 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'4
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -3011,6 +3049,8 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             g''16
+                            \mf
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                             [
 
                             g''16
@@ -3072,6 +3112,9 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'2
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -3176,6 +3219,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 gs''8
@@ -3367,6 +3412,7 @@
                                 r8
 
                                 gs8
+                                \mp
 
                                 r8
 
@@ -3511,6 +3557,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'4
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
 
                             \clef "tenorvarC"
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -3897,6 +3945,8 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 g''16
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 as''16
@@ -4087,6 +4137,9 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'4
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                             \override Staff.Stem.stemlet-length = 0.75
                             \tweak Accidental.stencil #ly:text-interface::print
@@ -4117,6 +4170,8 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             g''16
+                            \mf
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                             [
 
                             g''16
@@ -4174,6 +4229,9 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs'4
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -4237,6 +4295,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''16
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 gs''16
@@ -4458,6 +4518,7 @@
 
                             \clef "tenorvarC"
                             a'4
+                            \mp
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -4519,6 +4580,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs''8
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -4550,17 +4613,16 @@
 
                             \clef "bass"
                             e,8
+                            \sfp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
+                            \<
                             ~
 
                             e,2
                             ~
 
-                            e,4
-                            ~
-
-                            e,8
-
-                            r8
+                            e,2
+                            \ff
                             \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 9 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -4568,6 +4630,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             fs''4
+                            \p
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" 
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")

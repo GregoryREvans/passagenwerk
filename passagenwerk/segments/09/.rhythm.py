@@ -36,7 +36,7 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'va_1_anuran',
+            'va_1_anuran_alt',
             abjad.OrderedDict(
                 [
                     ('state', 6),
@@ -62,7 +62,7 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'anuran_handler',
+            'anuran_handler_alt',
             abjad.OrderedDict(
                 [
                     ('state', 6),

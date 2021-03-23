@@ -5,12 +5,18 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    apply_scratch,
+    apply_spectrum_tremolo,
     clef_whitespace,
+    col_legno_markup,
     mark_60,
     mark_108,
     mark_115,
     met_108,
     met_115,
+    normale_markup,
+    normale_markup_tall,
+    pizz_markup,
     rehearsal_mark_f,
     rehearsal_mark_g,
     transpose_contrabass,
@@ -81,6 +87,11 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         evans.attach(
+            "Voice 5",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
             "Voice 7",
             clef_whitespace,
             baca.leaf(0, pitched=True),
@@ -100,6 +111,172 @@ maker = evans.SegmentMaker(
             clef_whitespace,
             baca.leaf(43, pitched=True),
         ),
+        evans.attach(
+            "Voice 5",
+            abjad.StopTextSpan(),
+            baca.leaf(0),
+        ),
+        evans.call("Voice 1", apply_scratch, abjad.select().runs().get([0, 1, 2])),
+        evans.call("Voice 2", apply_scratch, abjad.select().runs().get([0, 1, 2])),
+        evans.call("Voice 3", apply_scratch, abjad.select().runs().get([0, 1, 2])),
+        evans.call("Voice 4", apply_scratch, abjad.select().runs().get([0, 1, 2])),
+        evans.call("Voice 7", apply_scratch, abjad.select().runs().get([1, 3, 5])),
+        evans.attach(
+            "Voice 7",
+            normale_markup,
+            abjad.select().run(1).leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            normale_markup_tall,
+            abjad.select().run(3).leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            normale_markup,
+            abjad.select().run(5).leaf(0),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_spectrum_tremolo,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_spectrum_tremolo,
+            abjad.select().run(2),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_spectrum_tremolo,
+            abjad.select().run(4),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_spectrum_tremolo,
+            abjad.select().run(6).leaves().get([0, 1, 2, 3, 4]),
+        ),
+        evans.detach(
+            "Voice 7",
+            abjad.StartHairpin(">"),
+            abjad.select().run(0).leaf(-1),
+        ),
+        evans.detach(
+            "Voice 7",
+            abjad.StartHairpin("<"),
+            abjad.select().run(2).leaf(-1),
+        ),
+        evans.call("Voice 8", apply_scratch, abjad.select().runs().get([1, 3])),
+        evans.attach(
+            "Voice 8",
+            normale_markup,
+            abjad.select().run(1).leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            normale_markup_tall,
+            abjad.select().run(3).leaf(0),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_spectrum_tremolo,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_spectrum_tremolo,
+            abjad.select().run(2),
+        ),
+        evans.detach(
+            "Voice 8",
+            abjad.StartHairpin(">"),
+            abjad.select().run(0).leaf(-2),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_spectrum_tremolo,
+            abjad.select().run(4).leaves().get([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_scratch,
+            abjad.select().runs().get([1, 3]),
+        ),
+        evans.attach(
+            "Voice 9",
+            normale_markup,
+            abjad.select().run(1).leaf(0),
+        ),
+        evans.attach(
+            "Voice 9",
+            normale_markup_tall,
+            abjad.select().run(3).leaf(0),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_spectrum_tremolo,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_spectrum_tremolo,
+            abjad.select().run(2),
+        ),
+        evans.detach(
+            "Voice 9",
+            abjad.StartHairpin("<"),
+            abjad.select().run(0).leaf(-1),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_spectrum_tremolo,
+            abjad.select()
+            .run(4)
+            .leaves()
+            .get([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
+        ),
+        evans.attach("Voice 1", abjad.Dynamic("p"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 1", col_legno_markup, abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 1", abjad.StartHairpin("<"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 1", abjad.Dynamic("f"), abjad.select().run(3).leaf(31)),
+        evans.attach("Voice 2", abjad.Dynamic("pp"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 2", pizz_markup, abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 2", abjad.StartHairpin("<"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 2", abjad.Dynamic("ff"), abjad.select().run(3).leaf(31)),
+        evans.attach("Voice 3", abjad.Dynamic("p"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 3", col_legno_markup, abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 3", abjad.StartHairpin("<"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 3", abjad.Dynamic("f"), abjad.select().run(3).leaf(31)),
+        evans.attach("Voice 4", abjad.Dynamic("pp"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 4", pizz_markup, abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 4", abjad.StartHairpin("<"), abjad.select().run(3).leaf(0)),
+        evans.attach("Voice 4", abjad.Dynamic("ff"), abjad.select().run(3).leaf(31)),
+        evans.attach("Voice 5", abjad.Dynamic("p"), abjad.select().run(-1).leaf(1)),
+        evans.attach("Voice 5", col_legno_markup, abjad.select().run(-1).leaf(1)),
+        evans.attach(
+            "Voice 5", abjad.StartHairpin("<"), abjad.select().run(-1).leaf(1)
+        ),
+        evans.attach("Voice 5", abjad.Dynamic("f"), abjad.select().run(-1).leaf(32)),
+        evans.attach("Voice 6", abjad.Dynamic("pp"), abjad.select().run(0).leaf(0)),
+        evans.attach("Voice 6", pizz_markup, abjad.select().run(0).leaf(0)),
+        evans.attach("Voice 6", abjad.StartHairpin("<"), abjad.select().run(0).leaf(0)),
+        evans.attach("Voice 6", abjad.Dynamic("ff"), abjad.select().run(0).leaf(31)),
+        evans.attach("Voice 7", abjad.Dynamic("p"), abjad.select().run(6).leaf(5)),
+        evans.attach("Voice 7", col_legno_markup, abjad.select().run(6).leaf(5)),
+        evans.attach("Voice 7", abjad.StartHairpin("<"), abjad.select().run(6).leaf(5)),
+        evans.attach("Voice 7", abjad.Dynamic("f"), abjad.select().run(6).leaf(36)),
+        evans.attach("Voice 8", abjad.Dynamic("p"), abjad.select().run(4).leaf(10)),
+        evans.attach("Voice 8", pizz_markup, abjad.select().run(4).leaf(10)),
+        evans.attach(
+            "Voice 8", abjad.StartHairpin("<"), abjad.select().run(4).leaf(10)
+        ),
+        evans.attach("Voice 8", abjad.Dynamic("f"), abjad.select().run(4).leaf(41)),
+        evans.attach("Voice 9", abjad.Dynamic("p"), abjad.select().run(4).leaf(14)),
+        evans.attach("Voice 9", col_legno_markup, abjad.select().run(4).leaf(14)),
+        evans.attach(
+            "Voice 9", abjad.StartHairpin("<"), abjad.select().run(4).leaf(14)
+        ),
+        evans.attach("Voice 9", abjad.Dynamic("f"), abjad.select().run(4).leaf(45)),
         evans.attach(
             "Global Context",
             mark_60,

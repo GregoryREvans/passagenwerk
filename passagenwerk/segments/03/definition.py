@@ -5,9 +5,11 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    apply_rain_tremolo,
     clef_whitespace,
     make_percussion_staff,
     mark_45,
+    rain_markup,
     rehearsal_mark_d,
     with_sharps,
 )
@@ -70,6 +72,51 @@ maker = evans.SegmentMaker(
             evans.SegmentMaker.beam_score,
             abjad.select().components(abjad.Score),
         ),
+        evans.attach(
+            "Voice 1",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
         evans.call(
             "Voice 1",
             make_percussion_staff,
@@ -159,6 +206,51 @@ maker = evans.SegmentMaker(
             "Voice 9",
             clef_whitespace,
             baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 1",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 2",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 3",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 4",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 5",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 6",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_rain_tremolo,
+            abjad.select().runs(),
         ),
         evans.attach(
             "Global Context",

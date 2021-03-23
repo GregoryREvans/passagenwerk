@@ -111,29 +111,59 @@
                                 \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 1 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                                \stopStaff
+                                \startStaff
                                 \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                                 \override Staff.NoteHead.no-ledgers = ##t
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \p
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 1 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 1 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \mf
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
                                 \revert Staff.Accidental.stencil
+                                \stopStaff
+                                \startStaff
                                 % [Voice 1 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 3/8
+                                \stopTextSpanOne                               %! applying indicators
+                                - \abjad-invisible-line                        %! applying indicators
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 } %! applying indicators
+                                - \tweak bound-details.right.padding 3         %! applying indicators
+                                - \tweak staff-padding #1                      %! applying indicators
+                                \startTextSpanOne                              %! applying indicators
 
                                 R1 * 3/8
                                 \bar "||"
@@ -184,30 +214,72 @@
                                 \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 2 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                                \stopStaff
+                                \startStaff
                                 \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                                 \override Staff.NoteHead.no-ledgers = ##t
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \f
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \>
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \mf
+                                \stopTextSpanOne
+                                - \abjad-invisible-line
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 3
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
                                 \revert Staff.Accidental.stencil
+                                \stopStaff
+                                \startStaff
                                 % [Voice 2 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 3/8
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 3/8
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -279,28 +351,61 @@
                                 \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 3 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                                \stopStaff
+                                \startStaff
                                 \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                                 \override Staff.NoteHead.no-ledgers = ##t
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \f
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \>
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 3 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \p
+                                \stopTextSpanOne
+                                - \abjad-invisible-line
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 3
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
                                 \revert Staff.Accidental.stencil
+                                \stopStaff
+                                \startStaff
                                 % [Voice 3 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 3/8
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 3/8
                                 \bar "||"
@@ -343,41 +448,86 @@
                                 \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                                \stopStaff
+                                \startStaff
                                 \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                                 \override Staff.NoteHead.no-ledgers = ##t
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \mf
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
                                 ~
                                 % [Voice 4 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
 
                                 c'2
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \p
+                                \stopTextSpanOne
+                                - \abjad-invisible-line
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 3
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
                                 \revert Staff.Accidental.stencil
+                                \stopStaff
+                                \startStaff
                                 % [Voice 4 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 3/8
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 3/8
                                 \bar "||"
@@ -419,43 +569,102 @@
                             \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 5 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \stopStaff
+                            \startStaff
                             \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                             \override Staff.NoteHead.no-ledgers = ##t
                             \override Staff.Accidental.stencil = ##f
                             \clef "percussion"
                             c'2
+                            :32
+                            \mf
+                            - \tweak staff-padding 6.5
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                            \<
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
 
                             c'4
+                            :32
+                            \f
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 5 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \mp
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \p
+                            \<
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 5 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2
+                            :32
 
                             c'4
+                            :32
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 5 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \mf
                             \revert Staff.StaffSymbol.line-positions
                             \revert Staff.NoteHead.no-ledgers
                             \revert Staff.Accidental.stencil
+                            \stopStaff
+                            \startStaff
                             % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
+                            - \abjad-invisible-line                            %! applying indicators
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (rit.)"  } \hspace #0.5 } %! applying indicators
+                            - \tweak bound-details.right.padding 3             %! applying indicators
+                            - \tweak staff-padding #1                          %! applying indicators
+                            \startTextSpanOne                                  %! applying indicators
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
@@ -464,6 +673,7 @@
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
 
                             R1 * 3/8
                             \bar "||"
@@ -506,31 +716,65 @@
                             \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 6 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \stopStaff
+                            \startStaff
                             \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                             \override Staff.NoteHead.no-ledgers = ##t
                             \override Staff.Accidental.stencil = ##f
                             \clef "percussion"
                             c'4
+                            :32
+                            \f
+                            - \tweak staff-padding 6.5
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                            \>
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
 
                             c'2
+                            :32
+                            \mp
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
                             ~
                             % [Voice 6 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \p
+                            \stopTextSpanOne
+                            - \abjad-invisible-line
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 3
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             \revert Staff.StaffSymbol.line-positions
                             \revert Staff.NoteHead.no-ledgers
                             \revert Staff.Accidental.stencil
+                            \stopStaff
+                            \startStaff
                             % [Voice 6 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
@@ -594,34 +838,77 @@
                             \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \stopStaff
+                            \startStaff
                             \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                             \override Staff.NoteHead.no-ledgers = ##t
                             \override Staff.Accidental.stencil = ##f
                             \clef "percussion"
                             c'2.
+                            :32
+                            \mf
+                            - \tweak staff-padding 6.5
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                            \<
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \f
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 7 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \mp
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 7 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \p
+                            \stopTextSpanOne
+                            - \abjad-invisible-line
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 3
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             \revert Staff.StaffSymbol.line-positions
                             \revert Staff.NoteHead.no-ledgers
                             \revert Staff.Accidental.stencil
+                            \stopStaff
+                            \startStaff
                             % [Voice 7 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
@@ -664,32 +951,71 @@
                             \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 8 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \stopStaff
+                            \startStaff
                             \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                             \override Staff.NoteHead.no-ledgers = ##t
                             \override Staff.Accidental.stencil = ##f
                             \clef "percussion"
                             c'2.
+                            :32
+                            \mf
+                            - \tweak staff-padding 6.5
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                            \<
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \f
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4
+                            :32
 
                             c'2
+                            :32
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 8 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \mp
                             \revert Staff.StaffSymbol.line-positions
                             \revert Staff.NoteHead.no-ledgers
                             \revert Staff.Accidental.stencil
+                            \stopStaff
+                            \startStaff
                             % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
+                            - \abjad-invisible-line                            %! applying indicators
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 } %! applying indicators
+                            - \tweak bound-details.right.padding 3             %! applying indicators
+                            - \tweak staff-padding #1                          %! applying indicators
+                            \startTextSpanOne                                  %! applying indicators
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
@@ -698,6 +1024,7 @@
                             \once \override Rest.transparent = ##t             %! applying invisibility
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                             r1 * 3/8
+                            \stopTextSpanOne                                   %! applying indicators
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
@@ -737,46 +1064,117 @@
                             \markup { \hcenter-in #12 "cb." }                  %! applying staff names and clefs
                             \set Staff.instrumentName =                        %! applying staff names and clefs
                             \markup { \hcenter-in #14 "Contrabass" }           %! applying staff names and clefs
+                            \stopStaff
+                            \startStaff
                             \override Staff.StaffSymbol.line-positions = #'(-4.2 -4 4 4.2)
                             \override Staff.NoteHead.no-ledgers = ##t
                             \override Staff.Accidental.stencil = ##f
                             \clef "percussion"
                             c'2.
+                            :32
+                            \p
+                            - \tweak staff-padding 6.5
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                            \<
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 9 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \mf
+                            \<
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 9 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2
+                            :32
 
                             c'4
+                            :32
+                            \f
+                            \>
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 9 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
                             % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2.
+                            :32
+                            \mp
+                            \>
+                            \stopTextSpanOne
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2
+                            :32
+                            \p
+                            \<
+                            \stopTextSpanOne
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
 
                             c'4
+                            :32
+                            \mf
+                            \<
+                            \stopTextSpanOne
                             ~
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 1.4
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'2
+                            :32
 
                             c'4
+                            :32
+                            \f
+                            \stopTextSpanOne
+                            - \abjad-invisible-line
+                            - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                            - \tweak bound-details.right.padding 3
+                            - \tweak staff-padding #1
+                            \startTextSpanOne
                             \bar "||"
                             \revert Staff.StaffSymbol.line-positions
                             \revert Staff.NoteHead.no-ledgers
                             \revert Staff.Accidental.stencil
+                            \stopStaff
+                            \startStaff
 
                         }
 

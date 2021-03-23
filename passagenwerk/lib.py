@@ -1,4 +1,5 @@
 import abjad
+import evans
 
 ##
 ## MARKUP
@@ -12,7 +13,7 @@ c = abjad.LilyPondLiteral(
         r"""    \right-column {""",
         r"""        \line { "\hspace #0.75 ............" }""",
         r"""        \with-color #black""",
-        r"""        \line { Panama City Beach, Fl. \hspace #0.75 - \hspace #0.75 Iowa City, Ia. }""",
+        r"""        \line { Panama City Beach, Fl. \hspace #0.75 - \hspace #0.75 Spring Valley, Oh. }""",
         r"""        \with-color #black""",
         r"""        \line { \hspace #0.75 March 2021 }""",
         r"""    }""",
@@ -137,6 +138,64 @@ clef_whitespace = abjad.LilyPondLiteral(
     format_slot="absolute_before",
 )
 
+col_legno_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+rallantando_markup = abjad.Markup(
+    r"""\markup \concat { \hspace #1 \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout "rallantando" } """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+rain_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+pizz_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+arco_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+normale_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+normale_markup_tall = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+quasi_pont_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+tasto_markup = abjad.Markup(
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" """,
+    direction=abjad.Up,
+    literal=True,
+)
+
+abjad.tweak(rain_markup).staff_padding = 6.5
+
+abjad.tweak(normale_markup_tall).staff_padding = 5.5
+
 ##
 ## REHEARSAL MARKS
 ##
@@ -253,3 +312,100 @@ def make_percussion_staff(selections):
 
 def make_gliss(selections):
     abjad.glissando(selections[:])
+
+
+trem_handler = evans.ArticulationHandler(["tremolo"], forget=True)
+trem_speed_handler = evans.TextSpanHandler(
+    span_one_positions=[
+        """ "slow (accel.)" """,
+        """ "mod. (accel.)" """,
+        """ "fast (rit.)" """,
+        """ "mod. (rit.)" """,
+    ],
+    span_one_style="dashed-line",
+    span_one_padding=1,
+    attach_span_one_to="leaves",
+    forget=False,
+)
+
+rain_dynamics = evans.CyclicList(["p", "mf", "f", "mp"], forget=False)
+
+
+def apply_rain_tremolo(selections):
+    trem_handler(selections)
+    speed_leaves = abjad.select(selections).leaves()
+    trem_speed_handler(speed_leaves[:-1])
+    ties = abjad.select(selections).logical_ties(pitched=True)
+    non_last_ties = ties[:-1]
+    dynamics = rain_dynamics(r=len(ties))
+    for i, tie in enumerate(non_last_ties):
+        leaf = abjad.select(tie).leaf(0)
+        dynamic_string = dynamics[i]
+        dynamic = abjad.Dynamic(dynamic_string)
+        next_dynamic_string = dynamics[i + 1]
+        next_dynamic = abjad.Dynamic(next_dynamic_string)
+        if dynamic.ordinal < next_dynamic.ordinal:
+            hairpin = abjad.StartHairpin("<")
+        else:
+            hairpin = abjad.StartHairpin(">")
+        abjad.attach(dynamic, leaf)
+        abjad.attach(hairpin, leaf)
+    final_leaf = abjad.select(selections).leaf(-1, pitched=True)
+    abjad.attach(abjad.Dynamic(dynamics[-1]), final_leaf)
+
+
+spectrum_dynamics = evans.CyclicList(["mp", "f", "ff", "mf"], forget=False)
+
+
+def apply_spectrum_tremolo(selections):
+    trem_handler(selections)
+    ties = abjad.select(selections).logical_ties(pitched=True)
+    non_last_ties = ties[:-1]
+    dynamics = spectrum_dynamics(r=len(ties))
+    for i, tie in enumerate(non_last_ties):
+        leaf = abjad.select(tie).leaf(0)
+        dynamic_string = dynamics[i]
+        dynamic = abjad.Dynamic(dynamic_string)
+        next_dynamic_string = dynamics[i + 1]
+        next_dynamic = abjad.Dynamic(next_dynamic_string)
+        if dynamic.ordinal < next_dynamic.ordinal:
+            hairpin = abjad.StartHairpin("<")
+        else:
+            hairpin = abjad.StartHairpin(">")
+        abjad.attach(dynamic, leaf)
+        abjad.attach(hairpin, leaf)
+    first_leaf = abjad.select(selections).leaf(0, pitched=True)
+    final_leaf = abjad.select(selections).leaf(-1, pitched=True)
+    abjad.attach(abjad.Dynamic(dynamics[-1]), final_leaf)
+    abjad.attach(tasto_markup, first_leaf)
+
+
+def apply_scratch(selections):
+    start_dynamic = abjad.Dynamic("sfp")
+    stop_dynamic = abjad.Dynamic("ff")
+    scratch_text = abjad.Markup(
+        r"""\override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch" """,
+        literal=True,
+    )
+    start_scratch_span = abjad.StartTextSpan(
+        left_text=scratch_text,
+        style="solid-line-with-hook",
+    )
+    abjad.tweak(start_scratch_span).padding = 2
+    abjad.tweak(start_scratch_span).staff_padding = 3
+    stop_scratch_span = abjad.StopTextSpan()
+    scratch_dynamic = abjad.Dynamic("f")
+    ties = abjad.select(selections).logical_ties(pitched=True)
+    for i, tie in enumerate(ties):
+        if len(tie) < 2:
+            abjad.attach(start_dynamic, tie[0])
+        else:
+            if i % 2 == 0:
+                abjad.attach(start_dynamic, tie[0])
+                abjad.attach(abjad.StartHairpin("<"), tie[0])
+                abjad.attach(stop_dynamic, tie[-1])
+            else:
+                next_leaf = abjad.get.leaf(tie[-1], 1)
+                abjad.attach(start_scratch_span, tie[0])
+                abjad.attach(scratch_dynamic, tie[0])
+                abjad.attach(stop_scratch_span, next_leaf)

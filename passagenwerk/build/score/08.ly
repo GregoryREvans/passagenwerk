@@ -94,64 +94,48 @@
 
                             \context Voice = "Voice 1"
                             {
+                                % [Voice 1 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                \tweak text #tuplet-number::calc-fraction-text
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "4")
-                                \times 5/8 {
-                                    % [Voice 1 measure 1]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                                \set Staff.shortInstrumentName =               %! applying staff names and clefs
+                                \markup { \hcenter-in #12 "vln. I-1" }         %! applying staff names and clefs
+                                \set Staff.instrumentName =                    %! applying staff names and clefs
+                                \markup { \hcenter-in #14 "Violin I-1" }       %! applying staff names and clefs
+                                \clef "treble"
+                                a4
+                                \f
+                                \stopTextSpanOne
 
-                                    \set Staff.shortInstrumentName =           %! applying staff names and clefs
-                                    \markup { \hcenter-in #12 "vln. I-1" }     %! applying staff names and clefs
-                                    \set Staff.instrumentName =                %! applying staff names and clefs
-                                    \markup { \hcenter-in #14 "Violin I-1" }   %! applying staff names and clefs
-                                    \clef "treble"
-                                    a2
+                                a4
 
-                                    a2
-
-                                    a1
-
-                                }
+                                a2.
+                                \glissando                                     %! abjad.glissando(7)
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                b2.
-                                ~
+                                b1
+                                \glissando                                     %! abjad.glissando(7)
 
-                                b2
-                                ~
+                                ds'4
                                 % [Voice 1 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                b2.
-                                ~
+                                ds'2
 
-                                b2
-                                ~
+                                ds'4
 
-                                \tweak text #tuplet-number::calc-fraction-text
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "4")
-                                \times 5/8 {
-                                    % [Voice 1 measure 4]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+                                ds'4
 
-                                    b2
+                                ds'4
+                                % [Voice 1 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                    ds'2
+                                ds'1
 
-                                    ds'1
+                                ds'4
+                                \glissando                                     %! abjad.glissando(7)
+                                % [Voice 1 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                }
+                                e'2
+                                \glissando                                     %! abjad.glissando(7)
 
-                                \tweak text #tuplet-number::calc-fraction-text
-                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "4")
-                                \times 5/8 {
-                                    % [Voice 1 measure 5]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                    ds'2
-
-                                    ds'2
-
-                                    ds'1
-
-                                }
+                                a2.
                                 % [Voice 1 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
@@ -173,28 +157,25 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''2
                                 ~
 
-                                e''4
+                                e''2
                                 ~
-
-                                e''8
-
-                                r8
                                 % [Voice 1 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
-
-                                e''2
+                                e''2.
                                 ~
 
                                 e''4
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 % [Voice 1 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -204,6 +185,8 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''4
@@ -213,6 +196,7 @@
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 \bar "||"
@@ -243,6 +227,9 @@
                                     \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     g''8
+                                    \mf
+                                    ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
+                                    \stopTextSpanOne
                                     [
 
                                     g''8
@@ -318,6 +305,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs'16
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 gs'16
@@ -455,31 +444,21 @@
 
                                 r2
 
-                                e''4
+                                e''2.
+                                \sfp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
+                                \<
                                 ~
-
-                                e''4
-                                ~
-
-                                e''8
-
-                                r8
                                 % [Voice 2 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
-
-                                r8
-
-                                e''8
-                                ~
-
-                                e''4
+                                e''2.
                                 ~
 
                                 e''4
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 % [Voice 2 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -487,12 +466,15 @@
                                 r4
 
                                 e''2
+                                \sfp
+                                \<
                                 ~
 
                                 e''4
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 \bar "||"
@@ -526,6 +508,7 @@
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 \clef "treble"
                                 r1 * 5/8
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 5/8
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -582,6 +565,8 @@
                                 r8
 
                                 as'8
+                                \sfp
+                                \<
                                 ~
 
                                 as'2
@@ -591,37 +576,27 @@
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
                                 % [Voice 3 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r4
 
-                                as'2
+                                as'1
+                                \sfp
+                                \<
                                 ~
-
-                                as'4
-                                ~
-
-                                as'8
-
-                                r8
                                 % [Voice 3 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
-
-                                r8
-
-                                as'8
-                                ~
-
-                                as'4
+                                as'2.
                                 ~
 
                                 as'4
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
                                 \bar "||"
@@ -649,6 +624,9 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 g''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
+                                \stopTextSpanOne
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -728,6 +706,8 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -847,31 +827,21 @@
 
                                 r2
 
-                                as'4
+                                as'2.
+                                \sfp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
+                                \<
                                 ~
-
-                                as'4
-                                ~
-
-                                as'8
-
-                                r8
                                 % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                                r4
-
-                                r8
-
-                                as'8
-                                ~
-
-                                as'4
+                                as'2.
                                 ~
 
                                 as'4
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
                                 % [Voice 4 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -971,12 +941,15 @@
                             r4
 
                             e'2
+                            \sfp
+                            \<
                             ~
 
                             e'4
                             ~
 
                             e'8
+                            \ff
 
                             r8
                             % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -984,17 +957,15 @@
                             r8
 
                             e'8
+                            \sfp
+                            \<
                             ~
 
                             e'2
                             ~
 
-                            e'4
-                            ~
-
-                            e'8
-
-                            r8
+                            e'2
+                            \ff
                             % [Voice 5 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -1047,6 +1018,8 @@
                                 \clef "varC"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 g''16
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 g''16
@@ -1127,6 +1100,8 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             gs'16
+                            \mf
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                             [
 
                             gs'16
@@ -1236,15 +1211,17 @@
                             ]
                             % [Voice 6 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            bqs2
+                            bqs2.
+                            \sfp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
+                            \<
                             ~
 
                             bqs4
                             ~
 
                             bqs8
+                            \ff
 
                             r8
                             % [Voice 6 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1254,17 +1231,12 @@
                             r8
 
                             bqs8
+                            \sfp
+                            \<
                             ~
 
-                            bqs4
-                            ~
-
-                            bqs4
-                            ~
-
-                            bqs8
-
-                            r8
+                            bqs2.
+                            \ff
                             % [Voice 6 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -1325,15 +1297,16 @@
                             \stopStaff \startStaff                             %! applying cutaway
                             % [Voice 7 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r2
-
-                            ds4
+                            ds2.
+                            \sfp
+                            \<
                             ~
 
                             ds4
                             ~
 
                             ds8
+                            \ff
 
                             r8
                             % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1343,17 +1316,12 @@
                             r8
 
                             ds8
+                            \sfp
+                            \<
                             ~
 
-                            ds4
-                            ~
-
-                            ds4
-                            ~
-
-                            ds8
-
-                            r8
+                            ds2.
+                            \ff
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -1438,6 +1406,8 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 g''8
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 g''8
@@ -1496,12 +1466,16 @@
 
                             \clef "bass"
                             gqs,2
+                            \sfp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
+                            \<
                             ~
 
                             gqs,4
                             ~
 
                             gqs,8
+                            \ff
 
                             r8
                             % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1509,17 +1483,15 @@
                             r8
 
                             gqs,8
+                            \sfp
+                            \<
                             ~
 
                             gqs,2
                             ~
 
-                            gqs,4
-                            ~
-
-                            gqs,8
-
-                            r8
+                            gqs,2
+                            \ff
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
                             \times 4/5 {
@@ -1528,6 +1500,8 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''16
+                                \mf
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "pizz." 
                                 [
 
                                 gs''16
@@ -1645,13 +1619,25 @@
                             % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'2
+                            :32
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" 
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
+                            \<
 
                             f'4
+                            :32
+                            \f
+                            \<
                             ~
 
                             f'4
+                            :32
 
                             f'4
+                            :32
+                            \ff
+                            \>
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -1659,67 +1645,106 @@
                                 % [Voice 8 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 f'8
+                                :32
 
                                 f'4
+                                :32
+                                \mf
+                                \>
 
                             }
 
                             f'4
+                            :32
+                            \mp
+                            \<
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f'8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             f'8
+                            :32
+                            \f
+                            \<
                             ~
                             ]
 
                             f'4
+                            :32
 
                             f'4
+                            :32
+                            \ff
+                            \>
                             ~
                             % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'4
+                            :32
 
                             f'2
+                            :32
+                            \mf
+                            \>
                             ~
 
                             f'4
+                            :32
 
                             f'4
+                            :32
+                            \mp
+                            \<
                             ~
                             % [Voice 8 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'4
+                            :32
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 f'8
+                                :32
 
                                 f'4
+                                :32
+                                \f
+                                \<
                                 ~
 
                             }
 
                             f'4
+                            :32
 
                             f'4
+                            :32
+                            \ff
+                            \>
 
                             f'4
+                            :32
+                            \mf
+                            \>
                             ~
                             % [Voice 8 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f'8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             f'8
+                            :32
+                            \mp
+                            \<
                             ~
                             ]
 
@@ -1727,25 +1752,34 @@
                             \times 2/3 {
 
                                 f'4
+                                :32
 
                                 f'8
+                                :32
+                                \f
+                                \<
                                 ~
 
                             }
 
                             f'4
+                            :32
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f'8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             f'8
+                            :32
                             ~
                             ]
 
                             f'4
+                            :32
+                            \ff
                             \bar "||"
 
                         }
@@ -1782,15 +1816,16 @@
                             \stopStaff \startStaff                             %! applying cutaway
                             % [Voice 9 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r4
-
-                            e,2
+                            e,2.
+                            \sfp
+                            \<
                             ~
 
                             e,4
                             ~
 
                             e,8
+                            \ff
 
                             r8
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1800,6 +1835,8 @@
                             r8
 
                             e,8
+                            \sfp
+                            \<
                             ~
 
                             e,4
@@ -1809,6 +1846,7 @@
                             ~
 
                             e,8
+                            \ff
 
                             r8
                             % [Voice 9 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1831,57 +1869,83 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
+                            \mf
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \mp
+                            \<
                             ~
                             ]
 
                             cs2
+                            :32
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \f
+                            \<
                             ~
                             ]
 
                             cs4
+                            :32
                             ~
                             % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \ff
+                            \>
                             ~
                             ]
 
                             cs4
+                            :32
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \mf
+                                \>
                                 ~
 
                             }
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \mp
+                            \<
                             ~
                             ]
 
@@ -1889,72 +1953,107 @@
                             \times 2/3 {
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \f
+                                \<
                                 ~
 
                             }
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
 
                             cs4
+                            :32
+                            \ff
+                            \>
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs4
+                                :32
 
                                 cs8
+                                :32
+                                \mf
+                                \>
                                 ~
 
                             }
 
                             cs2
+                            :32
                             % [Voice 9 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs2
+                            :32
+                            \mp
+                            \<
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \f
+                                \<
                                 ~
 
                             }
 
                             cs2
+                            :32
                             % [Voice 9 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
+                            \ff
+                            \>
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \mf
+                            \>
                             ~
                             ]
 
                             cs4
+                            :32
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs4
+                                :32
+                                \mp
+                                \<
 
                                 cs8
+                                :32
                                 ~
 
                             }
 
                             cs4
+                            :32
+                            \f
                             \bar "||"
 
                         }

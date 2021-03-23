@@ -5,10 +5,14 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    arco_markup,
     clef_whitespace,
     mark_60,
     mark_108,
     met_108,
+    normale_markup,
+    pizz_markup,
+    quasi_pont_markup,
     rehearsal_mark_a,
     transpose_contrabass,
     with_sharps,
@@ -95,7 +99,352 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 9",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(48, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            quasi_pont_markup,
+            baca.leaf(48, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            arco_markup,
+            baca.leaf(48, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(50, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            pizz_markup,
+            baca.leaf(50, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(66, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            quasi_pont_markup,
+            baca.leaf(66, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            arco_markup,
+            baca.leaf(66, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(82, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            pizz_markup,
+            baca.leaf(82, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("p"),
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            quasi_pont_markup,
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            arco_markup,
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mf"),
+            baca.leaf(52, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            pizz_markup,
+            baca.leaf(52, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("p"),
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            quasi_pont_markup,
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            arco_markup,
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mf"),
+            baca.leaf(85, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            pizz_markup,
+            baca.leaf(85, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("p"),
+            baca.leaf(47, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            quasi_pont_markup,
+            baca.leaf(47, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            arco_markup,
+            baca.leaf(47, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mf"),
+            baca.leaf(51, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            pizz_markup,
+            baca.leaf(51, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("p"),
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            quasi_pont_markup,
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            arco_markup,
+            baca.leaf(68, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mf"),
+            baca.leaf(84, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            pizz_markup,
+            baca.leaf(84, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("p"),
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            quasi_pont_markup,
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            arco_markup,
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mf"),
+            baca.leaf(54, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            pizz_markup,
+            baca.leaf(54, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("p"),
+            baca.leaf(69, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            quasi_pont_markup,
+            baca.leaf(69, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            arco_markup,
+            baca.leaf(69, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mf"),
+            baca.leaf(80, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            pizz_markup,
+            baca.leaf(80, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(29, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            quasi_pont_markup,
+            baca.leaf(29, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Dynamic("p"),
+            baca.leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            quasi_pont_markup,
+            baca.leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("p"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            quasi_pont_markup,
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("p"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            quasi_pont_markup,
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("p"),
+            baca.leaf(8, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            quasi_pont_markup,
+            baca.leaf(8, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            normale_markup,
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("sfp"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.StartHairpin("<"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("ff"),
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("p"),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            quasi_pont_markup,
+            baca.leaf(16, pitched=True),
         ),
         evans.attach(
             "Global Context",

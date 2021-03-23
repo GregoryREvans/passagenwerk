@@ -4,7 +4,14 @@ import abjad
 import baca
 import evans
 
-from passagenwerk.lib import c, clef_whitespace, mark_115, rehearsal_mark_n, with_sharps
+from passagenwerk.lib import (
+    c,
+    clef_whitespace,
+    col_legno_markup,
+    mark_115,
+    rehearsal_mark_n,
+    with_sharps,
+)
 from passagenwerk.materials.instruments import clef_handlers, instruments
 from passagenwerk.materials.score_structure import score
 from passagenwerk.materials.time_signatures import signatures_10
@@ -63,6 +70,216 @@ maker = evans.SegmentMaker(
             "score",
             evans.SegmentMaker.beam_score,
             abjad.select().components(abjad.Score),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("mp"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.StartHairpin(">"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.Dynamic("pp"),
+            baca.leaf(-1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 5",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 6",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 9",
+            col_legno_markup,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 7",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            clef_whitespace,
+            baca.leaf(0),
         ),
         evans.attach(
             "Global Context",

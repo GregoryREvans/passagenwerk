@@ -5,13 +5,15 @@ import baca
 import evans
 
 from passagenwerk.lib import (
-    clef_whitespace,
+    apply_scratch,
+    apply_spectrum_tremolo,
+    arco_markup,
     make_gliss,
-    make_percussion_staff,
     mark_90,
     mark_108,
     met_90,
     met_108,
+    pizz_markup,
     rehearsal_mark_l,
     transpose_contrabass,
     with_sharps,
@@ -53,6 +55,26 @@ maker = evans.SegmentMaker(
             evans.SegmentMaker.transform_brackets,
             abjad.select().components(abjad.Score),
         ),
+        evans.attach(
+            "Voice 1",
+            abjad.Tie(),
+            abjad.select().leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Tie(),
+            abjad.select().leaf(48, pitched=True),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.Tie(),
+            abjad.select().leaf(-3, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Tie(),
+            abjad.select().leaf(47, pitched=True),
+        ),
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
@@ -85,6 +107,267 @@ maker = evans.SegmentMaker(
         #     clef_whitespace,
         #     baca.leaf(17, pitched=True),
         # ),
+        evans.call(
+            "Voice 1",
+            make_gliss,
+            abjad.select().run(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            pizz_markup,
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            pizz_markup,
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.Dynamic("mf"),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            pizz_markup,
+            baca.leaf(18, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            abjad.Dynamic("mf"),
+            baca.leaf(18, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            pizz_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mf"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_spectrum_tremolo,
+            abjad.select()
+            .leaves(pitched=True)
+            .get(
+                [
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                ]
+            ),
+        ),
+        evans.call("Voice 9", apply_spectrum_tremolo, abjad.select().run(2)),
+        evans.call(
+            "Voice 1",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 1",
+            apply_scratch,
+            abjad.select().run(-2),
+        ),
+        evans.call(
+            "Voice 2",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 2",
+            apply_scratch,
+            abjad.select().run(-2),
+        ),
+        evans.call(
+            "Voice 3",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 3",
+            apply_scratch,
+            abjad.select().run(-2),
+        ),
+        evans.call(
+            "Voice 4",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 5",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 5",
+            apply_scratch,
+            abjad.select().run(-2),
+        ),
+        evans.call(
+            "Voice 6",
+            apply_scratch,
+            abjad.select().run(-1),
+        ),
+        evans.call(
+            "Voice 6",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([-3, -4, -5]),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([0, 1, 2]),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([3, 4]),
+        ),
+        evans.attach(
+            "Voice 8",
+            arco_markup,
+            abjad.select().leaf(17),
+        ),
+        evans.attach(
+            "Voice 8",
+            pizz_markup,
+            abjad.select().leaf(25),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mf"),
+            abjad.select().leaf(25),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([16, 17, 18]),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([19, 20, 21]),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([0, 1, 2]),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_scratch,
+            abjad.select().leaves(pitched=True).get([3, 4, 5, 6]),
+        ),
+        evans.attach(
+            "Voice 2",
+            arco_markup,
+            baca.leaf(-7, pitched=True),
+        ),
+        evans.attach(
+            "Voice 4",
+            arco_markup,
+            baca.leaf(-4, pitched=True),
+        ),
+        evans.attach(
+            "Voice 6",
+            arco_markup,
+            baca.leaf(-5, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            arco_markup,
+            baca.leaf(55, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopTextSpan(command=r"\stopTextSpanOne"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.StopTextSpan(command=r"\stopTextSpanOne"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            abjad.StopTextSpan(command=r"\stopTextSpanOne"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            abjad.StopTextSpan(command=r"\stopTextSpanOne"),
+            baca.leaf(0),
+        ),
         evans.attach(
             "Global Context",
             mark_108,

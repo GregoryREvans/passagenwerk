@@ -98,6 +98,7 @@
                                 \markup { \hcenter-in #14 "Violin I-1" }       %! applying staff names and clefs
                                 \clef "treble"
                                 a4
+                                \f
 
                                 a4
 
@@ -146,12 +147,15 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''2
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 % [Voice 1 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -159,14 +163,23 @@
                                 r4
 
                                 e''2
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''8
 
                                 r8
+                                \stopTextSpan
                                 % [Voice 1 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 ds'4
+                                \f
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                                 ds'4
 
@@ -185,17 +198,53 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'1
+                                :32
+                                \p
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 1 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'1
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "4")
                                 \times 4/5 {
                                     % [Voice 1 measure 14]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'2.
+                                    :32
+                                    \f
+                                    \>
+                                    \stopTextSpanOne
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                     c'2
+                                    :32
+                                    \mp
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \bar "||"
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
@@ -227,6 +276,7 @@
                                 \markup { \hcenter-in #14 "Violin I-2" }       %! applying staff names and clefs
                                 \clef "treble"
                                 a4
+                                \f
 
                                 a4
 
@@ -277,12 +327,15 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''4
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
                                 % [Voice 2 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -290,14 +343,23 @@
                                 r2
 
                                 e''4
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''8
 
                                 r8
+                                \stopTextSpan
                                 % [Voice 2 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 f'4
+                                \f
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                                 f'4
 
@@ -316,12 +378,39 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'1
+                                :32
+                                \p
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 13]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'1
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 14]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'1
+                                :32
+                                \f
+                                \stopTextSpanOne
+                                - \abjad-invisible-line
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 3
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 \bar "||"
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
@@ -356,6 +445,7 @@
                                 \markup { \hcenter-in #14 "Violin II-1" }      %! applying staff names and clefs
                                 \clef "treble"
                                 a4
+                                \f
 
                                 a4
 
@@ -406,12 +496,15 @@
                                 r8
 
                                 as'8
+                                \sfp
+                                \<
                                 ~
 
                                 as'4
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
                                 % [Voice 3 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -419,14 +512,23 @@
                                 r4
 
                                 as'2
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 as'8
 
                                 r8
+                                \stopTextSpan
                                 % [Voice 3 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 atqs4
+                                \f
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                                 atqs4
 
@@ -445,18 +547,47 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'1
+                                :32
+                                \mp
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \>
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "2")
                                 \times 2/3 {
                                     % [Voice 3 measure 13]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'1
+                                    :32
+                                    \p
+                                    \<
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                     c'4
+                                    :32
 
                                     c'4
+                                    :32
+                                    \mf
+                                    \<
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -465,8 +596,17 @@
                                     % [Voice 3 measure 14]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'2.
+                                    :32
 
                                     c'2
+                                    :32
+                                    \f
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \bar "||"
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
@@ -498,6 +638,7 @@
                                 \markup { \hcenter-in #14 "Violin II-2" }      %! applying staff names and clefs
                                 \clef "treble"
                                 a4
+                                \f
 
                                 a4
 
@@ -546,12 +687,15 @@
                                 r8
 
                                 as'8
+                                \sfp
+                                \<
                                 ~
 
                                 as'2
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
                                 % [Voice 4 measure 9]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -559,14 +703,23 @@
                                 r4
 
                                 as'2
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 as'8
 
                                 r8
+                                \stopTextSpan
                                 % [Voice 4 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as4
+                                \f
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                                 as4
 
@@ -585,20 +738,58 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'4
+                                :32
+                                \mp
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \>
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'2
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "4")
                                 \times 4/5 {
                                     % [Voice 4 measure 13]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'2
+                                    :32
 
                                     c'2.
+                                    :32
+                                    \f
+                                    \>
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -608,8 +799,17 @@
                                     % [Voice 4 measure 14]                     %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4
+                                    :32
 
                                     c'2
+                                    :32
+                                    \mp
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \bar "||"
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
@@ -672,6 +872,7 @@
                             % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             fs4
+                            \f
 
                             fs4
 
@@ -695,12 +896,15 @@
                             r8
 
                             e'8
+                            \sfp
+                            \<
                             ~
 
                             e'4
                             ~
 
                             e'8
+                            \ff
 
                             r8
                             % [Voice 5 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -708,14 +912,23 @@
                             r2
 
                             e'4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             e'8
 
                             r8
+                            \stopTextSpan
                             % [Voice 5 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             fs4
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                             fs4
 
@@ -784,6 +997,7 @@
                             % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            \f
 
                             cs4
 
@@ -807,12 +1021,15 @@
                             r8
 
                             bqs8
+                            \sfp
+                            \<
                             ~
 
                             bqs4
                             ~
 
                             bqs8
+                            \ff
 
                             r8
                             % [Voice 6 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -820,14 +1037,23 @@
                             r4
 
                             bqs2
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             bqs8
 
                             r8
+                            \stopTextSpan
                             % [Voice 6 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                             cs4
 
@@ -901,6 +1127,7 @@
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             <fs, b,>4
+                            \f
 
                             <fs, b,>4
 
@@ -922,12 +1149,15 @@
                             r8
 
                             ds8
+                            \sfp
+                            \<
                             ~
 
                             ds2
                             ~
 
                             ds8
+                            \ff
 
                             r8
                             % [Voice 7 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -935,14 +1165,23 @@
                             r4
 
                             ds2
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             ds8
 
                             r8
+                            \stopTextSpan
                             % [Voice 7 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             <fs, b,>4
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                             <fs, b,>4
 
@@ -1011,6 +1250,7 @@
                             % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             <ds, gs,>4
+                            \f
 
                             <ds, gs,>4
 
@@ -1034,12 +1274,15 @@
                             r8
 
                             gqs,8
+                            \sfp
+                            \<
                             ~
 
                             gqs,4
                             ~
 
                             gqs,8
+                            \ff
 
                             r8
                             % [Voice 8 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -1047,14 +1290,23 @@
                             r2
 
                             gqs,4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             gqs,8
 
                             r8
+                            \stopTextSpan
                             % [Voice 8 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             <ds, gs,>4
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                             <ds, gs,>4
 
@@ -1104,6 +1356,7 @@
                             \markup { \hcenter-in #14 "Contrabass" }           %! applying staff names and clefs
                             \clef "bass"
                             <f, as,>4
+                            \f
 
                             <f, as,>4
 

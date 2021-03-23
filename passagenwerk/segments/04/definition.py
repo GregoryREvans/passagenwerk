@@ -5,6 +5,7 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    apply_scratch,
     clef_whitespace,
     mark_90,
     persistent_cancel_percussion_staff,
@@ -179,6 +180,61 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 9",
             clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.call(
+            "Voice 1",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 2",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 3",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 4",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 5",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 6",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 8",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_scratch,
+            abjad.select().runs(),
+        ),
+        evans.attach(
+            "Voice 9",
+            abjad.StopTextSpan(r"\stopTextSpanOne"),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopTextSpan(r"\stopTextSpanOne"),
             baca.leaf(0),
         ),
         evans.attach(

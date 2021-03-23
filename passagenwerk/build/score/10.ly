@@ -66,6 +66,7 @@
 
                             \context Voice = "Voice 1"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 1 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -75,6 +76,9 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 as''8
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                                \>
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -301,6 +305,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 as''8
+                                \pp
                                 ]
                                 % [Voice 1 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -328,6 +333,7 @@
 
                             \context Voice = "Voice 2"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 2 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -337,6 +343,9 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 a'8
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                                \>
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -563,6 +572,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 a'8
+                                \pp
                                 ]
                                 % [Voice 2 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -595,6 +605,7 @@
 
                             \context Voice = "Voice 3"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 3 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -604,6 +615,9 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 as''8
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                                \>
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -830,6 +844,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 as''8
+                                \pp
                                 ]
                                 % [Voice 3 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -857,6 +872,7 @@
 
                             \context Voice = "Voice 4"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 4 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -866,6 +882,9 @@
                                 \clef "treble"
                                 \override Staff.Stem.stemlet-length = 0.75
                                 a'8
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                                \>
                                 [
 
                                 \revert Staff.Stem.stemlet-length
@@ -1092,6 +1111,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 a'8
+                                \pp
                                 ]
                                 % [Voice 4 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1135,6 +1155,9 @@
                             \clef "varC"
                             \override Staff.Stem.stemlet-length = 0.75
                             fs8
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -1361,6 +1384,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             fs8
+                            \pp
                             ]
                             % [Voice 5 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1397,6 +1421,9 @@
                             \clef "varC"
                             \override Staff.Stem.stemlet-length = 0.75
                             e8
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -1623,6 +1650,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             e8
+                            \pp
                             ]
                             % [Voice 6 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1655,6 +1683,7 @@
 
                         \context Voice = "Voice 7"
                         {
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 7 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \set Staff.shortInstrumentName =                   %! applying staff names and clefs
@@ -1664,6 +1693,9 @@
                             \clef "bass"
                             \override Staff.Stem.stemlet-length = 0.75
                             e8
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -1890,6 +1922,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             e8
+                            \pp
                             ]
                             % [Voice 7 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -1917,6 +1950,7 @@
 
                         \context Voice = "Voice 8"
                         {
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                             % [Voice 8 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \set Staff.shortInstrumentName =                   %! applying staff names and clefs
@@ -1926,6 +1960,9 @@
                             \clef "bass"
                             \override Staff.Stem.stemlet-length = 0.75
                             ds,8
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -2152,6 +2189,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             ds,8
+                            \pp
                             ]
                             % [Voice 8 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -2193,6 +2231,9 @@
                             \clef "bass"
                             \override Staff.Stem.stemlet-length = 0.75
                             d,8
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "col legno" 
+                            \>
                             [
 
                             \revert Staff.Stem.stemlet-length
@@ -2419,6 +2460,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             d,8
+                            \pp
                             ]
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -2431,7 +2473,7 @@
                                 \right-column {
                                     \line { "\hspace #0.75 ............" }
                                     \with-color #black
-                                    \line { Panama City Beach, Fl. \hspace #0.75 - \hspace #0.75 Iowa City, Ia. }
+                                    \line { Panama City Beach, Fl. \hspace #0.75 - \hspace #0.75 Spring Valley, Oh. }
                                     \with-color #black
                                     \line { \hspace #0.75 March 2021 }
                                 }

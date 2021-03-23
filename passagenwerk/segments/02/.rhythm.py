@@ -23,7 +23,7 @@ handler_to_value = abjad.OrderedDict(
             'scratch_handler',
             abjad.OrderedDict(
                 [
-                    ('state', 5),
+                    ('state', 11),
                     ]
                 ),
             ),

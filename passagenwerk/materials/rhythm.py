@@ -92,6 +92,84 @@ va_1_anuran = evans.RhythmHandler(
     name="va_1_anuran",
 )
 
+va_1_anuran_maker_alt = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 -1 1))",
+            "(1 (-1 1 -1))",
+            "(1 (1 -1 1))",
+            "(1 (-1 1 -1))",
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+va_1_anuran_alt = evans.RhythmHandler(
+    rmaker=va_1_anuran_maker_alt,
+    forget=False,
+    name="va_1_anuran_alt",
+)
+
+anuran_maker_alt = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 ((1 (1 1 1 -1 1)) (1 (1 1 -1 1 1)) -1))",  # vc-1
+            "(1 ((1 (-1 1 1 1 -1)) (2 (1 1 1 -1 1))))",
+            "(1 ((2 (1 1 -1 1 1)) (1 (2 -3))))",
+            "(1 ((1 (-2 1)) (1 (1 1 -1)) -1))",  # vc-2
+            "(1 ((1 (-1 1)) (1 (1 1)) (1 (1 -1))))",
+            "(1 (-1 (1 (-1 1)) -1))",
+            "(1 ((1 (1 1)) (1 (1 -1)) -1))",
+            "(1 (-1 (1 (1 1)) (1 (1 -1)) (1 (-1 1))))",
+            "(1 ((1 (-1 1 1)) (1 (1 1 -1)) -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+anuran_handler_alt = evans.RhythmHandler(
+    rmaker=anuran_maker_alt,
+    forget=False,
+    name="anuran_handler_alt",
+)
+
+va_1_anuran_maker_alt_2 = rmakers.stack(  # modify
+    evans.RTMMaker(
+        [
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1))",
+            "(1 (-1 1 -1 1))",
+            "(1 (-1 1 -1 1))",
+            "(1 (-1 1 -1))",
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1 -1))",
+            "(1 (1 -1 1))",
+            "(1 (-1 1 -1 1))",
+            "(1 (-1 1 -1 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+va_1_anuran_alt_2 = evans.RhythmHandler(
+    rmaker=va_1_anuran_maker_alt_2,
+    forget=False,
+    name="va_1_anuran_alt_2",
+)
+
 ##
 ##
 
@@ -231,11 +309,23 @@ spectrum_handler = evans.RhythmHandler(
 scratch_maker = rmakers.stack(
     evans.RTMMaker(
         [
-            "(1 (-1 8 -1))",
+            "(1 (-1 9))",
+            "(1 (9 -1))",
+            "(1 (-3 6 -1))",
+            "(1 (-4 6))",
+            "(1 (9 -1))",
             "(1 (-2 7 -1))",
-            "(1 (-3 6 -1))",
-            "(1 (-4 5 -1))",
-            "(1 (-3 6 -1))",
+            "(1 (-1 8 -1))",
+            "(1 (-2 8))",
+            "(1 (9 -1))",
+            "(1 (-4 6))",
+            "(1 (9 -1))",
+            "(1 (-2 7 -1))",
+            "(1 (-1 9))",
+            "(1 (9 -1))",
+            "(1 (-3 7))",
+            "(1 (9 -1))",
+            "(1 (-3 7))",
             "(1 (-2 7 -1))",
         ]
     ),
@@ -272,6 +362,47 @@ scratch_handler_alt = evans.RhythmHandler(
     rmaker=scratch_maker_alt,
     forget=False,
     name="scratch_handler_alt",
+)
+
+scratch_maker_alt_2 = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (-1 6 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-3 2 -1))",
+            "(1 (-4 3 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-1 6 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-4 3 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-2 3 -1))",
+            "(1 (-1 6 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-4 3 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-1 6 -1))",
+            "(1 (-2 5 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-4 3 -1))",
+            "(1 (-3 4 -1))",
+            "(1 (-2 3 -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+scratch_handler_alt_2 = evans.RhythmHandler(
+    rmaker=scratch_maker_alt_2,
+    forget=False,
+    name="scratch_handler_alt_2",
 )
 
 ##
@@ -414,4 +545,26 @@ gravity_handler = evans.RhythmHandler(
     rmaker=gravity_maker,
     forget=False,
     name="gravity_handler",
+)
+
+gravity_maker_alt = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 1 3))",
+            "(1 (4 1))",
+            "(1 (2 1 1 1))",
+            "(1 (4 1))",
+            "(1 (2 3))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+gravity_handler_alt = evans.RhythmHandler(
+    rmaker=gravity_maker_alt,
+    forget=False,
+    name="gravity_handler_alt",
 )

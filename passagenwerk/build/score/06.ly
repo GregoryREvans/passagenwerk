@@ -79,6 +79,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
                                 g'''2.
+                                \pp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                                 ~
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -179,6 +181,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-natural-markup
                                 c''''2
+                                \pp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                                 r4
                                 % [Voice 2 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -289,6 +293,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 as''2
+                                \pp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
@@ -426,6 +432,8 @@
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \abjad-sharp-markup
                                 fs''4
+                                \pp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                                 ~
 
                                 \tweak Accidental.stencil #ly:text-interface::print
@@ -556,6 +564,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             a'2.
+                            \pp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                             ~
                             % [Voice 5 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -697,6 +707,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             c'2.
+                            \pp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
                             ~
                             % [Voice 6 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -819,6 +831,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             b2
+                            \pp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                             r4
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -921,6 +935,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
                             d4
+                            \pp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup
@@ -1054,6 +1070,8 @@
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-sharp-markup
                             gs,4
+                            \pp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "arco" 
 
                             \tweak Accidental.stencil #ly:text-interface::print
                             \tweak Accidental.text \abjad-natural-markup

@@ -43,8 +43,10 @@ from passagenwerk.materials.pitch import (
 )
 from passagenwerk.materials.rhythm import (
     anuran_handler,
+    anuran_handler_alt,
     clock_handler,
     gravity_handler,
+    gravity_handler_alt,
     guerrero_handler,
     heterophony_handler,
     heterophony_handler_alt,
@@ -52,9 +54,11 @@ from passagenwerk.materials.rhythm import (
     rain_handler,
     scratch_handler,
     scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
     spectrum_handler,
-    va_1_anuran,
+    va_1_anuran_alt,
+    va_1_anuran_alt_2,
 )
 
 ## 01
@@ -355,59 +359,59 @@ rhythm_materials_04 = [
 
 rhythm_materials_05 = [
     silence_handler,  # vnI-1
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
     clock_handler,
     silence_handler,
     silence_handler,  # vnI-2
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
     clock_handler,
     guerrero_handler,
     silence_handler,  # vnII-1
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
     clock_handler,
     silence_handler,
     silence_handler,  # vnII-2
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     silence_handler,
     clock_handler,
     guerrero_handler,
-    va_1_anuran,  # va-1
+    va_1_anuran_alt_2,  # va-1
     clock_handler,
     silence_handler,
     silence_handler,  # va-2
     clock_handler,
     guerrero_handler,
     spectrum_handler,  # vc-1
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
     clock_handler,
     silence_handler,
     spectrum_handler,  # vc-2
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
     clock_handler,
     guerrero_handler,
     spectrum_handler,  # cb
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
-    scratch_handler_alt,
+    scratch_handler_alt_2,
     spectrum_handler,
     clock_handler,
     silence_handler,
@@ -570,7 +574,7 @@ pitch_materials_07 = [
 ## 08
 
 rhythm_materials_08 = [
-    gravity_handler,  # vnI-1
+    gravity_handler_alt,  # vnI-1
     silence_handler,
     scratch_handler,
     guerrero_handler,  # vnI-2
@@ -655,18 +659,18 @@ rhythm_materials_09 = [
     rain_handler,  # vnII-2
     silence_handler,
     silence_handler,  # va-1
-    va_1_anuran,
+    va_1_anuran_alt,
     silence_handler,
-    va_1_anuran,
+    va_1_anuran_alt,
     silence_handler,  # va-2
     spectrum_handler,
     silence_handler,
     spectrum_handler,  # vc-1
     silence_handler,
-    anuran_handler,
+    anuran_handler_alt,
     silence_handler,
     silence_handler,  # vc-2
-    anuran_handler,
+    anuran_handler_alt,
     silence_handler,
     spectrum_handler,  # cb
     silence_handler,

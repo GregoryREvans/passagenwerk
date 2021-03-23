@@ -5,10 +5,14 @@ import baca
 import evans
 
 from passagenwerk.lib import (
+    apply_rain_tremolo,
+    apply_spectrum_tremolo,
     clef_whitespace,
-    make_gliss,
     make_percussion_staff,
     mark_60,
+    normale_markup,
+    rain_markup,
+    rallantando_markup,
     rehearsal_mark_m,
     transpose_contrabass,
     with_sharps,
@@ -135,6 +139,108 @@ maker = evans.SegmentMaker(
             abjad.select(),
         ),
         evans.attach(
+            "Voice 1",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 1",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.attach(
+            "Voice 2",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 2",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.attach(
+            "Voice 3",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 3",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.attach(
+            "Voice 4",
+            rain_markup,
+            baca.leaf(0, pitched=True),
+        ),
+        evans.call(
+            "Voice 4",
+            apply_rain_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 9",
+            apply_spectrum_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.call(
+            "Voice 7",
+            apply_spectrum_tremolo,
+            abjad.select().run(0),
+        ),
+        evans.call(
+            "Voice 6",
+            apply_spectrum_tremolo,
+            abjad.select().runs(),
+        ),
+        evans.attach(
+            "Voice 5",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            abjad.Dynamic("mp"),
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 7",
+            clef_whitespace,
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 8",
+            abjad.Dynamic("mp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 3",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 4",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 8",
+            clef_whitespace,
+            baca.leaf(0),
+        ),
+        evans.attach("Voice 7", normale_markup, abjad.select().run(1).leaf(0)),
+        evans.attach("Voice 8", normale_markup, abjad.select().run(0).leaf(0)),
+        evans.attach(
             "Global Context",
             mark_60,
             baca.leaf(0),
@@ -143,6 +249,11 @@ maker = evans.SegmentMaker(
             "Global Context",
             rehearsal_mark_m,
             baca.leaf(3),
+        ),
+        evans.attach(
+            "Global Context",
+            rallantando_markup,
+            baca.leaf(8),
         ),
     ],
     score_template=score,

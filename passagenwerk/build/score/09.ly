@@ -49,6 +49,7 @@
 
             \time 4/4                                                          %! scaling time signatures
             s1 * 1
+            ^ \markup \concat { \hspace #1 \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout "rallantando" } 
             % [Global Context measure 10]                                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
             \time 4/4                                                          %! scaling time signatures
@@ -77,6 +78,7 @@
 
                             \context Voice = "Voice 1"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 1 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -90,51 +92,105 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \p
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
 
                                 c'2
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 1 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
                                 ~
                                 % [Voice 1 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
                                 ~
                                 % [Voice 1 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
 
                                 c'2
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \tweak text #tuplet-number::calc-fraction-text
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "4")
@@ -142,9 +198,19 @@
                                     % [Voice 1 measure 6]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4
+                                    :32
 
                                     c'2.
+                                    :32
+                                    \mf
+                                    \<
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -154,9 +220,19 @@
                                     % [Voice 1 measure 7]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'8
+                                    :32
 
                                     c'2
+                                    :32
+                                    \f
+                                    \>
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -166,8 +242,17 @@
                                     % [Voice 1 measure 8]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'8
+                                    :32
 
                                     c'2
+                                    :32
+                                    \mp
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
                                     \revert Staff.Accidental.stencil
@@ -180,6 +265,7 @@
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 1/2
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 1/2
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -215,6 +301,7 @@
 
                             \context Voice = "Voice 2"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 2 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -228,34 +315,84 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'4
+                                :32
+                                \p
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
                                 ~
                                 % [Voice 2 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
                                 % [Voice 2 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 2 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
 
                                 c'2
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \tweak text #tuplet-number::calc-fraction-text
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "4")
@@ -263,9 +400,27 @@
                                     % [Voice 2 measure 6]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'2.
+                                    :32
+                                    \mf
+                                    \<
+                                    \stopTextSpanOne
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                     c'4
+                                    :32
+                                    \f
+                                    \>
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -275,9 +430,19 @@
                                     % [Voice 2 measure 7]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4.
+                                    :32
 
                                     c'4
+                                    :32
+                                    \mp
+                                    \>
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -287,8 +452,17 @@
                                     % [Voice 2 measure 8]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4.
+                                    :32
 
                                     c'4
+                                    :32
+                                    \p
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
                                     \revert Staff.Accidental.stencil
@@ -301,6 +475,7 @@
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 1/2
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 1/2
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -341,6 +516,7 @@
 
                             \context Voice = "Voice 3"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 3 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -354,47 +530,108 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \mf
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 3 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 3 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
                                 ~
                                 % [Voice 3 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
                                 % [Voice 3 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 3 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
                                 ~
 
                                 \tweak text #tuplet-number::calc-fraction-text
@@ -403,13 +640,31 @@
                                     % [Voice 3 measure 7]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'8
+                                    :32
 
                                     c'2
+                                    :32
+                                    \mp
+                                    \>
+                                    \stopTextSpanOne
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
                                 % [Voice 3 measure 8]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \p
+                                \stopTextSpanOne
+                                - \abjad-invisible-line
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 3
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 \revert Staff.StaffSymbol.line-positions
                                 \revert Staff.NoteHead.no-ledgers
                                 \revert Staff.Accidental.stencil
@@ -420,6 +675,7 @@
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 1/2
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 1/2
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -455,6 +711,7 @@
 
                             \context Voice = "Voice 4"
                             {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 4 measure 1]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \set Staff.shortInstrumentName =               %! applying staff names and clefs
@@ -468,41 +725,93 @@
                                 \override Staff.Accidental.stencil = ##f
                                 \clef "percussion"
                                 c'2.
+                                :32
+                                \mf
+                                - \tweak staff-padding 6.5
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \column { \whiteout \small "tap instrument face" "softly, like rain" } 
+                                \<
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \f
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
                                 % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2.
+                                :32
+                                \mp
+                                \>
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'2
+                                :32
 
                                 c'4
+                                :32
+                                \p
+                                \<
+                                \stopTextSpanOne
                                 ~
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
                                 % [Voice 4 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 c'4
+                                :32
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 c'8
+                                :32
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 c'8
+                                :32
+                                \mf
+                                \<
+                                \stopTextSpanOne
                                 ~
                                 ]
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (accel.)"  } \hspace #0.5 }
+                                - \tweak bound-details.right.padding 1.4
+                                - \tweak staff-padding #1
+                                \startTextSpanOne
 
                                 c'4
+                                :32
 
                                 \tweak text #tuplet-number::calc-fraction-text
                                 \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "8")
@@ -510,9 +819,27 @@
                                     % [Voice 4 measure 7]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4.
+                                    :32
+                                    \f
+                                    \>
+                                    \stopTextSpanOne
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "fast (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                     c'4
+                                    :32
+                                    \mp
+                                    \>
+                                    \stopTextSpanOne
                                     ~
+                                    - \abjad-dashed-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \upright \center-align \vcenter  "mod. (rit.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1.4
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
 
                                 }
 
@@ -522,8 +849,17 @@
                                     % [Voice 4 measure 8]                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                     c'4
+                                    :32
 
                                     c'4.
+                                    :32
+                                    \p
+                                    \stopTextSpanOne
+                                    - \abjad-invisible-line
+                                    - \tweak bound-details.left.text \markup \concat { \center-column { \center-align \upright \vcenter  "slow (accel.)"  } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 3
+                                    - \tweak staff-padding #1
+                                    \startTextSpanOne
                                     \revert Staff.StaffSymbol.line-positions
                                     \revert Staff.NoteHead.no-ledgers
                                     \revert Staff.Accidental.stencil
@@ -536,6 +872,7 @@
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 1/2
+                                \stopTextSpanOne                               %! applying indicators
 
                                 R1 * 1/2
                                 \stopStaff \startStaff                         %! applying cutaway
@@ -609,32 +946,19 @@
                             \stopStaff \startStaff                             %! applying cutaway
                             % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g'8.
+                            g'4
+                            \mp
 
-                            r16
+                            r4
 
-                            r8
-
-                            g'8
-                            ~
-
-                            g'16
-
-                            r8.
+                            g'4
                             % [Voice 5 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g'8.
+                            r4
 
-                            r16
+                            g'4
 
-                            r8
-
-                            g'8
-                            ~
-
-                            g'16
-
-                            r8.
+                            r4
                             % [Voice 5 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             g'4
@@ -644,18 +968,11 @@
                             g'4
                             % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r8.
+                            r4
 
-                            g'16
-                            ~
+                            g'4
 
-                            g'8
-
-                            r8
-
-                            r16
-
-                            g'8.
+                            r4
                             % [Voice 5 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -666,7 +983,14 @@
                             \stopStaff \startStaff                             %! applying cutaway
                             % [Voice 5 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            g'4
+
                             r4
+
+                            g'4
+
+                            r4
+                            % [Voice 5 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             g'4
 
@@ -674,31 +998,14 @@
 
                             g'4
 
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "2")
-                            \times 2/3 {
-                                % [Voice 5 measure 10]                         %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                                r2
-
-                                g'2
-
-                                r2
-
-                            }
+                            r4
                             % [Voice 5 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g'8.
+                            g'4
 
-                            r16
+                            r4
 
-                            r8
-
-                            g'8
-                            ~
-
-                            g'16
-
-                            r8.
+                            g'4
                             \bar "||"
 
                         }
@@ -731,44 +1038,72 @@
                             % [Voice 6 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'2
+                            :32
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" 
+                            \<
 
                             f'4
+                            :32
+                            \ff
+                            \>
                             ~
                             % [Voice 6 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'4
+                            :32
 
                             f'4
+                            :32
+                            \mf
+                            \>
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 f'8
+                                :32
 
                                 f'4
+                                :32
+                                \mp
+                                \<
 
                             }
                             % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'4
+                            :32
+                            \f
+                            \<
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f'8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             f'8
+                            :32
+                            \ff
+                            \>
                             ~
                             ]
 
                             f'4
+                            :32
                             % [Voice 6 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             f'2
+                            :32
+                            \mf
+                            \>
 
                             f'4
+                            :32
+                            \mp
                             % [Voice 6 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -846,38 +1181,61 @@
                             \markup { \hcenter-in #14 "Violoncello-1" }        %! applying staff names and clefs
                             \clef "bass"
                             gs,2
+                            :32
+                            \f
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" 
+                            \<
 
                             gs,4
+                            :32
+                            \ff
+                            \>
                             ~
                             % [Voice 7 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             gs,4
+                            :32
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 gs,8
+                                :32
 
                                 gs,4
+                                :32
+                                \mf
+                                \>
                                 ~
 
                             }
 
                             gs,4
+                            :32
                             % [Voice 7 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             gs,4
+                            :32
+                            \mp
+                            \<
 
                             gs,4
+                            :32
+                            \f
+                            \<
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             gs,8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             gs,8
+                            :32
+                            \ff
+                            \>
                             ~
                             ]
 
@@ -886,21 +1244,29 @@
                                 % [Voice 7 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 gs,4
+                                :32
 
                                 gs,8
+                                :32
+                                \mf
+                                \>
                                 ~
 
                             }
 
                             gs,4
+                            :32
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             gs,8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             gs,8
+                            :32
+                            \mp
                             ]
                             % [Voice 7 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -911,77 +1277,57 @@
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "32")
-                            \times 6/5 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
+                            \times 4/5 {
+                                \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                 % [Voice 7 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \clef "tenorvarC"
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'32
+                                g'16
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
                                 [
 
-                                g'32
+                                g'16
 
                                 \revert Staff.Stem.stemlet-length
-                                g'32
+                                g'16
                                 ]
 
-                                r32
+                                r16
 
-                                g'32
+                                g'16
 
                             }
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "32")
-                            \times 6/5 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
+                            \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'32
+                                g'16
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                g'32
+                                g'16
                                 ]
 
-                                r32
+                                r16
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'32
+                                g'16
                                 [
 
                                 \revert Staff.Stem.stemlet-length
-                                g'32
+                                g'16
                                 ]
 
                             }
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "32")
-                            \times 6/5 {
+                            r4
 
-                                g'32
-
-                                r32
-
-                                \override Staff.Stem.stemlet-length = 0.75
-                                g'32
-                                [
-
-                                \revert Staff.Stem.stemlet-length
-                                g'32
-                                ]
-
-                                r32
-
-                            }
-
-                            r8.
-
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
-                            \times 6/5 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "16")
+                            \times 4/5 {
                                 % [Voice 7 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r16
@@ -1000,23 +1346,22 @@
 
                             }
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "16")
-                            \times 6/5 {
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) "8")
+                            \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                g'16
+                                g'8
                                 [
 
-                                g'16
+                                g'8
 
                                 \revert Staff.Stem.stemlet-length
-                                g'16
+                                g'8
                                 ]
 
-                                r16
+                                r8
 
-                                g'16
+                                g'8
 
                             }
 
@@ -1092,6 +1437,7 @@
 
                         \context Voice = "Voice 8"
                         {
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0) %! applying indicators
                             % [Voice 8 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \set Staff.shortInstrumentName =                   %! applying staff names and clefs
@@ -1113,99 +1459,62 @@
 
                             R1 * 3/8
                             \stopStaff \startStaff                             %! applying cutaway
-                            % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            r8.
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                            \times 2/3 {
+                                % [Voice 8 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "32")
-                            \times 6/5 {
-
-                                r16
+                                r4
 
                                 \clef "tenorvarC"
-                                \override Staff.Stem.stemlet-length = 0.75
-                                g'32
-                                [
-
-                                g'32
-
-                                \revert Staff.Stem.stemlet-length
-                                g'32
-                                ]
+                                g'8
+                                \mp
+                                ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "normale" 
 
                             }
 
-                            r8
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
+                            \times 2/3 {
 
-                            r16
+                                \override Staff.Stem.stemlet-length = 0.75
+                                g'8
+                                [
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            g'32.
-                            [
+                                \revert Staff.Stem.stemlet-length
+                                g'8
+                                ]
 
-                            g'64
-                            ~
+                                r8
 
-                            \revert Staff.Stem.stemlet-length
-                            g'32
-                            ]
+                            }
 
-                            r32.
-
-                            g'32.
+                            r4
                             % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            g'16.
-                            [
+                            r8
 
-                            g'32
-                            ~
-
-                            \revert Staff.Stem.stemlet-length
-                            g'16
-                            ]
-
-                            r16
-
-                            r32
+                            g'8
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            g'16.
+                            g'8
                             [
 
-                            g'16.
-
                             \revert Staff.Stem.stemlet-length
-                            g'32
-                            ~
+                            g'8
                             ]
 
-                            \override Staff.Stem.stemlet-length = 0.75
-                            g'16
-                            [
+                            g'8
 
-                            g'16
-                            ~
-
-                            \revert Staff.Stem.stemlet-length
-                            g'32
-                            ]
-
-                            r16.
+                            r8
                             % [Voice 8 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r4
 
-                            r8..
+                            r8
 
-                            g'32
-                            ~
+                            g'8
 
-                            g'16
-
-                            r8.
+                            r4
                             % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -1290,55 +1599,79 @@
                             \markup { \hcenter-in #14 "Contrabass" }           %! applying staff names and clefs
                             \clef "bass"
                             cs4
+                            :32
+                            \mp
+                            ^ \markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "sul tasto" 
+                            \<
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \f
+                            \<
                             ~
                             ]
 
                             cs4
+                            :32
                             ~
                             % [Voice 9 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \ff
+                            \>
                             ~
                             ]
 
                             cs4
+                            :32
                             ~
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \mf
+                            \>
                             ~
                             ]
 
                             cs4
+                            :32
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \mp
+                                \<
                                 ~
 
                             }
@@ -1346,10 +1679,14 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
+                            \f
+                            \<
                             ~
                             ]
 
@@ -1357,35 +1694,52 @@
                             \times 2/3 {
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \ff
+                                \>
                                 ~
 
                             }
 
                             cs4
+                            :32
                             % [Voice 9 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
+                            \mf
+                            \>
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
                             \times 2/3 {
 
                                 cs4
+                                :32
 
                                 cs8
+                                :32
+                                \mp
+                                \<
                                 ~
 
                             }
 
                             cs4
+                            :32
                             ~
                             % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
 
                             cs2
+                            :32
+                            \f
+                            \<
                             ~
 
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "8")
@@ -1393,28 +1747,40 @@
                                 % [Voice 9 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 cs8
+                                :32
 
                                 cs4
+                                :32
+                                \ff
+                                \>
                                 ~
 
                             }
 
                             cs2
+                            :32
                             % [Voice 9 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs4
+                            :32
+                            \mf
+                            \>
                             ~
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs8
+                            :32
                             [
 
                             \revert Staff.Stem.stemlet-length
                             cs8
+                            :32
                             ~
                             ]
 
                             cs4
+                            :32
+                            \mp
                             % [Voice 9 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility

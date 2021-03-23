@@ -70,9 +70,13 @@
                                 \markup { \hcenter-in #14 "Violin I-1" }       %! applying staff names and clefs
                                 \clef "treble"
                                 e''2.
+                                \sfp
+                                \<
+                                \stopTextSpanOne
                                 ~
 
                                 e''2
+                                \ff
                                 % [Voice 1 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 \once \override Rest.transparent = ##t         %! applying invisibility
@@ -84,8 +88,10 @@
                                 % [Voice 1 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 e''2.
+                                \sfp
 
                                 e''4
+                                \sfp
 
                                 r4
                                 % [Voice 1 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -93,11 +99,20 @@
                                 r2
 
                                 e''4
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''4
 
                                 e''4
+                                \sfp
+                                \<
+                                \stopTextSpan
                                 ~
                                 % [Voice 1 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -105,10 +120,17 @@
                                 ~
 
                                 e''2
+                                \ff
                                 % [Voice 1 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 e''2.
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''2
                                 % [Voice 1 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -116,6 +138,7 @@
                                 \once \override Rest.transparent = ##t         %! applying invisibility
                                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff %! applying cutaway
                                 r1 * 5/8
+                                \stopTextSpan                                  %! applying indicators
 
                                 R1 * 5/8
                                 \bar "||"
@@ -148,6 +171,8 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''2
@@ -156,16 +181,24 @@
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 e''8
+                                \ff
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 e''8
+                                \f
                                 ~
                                 ]
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''8
 
                                 r8
+                                \stopTextSpan
 
                                 r2.
                                 % [Voice 2 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -173,12 +206,15 @@
                                 r8
 
                                 e''8
+                                \sfp
+                                \<
                                 ~
 
                                 e''4
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
 
@@ -188,7 +224,13 @@
                                 r8
 
                                 e''8
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''2
                                 ~
@@ -206,6 +248,9 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 e''8
+                                \sfp
+                                \<
+                                \stopTextSpan
                                 ~
                                 ]
 
@@ -217,6 +262,7 @@
                                 ~
 
                                 e''8
+                                \ff
 
                                 r8
 
@@ -228,7 +274,13 @@
                                 r8
 
                                 e''8
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 e''4
                                 ~
@@ -239,6 +291,7 @@
                                 e''8
 
                                 r8
+                                \stopTextSpan
                                 \bar "||"
 
                             }
@@ -273,16 +326,25 @@
                                 r8
 
                                 as'8
+                                \sfp
+                                \<
                                 ~
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 as'8
+                                \ff
                                 [
 
                                 \revert Staff.Stem.stemlet-length
                                 as'8
+                                \f
                                 ~
                                 ]
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 as'4
                                 ~
@@ -293,6 +355,9 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 as'8
+                                \sfp
+                                \<
+                                \stopTextSpan
                                 ~
                                 ]
                                 % [Voice 3 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -305,6 +370,7 @@
                                 % [Voice 3 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as'8
+                                \ff
 
                                 r8
 
@@ -313,7 +379,13 @@
                                 r8
 
                                 as'8
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 as'4
                                 ~
@@ -328,6 +400,9 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 as'8
+                                \sfp
+                                \<
+                                \stopTextSpan
                                 ~
                                 ]
 
@@ -339,6 +414,7 @@
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
 
@@ -348,11 +424,18 @@
                                 r8
 
                                 as'8
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
 
                                 as'8
 
                                 r8
+                                \stopTextSpan
 
                                 r4
 
@@ -361,6 +444,8 @@
                                 r8
 
                                 as'8
+                                \sfp
+                                \<
                                 ~
                                 % [Voice 3 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -368,6 +453,7 @@
                                 ~
 
                                 as'8
+                                \ff
 
                                 r8
 
@@ -399,42 +485,64 @@
                                 r2.
 
                                 as'2
+                                \sfp
+                                \<
                                 ~
                                 % [Voice 4 measure 2]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as'1
+                                \ff
 
                                 as'4
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
                                 % [Voice 4 measure 3]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as'1
 
                                 r4
+                                \stopTextSpan
                                 % [Voice 4 measure 4]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r1
 
                                 as'4
+                                \sfp
+                                \<
                                 ~
                                 % [Voice 4 measure 5]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as'2
+                                \ff
 
                                 as'4
+                                \sfp
 
                                 as'2
+                                \sfp
                                 % [Voice 4 measure 6]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 r2.
 
                                 as'2
+                                \f
                                 ~
+                                - \abjad-solid-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                                - \tweak padding 2
+                                - \tweak staff-padding 3
+                                \startTextSpan
                                 % [Voice 4 measure 7]                          %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                                 as'1
 
                                 r4
+                                \stopTextSpan
                                 \bar "||"
 
                             }
@@ -469,22 +577,33 @@
                             r4
 
                             e'1
+                            \sfp
+                            \<
                             ~
                             % [Voice 5 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             e'4
+                            \ff
 
                             e'2
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             e'4
 
                             r4
+                            \stopTextSpan
                             % [Voice 5 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r2.
 
                             e'4
+                            \sfp
 
                             r4
                             % [Voice 5 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -492,11 +611,20 @@
                             r2
 
                             e'4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             e'4
 
                             e'4
+                            \sfp
+                            \<
+                            \stopTextSpan
                             ~
                             % [Voice 5 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -504,6 +632,7 @@
                             ~
 
                             e'2
+                            \ff
                             % [Voice 5 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Rest.transparent = ##t             %! applying invisibility
@@ -515,7 +644,13 @@
                             % [Voice 5 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             e'2.
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             e'2
                             \bar "||"
@@ -543,21 +678,32 @@
                             \markup { \hcenter-in #14 "Viola-2" }              %! applying staff names and clefs
                             \clef "varC"
                             bqs2.
+                            \sfp
 
                             bqs4
+                            \sfp
 
                             bqs4
+                            \sfp
+                            \<
                             ~
                             % [Voice 6 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             bqs4
+                            \ff
 
                             r2
 
                             r4
 
                             bqs4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
                             % [Voice 6 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             bqs2.
@@ -567,25 +713,38 @@
                             % [Voice 6 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             bqs2.
+                            \sfp
+                            \<
+                            \stopTextSpan
                             ~
 
                             bqs2
+                            \ff
                             % [Voice 6 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r1
 
                             bqs4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
                             % [Voice 6 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             bqs2
 
                             r2.
+                            \stopTextSpan
                             % [Voice 6 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             bqs4
+                            \sfp
 
                             bqs2
+                            \sfp
 
                             r2
                             \bar "||"
@@ -622,6 +781,8 @@
                             r8
 
                             ds8
+                            \sfp
+                            \<
                             ~
 
                             ds2
@@ -633,12 +794,19 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             ds8
+                            \ff
                             [
 
                             \revert Staff.Stem.stemlet-length
                             ds8
+                            \f
                             ~
                             ]
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             ds4
                             ~
@@ -650,6 +818,7 @@
                             ds8
 
                             r8
+                            \stopTextSpan
 
                             r4
                             % [Voice 7 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -659,6 +828,8 @@
                             r8
 
                             ds8
+                            \sfp
+                            \<
                             ~
 
                             ds4
@@ -670,12 +841,19 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             ds8
+                            \ff
                             [
 
                             \revert Staff.Stem.stemlet-length
                             ds8
+                            \f
                             ~
                             ]
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             \override Staff.Stem.stemlet-length = 0.75
                             ds8
@@ -683,6 +861,9 @@
 
                             \revert Staff.Stem.stemlet-length
                             ds8
+                            \sfp
+                            \<
+                            \stopTextSpan
                             ~
                             ]
 
@@ -690,6 +871,7 @@
                             ~
 
                             ds8
+                            \ff
 
                             r8
                             % [Voice 7 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -699,7 +881,13 @@
                             r8
 
                             ds8
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             ds2
                             ~
@@ -711,6 +899,7 @@
                             ds8
 
                             r8
+                            \stopTextSpan
 
                             r4
                             \bar "||"
@@ -742,6 +931,8 @@
                             r8
 
                             gqs,8
+                            \sfp
+                            \<
                             ~
 
                             gqs,2.
@@ -753,12 +944,19 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             gqs,8
+                            \ff
                             [
 
                             \revert Staff.Stem.stemlet-length
                             gqs,8
+                            \f
                             ~
                             ]
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             gqs,4
                             ~
@@ -769,6 +967,7 @@
                             gqs,8
 
                             r8
+                            \stopTextSpan
                             % [Voice 8 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r2.
@@ -776,9 +975,12 @@
                             r8
 
                             gqs,8
+                            \sfp
+                            \<
                             ~
 
                             gqs,8
+                            \ff
 
                             r8
                             % [Voice 8 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -788,7 +990,13 @@
                             r8
 
                             gqs,8
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             gqs,4
                             ~
@@ -799,6 +1007,9 @@
 
                             \revert Staff.Stem.stemlet-length
                             gqs,8
+                            \sfp
+                            \<
+                            \stopTextSpan
                             ~
                             ]
                             % [Voice 8 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -811,6 +1022,7 @@
                             % [Voice 8 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             gqs,8
+                            \ff
 
                             r8
 
@@ -856,20 +1068,32 @@
                             \stopStaff \startStaff
                             \clef "bass"
                             r2.
+                            \stopTextSpanOne
 
                             e,2
+                            \sfp
+                            \<
                             ~
                             % [Voice 9 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             e,2.
+                            \ff
 
                             e,2
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
                             % [Voice 9 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             e,4
 
                             e,4
+                            \sfp
+                            \stopTextSpan
 
                             r2.
                             % [Voice 9 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -877,11 +1101,20 @@
                             r2
 
                             e,4
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
 
                             e,4
 
                             e,4
+                            \sfp
+                            \<
+                            \stopTextSpan
                             ~
                             % [Voice 9 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -889,17 +1122,25 @@
                             ~
 
                             e,2
+                            \ff
                             % [Voice 9 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             r2.
 
                             e,2
+                            \f
                             ~
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "scratch"  \hspace #0.5 }
+                            - \tweak padding 2
+                            - \tweak staff-padding 3
+                            \startTextSpan
                             % [Voice 9 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             e,2.
 
                             r2
+                            \stopTextSpan
                             \bar "||"
 
                         }

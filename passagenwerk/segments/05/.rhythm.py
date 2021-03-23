@@ -18,10 +18,10 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'scratch_handler_alt',
+            'scratch_handler_alt_2',
             abjad.OrderedDict(
                 [
-                    ('state', 0),
+                    ('state', 18),
                     ]
                 ),
             ),
@@ -50,10 +50,10 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'va_1_anuran',
+            'va_1_anuran_alt_2',
             abjad.OrderedDict(
                 [
-                    ('state', 3),
+                    ('state', 10),
                     ]
                 ),
             ),
