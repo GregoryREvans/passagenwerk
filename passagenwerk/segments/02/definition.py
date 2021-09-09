@@ -82,22 +82,22 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 6",
             clef_whitespace,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Voice 7",
             clef_whitespace,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Voice 8",
             clef_whitespace,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Voice 9",
             clef_whitespace,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.call(
             "Voice 1",
@@ -168,7 +168,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             normale_markup,
-            baca.leaf(21, pitched=True),
+            baca.selectors.leaf(21, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -268,7 +268,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             normale_markup,
-            baca.leaf(80, pitched=True),
+            baca.selectors.leaf(80, pitched=True),
         ),
         evans.call(
             "Voice 3",
@@ -360,7 +360,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 3",
             normale_markup,
-            baca.leaf(70, pitched=True),
+            baca.selectors.leaf(70, pitched=True),
         ),
         evans.call(
             "Voice 4",
@@ -468,7 +468,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 4",
             normale_markup,
-            baca.leaf(88, pitched=True),
+            baca.selectors.leaf(88, pitched=True),
         ),
         evans.call(
             "Voice 5",
@@ -552,7 +552,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 5",
             normale_markup,
-            baca.leaf(38, pitched=True),
+            baca.selectors.leaf(38, pitched=True),
         ),
         evans.call(
             "Voice 6",
@@ -633,7 +633,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 6",
             normale_markup,
-            baca.leaf(59, pitched=True),
+            baca.selectors.leaf(59, pitched=True),
         ),
         evans.call(
             "Voice 7",
@@ -700,7 +700,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 7",
             normale_markup,
-            baca.leaf(45, pitched=True),
+            baca.selectors.leaf(45, pitched=True),
         ),
         evans.call(
             "Voice 8",
@@ -749,7 +749,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 8",
             normale_markup,
-            baca.leaf(20, pitched=True),
+            baca.selectors.leaf(20, pitched=True),
         ),
         evans.call(
             "Voice 9",
@@ -822,22 +822,22 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 9",
             normale_markup,
-            baca.leaf(51, pitched=True),
+            baca.selectors.leaf(51, pitched=True),
         ),
         evans.attach(
             "Global Context",
             mark_90,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             rehearsal_mark_b,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             rehearsal_mark_c,
-            baca.leaf(9),
+            baca.selectors.leaf(9),
         ),
     ],
     score_template=score,
@@ -851,7 +851,7 @@ maker = evans.SegmentMaker(
     ],
     segment_name="02",
     current_directory=pathlib.Path(__file__).resolve().parent,
-    cutaway=True,
+    cutaway=False,
     beam_pattern="meter",
     beam_rests=False,
     barline="||",

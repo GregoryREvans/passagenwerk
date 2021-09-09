@@ -273,6 +273,20 @@ heterophony_handler_alt = evans.RhythmHandler(
     name="heterophony_handler_alt",
 )
 
+sustain_maker = rmakers.stack(
+    rmakers.talea([20], 1),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+sustain_handler = evans.RhythmHandler(
+    rmaker=sustain_maker,
+    forget=False,
+    name="sustain_handler",
+)
+
 ##
 ##
 

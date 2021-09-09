@@ -181,7 +181,7 @@ normale_markup_tall = abjad.Markup(
 )
 
 quasi_pont_markup = abjad.Markup(
-    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "quasi sul ponticello" """,
+    r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \italic \box \whiteout \small "poco sul ponticello" """,
     direction=abjad.Up,
     literal=True,
 )

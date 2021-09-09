@@ -85,7 +85,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
             "Voice 1",
@@ -100,12 +100,12 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             rain_markup,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -120,12 +120,12 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             rain_markup,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 3",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
             "Voice 3",
@@ -140,12 +140,12 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 3",
             rain_markup,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 4",
             clef_whitespace,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
             "Voice 4",
@@ -160,7 +160,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 4",
             rain_markup,
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
             "Voice 1", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4])
@@ -228,47 +228,47 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 3",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 4",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 5",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 6",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 7",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 8",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 9",
             abjad.Dynamic("f"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.call("Voice 1", apply_scratch, abjad.select().runs().get([2, 3])),
         evans.attach("Voice 1", abjad.Dynamic("f"), abjad.select().run(4).leaf(0)),
@@ -297,17 +297,17 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Global Context",
             mark_120,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             rehearsal_mark_i,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             rehearsal_mark_k,
-            baca.leaf(9),
+            baca.selectors.leaf(9),
         ),
     ],
     score_template=score,
@@ -321,7 +321,7 @@ maker = evans.SegmentMaker(
     ],
     segment_name="07",
     current_directory=pathlib.Path(__file__).resolve().parent,
-    cutaway=True,
+    cutaway=False,
     beam_pattern="meter",
     beam_rests=False,
     barline="||",

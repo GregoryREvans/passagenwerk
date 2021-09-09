@@ -3,6 +3,9 @@
 #(set-default-paper-size "11x17portrait")
 #(set-global-staff-size 12)
 
+%{ \include "ekmel.ily"
+\ekmelicStyle go %}
+
 \header {
 	tagline = ##f
 	breakbefore = ##t

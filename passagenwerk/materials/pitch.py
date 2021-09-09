@@ -146,6 +146,8 @@ heterophony_pitch_handler = evans.PitchHandler(
     forget=True,
 )
 
+bass_drone = evans.PitchHandler(["as,,"])
+
 ##
 ##
 

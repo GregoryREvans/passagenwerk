@@ -1,5 +1,6 @@
 from passagenwerk.materials.pitch import (
     anuran_pitch_handler,
+    bass_drone,
     cb_clock,
     cb_gravity,
     cb_scratch,
@@ -57,6 +58,7 @@ from passagenwerk.materials.rhythm import (
     scratch_handler_alt_2,
     silence_handler,
     spectrum_handler,
+    sustain_handler,
     va_1_anuran_alt,
     va_1_anuran_alt_2,
 )
@@ -122,10 +124,10 @@ rhythm_materials_01 = [
     silence_handler,  # cb
     anuran_handler,
     silence_handler,
-    heterophony_handler,
+    sustain_handler,
     scratch_handler,
-    heterophony_handler,
-    heterophony_handler,
+    sustain_handler,
+    sustain_handler,
 ]
 
 pitch_materials_01 = [
@@ -187,10 +189,10 @@ pitch_materials_01 = [
     silence_handler,  # cb
     anuran_pitch_handler,
     silence_handler,
-    heterophony_pitch_handler,
+    bass_drone,
     cb_scratch,
-    heterophony_pitch_handler,
-    heterophony_pitch_handler,
+    bass_drone,
+    bass_drone,
 ]
 
 ## 02
