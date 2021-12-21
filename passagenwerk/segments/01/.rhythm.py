@@ -1,13 +1,13 @@
 import abjad
-handler_to_value = abjad.OrderedDict(
+handler_to_value = dict(
     [
         (
             'silence_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 3),
                                 ('logical_ties_produced', 3),
@@ -19,7 +19,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'anuran_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 21),
                     ]
@@ -27,11 +27,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'heterophony_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 220),
                                 ('incomplete_last_note', True),
@@ -45,7 +45,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'guerrero_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 23),
                     ]
@@ -53,11 +53,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'sustain_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 10),
                                 ('incomplete_last_note', True),
@@ -71,7 +71,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'scratch_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 0),
                     ]

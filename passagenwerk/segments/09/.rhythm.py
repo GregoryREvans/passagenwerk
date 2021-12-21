@@ -1,13 +1,13 @@
 import abjad
-handler_to_value = abjad.OrderedDict(
+handler_to_value = dict(
     [
         (
             'rain_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 32),
                                 ('incomplete_last_note', True),
@@ -21,11 +21,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'silence_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 3),
                                 ('logical_ties_produced', 3),
@@ -37,7 +37,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'va_1_anuran_alt',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 6),
                     ]
@@ -45,11 +45,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'spectrum_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 48),
                                 ('incomplete_last_note', True),
@@ -63,7 +63,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'anuran_handler_alt',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 6),
                     ]

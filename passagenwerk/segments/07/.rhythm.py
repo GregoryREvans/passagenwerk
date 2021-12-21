@@ -1,9 +1,9 @@
 import abjad
-handler_to_value = abjad.OrderedDict(
+handler_to_value = dict(
     [
         (
             'gravity_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 73),
                     ]
@@ -11,11 +11,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'silence_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 3),
                                 ('logical_ties_produced', 3),
@@ -27,7 +27,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'scratch_handler_alt',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 3),
                     ]
@@ -35,11 +35,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'rain_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 12),
                                 ('incomplete_last_note', True),

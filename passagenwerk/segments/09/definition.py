@@ -59,24 +59,24 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.transform_brackets,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         "skips",
         handler_commands_09,
         evans.call(
             "Voice 9",
             transpose_contrabass,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "score",
             with_sharps,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         # evans.call(
         #     "vertical",
@@ -86,7 +86,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         # evans.attach(
         #     "Voice 2",
@@ -96,47 +96,47 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             make_percussion_staff,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 2",
             make_percussion_staff,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 3",
             make_percussion_staff,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 4",
             make_percussion_staff,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 5",
             clef_handler_five,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 6",
             clef_handler_six,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 7",
             clef_handler_seven,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 8",
             clef_handler_eight,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 9",
             clef_handler_nine,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Voice 1",
@@ -146,7 +146,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             apply_rain_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.attach(
             "Voice 2",
@@ -156,7 +156,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 2",
             apply_rain_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.attach(
             "Voice 3",
@@ -166,7 +166,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 3",
             apply_rain_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.attach(
             "Voice 4",
@@ -176,22 +176,22 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 4",
             apply_rain_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 9",
             apply_spectrum_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 7",
             apply_spectrum_tremolo,
-            abjad.select().run(0),
+            lambda _: abjad.Selection(_).run(0),
         ),
         evans.call(
             "Voice 6",
             apply_spectrum_tremolo,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.attach(
             "Voice 5",
@@ -238,8 +238,12 @@ maker = evans.SegmentMaker(
             clef_whitespace,
             baca.selectors.leaf(0),
         ),
-        evans.attach("Voice 7", normale_markup, abjad.select().run(1).leaf(0)),
-        evans.attach("Voice 8", normale_markup, abjad.select().run(0).leaf(0)),
+        evans.attach(
+            "Voice 7", normale_markup, lambda _: abjad.Selection(_).run(1).leaf(0)
+        ),
+        evans.attach(
+            "Voice 8", normale_markup, lambda _: abjad.Selection(_).run(0).leaf(0)
+        ),
         evans.attach(
             "Global Context",
             mark_60,

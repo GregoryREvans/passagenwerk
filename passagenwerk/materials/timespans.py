@@ -43,9 +43,7 @@ from passagenwerk.materials.time_signatures import (
     quarter_bounds_09,
 )
 
-music_specifiers = abjad.OrderedDict(
-    [(f"Voice {i+1}", None) for i, name in enumerate(instruments)]
-)
+music_specifiers = dict([(f"Voice {i+1}", None) for i, name in enumerate(instruments)])
 
 voice_names = [specifier for specifier in music_specifiers]
 

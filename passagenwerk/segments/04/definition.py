@@ -59,68 +59,68 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.transform_brackets,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         "skips",
         evans.call(
             "Voice 1",
             vn_I_1_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 2",
             vn_I_2_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 3",
             vn_II_1_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 4",
             vn_II_2_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 5",
             va_1_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 6",
             va_2_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 7",
             vc_1_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 8",
             vc_2_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 9",
             cb_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 9",
             transpose_contrabass,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "score",
             with_sharps,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         # evans.call(
         #     "vertical",
@@ -130,7 +130,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.attach(
             "Voice 1",
@@ -185,47 +185,47 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 2",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 3",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 4",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 5",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 6",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 7",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 8",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 9",
             apply_scratch,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.attach(
             "Voice 9",

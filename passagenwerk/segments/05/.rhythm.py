@@ -1,13 +1,13 @@
 import abjad
-handler_to_value = abjad.OrderedDict(
+handler_to_value = dict(
     [
         (
             'silence_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 2),
                                 ('logical_ties_produced', 2),
@@ -19,7 +19,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'scratch_handler_alt_2',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 18),
                     ]
@@ -27,11 +27,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'clock_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 36),
                                 ('logical_ties_produced', 288),
@@ -43,7 +43,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'guerrero_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 7),
                     ]
@@ -51,7 +51,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'va_1_anuran_alt_2',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 10),
                     ]
@@ -59,11 +59,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'spectrum_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 95),
                                 ('incomplete_last_note', True),

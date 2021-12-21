@@ -53,24 +53,24 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.transform_brackets,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         "skips",
         handler_commands_07,
         evans.call(
             "Voice 9",
             transpose_contrabass,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "score",
             with_sharps,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         # evans.call(
         #     "vertical",
@@ -80,7 +80,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.attach(
             "Voice 1",
@@ -90,12 +90,12 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             make_percussion_staff,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([17, 18, 19, 20]),
         ),
         evans.call(
             "Voice 1",
             apply_rain_tremolo,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([17, 18, 19, 20]),
         ),
         evans.attach(
             "Voice 1",
@@ -110,12 +110,12 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 2",
             make_percussion_staff,
-            abjad.select().leaves(pitched=True).get([17, 18, 19]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([17, 18, 19]),
         ),
         evans.call(
             "Voice 2",
             apply_rain_tremolo,
-            abjad.select().leaves(pitched=True).get([17, 18, 19]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([17, 18, 19]),
         ),
         evans.attach(
             "Voice 2",
@@ -130,12 +130,16 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 3",
             make_percussion_staff,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20, 21, 22]),
+            lambda _: abjad.Selection(_)
+            .leaves(pitched=True)
+            .get([17, 18, 19, 20, 21, 22]),
         ),
         evans.call(
             "Voice 3",
             apply_rain_tremolo,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20, 21, 22]),
+            lambda _: abjad.Selection(_)
+            .leaves(pitched=True)
+            .get([17, 18, 19, 20, 21, 22]),
         ),
         evans.attach(
             "Voice 3",
@@ -150,12 +154,16 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 4",
             make_percussion_staff,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20, 21, 22, 23]),
+            lambda _: abjad.Selection(_)
+            .leaves(pitched=True)
+            .get([17, 18, 19, 20, 21, 22, 23]),
         ),
         evans.call(
             "Voice 4",
             apply_rain_tremolo,
-            abjad.select().leaves(pitched=True).get([17, 18, 19, 20, 21, 22, 23]),
+            lambda _: abjad.Selection(_)
+            .leaves(pitched=True)
+            .get([17, 18, 19, 20, 21, 22, 23]),
         ),
         evans.attach(
             "Voice 4",
@@ -163,65 +171,89 @@ maker = evans.SegmentMaker(
             baca.selectors.leaf(17, pitched=True),
         ),
         evans.call(
-            "Voice 1", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4])
+            "Voice 1",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4]),
         ),
         evans.call(
-            "Voice 1", make_gliss, abjad.select().leaves(pitched=True).get([15, 16])
+            "Voice 1",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([15, 16]),
         ),
         evans.call(
-            "Voice 2", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4])
+            "Voice 2",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4]),
         ),
         evans.call(
-            "Voice 2", make_gliss, abjad.select().leaves(pitched=True).get([15, 16])
+            "Voice 2",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([15, 16]),
         ),
         evans.call(
-            "Voice 3", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4])
+            "Voice 3",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4]),
         ),
         evans.call(
-            "Voice 3", make_gliss, abjad.select().leaves(pitched=True).get([15, 16])
+            "Voice 3",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([15, 16]),
         ),
         evans.call(
-            "Voice 4", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4])
+            "Voice 4",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4]),
         ),
         evans.call(
-            "Voice 4", make_gliss, abjad.select().leaves(pitched=True).get([15, 16])
-        ),
-        evans.call(
-            "Voice 5", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4, 5])
+            "Voice 4",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([15, 16]),
         ),
         evans.call(
             "Voice 5",
             make_gliss,
-            abjad.select().leaves(pitched=True).get([13, 14, 15, 16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4, 5]),
         ),
         evans.call(
-            "Voice 6", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4, 5])
+            "Voice 5",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([13, 14, 15, 16, 17]),
         ),
         evans.call(
             "Voice 6",
             make_gliss,
-            abjad.select().leaves(pitched=True).get([13, 14, 15, 16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4, 5]),
         ),
         evans.call(
-            "Voice 7", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4, 5])
+            "Voice 6",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([13, 14, 15, 16, 17]),
         ),
         evans.call(
             "Voice 7",
             make_gliss,
-            abjad.select().leaves(pitched=True).get([13, 14, 15, 16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4, 5]),
         ),
         evans.call(
-            "Voice 8", make_gliss, abjad.select().leaves(pitched=True).get([2, 3, 4, 5])
+            "Voice 7",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([13, 14, 15, 16, 17]),
         ),
         evans.call(
             "Voice 8",
             make_gliss,
-            abjad.select().leaves(pitched=True).get([13, 14, 15, 16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3, 4, 5]),
+        ),
+        evans.call(
+            "Voice 8",
+            make_gliss,
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([13, 14, 15, 16, 17]),
         ),
         evans.call(
             "Voice 9",
             make_gliss,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
         ),
@@ -270,30 +302,78 @@ maker = evans.SegmentMaker(
             abjad.Dynamic("f"),
             baca.selectors.leaf(0, pitched=True),
         ),
-        evans.call("Voice 1", apply_scratch, abjad.select().runs().get([2, 3])),
-        evans.attach("Voice 1", abjad.Dynamic("f"), abjad.select().run(4).leaf(0)),
-        evans.attach("Voice 1", normale_markup, abjad.select().run(4).leaf(0)),
-        evans.call("Voice 2", apply_scratch, abjad.select().runs().get([2, 3])),
-        evans.attach("Voice 2", abjad.Dynamic("f"), abjad.select().run(4).leaf(0)),
-        evans.attach("Voice 2", normale_markup, abjad.select().run(4).leaf(0)),
-        evans.call("Voice 3", apply_scratch, abjad.select().runs().get([2, 3])),
-        evans.attach("Voice 3", abjad.Dynamic("f"), abjad.select().run(4).leaf(0)),
-        evans.attach("Voice 3", normale_markup, abjad.select().run(4).leaf(0)),
-        evans.call("Voice 4", apply_scratch, abjad.select().runs().get([2, 3])),
-        evans.attach("Voice 4", abjad.Dynamic("f"), abjad.select().run(4).leaf(0)),
-        evans.attach("Voice 4", normale_markup, abjad.select().run(4).leaf(0)),
-        evans.call("Voice 5", apply_scratch, abjad.select().runs().get([1, 2])),
-        evans.attach("Voice 5", abjad.Dynamic("f"), abjad.select().run(3).leaf(0)),
-        evans.attach("Voice 5", normale_markup, abjad.select().run(3).leaf(0)),
-        evans.call("Voice 6", apply_scratch, abjad.select().runs().get([1, 2])),
-        evans.attach("Voice 6", abjad.Dynamic("f"), abjad.select().run(3).leaf(0)),
-        evans.attach("Voice 6", normale_markup, abjad.select().run(3).leaf(0)),
-        evans.call("Voice 7", apply_scratch, abjad.select().runs().get([1, 2])),
-        evans.attach("Voice 7", abjad.Dynamic("f"), abjad.select().run(3).leaf(0)),
-        evans.attach("Voice 7", normale_markup, abjad.select().run(3).leaf(0)),
-        evans.call("Voice 8", apply_scratch, abjad.select().runs().get([1, 2])),
-        evans.attach("Voice 8", abjad.Dynamic("f"), abjad.select().run(3).leaf(0)),
-        evans.attach("Voice 8", normale_markup, abjad.select().run(3).leaf(0)),
+        evans.call(
+            "Voice 1", apply_scratch, lambda _: abjad.Selection(_).runs().get([2, 3])
+        ),
+        evans.attach(
+            "Voice 1", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.attach(
+            "Voice 1", normale_markup, lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.call(
+            "Voice 2", apply_scratch, lambda _: abjad.Selection(_).runs().get([2, 3])
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.attach(
+            "Voice 2", normale_markup, lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.call(
+            "Voice 3", apply_scratch, lambda _: abjad.Selection(_).runs().get([2, 3])
+        ),
+        evans.attach(
+            "Voice 3", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.attach(
+            "Voice 3", normale_markup, lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.call(
+            "Voice 4", apply_scratch, lambda _: abjad.Selection(_).runs().get([2, 3])
+        ),
+        evans.attach(
+            "Voice 4", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.attach(
+            "Voice 4", normale_markup, lambda _: abjad.Selection(_).run(4).leaf(0)
+        ),
+        evans.call(
+            "Voice 5", apply_scratch, lambda _: abjad.Selection(_).runs().get([1, 2])
+        ),
+        evans.attach(
+            "Voice 5", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.attach(
+            "Voice 5", normale_markup, lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.call(
+            "Voice 6", apply_scratch, lambda _: abjad.Selection(_).runs().get([1, 2])
+        ),
+        evans.attach(
+            "Voice 6", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.attach(
+            "Voice 6", normale_markup, lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.call(
+            "Voice 7", apply_scratch, lambda _: abjad.Selection(_).runs().get([1, 2])
+        ),
+        evans.attach(
+            "Voice 7", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.attach(
+            "Voice 7", normale_markup, lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.call(
+            "Voice 8", apply_scratch, lambda _: abjad.Selection(_).runs().get([1, 2])
+        ),
+        evans.attach(
+            "Voice 8", abjad.Dynamic("f"), lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
+        evans.attach(
+            "Voice 8", normale_markup, lambda _: abjad.Selection(_).run(3).leaf(0)
+        ),
         evans.attach(
             "Global Context",
             mark_120,
