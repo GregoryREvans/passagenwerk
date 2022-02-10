@@ -266,8 +266,8 @@ maker = evans.SegmentMaker(
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=False,
     score_includes=[
-        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
-        "/Users/evansdsg2/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
+        "/Users/gregoryevans/abjad/docs/source/_stylesheets/abjad.ily",
+        "/Users/gregoryevans/Scores/passagenwerk/passagenwerk/build/score_stylesheet.ily",
     ],
     segment_name="09",
     current_directory=pathlib.Path(__file__).resolve().parent,
